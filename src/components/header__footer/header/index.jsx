@@ -3,7 +3,7 @@ import "./../../../css/header.css";
 import Menu from "./menu";
 import { Link } from "react-router-dom";
 //import SigninLoginBox from "./register/signin__login__box";
-import Search from "./search";
+//import Search from "./search";
 import Basket from "./basket/basket.jsx";
 
 
@@ -26,12 +26,12 @@ function index() {
           </div>
           <div className="header__left">
             {/* <SigninLoginBox className1="regular"></SigninLoginBox> */}
-            <Basket history={this.props.history}></Basket>
+            <Basket></Basket>
           </div>
         </div>
       </div>
     </header>
-    {/* <Menu></Menu> */}
+    <Menu></Menu>
   </div>
   )
 }

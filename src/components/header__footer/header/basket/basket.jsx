@@ -1,41 +1,29 @@
 import "./../../../../css/basket.css";
-import { Link } from "react-router-dom";
-import React from 'react'
-// import { connect } from "react-redux";
-// import {
-//   tryToAddToCart,
-//   deletAllProduct,
-//   deleteSpeceficProduct,
-// } from "../../../../redux-slicers/addToCart";
+import { Link, useNavigate } from "react-router-dom";
+import React, { Fragment, useContext } from 'react'
+import cardContext from "../../../contexts/cardContext";
 
 
-function basket({productsInCard}) {
-  const deletSpecificProduct = (product) => {
-    let size = product.size;
-    let color = product.color;
-    let id = product.product._id;
-    let index = this.props.productsInCard.findIndex(
-      (p) => p.size === size && p.color === color && p.product._id === id
-    );
-    this.props.deleteOneProduct(index);
-  };
+function Basket() {
+  const {state, cardDispatch}= useContext(cardContext)
+  const navigate = useNavigate();
+
+
+ 
 
   const numberWithCommas=(x)=> {
       return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
   }
-    const numberOfProdudcts = () => {
-      let sum = 0;
-      this.props.productsInCard.map((p) => (sum += p.number));
-      return sum;
+
+    const handleCard = () => {
+      //if (state.cartProducts.length > 0) {
+        navigate("/user");
+      //}
     };
-    const handleShop = () => {
-      if (this.props.productsInCard.length > 0) {
-        this.props.history.push(`/shoppingProcess`);
-      }
-    };
+
       return (
         <div className="basket" >
-          <div className="basket__image" onClick={this.handleShop}>
+          <div className="basket__image" onClick={handleCard} >
             <img
               src={require("./../../../../assets/icons/cart2.png")}
               alt=""
@@ -47,20 +35,20 @@ function basket({productsInCard}) {
               className="image__2"
             />
           </div>
-          <span className="shop__item">{this.numberOfProdudcts()}</span>
+          <span className="shop__item">{state.cartProducts.length}</span>
           <div className="dropdown__basket">
-            {productsInCard.length === 0 && (
+            {state.cartProducts.length === 0 && (
               <div className="without__product">سبد خرید شما خالی است</div>
             )}
-            {productsInCard.length > 0 && (
+            {state.cartProducts.length > 0 && (
               <div className="dropdown__basket__main">
                 <div className="dropdown__basket__header">
                   <div className="number__of__commodity">
-                    <span>{this.numberOfProdudcts()}</span>
+                    <span>{state.state.cartProducts.length}</span>
                     &nbsp; کالا
                   </div>
                 </div>
-                {productsInCard.slice(0, 3).map((product) => (
+                {state.cartProducts.slice(0, 3).map((product) => (
                   <Fragment key={product.product._id}>
                     <div className="dropdown__basket__body">
                       <div className="dropdown__basket__body__right">
@@ -91,7 +79,7 @@ function basket({productsInCard}) {
                             <img
                               src={require("./../../../../assets/icons/trash-2.png")}
                               alt="logo"
-                              onClick={() => this.deletSpecificProduct(product)}
+                              onClick={() => {cardDispatch({type:"deleteSpecificProduct",payload:product})}}
                             />
                           </div>
                         </div>
@@ -101,7 +89,7 @@ function basket({productsInCard}) {
                     <div className="dropdown__basket__footer">
                       <div className="dropdown__basket__footer__top">
                         <span className="price__item">
-                        {this.numberWithCommas(
+                        {numberWithCommas(
                           product.product.off
                             ? ((parseInt(product.product.price) *
                                 (100 - parseInt(product.product.off))) /
@@ -116,7 +104,7 @@ function basket({productsInCard}) {
                   </Fragment>
                 ))}
                 <div className="dropdown__basket__footer__bottom">
-                  {productsInCard.length > 3 && (
+                  {state.cartProducts.length > 3 && (
                     <div className="seeMore__button">
                                         <Link to="/shoppingProcess">
                       <span> همه ی کالاهای سبد خریدتو ببین </span>
@@ -141,22 +129,5 @@ function basket({productsInCard}) {
   )
 }
 
-export default basket
+export default Basket
 
-
-
-// function mapStateToProps(state) {
-//   return {
-//     allproducts: state.api.apiProducts.list,
-//     productsInCard: state.addToCart.products,
-//   };
-// }
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     AddToBasket: (product, color, size, number) =>
-//       dispatch(tryToAddToCart(product, color, size, number)),
-//     deleteAllProduct: () => dispatch(deletAllProduct()),
-//     deleteOneProduct: (index) => dispatch(deleteSpeceficProduct({ index })),
-//   };
-// }
-// export default connect(mapStateToProps, mapDispatchToProps)(Basket);

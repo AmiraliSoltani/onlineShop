@@ -1,7 +1,6 @@
 import React from "react";
 import "./../../../../css/menu.css";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 import { Fragment } from "react";
 import { loadattributeItem } from "../../../../redux-slicers/attributeItem";
 import { loadAllProducts } from "../../../../redux-slicers/products";
@@ -13,14 +12,14 @@ function menu() {
     allCategories: [],
   };
 
-  componentDidMount() {
-    this.props.loadattributeItem();
-    this.props.loadAllProducts();
-    let { allCategories } = this.props;
-    this.setState({ allCategories });
-  }
+  // componentDidMount() {
+  //   this.props.loadattributeItem();
+  //   this.props.loadAllProducts();
+  //   let { allCategories } = this.props;
+  //   this.setState({ allCategories });
+  // }
 
-  background = (i1) => {
+  const background = (i1) => {
     let background;
     if (i1.id === 1) background = "background1";
     if (i1.id === 2) background = "background2";
@@ -28,7 +27,7 @@ function menu() {
     return background;
   };
 
-  openCloseBurgerMenu = () => {
+  const openCloseBurgerMenu = () => {
     let { statusOfMenu } = this.props;
     if (statusOfMenu === false) this.props.openMenu();
     else this.props.closeMenu();
@@ -51,7 +50,7 @@ function menu() {
             .map((i1) => (
               <li style={{ fontWeight: "500" }} key={i1.id}>
                 <Link to={`/category/${i1.id}`}>{i1.title}</Link>
-                <ul className={this.background(i1)}>
+                <ul className={background(i1)}>
                   {allCategories
                     .filter((c2) => c2.parentId === i1.id)
                     .map((i2) => (
