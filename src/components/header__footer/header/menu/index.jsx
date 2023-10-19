@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./../../../../css/menu.css";
 import { Link } from "react-router-dom";
 import { Fragment } from "react";
-import { loadattributeItem } from "../../../../redux-slicers/attributeItem";
-import { loadAllProducts } from "../../../../redux-slicers/products";
-import SigninLoginBox from "./../register/signin__login__box";
+//import SigninLoginBox from "./../register/signin__login__box";
+import menuSearchContext from "../../../contexts/menuSearchContext";
+import all from "../../../../json/categories.json"
 
-
-function menu() {
-  state = {
-    allCategories: [],
-  };
+function Menu() {
+  const {menuSearchState, menuSearchDispatch}= useContext(menuSearchContext)
+  let allCategories=all.data
+  console.log(allCategories)
+  //allCategories=allCategories.data
+ 
 
   // componentDidMount() {
   //   this.props.loadattributeItem();
@@ -22,26 +23,21 @@ function menu() {
   const background = (i1) => {
     let background;
     if (i1.id === 1) background = "background1";
-    if (i1.id === 2) background = "background2";
-    if (i1.id === 3) background = "background3";
+    else if (i1.id === 2) background = "background2";
+    else if (i1.id === 3) background = "background3";
     return background;
   };
 
-  const openCloseBurgerMenu = () => {
-    let { statusOfMenu } = this.props;
-    if (statusOfMenu === false) this.props.openMenu();
-    else this.props.closeMenu();
-  };
   return (
     <div className="main__menu">
     <div className="container">
       <div className="mobile__menu">
         <img
           src={require("./../../../../assets/icons/menu-2.png")}
-          onClick={this.openCloseBurgerMenu}
+          onClick={() => {menuSearchDispatch({type:"toggleMenu"})}}
           alt=""
         />
-        <SigninLoginBox></SigninLoginBox>
+        {/* <SigninLoginBox></SigninLoginBox> */}
       </div>
       <div className="menu1">
         <ul>
@@ -115,7 +111,7 @@ function menu() {
   )
 }
 
-export default menu
+export default Menu
 
 
 

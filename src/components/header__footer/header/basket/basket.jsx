@@ -5,7 +5,7 @@ import cardContext from "../../../contexts/cardContext";
 
 
 function Basket() {
-  const {state, cardDispatch}= useContext(cardContext)
+  const {cardState, cardDispatch}= useContext(cardContext)
   const navigate = useNavigate();
 
 
@@ -16,7 +16,7 @@ function Basket() {
   }
 
     const handleCard = () => {
-      //if (state.cartProducts.length > 0) {
+      //if (cardState.cartProducts.length > 0) {
         navigate("/user");
       //}
     };
@@ -35,20 +35,20 @@ function Basket() {
               className="image__2"
             />
           </div>
-          <span className="shop__item">{state.cartProducts.length}</span>
+          <span className="shop__item">{cardState.cartProducts.length}</span>
           <div className="dropdown__basket">
-            {state.cartProducts.length === 0 && (
+            {cardState.cartProducts.length === 0 && (
               <div className="without__product">سبد خرید شما خالی است</div>
             )}
-            {state.cartProducts.length > 0 && (
+            {cardState.cartProducts.length > 0 && (
               <div className="dropdown__basket__main">
                 <div className="dropdown__basket__header">
                   <div className="number__of__commodity">
-                    <span>{state.state.cartProducts.length}</span>
+                    <span>{cardState.cardState.cartProducts.length}</span>
                     &nbsp; کالا
                   </div>
                 </div>
-                {state.cartProducts.slice(0, 3).map((product) => (
+                {cardState.cartProducts.slice(0, 3).map((product) => (
                   <Fragment key={product.product._id}>
                     <div className="dropdown__basket__body">
                       <div className="dropdown__basket__body__right">
@@ -104,7 +104,7 @@ function Basket() {
                   </Fragment>
                 ))}
                 <div className="dropdown__basket__footer__bottom">
-                  {state.cartProducts.length > 3 && (
+                  {cardState.cartProducts.length > 3 && (
                     <div className="seeMore__button">
                                         <Link to="/shoppingProcess">
                       <span> همه ی کالاهای سبد خریدتو ببین </span>

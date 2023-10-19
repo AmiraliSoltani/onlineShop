@@ -1,16 +1,10 @@
 const MenuSearchReducer = (state, action) => {
   switch (action.type) {
-    case "closeMenu":
-      state.menu.open = true;
+    case "toggleMenu":
+      state.menu = !state.menu;
       break;
-    case "openMenu":
-      state.menu.open = false;
-      break;
-    case "openSearch":
-      state.search.open = true;
-      break;
-    case "closeSearch":
-      state.search.open = false;
+    case "toggleSearch":
+      state.search = !state.search;
       break;
     default:
       return null;

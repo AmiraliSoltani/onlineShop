@@ -1,150 +1,138 @@
-import React from "react";
+import React, { useContext, useState } from 'react';
 import "./../../../../css/serach.css";
 import Input from "../../../common/input";
 import { Link, Redirect } from "react-router-dom";
+import menuSearchContext from '../../../contexts/menuSearchContext';
 
-renderInput(name, label, placeholder, ref, className, type = "text") {
-  const { data } = this.state;
+function Search({ allProducts, history }) {
+  const {menuSearchState, menuSearchDispatch}= useContext(menuSearchContext)
+  const [data, setData] = useState({
+    searchBox: '',
+  });
+  const [className, setClassName] = useState('dropdown__search');
+  const [filtered, setFiltered] = useState([]);
+
+  const handleKey = (e) => {
+    if (e.keyCode === 13) {
+      menuSearchDispatch({type:"toggleSearch"})
+      //history.push(`/last__category/0/search=${data.searchBox}`);
+    }
+  };
+
+  const handleValue = ({ currentTarget: input }) => {
+    const newData = { ...data };
+    newData[input.name] = input.value;
+    setData(newData);
+
+    if (input.name === 'searchBox') {
+      handleSoloValidate(input);
+    }
+  };
+
+  const handleSoloValidate = (input) => {
+    const newData = { ...data };
+    const { name, value } = input;
+    const obj = { [name]: value };
+    // Add your Joi schema validation here
+    const error = null; // Replace this with your validation logic
+    let errorMessage = error === null ? null : error.details[0].message;
+    if (errorMessage) {
+      const newErrors = { ...errors };
+      newErrors[input.name] = errorMessage;
+      setErrors(newErrors);
+    } else {
+      const newErrors = { ...errors };
+      delete newErrors[input.name];
+      setErrors(newErrors);
+    }
+  };
+
+  const closeSearch = () => {
+    setClassName('dropdown__search');
+  };
+
+  const handleShow = () => {
+    let { searchBox } = data;
+
+    if (filtered.length > 0 && searchBox.length > 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   return (
-    <Input
-      type={type}
-      name={name}
-      placeholder={placeholder}
-      value={data[name]}
-      label={label}
-      onChange={this.handleValue}
-      onBlur={this.closeSearch}
-      className={className}
-      onKeyDown={this.handleKey}
-    />
-  );
-}
-function search() {
-    state = {
-      data: {
-        searchBox: "",
-      },
-      className: "dropdown__search",
-      filtered: [],
-    };
-  
-    handleKey = (e) => {
-      if (e.keyCode === 13) {
-        this.props.history.push(`/last__category/0/search=${this.state.data.searchBox}`);
-        this.closeSearch()
-        return <Redirect to={`/last__category/0/search=${this.state.data.searchBox}`} />;
-      }
-    };
-  
-  
-    handleValue = ({ currentTarget: input }) => {
-      const data = { ...this.state.data };
-      data[input.name] = input.value;
-      this.setState({ data });
-      if (input.value.length > 0) {
-        let className = "dropdown__search dropdown__search__active";
-        this.setState({ className });
-      } else {
-        let className = "dropdown__search";
-        this.setState({ className });
-      }
-  
-      let { allProducts } = this.props;
-      let filtered = allProducts.filter(
-        (m) =>
-          m.title.toLowerCase().includes(input.value.toLowerCase()) ||
-          m.title_En.toLowerCase().includes(input.value.toLowerCase())
-      );
-      this.setState({ filtered });
-    };
-  
-    closeSearch = () => {
-      let className = "dropdown__search";
-      this.setState({ className });
-    };
-    handleShow = () => {
-      let { searchBox } = this.state.data;
-      let { filtered } = this.state;
-  
-      if (filtered.length > 0 && searchBox.length > 0) {
-        return true;
-      } else {
-        return false;
-      }
-    };
-  
-    render() {
-      let { className, filtered } = this.state;
-      return (
-        <div className="search__box">
-          {this.renderInput(
-            "searchBox",
-            null,
-            "هر کالایی تو فکرته سرچ کن!",
-            this.searchBox,
-            "form-control"
-          )}
-          <Link to={`/last__category/0/search=${this.state.data.searchBox}`}>
-            <button onClick={this.closeSearch} className="btn lets__go">بزن بریم!</button>
-          </Link>
-  
-          <div className={className}>
-            {filtered.length === 0 && (
-              <div className="without__result ">
-                متاسفیم! هیچ کالایی برات پیدا نکردیم
+    <div className="search__box">
+      <Input
+        type="text"
+        name="searchBox"
+        placeholder="هر کالایی تو فکرته سرچ کن!"
+        value={data.searchBox}
+        onChange={handleValue}
+        onBlur={handleSoloValidate}
+        onKeyDown={handleKey}
+        className="form-control mt-3 mb-3"
+      />
+      <Link to={`/last__category/0/search=${data.searchBox}`}>
+        <button onClick={closeSearch} className="btn lets__go">
+          بزن بریم!
+        </button>
+      </Link>
+
+      <div className={className}>
+        {filtered.length === 0 && (
+          <div className="without__result ">
+            متاسفیم! هیچ کالایی برات پیدا نکردیم
+          </div>
+        )}
+
+        {filtered.length > 0 && (
+          <div className="dropdown__search__main">
+            <div className="dropdown__search__header">
+              <div className="number__of__result">
+                <span>{`${filtered.length}تا کالا مطابق جستجوت یافتیم!`}</span>
               </div>
-            )}
-  
-            {filtered.length > 0 && (
-              <div className="dropdown__search__main">
-                <div className="dropdown__search__header">
-                  <div className="number__of__result">
-                    <span>
-                      {`${filtered.length}تا کالا مطابق جستجوت یافتیم!`}
-                    </span>
+            </div>
+            {filtered.slice(0, 6).map((product) => (
+              <Link to={`/product/${product._id}/Review`} key={product._id}>
+                <div className="dropdown__search__body">
+                  <div className="dropdown__search__body__right">
+                    <img
+                      src={
+                        product.productPic[Object.keys(product.productPic)[0]]
+                      }
+                      alt="product"
+                    />
+                  </div>
+                  <div className="dropdown__search__body__left">
+                    <div className="productName">
+                      <span>{product.title.slice(0, 3)}</span>
+                      {product.title.length > 29 && <span>...</span>}
+                    </div>
+
+                    <div className="dropdown__search__body__left__icons">
+                      <div className="basket__price">
+                        <span> {product.price} هزارتومان</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                {filtered.slice(0, 6).map((product) => (
-                  <Link to={`/product/${product._id}/Review`} key={product._id}>
-                    <div className="dropdown__search__body">
-                      <div className="dropdown__search__body__right">
-                        <img
-                          src={
-                            product.productPic[Object.keys(product.productPic)[0]]
-                          }
-                          alt="product"
-                        />
-                      </div>
-                      <div className="dropdown__search__body__left">
-                        <div className="productName">
-                          <span>{product.title.slice(0.3)}</span>
-                          {product.title.length > 29 && <span>...</span>}
-                        </div>
-  
-                        <div className="dropdown__search__body__left__icons">
-                          <div className="basket__price">
-                            <span> {product.price} هزارتومان</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {filtered[filtered.length - 1] !== product && <hr />}
-                  </Link>
-                ))}
-  
-                {filtered.length > 6 && (
-                  <div className="dropdown__search__footer">
-                    <div className="result__button">
-                      <img
-                        src={require("./../../../../assets/icons/eye-1.png")}
-                        alt="logo"
-                      />
-                              <Link to={`/last__category/0/search=${this.state.data.searchBox}`}>
-                        <span onClick={this.closeSearch} > همه نتایح سرچتو ببین!</span>
+                {filtered[filtered.length - 1] !== product && <hr />}
+              </Link>
+            ))}
+
+            {filtered.length > 6 && (
+              <div className="dropdown__search__footer">
+                <div className="result__button">
+                  <img
+                    src={require('./../../../../assets/icons/eye-1.png')}
+                    alt="logo"
+                  />
+                  <Link to={`/last__category/0/search=${data.searchBox}`}>
+                   <span onClick={closeSearch} > همه نتایح سرچتو ببین!</span>
                       </Link>
-                    </div>
-                  </div>
+                   </div>
+                   </div>
                 )}
               </div>
             )}
@@ -153,7 +141,184 @@ function search() {
       );
 }
 
-export default search
+export default Search
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const renderInput=(name, label, placeholder, ref, className, type = "text") =>{
+//   const { data } = this.state;
+
+//   return (
+//     <Input
+//       type={type}
+//       name={name}
+//       placeholder={placeholder}
+//       value={data[name]}
+//       label={label}
+//       onChange={this.handleValue}
+//       onBlur={this.closeSearch}
+//       className={className}
+//       onKeyDown={this.handleKey}
+//     />
+//   );
+// }
+
+// function search() {
+//     state = {
+//       data: {
+//         searchBox: "",
+//       },
+//       className: "dropdown__search",
+//       filtered: [],
+//     };
+  
+//     const handleKey = (e) => {
+//       if (e.keyCode === 13) {
+//         this.props.history.push(`/last__category/0/search=${this.state.data.searchBox}`);
+//         this.closeSearch()
+//         return <Redirect to={`/last__category/0/search=${this.state.data.searchBox}`} />;
+//       }
+//     };
+  
+  
+//     const handleValue = ({ currentTarget: input }) => {
+//       const data = { ...this.state.data };
+//       data[input.name] = input.value;
+//       this.setState({ data });
+//       if (input.value.length > 0) {
+//         let className = "dropdown__search dropdown__search__active";
+//         this.setState({ className });
+//       } else {
+//         let className = "dropdown__search";
+//         this.setState({ className });
+//       }
+  
+//       let { allProducts } = this.props;
+//       let filtered = allProducts.filter(
+//         (m) =>
+//           m.title.toLowerCase().includes(input.value.toLowerCase()) ||
+//           m.title_En.toLowerCase().includes(input.value.toLowerCase())
+//       );
+//       this.setState({ filtered });
+//     };
+  
+//     const closeSearch = () => {
+//       let className = "dropdown__search";
+//       this.setState({ className });
+//     };
+//     const handleShow = () => {
+//       let { searchBox } = this.state.data;
+//       let { filtered } = this.state;
+  
+//       if (filtered.length > 0 && searchBox.length > 0) {
+//         return true;
+//       } else {
+//         return false;
+//       }
+//     };
+  
+//       let { className, filtered } = this.state;
+//       return (
+//         <div className="search__box">
+//           {this.renderInput(
+//             "searchBox",
+//             null,
+//             "هر کالایی تو فکرته سرچ کن!",
+//             this.searchBox,
+//             "form-control"
+//           )}
+//           <Link to={`/last__category/0/search=${this.state.data.searchBox}`}>
+//             <button onClick={this.closeSearch} className="btn lets__go">بزن بریم!</button>
+//           </Link>
+  
+//           <div className={className}>
+//             {filtered.length === 0 && (
+//               <div className="without__result ">
+//                 متاسفیم! هیچ کالایی برات پیدا نکردیم
+//               </div>
+//             )}
+  
+//             {filtered.length > 0 && (
+//               <div className="dropdown__search__main">
+//                 <div className="dropdown__search__header">
+//                   <div className="number__of__result">
+//                     <span>
+//                       {`${filtered.length}تا کالا مطابق جستجوت یافتیم!`}
+//                     </span>
+//                   </div>
+//                 </div>
+//                 {filtered.slice(0, 6).map((product) => (
+//                   <Link to={`/product/${product._id}/Review`} key={product._id}>
+//                     <div className="dropdown__search__body">
+//                       <div className="dropdown__search__body__right">
+//                         <img
+//                           src={
+//                             product.productPic[Object.keys(product.productPic)[0]]
+//                           }
+//                           alt="product"
+//                         />
+//                       </div>
+//                       <div className="dropdown__search__body__left">
+//                         <div className="productName">
+//                           <span>{product.title.slice(0.3)}</span>
+//                           {product.title.length > 29 && <span>...</span>}
+//                         </div>
+  
+//                         <div className="dropdown__search__body__left__icons">
+//                           <div className="basket__price">
+//                             <span> {product.price} هزارتومان</span>
+//                           </div>
+//                         </div>
+//                       </div>
+//                     </div>
+//                     {filtered[filtered.length - 1] !== product && <hr />}
+//                   </Link>
+//                 ))}
+  
+//                 {filtered.length > 6 && (
+//                   <div className="dropdown__search__footer">
+//                     <div className="result__button">
+//                       <img
+//                         src={require("./../../../../assets/icons/eye-1.png")}
+//                         alt="logo"
+//                       />
+//                               <Link to={`/last__category/0/search=${this.state.data.searchBox}`}>
+//                         <span onClick={this.closeSearch} > همه نتایح سرچتو ببین!</span>
+//                       </Link>
+//                     </div>
+//                   </div>
+//                 )}
+//               </div>
+//             )}
+//           </div>
+//         </div>
+//       );
+// }
+
+// export default search
 
   
 
