@@ -89,7 +89,7 @@ export async function registerUser(data) {
     console.log("first");
     //const response = await axios.post("http://localhost:8080/register", {
       const response = await axios.post(
-        "https://backend-register-online-shop-8ruek3xu5-amiralisoltanis-projects.vercel.app/register", 
+        "https://backend-register-online-shop.vercel.app/register", 
         {
           username: data.username,
           password: data.password,
