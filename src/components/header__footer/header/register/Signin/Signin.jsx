@@ -13,7 +13,7 @@ import { ReadTokenInformation } from "../../../../../services/ReadTokenInformati
 
 const userService = require("../../../../../services/authenticate");
 
-function SignIn({ showRegisterModal, setShowRegisterModal, toggleModal }) {
+function Signin({ showRegisterModal, setShowRegisterModal, toggleModal }) {
   const schema = z.object({
     username: z.string().email("Please enter a valid email address"),
     password: z.string().min(5, "Password needs at least 5 letters"),
@@ -212,7 +212,7 @@ function SignIn({ showRegisterModal, setShowRegisterModal, toggleModal }) {
   );
 }
 
-export default SignIn;
+export default Signin;
 
 
 

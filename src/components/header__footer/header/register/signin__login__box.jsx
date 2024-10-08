@@ -5,7 +5,7 @@ import Login from "./Login/Login";
 import "./../../../../css/signin__login__box.css";
 import loginContext from "../../../contexts/loginContext";
 import {removeAuthenticateToken} from "../../../../services/authenticate"
-import SignIn from "./Signin/SignIn";
+import Signin from "./Signin/Signin.jsx";
 
 
 function SignIn__login__box() {
@@ -34,7 +34,7 @@ function SignIn__login__box() {
             {!loginState.authenticated && (
               <Fragment>
                 <Login toggleModal={toggleModal} showLoginModal={showLoginModal} setShowLoginModal={setShowLoginModal}/>
-                <SignIn toggleModal={toggleModal} showRegisterModal={showRegisterModal} setShowRegisterModal={setShowRegisterModal}/>
+                <Signin toggleModal={toggleModal} showRegisterModal={showRegisterModal} setShowRegisterModal={setShowRegisterModal}/>
               </Fragment>
             )}
   
