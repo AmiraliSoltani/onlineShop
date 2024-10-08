@@ -89,7 +89,7 @@ export async function registerUser(data) {
     console.log("first");
     //const response = await axios.post("http://localhost:8080/register", {
       const response = await axios.post(
-        "https://backend-register-online-shop.vercel.app/register", 
+        "https://backend-register-online-shop.vercel.app/api/register", 
         {
           username: data.username,
           password: data.password,
@@ -105,6 +105,11 @@ export async function registerUser(data) {
       setAuthenticateToken(response.data.token);
       //ReadTokenInformation();
       // SyncbackAndFront();
+      console.log("yesssssssssssss");
+
+      console.log(response.data.message);
+      
+
       console.log(response.data.token);
       return [true, response.data.user];
     } else {
