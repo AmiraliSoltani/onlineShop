@@ -3,9 +3,9 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Login from "./Login/Login";
 
 import "./../../../../css/signin__login__box.css";
-import SignIn from "./Signin/SignIn.jsx"
 import loginContext from "../../../contexts/loginContext";
 import {removeAuthenticateToken} from "../../../../services/authenticate"
+import SignIn from "./Signin/SignIn";
 
 
 function SignIn__login__box() {
