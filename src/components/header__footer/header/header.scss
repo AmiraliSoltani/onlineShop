@@ -29,6 +29,17 @@ transform: rotate(45deg);
   }
 
 
+  .striped-background-red {
+    background: repeating-linear-gradient(
+      45deg,  /* Angle of stripes */
+      #FF7675,  /* Starting color of stripe */
+      #FF7675 10px,  /* Width of stripe */
+      #e66564 10px,  /* Ending color of stripe */
+      #e66564 20px   /* Total width of two stripes (light + dark) */
+    );
+  }
+  
+
 .container {
     direction: rtl;
     font-family: $main-font;
@@ -57,7 +68,7 @@ header {
             justify-content: space-between;
           }
 
-        .header__right {
+        .header__left {
             display: flex;
             align-items: center;
 
@@ -85,7 +96,7 @@ header {
         }
     }
 
-    .header__left {
+    .header__right {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -97,7 +108,7 @@ header {
 }
 .register__modal{
     div{
-        direction: rtl;
+        direction: ltr;
     }
 .modal-content{
 position: absolute !important;
@@ -105,7 +116,15 @@ top: 63px;
 
 .register{
     .modal-header{
-        background-color:$orange !important;
+        height: 60px;
+        //background-color:$orange !important;
+        background: repeating-linear-gradient(
+    45deg,           /* Angle of stripes */
+    #FF7675,         /* Starting color of stripe */
+    #FF7675 20px,    /* Width of red stripe */
+    #e66564 20px,    /* Darker red stripe starts here */
+    #e66564 40px     /* Total width of two stripes (light + dark) */
+  ) !important;
         .modal-title{
             font-size: 22px !important;
             margin-right: 16px;
@@ -153,15 +172,22 @@ top: 63px;
 }
     .modal-footer{
         background-color: $lightgreen;
+        justify-content: flex-start;
         .btn-secondary{
-            background-color: $lemon !important;
+            background-color: #FDD5BC !important;
             color: $black;
             border: 0px;
+            &:hover{
+                background-color: #e6bfa6;
+            }
         }
         .btn-primary{
             background-color:$orange;
             border: 0px;
             width: 200px;
+            &:hover{
+                background-color: #e65c5b;
+            }
 
         }
     }
@@ -169,7 +195,15 @@ top: 63px;
 .success__register{
 
     .modal-header{
-        background-color:$orange !important;
+        height: 60px;
+        //background-color:$orange !important;
+        background: repeating-linear-gradient(
+    45deg,           /* Angle of stripes */
+    #FF7675,         /* Starting color of stripe */
+    #FF7675 20px,    /* Width of red stripe */
+    #e66564 20px,    /* Darker red stripe starts here */
+    #e66564 40px     /* Total width of two stripes (light + dark) */
+  ) !important;
         .modal-title{
             font-size: 22px !important;
             margin-right: 16px;
@@ -227,7 +261,7 @@ text-align: center;
 
 .login__modal{
     div{
-        direction: rtl;
+        direction: ltr;
     }
     .modal-content{
     position: absolute !important;
@@ -235,7 +269,15 @@ text-align: center;
     
     .login{
     .modal-header{
-            background-color:$orange !important;
+        height: 60px;
+        //background-color:$orange !important;
+        background: repeating-linear-gradient(
+    45deg,           /* Angle of stripes */
+    #FF7675,         /* Starting color of stripe */
+    #FF7675 20px,    /* Width of red stripe */
+    #e66564 20px,    /* Darker red stripe starts here */
+    #e66564 40px     /* Total width of two stripes (light + dark) */
+  ) !important;
             .modal-title{
                 font-size: 22px !important;
                 margin-right: 16px;
@@ -283,15 +325,23 @@ text-align: center;
     }
         .modal-footer{
             background-color: $lightgreen;
+            justify-content: flex-start;
+
             .btn-secondary{
-                background-color: $lemon !important;
+                background-color: #FDD5BC !important;
                 color: $black;
                 border: 0px;
+                &:hover{
+                    background-color: #e6bfa6;
+                }
             }
             .btn-primary{
                 background-color:$orange;
                 border: 0px;
                 width: 200px;
+                &:hover{
+                    background-color: #e65c5b;
+                }
     
             }
         }
@@ -299,7 +349,15 @@ text-align: center;
     .success__login{
 
         .modal-header{
-            background-color:$orange !important;
+            height: 60px;
+            //background-color:$orange !important;
+            background: repeating-linear-gradient(
+        45deg,           /* Angle of stripes */
+        #FF7675,         /* Starting color of stripe */
+        #FF7675 20px,    /* Width of red stripe */
+        #e66564 20px,    /* Darker red stripe starts here */
+        #e66564 40px     /* Total width of two stripes (light + dark) */
+      ) !important;
             .modal-title{
                 font-size: 22px !important;
                 margin-right: 16px;

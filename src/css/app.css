@@ -5,7 +5,6 @@
   src: url("./../fonts/eot/IRANSansWeb_Medium.eot");
   src: url("./../fonts/eot/IRANSansWeb_Medium.eot?#iefix") format("embedded-opentype"), url("./../fonts/woff2/IRANSansWeb_Medium.woff2") format("woff2"), url("./../fonts/woff/IRANSansWeb_Medium.woff") format("woff"), url("./../fonts/ttf/IRANSansWeb_Medium.ttf") format("truetype");
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -13,7 +12,6 @@
   src: url("./../fonts/eot/IRANSansWeb_Light.eot");
   src: url("./../fonts/eot/IRANSansWeb_Light.eot?#iefix") format("embedded-opentype"), url("./../fonts/woff2/IRANSansWeb_Light.woff2") format("woff2"), url("./../fonts/woff/IRANSansWeb_Light.woff") format("woff"), url("./../fonts/ttf/IRANSansWeb_Light.ttf") format("truetype");
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -21,7 +19,6 @@
   src: url("./../fonts/eot/IRANSansWeb_UltraLight.eot");
   src: url("./../fonts/eot/IRANSansWeb_UltraLight.eot?#iefix") format("embedded-opentype"), url("./../fonts/woff2/IRANSansWeb_UltraLight.woff2") format("woff2"), url("./../fonts/woff/IRANSansWeb_UltraLight.woff") format("woff"), url("./../fonts/ttf/IRANSansWeb_UltraLight.ttf") format("truetype");
 }
-
 @font-face {
   font-family: IRANSans;
   font-style: normal;
@@ -29,7 +26,6 @@
   src: url("./../fonts/eot/IRANSansWeb.eot");
   src: url("./../fonts/eot/IRANSansWeb.eot?#iefix") format("embedded-opentype"), url("./../fonts/woff2/IRANSansWeb.woff2") format("woff2"), url("./../fonts/woff/IRANSansWeb.woff") format("woff"), url("./../fonts/ttf/IRANSansWeb.ttf") format("truetype");
 }
-
 h4 {
   text-align: center;
   font-family: IRANSans;
@@ -242,5 +238,4 @@ Note: Beware of modifying this element as it can break the animations - you shou
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.3);
-}
-/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app.css.map */

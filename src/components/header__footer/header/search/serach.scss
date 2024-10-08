@@ -2,16 +2,25 @@
 @import './../../../../scss/mixins.scss';
 
 
+
+// .slick-track {
+//  margin-left: 0px !important;
+//  margin-right: 0px !important;
+// width: 410px !important;
+// flex-wrap: nowrap;
+// }
+
 .search__box {
-    margin-right: 50px;
+    margin-left: 50px;
+    direction: ltr;
     display: flex;
     align-items: center;
     position: relative;
     @include mq(992) {
-        margin-right: 20px
+        margin-left: 20px
     }
     @include mq(480) {
-        margin-right: 10px
+        margin-left: 10px
 
 
       }
@@ -20,39 +29,68 @@
             display: none;
                   }
             }
+            .striped-background-search {
+                background: repeating-linear-gradient(
+                    45deg,        /* Angle of stripes */
+                    #ffffff,      /* Lighter starting color (pure white) */
+                    #ffffff 20px, /* Width of the lighter stripe */
+                    #fafafa 20px, /* Lighter grey for the darker stripe */
+                    #fafafa 40px  /* Total width of two stripes (light + dark) */
+                  );
+                  
+                //padding: 10px; /* Adjust padding as needed */
+                border-radius: 8px; /* Optional: to give rounded corners */
+              }
+              .striped-background-search2 {
+                background: repeating-linear-gradient(45deg, #ffffff, #ffffff 20px, #f2f2f2 20px, #f2f2f2 40px);
+                  
+                //padding: 10px; /* Adjust padding as needed */
+                border-radius: 8px; /* Optional: to give rounded corners */
+                &:hover{
+                    background: repeating-linear-gradient(45deg, #f2f2f2, #f2f2f2 20px, #ffffff 20px, #ffffff 40px);
+                }
+              }
+              .focus{
+                  width:420px !important;
+            outline: none !important;
+            border: none !important; /* Optional: remove border as well */
+            box-shadow: none !important;
+            border-radius: 4px 4px 0px 0px;
+            
+              }
     input {
-        width: 256px;
+        width: 250px;
         transition: 0.4s;
+
         @include mq(435) {
             width: 48vw;
     
           }
 
         &:focus {
-            width: 368px;
+            // width:420px !important;
+            // outline: none !important;
+            // border: none !important; /* Optional: remove border as well */
+            // box-shadow: none !important;
+            // border-radius: 4px 4px 0px 0px;
+            
+                            .dropdown__search {
+                             visibility: visible;
+                                
+                        
+                        }
             @include mq(992) {
                 width: 256px;
               }
               @include mq(435) {
                  width: 48vw;
               }
-
-            .search__box {
-                .dropdown__search {
-                    transform: perspective(400) rotate3d(1, 0, 0, 0);
-                    -webkit-transform: perspective(400) rotate3d(1, 0, 0, 0);
-                    -moz-transform: perspective(400) rotate3d(1, 0, 0, 0);
-                    -ms-transform: perspective(400) rotate3d(1, 0, 0, 0);
-                    -o-transform: perspective(400) rotate3d(1, 0, 0, 0);
-                    
-                }
-            }
         }
 
     }
 
     button {
-        margin-right: 10px;
+        margin-left: 10px;
         width: 90px;
         background-color: $green300;
         color: $white;
@@ -60,8 +98,11 @@
         overflow: hidden;
 
         &:hover {
+            background-color: $green300 !important;
+            color: $white !important;
             &::after {
-                left: 65px
+                left: 65px;
+
             }
         }
 
@@ -75,7 +116,7 @@
             top: 12px;
             transform: rotate(134deg);
             opacity: 0.5;
-            left: -67px;
+            left: -49px;
             transition: all 0.4s;
 
 
@@ -83,30 +124,36 @@
         }
     }
 
+    .visible{
+        // visibility: visible !important;
+        opacity: 1 !important;  /* Fully visible */
+    visibility: visible !important;  /* Make it visible immediately */
+    transition: opacity 0s ease-in, visibility 0s 0s; /* No delay for visibility */
+    }
     .dropdown__search {
         position: absolute;
-        left: 101px;
-        top: 41px;
+        left: 0px;
+        top: 52px;
         z-index: 100;
         background-color: #fff;
-        width: 368px;
-        box-shadow: 0 20px 40px 0 $black300;
-        border-radius: 3px;
-        padding: 8px;
-        transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-        -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-        -moz-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-        -ms-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-        -o-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-        transition: all 0.3s;
-        -webkit-transition: all 0.3s;
-        -moz-transition: all 0.3s;
-        -ms-transition: all 0.3s;
-        -o-transition: all 0.3s;
-        transform-origin: 50% 0;
-        -webkit-transform-origin: 50% 0;
-        -ms-transform-origin: 50% 0;
-        transform-origin: 50% 0;
+        width: 420px;
+        // box-shadow: 
+        // 0px 10px 20px rgba(0, 0, 0, 0.3),  /* Bottom shadow */
+        // -10px 0px 15px rgba(0, 0, 0, 0.2), /* Left shadow */
+        // 10px 0px 15px rgba(0, 0, 0, 0.2);  /* Right shadow */
+                border-radius: 0px 0px 3px 3px;
+        padding: 0px 8px 8px 8px;
+        // visibility: hidden;
+        // transition: visibility 0s 0.3s; /* Transition with delay for visibility */
+
+        opacity: 0;  /* Fully transparent */
+        visibility: hidden;  /* Hidden */
+        
+        /* Transition for opacity and visibility */
+        transition: opacity 0.3s ease-out, visibility 0s 0.3s; /* Visibility delay matches the opacity transition */
+    
+
+
         @include mq(992) {
             width: 256px;
             left:0px
@@ -118,7 +165,7 @@
          
 
         .without__result {
-            background-color: $lemon;
+            background-color: #FDD5BC ;
             padding: 10px;
             text-align: center;
             font-size: 14px;
@@ -127,111 +174,206 @@
         .dropdown__search__main {
             width: 100%;
             height: 100%;
-            display: flex;
-            flex-direction: column;
-            padding: 7px 9px;
+            // display: flex;
+            // flex-direction: column;
+            // padding: 7px 9px;
+            .line {
+                width: 100%;
+                height: 2px;
+        background-color: grey  ;
+        margin-top: 10px;
+        margin-bottom: 10px;
+             }
+        
+            .dropdown__search__history{
+                
+                .history{
+                    .history-trend-search {
+  
+                        .slick-slide {
+                            // display: inline-block;
+                            display: inline-flex;
+                            //justify-content: center; /* Centers the content horizontally */
+                            align-items: center; /* Centers the content vertically */
+                            width: auto; /* This allows each slide to take its own width */
+                            margin-right: 5px; /* Adjust the spacing between slides */
+                          }
+                        .slick-prev,
+                        .slick-next {
+                          &::before {
+                            position: absolute;
+                            color: grey;
+                            //visibility: hidden; /* Initially hide the arrows */
+                          }
+                        }
+                      
+                        .slick-prev::before {
+                          left: 172px;
+                          top: -35px;
+                        }
+                      
+                        .slick-next::before {
+                          right: 235px;
+                          top: -35px;
+                        }
+                      
+                       
+                      
+                    .text{
+                        white-space: nowrap; /* Prevent text from wrapping */
+                        text-align: center; /* Center text inside the item */
 
-            .dropdown__search__header {
-                background-color: $lemon;
-                padding: 5px;
+                        color: grey;
+                        border: 1px solid;
+                        border-color: lightgrey;
+                        border-radius: 9px;
+                        padding: 2px 0px;
+                        font-size: 14px;
+                        cursor: pointer;
+                        margin-right: 15px;
+                    }
+                }
+              
+                  
+                    .history-icons{
+                        margin-bottom: 10px;
 
-                .number__of__result {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 14px;
+                    
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 
-                    span {}
+
+                img{
+                    width: 15px;
+                    height: 15px;
+                    cursor: pointer;
+                }
+                
+                .left2{
+
+                    img{
+                        width: 18px;
+                        height: 18px;
+                    }
+                    span{
+                        font-size: 15px;
+                        color: grey;
+                        margin-left: 5px;
+                    }
+
                 }
             }
+        }
+        }
+            .dropdown__search__header {
+                //background-color: $lemon;
+                padding: 5px;
+
+                .line {
+                   width: 100%;
+                   height: 2px;
+background-color: $orange  ;
+margin-top: -4px;
+margin-bottom: 1px;
+                }
+            }
+            .no-result{
+                color:grey;
+                display: flex;
+                align-items: center;
+                margin-bottom: -5px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 5px;
+                }
+
+            }
+            .suggestions-container {
+                max-height: 400px; /* Adjust to show around 6 items */
+                overflow-y: auto; /* Enable vertical scrolling if needed */
+                width: 100%;
+                overflow-x: hidden;
+                /* Scrollbar styling for WebKit-based browsers (Chrome, Safari, newer Edge) */
+  &::-webkit-scrollbar {
+    width: 8px; /* Set the width of the scrollbar */
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #999; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Make the thumb round */
+    border: 2px solid transparent; /* Padding around the thumb */
+    background-clip: padding-box; /* Ensure padding remains */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Color of the scrollbar track */
+    border-radius: 10px; /* Make the track round */
+  }
+
+  /* Optional: Add hover effect for the scrollbar */
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Darken the scrollbar thumb on hover */
+  }
+  
+  /* Firefox scrollbar styles (optional, for better cross-browser support) */
+  scrollbar-width: thin; /* Makes scrollbar thinner in Firefox */
+  scrollbar-color: #999 #f1f1f1; /* Thumb and track colors in Firefox */
+
 
             .dropdown__search__body {
-                padding-top: 5px;
+                padding-top: 3px;
+                padding-bottom: 3px;
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 height: auto;
+                text-decoration: none !important;
+             
+                .left-search{
 
-                .dropdown__search__body__right {
-                    width: 24%;
-
-                    img {
-                        width: 75px;
-                        height: 75px;
-                        object-fit: cover;
-                        cursor: pointer;
+                    .icons{
+                        width: 20px;
+                        height: 20px;
+                    }
+                    .main-word{
+                        font-size: 15px;
+                        text-decoration: none !important;
+                      margin-left: 10px;
+                      color: grey;
                     }
                 }
+          .categories{
+            text-decoration: none !important;
+            font-size: 14px;
+            color: grey;
+            margin-right: 8px;
+            padding-top: 2px;
 
-                .dropdown__search__body__left {
-                    width: 76%;
-                    padding: 8px;
-                    direction: rtl;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: start;
-                    justify-content: center;
-                    @include mq(992) {
-                        margin-right: 22px;
-                
-                      }
-                    .productName {
-                        margin-bottom: 10px;
-                        text-align: right;
-
-                        >span {
-                            font-size: 14px;
-                            text-align: right;
-                            margin-bottom: 5px;
-                            cursor: pointer;
-                            direction: rtl;
-                        }
-                    }
-
-                    .dropdown__search__body__left__icons {
-                        display: flex;
-                        align-items: center;
-                        direction: rtl;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: start;
-                        justify-content: center;
-                        @include mq(992) {
-                            margin-right: 14px;
-                    width: 100%;
-                          }
-
-                        .basket__price {
-                            background-color: #ff7675;
-                            height: 33px;
-                            border-radius: 3%;
-                            text-align: center;
-                            color: white;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            padding: 0 8px;
-                            margin-left: 65px;
-                            @include mq(992) {
-                                margin-left: 20px;
-                        
-                              }
-                        }
-
-                        .eye__button {}
-
-                        img {
-                            width: 40px;
-                            height: 40px;
-                        }
-                    }
-                }
-
+          }
             }
 
+            .dropdown__search__body.selected,
+            .dropdown__search__body:hover {
+                background: repeating-linear-gradient(
+                    45deg,        /* Angle of stripes */
+                    #ffffff,      /* Lighter starting color of the stripe */
+                    #ffffff 20px, /* Lighter width of the stripe */
+                    #f2f2f2 20px, /* Slightly darker ending color of the stripe */
+                    #f2f2f2 40px  /* Total width of two stripes (light + dark) */
+                  );
+                  
+                  
+                  
+                  //padding: 10px; /* Adjust padding as needed */
+                  border-radius: 8px; /* Optional: to give rounded corners */
+            }
+        }
+
             hr {
-                height: 1px;
-                background-color: $lemon;
+                height: 2px;
+                background-color: #747D8C;
                 width: 100%;
                 margin: 3px;
             }
@@ -270,6 +412,5 @@
         -o-transform: perspective(400) rotate3d(0, 0, 0, 0deg);
     }
 
-
-
+ 
 }

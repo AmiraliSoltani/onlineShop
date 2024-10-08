@@ -1,0 +1,96 @@
+@import './../../scss/variable.scss';
+@import './../../scss/mixins.scss';
+
+.main{
+    direction: ltr;
+
+.container{
+    direction: ltr !important;
+        @include mq(1200) {
+            max-width: 1200px !important;                                             }
+    
+
+    .breadcrumb{
+        .breadcrumb-item{
+            font-size: 15px;
+            color: grey;
+            text-decoration: none;
+            a{
+                color: grey;
+                text-decoration: none;
+
+            }
+            &::before{
+                margin-left: 8px;
+            }
+
+            &:hover{
+                a{
+                    color: $orange;
+                    text-decoration: none;
+
+                }
+            }
+        }
+    }
+
+
+
+}
+.blurred {
+    filter: blur(1.5px); /* You can adjust the blur amount */
+  }
+.whole__category{
+.container{
+
+
+.main__search{
+display: flex;
+justify-content: center;
+align-items: flex-start;
+width: 100%;
+
+
+
+
+.left__search__products{
+width: 81%;
+@include mq(900) {
+    width: 100%;                                           }
+.whole__left__search{
+    width: 100%;
+    display: flex;
+    direction: ltr;
+    flex-direction: column;
+    align-self: start;
+    justify-content: start;
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+}
+
+
+}
+
+
+
+
+}
+
+
+
+}
+
+}

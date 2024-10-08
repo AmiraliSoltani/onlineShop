@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "ACCI,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EDE5C,AAAA,QAAQ,CAAA;IAEA,OAAO,EAAE,eAAe;GAG/B;;;AACD,AAAA,mBAAmB,CAAA;EACf,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,aAAa;EAC9B,WAAW,EAAE,IAAI;CAiBhB;;AArBL,AAUA,mBAVmB,CAUnB,yBAAyB,CAAA;EACrB,WAAW,EAAE,IAAI;CAOpB;;AC1BG,MAAM,MAAM,MAAM,MAAM,SAAS,EAAE,KAAK;EDQ5C,AAUA,mBAVmB,CAUnB,yBAAyB,CAAA;IAGzB,YAAY,EAAE,IAAI;GAKjB;;;AAlBD,AAeI,mBAfe,CAUnB,yBAAyB,CAKrB,CAAC,CAAA;EACG,UAAU,EAAE,KAAK;CACpB",
-    "sources": [
-        "../components/header__footer/header/register/signin__login__box.scss",
-        "../scss/mixins.scss"
-    ],
-    "names": [],
-    "file": "signin__login__box.css"
-}
+{"version":3,"sources":["../scss/mixins.scss","../components/header__footer/header/register/signin__login__box.scss","signin__login__box.css"],"names":[],"mappings":"AACI;ECEJ;IAEQ,wBAAA;ECFN;AACF;;ADKA;EACI,oBAAA;EAAA,oBAAA;EAAA,aAAA;EACA,yBAAA;MAAA,sBAAA;UAAA,mBAAA;EACA,yBAAA;MAAA,sBAAA;UAAA,8BAAA;ACFJ;ADQA;EACI,iBAAA;ACNJ;AFZI;ECiBJ;IAGA,kBAAA;ECJE;AACF","file":"signin__login__box.css"}

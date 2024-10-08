@@ -6,7 +6,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  direction: rtl;
+  direction: ltr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -14,14 +14,13 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 50px;
-  margin-top: -10px;
+  margin-top: 4px;
 }
-
 .last__box .numbers {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  direction: rtl;
+  direction: ltr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -30,7 +29,9 @@
           justify-content: center;
   width: 100%;
 }
-
+.last__box .numbers .bg-grey {
+  background-color: lightgrey;
+}
 .last__box .numbers span {
   margin-right: 10px;
   margin-left: 2px;
@@ -41,9 +42,7 @@
   border-radius: 10px;
   font-weight: 500;
 }
-
 .last__box .numbers span:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-}
-/*# sourceMappingURL=pagination.css.map */
+}/*# sourceMappingURL=pagination.css.map */

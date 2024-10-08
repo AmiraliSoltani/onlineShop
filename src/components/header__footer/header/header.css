@@ -1,0 +1,258 @@
+@keyframes trash__animate {
+  0% {
+    transform: rotate(45deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+.container {
+  direction: rtl;
+  font-family: IRANSans;
+}
+@media only screen and (max-width: 680px) {
+  .container {
+    overflow-x: hidden;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    padding-right: 8px !important;
+    padding-left: 8px !important;
+  }
+}
+
+header {
+  background-color: #ff7675;
+}
+header .header__content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+@media only screen and (max-width: 768px) {
+  header .header__content {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header .header__content {
+    justify-content: space-between;
+  }
+}
+header .header__content .header__left {
+  display: flex;
+  align-items: center;
+}
+header .header__content .header__left .logo a {
+  width: 80px;
+  display: inline-block;
+}
+header .header__content .header__left .logo a img {
+  height: 100%;
+  width: 100%;
+}
+@media only screen and (max-width: 450px) {
+  header .header__content .header__left .logo a img {
+    height: 85%;
+    width: 85%;
+  }
+}
+header .header__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.register__modal div {
+  direction: ltr;
+}
+.register__modal .modal-content {
+  position: absolute !important;
+  top: 63px;
+}
+.register__modal .modal-content .register .modal-header {
+  background-color: #ff7675 !important;
+}
+.register__modal .modal-content .register .modal-header .modal-title {
+  font-size: 22px !important;
+  margin-right: 16px;
+}
+.register__modal .modal-content .register .modal-header .close {
+  color: #ffeaa7 !important;
+  position: absolute;
+  left: 5px;
+  font-size: 34px;
+}
+.register__modal .modal-content .register .modal-body .form-row {
+  margin-bottom: 20px;
+}
+.register__modal .modal-content .register .modal-body .form-check {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.register__modal .modal-content .register .modal-body .form-check .form-check-input {
+  top: 4px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  top: -5px;
+  right: 10px;
+  cursor: pointer;
+  zoom: 1.5;
+}
+.register__modal .modal-content .register .modal-body .form-check .form-check-label {
+  font-size: 14px !important;
+  margin-right: 48px;
+}
+.register__modal .modal-content .register .modal-footer {
+  background-color: #81ecec;
+  justify-content: flex-start;
+}
+.register__modal .modal-content .register .modal-footer .btn-secondary {
+  background-color: #ffeaa7 !important;
+  color: #000;
+  border: 0px;
+}
+.register__modal .modal-content .register .modal-footer .btn-primary {
+  background-color: #ff7675;
+  border: 0px;
+  width: 200px;
+}
+.register__modal .modal-content .success__register .modal-header {
+  background-color: #ff7675 !important;
+}
+.register__modal .modal-content .success__register .modal-header .modal-title {
+  font-size: 22px !important;
+  margin-right: 16px;
+}
+.register__modal .modal-content .success__register .modal-header .close {
+  color: #ffeaa7 !important;
+  position: absolute;
+  left: 5px;
+  font-size: 34px;
+}
+.register__modal .modal-content .success__register .modal-body div {
+  font-size: 24px;
+}
+.register__modal .modal-content .success__register .modal-body .name {
+  text-align: right;
+}
+.register__modal .modal-content .success__register .modal-body .welcom {
+  text-align: center;
+}
+.register__modal .modal-content .success__register .modal-footer {
+  background-color: #81ecec;
+}
+.register__modal .modal-content .success__register .modal-footer .btn-secondary {
+  background-color: #ffeaa7 !important;
+  color: #000;
+  border: 0px;
+}
+.register__modal .modal-content .success__register .modal-footer .btn-primary {
+  background-color: #ff7675;
+  border: 0px;
+  width: 200px;
+}
+
+.login__modal div {
+  direction: ltr;
+}
+.login__modal .modal-content {
+  position: absolute !important;
+  top: 63px;
+}
+.login__modal .modal-content .login .modal-header {
+  background-color: #ff7675 !important;
+}
+.login__modal .modal-content .login .modal-header .modal-title {
+  font-size: 22px !important;
+  margin-right: 16px;
+}
+.login__modal .modal-content .login .modal-header .close {
+  color: #ffeaa7 !important;
+  position: absolute;
+  left: 5px;
+  font-size: 34px;
+}
+.login__modal .modal-content .login .modal-body .form-row {
+  margin-bottom: 20px;
+}
+.login__modal .modal-content .login .modal-body .form-check {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+.login__modal .modal-content .login .modal-body .form-check .form-check-input {
+  top: 4px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  top: -5px;
+  right: 10px;
+  cursor: pointer;
+  zoom: 1.5;
+}
+.login__modal .modal-content .login .modal-body .form-check .form-check-label {
+  font-size: 14px !important;
+  margin-right: 48px;
+}
+.login__modal .modal-content .login .modal-footer {
+  background-color: #81ecec;
+  justify-content: flex-start;
+}
+.login__modal .modal-content .login .modal-footer .btn-secondary {
+  background-color: #ffeaa7 !important;
+  color: #000;
+  border: 0px;
+}
+.login__modal .modal-content .login .modal-footer .btn-primary {
+  background-color: #ff7675;
+  border: 0px;
+  width: 200px;
+}
+.login__modal .modal-content .success__login .modal-header {
+  background-color: #ff7675 !important;
+}
+.login__modal .modal-content .success__login .modal-header .modal-title {
+  font-size: 22px !important;
+  margin-right: 16px;
+}
+.login__modal .modal-content .success__login .modal-header .close {
+  color: #ffeaa7 !important;
+  position: absolute;
+  left: 5px;
+  font-size: 34px;
+}
+.login__modal .modal-content .success__login .modal-body div {
+  font-size: 24px;
+}
+.login__modal .modal-content .success__login .modal-body .name {
+  text-align: right;
+}
+.login__modal .modal-content .success__login .modal-body .welcom {
+  text-align: center;
+}
+.login__modal .modal-content .success__login .modal-footer {
+  background-color: #81ecec;
+}
+.login__modal .modal-content .success__login .modal-footer .btn-secondary {
+  background-color: #ffeaa7 !important;
+  color: #000;
+  border: 0px;
+}
+.login__modal .modal-content .success__login .modal-footer .btn-primary {
+  background-color: #ff7675;
+  border: 0px;
+  width: 200px;
+}/*# sourceMappingURL=header.css.map */

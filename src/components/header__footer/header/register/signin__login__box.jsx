@@ -1,45 +1,69 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment, useContext, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import Login from "./Login/Login";
-import Signin from "./Signin/Signin";
+
 import "./../../../../css/signin__login__box.css";
-import { connect } from "react-redux";
-import { loadAllProducts } from "../../../../redux-slicers/products";
-import { loggedOut } from "../../../../redux-slicers/successLogin";
+import SignIn from "./Signin/SignIn.jsx"
+import loginContext from "../../../contexts/loginContext";
+import {removeAuthenticateToken} from "../../../../services/authenticate"
 
 
-function signin__login__box() {
-    logout = () => {
-      this.props.logout();
-    };
-  
-    render() {
-      const { confirmlogin, memberName,className1 } = this.props;
+function SignIn__login__box() {
+
+  const [className1] = ["regular"];
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showRegisterModal, setShowRegisterModal] = useState(false);
+  const {loginState, loginDispatch}= useContext(loginContext)
+
+  const toggleModal = ()=>{
+    setShowLoginModal(!showLoginModal);
+    setShowRegisterModal(!showRegisterModal)
+  }
+
+  const signoutUser=()=>{
+    loginDispatch({type:"userLoggedOut"})
+    removeAuthenticateToken()
+    setShowLoginModal(false);
+    setShowRegisterModal(false)
+  }
+
+  console.log("nnnnnnnnn",loginState)
       return (
         <div>
           <div className={`signin__login__box ${className1}`} >
-            {!confirmlogin && (
+            {!loginState.authenticated && (
               <Fragment>
-                <Login />
-                <Signin />
+                <Login toggleModal={toggleModal} showLoginModal={showLoginModal} setShowLoginModal={setShowLoginModal}/>
+                <SignIn toggleModal={toggleModal} showRegisterModal={showRegisterModal} setShowRegisterModal={setShowRegisterModal}/>
               </Fragment>
             )}
   
-            {confirmlogin && (
+            {loginState.authenticated && (
               <div
                 className="success__login__register"
                 id="success__login__register"
               >
                 <Dropdown>
-                  <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    {memberName}
-                  </Dropdown.Toggle>
+                <Dropdown.Toggle
+  variant="success"
+  id="dropdown-basic"
+  style={{
+    direction: 'ltr',
+    width: '159px', // Set the width to your desired size
+    height: '40px', // Set the height to your desired size
+    backgroundColor: "#00b894 !important",
+    border: "0px",
+  }}
+>
+  {loginState.user.name}
+</Dropdown.Toggle>
+
   {className1==="regular" && 
-                  <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">سفارشات</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">لیست ارزوها</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">صفحه کاربری</Dropdown.Item>
-                    <Dropdown.Item onClick={this.logout}>خروج</Dropdown.Item>
+                  <Dropdown.Menu >
+                    <Dropdown.Item href="#/action-1">My Account</Dropdown.Item>
+                    <Dropdown.Item href="#/action-2">My Wish List</Dropdown.Item>
+                    <Dropdown.Item href="#/action-3">My orders</Dropdown.Item>
+                    <Dropdown.Item onClick={signoutUser} >Sign Out</Dropdown.Item>
                   </Dropdown.Menu>
     }
                 </Dropdown>
@@ -50,7 +74,7 @@ function signin__login__box() {
       );
 }
 
-export default signin__login__box
+export default SignIn__login__box
   
 
 // const mapStateToProps = (state) => ({

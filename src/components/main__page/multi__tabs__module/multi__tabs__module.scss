@@ -1,0 +1,640 @@
+
+
+
+
+
+
+
+
+@import './../../../scss/variable.scss';
+@import './../../../scss/mixins.scss';
+
+@keyframes wave {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(3);
+      opacity: 0;
+    }
+  }
+
+  .blurred {
+    filter: blur(1.5px); /* You can adjust the blur amount */
+  }
+
+.amazing__offer {
+    margin-top: 15px;
+    position: relative;
+  
+    .container {
+      @media (max-width: 1100px) {
+        max-width: 1100px;
+        width: 1100px;
+      }
+  
+      .main__offer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-direction: column;
+  
+        .top__offer {
+          display: flex;
+          width: 100%;
+          cursor: pointer;
+          direction: ltr;
+  
+          .top__offer__category {
+            text-align: center;
+            color: black;
+            padding: 5px;
+            font-size: 16px;
+            border-radius: 3px;
+            width: 245px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            position: relative;
+            cursor: pointer;
+            height: 58px;
+  
+            // &:hover {
+            //   .icon {
+            //     animation: icon__animate 2s infinite;
+            //     -webkit-animation: icon__animate 2s infinite;
+            //   }
+            // }
+
+            &:hover {
+               
+              }
+  
+            .icon {
+              height: 40px;
+              width: 40px;
+              margin-right: 12px;
+              margin-left: 0px !important;
+              @media (max-width: 990px) {
+                display: none;
+              }
+              // &::before,
+              // &::after {
+              //   content: "";
+              //   position: absolute;
+              //   top: 50%;
+              //   left: 50%;
+              //   width: 100%;
+              //   height: 100%;
+              //   border-radius: 50%;
+              //   background-color: currentColor; /* The current color will match the text or icon color */
+              //   transform: translate(-50%, -50%) scale(0);
+              //   opacity: 0;
+              //   z-index: 1;
+              //   background: black;
+              // }
+          
+            //   &::before {
+            //     animation: wave 1.5s infinite ease-out;
+            //   }
+          
+            //   &::after {
+            //     animation: wave 1.5s infinite ease-out 0.75s; /* Slight delay for the ripple effect */
+            //   }
+             }
+
+            
+
+
+  
+            .arrow {
+              position: absolute;
+              height: 30px;
+              width: 30px;
+              top: 44px;
+              right: 182px;
+              transform: rotate(90deg);
+              visibility: visible;
+              @media (max-width: 1200px) {
+                right: 120px;
+              }
+              @media (max-width: 990px) {
+                right: 80px;
+              }
+              @media (max-width: 768px) {
+                right: 50px;
+              }
+            }
+          }
+  
+          .arrow__bg-orange {
+            fill: $orange;
+          }
+          .arrow__bg-0 {
+            fill: #FDD5BC;
+          }
+          .arrow__bg-1 {
+            fill: #FFD6D6;
+          }
+          .arrow__bg-2 {
+            fill: #CFC3FF;
+          }
+          .arrow__bg-3 {
+            fill: #C5E8D0;
+          }
+          .arrow__bg-4 {
+            fill: #EEE8AA;
+          }
+
+
+
+          .arrow__bg-sourLemon {
+            fill: $sourLemon;
+          }
+          .arrow__bg-tea {
+            fill: $tea;
+          }
+          .arrow__bg-lavender {
+            fill: $lavender;
+          }
+
+          .arrow__bg-coral {
+            fill: $coral;
+          }
+  
+          .arrow__bg-lightgreen {
+            fill: #81ecec;
+          }
+  
+          .arrow__bg-green300 {
+            fill: #55efc4;
+          }
+  
+          .arrow__bg-lemon {
+            fill: #fab1a0;
+          }
+  
+          .arrow__bg-blue {
+            fill: #74b9ff;
+          }
+
+          .arrow__bg-pale {
+            fill: #eee8aa;
+          }
+        }
+  
+        .middle__offer__slider {
+          display: flex;
+          justify-content: start;
+          width: 100%;
+          margin-top: 10px;
+  
+          .line2 {
+            width: 99%;
+            height: 4px;
+          }
+        }
+  
+        .buttom__offer__slider {
+          width: 100%;
+          //padding-top: 10px;
+          background-color: $white;
+  
+          &:hover {
+            .slick-arrow {
+              visibility: visible;
+            }
+          }
+
+          .no-decoration{
+            text-decoration: none;
+
+          }
+          .see-more2{
+            color: black;
+            width: 95% !important;
+            height: 280px;
+            font-size: 21px;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            text-decoration: none;
+          }
+  
+          .one__product {
+            width: 94% !important;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            position: relative;
+            margin-bottom: 15px;
+  
+            .tag__discount {
+              z-index: 10;
+              position: absolute;
+              border-radius: 30px;
+              width: 41px;
+              height: 41px;
+              background-color: #ff7675;
+              top: 5px;
+              left: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 19px;
+              font-weight: 500;
+              direction: ltr;
+            }
+  
+            .product__images {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              position: relative;
+  
+              .overlay {
+                position: absolute;
+                left: 26px;
+                top: 294px;
+                width: 37px;
+                height: 30px;
+                transition: all 0.5s;
+  
+                .product__star {
+                  ul {
+                    cursor: pointer;
+                    position: relative;
+  
+                    .star__icon {
+                      .without__color {
+                        height: 25px;
+                        width: 25px;
+                        margin-left: 16px;
+                        fill: gray;
+                        position: absolute;
+                        top: -15px;
+                        left: -37px;
+                        transition: all 0.5s;
+                      }
+  
+                      .positive {
+                        fill: $orange;
+                      }
+                    }
+                  }
+                }
+              }
+  
+              &:hover {
+                //box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+                .overlay {
+                  opacity: 1;
+  
+                  .product__star {
+                    ul {
+                      .star__icon {
+                        .number1 {
+                          top: -58px;
+                          left:-37px;
+                          transition-delay: 0.2s;
+                        }
+  
+                        .number2 {
+                          top: -58px;
+                          left: -7px;
+                          transition-delay: 0.4s;
+                        }
+  
+                        .number3 {
+                          top: -58px;
+                          left: 23px;
+                          transition-delay: 0.6s;
+                        }
+  
+                        .number4 {
+                          top: -58px;
+                          left: 53px;
+                          transition-delay: 0.8s;
+                        }
+  
+                        .number5 {
+                          top: -58px;
+                          left: 93px;
+                          transition-delay: 1.0s;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+  
+            .main__pic {
+              width: 210px;
+              height: 285px;
+              border-radius: 4px;
+              cursor: pointer;
+            }
+  
+            .product__detail {
+              width: 97%;
+              direction: rtl;
+  
+              .product__box__color {
+                width: 85%;
+  
+                ul {
+                  display: flex;
+                  margin-top: 10px;
+                  margin-bottom: 7px;
+                  justify-content: start;
+                  //margin-right: 7px;
+  
+                  li {
+                    height: 30px;
+                    width: 30px;
+                    border: 2px solid grey;
+                    border-radius: 20px;
+                    margin-left: 5px;
+                    cursor: pointer;
+  
+                    &:hover {
+                      border: 2px solid black;
+                    }
+                  }
+  
+                  .yellow {
+                    background-color: yellow;
+                  }
+  
+                  .blue {
+                    background-color: #74b9ff;
+                  }
+  
+                  .orange {
+                    background-color: $orange;
+                  }
+  
+                  .white {
+                    background-color: $white;
+                  }
+  
+                  .grey {
+                    background-color: grey;
+                  }
+  
+                  .red {
+                    background-color: #f53b57;
+                  }
+  
+                  .black {
+                    background-color: #2d3436;
+                  }
+  
+                  .pink {
+                    background-color: pink;
+                  }
+  
+                  .brown {
+                    background-color: #dabb9f;
+                  }
+  
+                  .cream {
+                    background-color: #fab1a0;
+                  }
+  
+                  .green {
+                    background-color: #55efc4;
+                  }
+                }
+              }
+  
+              .product__name {
+                text-align: left;
+                font-size: 15px;
+                margin-bottom: 5px;
+                direction: ltr;
+              }
+  
+              .product__price__and__icon {
+                display: flex;
+                direction: ltr;
+                align-items: center;
+  
+                span {
+                  font-size: 14px;
+                  text-align: right;
+                  font-weight: bold;
+                }
+  
+                .discount__price {
+                  text-decoration: line-through;
+                  font-size: 14px;
+                }
+  
+                .discount {
+                  font-size: 14px;
+                  font-weight: bold;
+                  color: $orange;
+                  margin-left: 10px;
+                }
+  
+                img {
+                  width: 40px;
+                  height: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .slick-arrow {
+      top: 40%;
+      visibility: hidden;
+  
+      &::before {
+        font-size: 35px;
+        color: grey;
+      }
+    }
+  
+    .slick-next {
+      right: -1px;
+    }
+  
+    .slick-prev {
+      left: -12px;
+      z-index: 10;
+    }
+  
+    .bg-blue {
+      background-color: #74b9ff !important;
+    }
+  
+    .bg-orange {
+      background-color: #ff7675 !important;
+    }
+  
+    .bg-red {
+      background-color: #f53b57 !important;
+    }
+  
+    .bg-grey {
+      background-color: grey !important;
+    }
+  
+    .bg-white {
+      background-color: #fff !important;
+    }
+  
+    .bg-yellow {
+      background-color: yellow !important;
+    }
+  
+    .bg-lemon {
+      background-color: #2d3436 !important;
+    }
+  
+    .bg-pink {
+      background-color: pink !important;
+    }
+  
+    .bg-brown {
+      background-color: #dabb9f !important;
+    }
+  
+    .bg-lightgreen {
+      background-color: green !important;
+    }
+  
+      .bg-pale {
+        background: repeating-linear-gradient(
+  45deg,        /* Angle of stripes */
+  #EEE8AA,      /* Lighter starting color of the stripe */
+  #EEE8AA 40px, /* Lighter width of the stripe */
+  #d6d09a 40px, /* Slightly darker ending color of the stripe */
+  #d6d09a 60px  /* Total width of two stripes (light + dark) */
+) !important;
+
+      // background-color: #eee8aa !important;
+    }
+
+    .bg-coral {
+        //background-color: $coral !important;
+        background: repeating-linear-gradient(
+  45deg,         /* Angle of stripes */
+  #FDD5BC,       /* Lighter starting color of the stripe */
+  #FDD5BC 40px,  /* Lighter width of the stripe */
+  #FBC4A2 40px,  /* Slightly darker ending color of the stripe */
+  #FBC4A2 60px   /* Total width of two stripes (light + dark) */
+);
+      }
+
+      .bg-tea {
+        //background-color: $tea !important;
+        background: repeating-linear-gradient(
+  45deg,         /* Angle of stripes */
+  #C5E8D0,       /* Lighter starting color of the stripe */
+  #C5E8D0 40px,  /* Lighter width of the stripe */
+  #A9D7BB 40px,  /* Slightly darker ending color of the stripe */
+  #A9D7BB 60px   /* Total width of two stripes (light + dark) */
+);
+
+      }
+
+      .bg-lavender {
+        background: repeating-linear-gradient(
+  45deg,         /* Angle of stripes */
+  #E2DBFF,       /* Lighter starting color of the stripe */
+  #E2DBFF 40px,  /* Lighter width of the stripe */
+  #CFC3FF 40px,  /* Slightly darker ending color of the stripe */
+  #CFC3FF 60px   /* Total width of two stripes (light + dark) */
+);
+
+        //background-color: $lavender !important;
+      }
+      .bg-sourLemon {
+        
+        background: repeating-linear-gradient(
+  45deg,         /* Angle of stripes */
+  #FFEAA7,       /* Lighter starting color of the stripe */
+  #FFEAA7 40px,  /* Lighter width of the stripe */
+  #FFD65C 40px,  /* Slightly darker ending color of the stripe */
+  #FFD65C 60px   /* Total width of two stripes (light + dark) */
+);
+//background-color: $sourLemon !important;
+      }
+      
+      .bg-lavender-strip{
+
+        background: repeating-linear-gradient(
+    45deg,         /* Angle of stripes */
+    #CFC3FF,       /* Lighter starting color of the stripe */
+    #CFC3FF 40px,  /* Lighter width of the stripe */
+    #BFB1FF 40px,  /* Slightly darker ending color of the stripe */
+    #BFB1FF 60px   /* Total width of two stripes (light + dark) */
+  );
+
+    }
+
+    .bg-0{
+      background: repeating-linear-gradient(
+        45deg,         /* Angle of stripes */
+        #FDD5BC,       /* Lighter starting color of the stripe */
+        #FDD5BC 40px,  /* Lighter width of the stripe */
+        #FBC4A2 40px,  /* Slightly darker ending color of the stripe */
+        #FBC4A2 60px   /* Total width of two stripes (light + dark) */
+      );
+    }
+.bg-1{
+  background: repeating-linear-gradient(
+    45deg,         /* Angle of stripes */
+    #FFD6D6,       /* Slightly lighter starting color of the stripe */
+    #FFD6D6 40px,  /* Slightly lighter width of the stripe */
+    #FFB3B3 40px,  /* Slightly darker color for the stripe */
+    #FFB3B3 60px   /* Total width of two stripes (light + dark) */
+  ) !important;
+  
+  
+}
+
+.bg-2{
+  background: repeating-linear-gradient(
+    45deg,         /* Angle of stripes */
+    #CFC3FF,       /* Lighter starting color of the stripe */
+    #CFC3FF 40px,  /* Lighter width of the stripe */
+    #BFB1FF 40px,  /* Slightly darker ending color of the stripe */
+    #BFB1FF 60px   /* Total width of two stripes (light + dark) */
+  );
+}
+
+.bg-3{
+  background: repeating-linear-gradient(
+    45deg,         /* Angle of stripes */
+    #C5E8D0,       /* Lighter starting color of the stripe */
+    #C5E8D0 40px,  /* Lighter width of the stripe */
+    #A9D7BB 40px,  /* Slightly darker ending color of the stripe */
+    #A9D7BB 60px   /* Total width of two stripes (light + dark) */
+  )
+}
+
+.bg-4{
+  background: repeating-linear-gradient(
+    45deg,        /* Angle of stripes */
+    #EEE8AA,      /* Lighter starting color of the stripe */
+    #EEE8AA 40px, /* Lighter width of the stripe */
+    #ebe7c3 40px, /* Slightly lighter dark color */
+    #ebe7c3 60px  /* Total width of two stripes (light + dark) */
+  ) !important;
+  
+
+}
+
+  }
+  
+  

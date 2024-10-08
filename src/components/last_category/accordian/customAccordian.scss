@@ -1,0 +1,153 @@
+@import "../../../scss/variable.scss";
+
+.accordion__container {
+    width: 100%;
+    margin-bottom: 10px;
+  
+    .filter__title {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+      background-color: #fdd5bc;
+      padding: 8px 12px;
+      border-radius: 7px;
+      align-items: center;
+      cursor: pointer;
+  
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+      }
+  
+      .title__icon {
+        height: 26px;
+        width: 26px;
+        margin-left: 3px;
+        transition: all 0.5s ease-in-out;
+  
+        &.open__accordion {
+          transform: rotate(0deg); // Rotate when open
+          margin-right: 10px;
+        }
+  
+        &.close__accordian {
+          transform: rotate(-90deg); // Default position
+          margin-right: 10px;
+        }
+      }
+    }
+  
+    .filter__content {
+      margin-right: 6px;
+      width: 100%;
+  
+      ul {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+        padding: 0px;
+  
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          padding: 7px;
+          cursor: pointer;
+  
+          .check__box__color {
+            .main__check__box {
+              height: 30px;
+              width: 30px;
+              border: 2px solid #808080;
+              border-radius: 20px;
+              margin-left: 5px;
+              cursor: pointer;
+              position: relative;
+  
+              .check__box__image {
+                position: absolute;
+                width: 18px;
+                height: 26px;
+                top: -3px;
+                left: 5px;
+                visibility: hidden;
+              }
+            }
+  
+            &:hover {
+              .main__check__box {
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  
+                // .check__box__image {
+                //   visibility: visible;
+                // }
+              }
+            }
+          }
+        }
+      }
+    }
+    .bg-blue {
+        background-color: #74b9ff !important;
+      }
+    
+      .bg-orange {
+        background-color: #ff7675 !important;
+      }
+    
+      .bg-red {
+        background-color: #f53b57 !important;
+      }
+    
+      .bg-grey {
+        background-color: grey !important;
+      }
+    
+      .bg-white {
+        background-color: #fff !important;
+      }
+    
+      .bg-yellow {
+        background-color: yellow !important;
+      }
+    
+      .bg-lemon {
+        background-color: #2d3436 !important;
+      }
+    
+      .bg-pink {
+        background-color: pink !important;
+      }
+    
+      .bg-brown {
+        background-color: #dabb9f !important;
+      }
+    
+      .bg-lightgreen {
+        background-color: green !important;
+      }
+    
+        .bg-pale {
+        background-color: #eee8aa !important;
+      }
+  
+      .bg-coral {
+          background-color: $coral !important;
+        }
+  
+        .bg-tea {
+          background-color: $tea !important;
+        }
+  
+        .bg-lavender {
+          background-color: $lavender !important;
+        }
+        .bg-sourLemon {
+          background-color: $sourLemon !important;
+        }
+        
+  }
+  

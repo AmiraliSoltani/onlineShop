@@ -1,0 +1,126 @@
+@import './../../../scss/variable.scss';
+@import './../../../scss/mixins.scss';
+
+
+
+
+.first__box {
+    // background-color: $lightgray;
+    width: 98%;
+    border-radius: 10px;
+    display: flex;
+    direction: ltr;
+    align-items: center;
+    justify-self: start;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    margin-left: 25px;
+
+    .number__of__product {
+        background-color:#FDD5BC ;
+        span {
+            font-size: 16px;
+        }
+
+        .number {
+            color: $orange;
+            font-weight: bold;
+            margin-left: 5px;
+            margin-right: 6px;
+        }
+    }
+.advanced__search{
+    display: none;
+    background-color: #ff7675;
+    color: white;
+    padding: 7px;
+    border-radius: 4px;
+    margin-right: 20px;
+    font-weight: 500;
+    font-size: 13px;
+    cursor: pointer;
+                                @include mq(900) {
+                            display: flex;
+                                                                           }
+}
+    .one__top__filter {
+        background-color: #FDD5BC;
+        color: white;
+        border-radius: 10px;
+        font-size: 15px;
+        margin-right: 0px;
+        position: relative;
+        padding: 6px 6px 6px 22px;
+        cursor: pointer;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        margin-right:10px;
+
+        .separator {
+            height: 35px;
+            width: 2px;
+            background-color: gray;
+            margin-left: 36px;
+        }
+
+        .name__of__filter {
+            font-size: 14px;
+            position: relative;
+
+            &::before {
+                content: "";
+                display: inline-block;
+                height: 15px;
+                width: 4px;
+                background-color: gray;
+                position: absolute;
+                left: -13px;
+                top: 3px;
+                background-color: $orange;
+                transform: rotate(45deg);
+                transition: all 0.5s;
+                -webkit-transition: all 0.8s;
+                -moz-transition: all 0.8s;
+                -ms-transition: all 0.8s;
+                -o-transition: all 0.8s;
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                height: 15px;
+                width: 4px;
+                background-color: gray;
+                position: absolute;
+                left: -13px;
+                top: 3px;
+                background-color: $orange;
+                transform: rotate(-45deg);
+                transition: all 0.5s;
+                -webkit-transition: all 0.8s;
+                -moz-transition: all 0.8s;
+                -ms-transition: all 0.8s;
+                -o-transition: all 0.8s;
+            }
+        }
+
+        &:hover {
+            color: $orange;
+
+            .name__of__filter {
+                &::before {
+                    transform: rotate(-90deg);
+                    background-color: $orange;
+                }
+
+                &::after {
+                    transform: rotate(90deg);
+                    background-color: $orange;
+                }
+
+            }
+        }
+    }
+
+}

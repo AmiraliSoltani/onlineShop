@@ -1,0 +1,141 @@
+.accordion__container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.accordion__container .filter__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  width: 100%;
+  background-color: #fdd5bc;
+  padding: 8px 7px;
+  border-radius: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.accordion__container .filter__title span {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  padding: 0px 70px 0px 0px;
+}
+.accordion__container .filter__title .title__icon {
+  height: 26px;
+  width: 26px;
+  margin-left: 3px;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.accordion__container .filter__title .title__icon.open__accordion {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  margin-right: 10px;
+}
+.accordion__container .filter__title .title__icon.close__accordian {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  margin-right: 10px;
+}
+.accordion__container .filter__content {
+  margin-right: 6px;
+  width: 100%;
+}
+.accordion__container .filter__content ul {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0px;
+}
+.accordion__container .filter__content ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  padding: 7px;
+  cursor: pointer;
+}
+.accordion__container .filter__content ul li .check__box__color .main__check__box {
+  height: 30px;
+  width: 30px;
+  border: 2px solid #808080;
+  border-radius: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.accordion__container .filter__content ul li .check__box__color .main__check__box .check__box__image {
+  position: absolute;
+  width: 18px;
+  height: 26px;
+  top: -3px;
+  left: 5px;
+  visibility: hidden;
+}
+.accordion__container .filter__content ul li .check__box__color:hover .main__check__box {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+}
+.accordion__container .bg-blue {
+  background-color: #74b9ff !important;
+}
+.accordion__container .bg-orange {
+  background-color: #ff7675 !important;
+}
+.accordion__container .bg-red {
+  background-color: #f53b57 !important;
+}
+.accordion__container .bg-grey {
+  background-color: grey !important;
+}
+.accordion__container .bg-white {
+  background-color: #fff !important;
+}
+.accordion__container .bg-yellow {
+  background-color: yellow !important;
+}
+.accordion__container .bg-lemon {
+  background-color: #2d3436 !important;
+}
+.accordion__container .bg-pink {
+  background-color: pink !important;
+}
+.accordion__container .bg-brown {
+  background-color: #dabb9f !important;
+}
+.accordion__container .bg-lightgreen {
+  background-color: green !important;
+}
+.accordion__container .bg-pale {
+  background-color: #eee8aa !important;
+}
+.accordion__container .bg-coral {
+  background-color: #FDD5BC !important;
+}
+.accordion__container .bg-tea {
+  background-color: #C5E8D0 !important;
+}
+.accordion__container .bg-lavender {
+  background-color: #e2dbff !important;
+}
+.accordion__container .bg-sourLemon {
+  background-color: #ffeaa7 !important;
+}/*# sourceMappingURL=customAccordian.css.map */

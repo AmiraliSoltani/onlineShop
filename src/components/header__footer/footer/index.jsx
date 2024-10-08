@@ -1,127 +1,156 @@
+import React, { useContext } from 'react';
+import "./footer.scss";
+import "./../../../css/footer.css";
+import blurContext from '../../contexts/blur';
 
-import React from 'react'
-import "./footer.scss"
-import "./../../../css/footer.css"
 
-function footer() {
+function Footer() {
+  const {blurState,blurDispatch}=useContext(blurContext)
+  // console.log("blur",blurState)
+  // blurDispatch({type:"activeBlur"})
+
   return (
-      <footer>
-        <div className="mainfooter">
-          <div className="container">
-            <div className="footer__top">
-              <div className="footer__top__image image1">
-                <img src={require("./../../../assets/icons/free.png")} alt="" />
-                <span> ارسال رایگان کالاهای بالای 200 هزار تومان</span>
-              </div>
-              <div className="footer__top__image image2">
-                <img src={require("./../../../assets/icons/24.png")} alt="" />
-                <span> بسته بندی و ارسال کالا کمتر از 24 ساعت </span>
-              </div>
-              <div className="footer__top__image image3">
-                <img
-                  src={require("./../../../assets/icons/shield.png")}
-                  alt=""
-                />
-                <span> گارانتی اصل بودن تمام کالا ها </span>
-              </div>
-              <div className="footer__top__image image4">
-                <img
-                  src={require("./../../../assets/icons/time-and-date.png")}
-                  alt=""
-                />
-                <span>پشتیبانی 24 ساعته و 7 روز هفته </span>
-              </div>
+    <footer  className={blurState.blur ? 'blurred' : ''}>
+      <div className="mainfooter">
+        <div className="container">
+          <div className="footer__top">
+            <div className="footer__top__image image1">
+              <img src={require("./../../../assets/icons/free.png")} alt="" />
+              <span>Free shipping on first order</span>
             </div>
-            <hr />
+            <div className="footer__top__image image2">
+              <img src={require("./../../../assets/icons/24.png")} alt="" />
+              <span>Fast packaging & shipping</span>
+            </div>
+            <div className="footer__top__image image3">
+              <img src={require("./../../../assets/icons/shield.png")} alt="" />
+              <span>Authenticity guarantee</span>
+            </div>
+            <div className="footer__top__image image4">
+              <img
+                src={require("./../../../assets/icons/time-and-date.png")}
+                alt=""
+              />
+              <span>24/7 Customer support</span>
+            </div>
           </div>
+          <hr />
+        </div>
 
-          <div className="footer__middle">
-            <div className="container">
-              <div className="footer__middle__main">
-                <div className="footer__middle__right">
+        <div className="footer__middle">
+          <div className="container">
+            <div className="footer__middle__main">
+            <div className="footer__middle__left">
+                <div className="footer__middle__left__first">
+                  <span>Follow us on social media</span>
                   <ul>
                     <li>
-                      <span>راهنمای خرید</span>
-                      <ul className="sub_cat">
-                        <li>نحوه ارسال سفارش</li>
-                        <li className="second">رویه ارسال سفارش</li>
-                        <li className="third">شیوه های پرداخت</li>
-                      </ul>
+                      <img
+                        src={require("./../../../assets/icons/011-youtube.png")}
+                        alt=""
+                      />
                     </li>
                     <li>
-                      <span>خدمات مشتریان</span>
-                      <ul className="sub_cat">
-                        <li> پرسش های متداول</li>
-                        <li className="second">رویه بازگرداندن کالا</li>
-                        <li className="third">شرایط استفاده</li>
-                        {/* <li>حریم خصوصی</li> */}
-                      </ul>
+                      <img
+                        src={require("./../../../assets/icons/035-whatsapp.png")}
+                        alt=""
+                      />
                     </li>
                     <li>
-                      <span>خدمات فروش</span>
-                      <ul className="sub_cat">
-                        <li>نحوه ارسال سفارش</li>
-                        <li className="second">رویه ارسال سفارش</li>
-                        <li className="third">شیوه های پرداخت</li>
-                      </ul>
+                      <img
+                        src={require("./../../../assets/icons/025-instagram.png")}
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src={require("./../../../assets/icons/029-telegram.png")}
+                        alt=""
+                      />
                     </li>
                   </ul>
                 </div>
-                <div className="footer__middle__left">
-                  <div className="footer__middle__left__first">
-                    <span>ما را در شبکه های اجتماعی دنبال کنید</span>
-                    <ul>
-                      <li>
-                        <img
-                          src={require("./../../../assets/icons/011-youtube.png")}
-                          alt=""
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src={require("./../../../assets/icons/035-whatsapp.png")}
-                          alt=""
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src={require("./../../../assets/icons/025-instagram.png")}
-                          alt=""
-                        />
-                      </li>
-                      <li>
-                        <img
-                          src={require("./../../../assets/icons/029-telegram.png")}
-                          alt=""
-                        />
-                      </li>
-                    </ul>
+                <div className="footer__middle__left__second">
+                  <div className="icon__image">
+                    <img
+                      src={require("./../../../assets/icons/telephone2.png")}
+                      alt=""
+                    />
                   </div>
-                  <div className="footer__middle__left__second">
-                    <div className="icon__image">
-                      <img
-                        src={require("./../../../assets/icons/phone-call.png")}
-                        alt=""
-                      />
-                    </div>
-                    <div className="phone__number">09035412827</div>
-                  </div>
+                  <div className="phone__number">(514) 815-0492</div>
                 </div>
               </div>
-              <hr className="line" />
-            </div>
-          </div>
-          <div className="footer__bottom">
-            <div className="container">
-              <div className="footer__info">
-                طراح وب سایت : &nbsp;
-                <div className="developer__name">امیر سلطانی</div>
+              <div className="footer__middle__right">
+                <ul>
+                  <li>
+                    <span>Shopping Guide</span>
+                    <ul className="sub_cat">
+                      <li className='hover-item'>
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Shipping Information</span> 
+                        </li>
+                        <li className="second hover-item">
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Delivery Details</span> 
+                        </li>
+                        <li className="third hover-item">
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Payment Methods</span> 
+                        </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Customer Services</span>
+                    <ul className="sub_cat">
+                    <li className='hover-item'>
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">FAQ & Support</span> 
+                        </li>
+                        <li className="second hover-item">
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Return Guidelines</span> 
+                        </li>
+                        <li className="third hover-item">
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Terms & Policies</span> 
+                        </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <span>Exclusive Offers</span>
+                    <ul className="sub_cat">
+                    <li className='hover-item'>
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Loyalty Program</span> 
+                        </li>
+                        <li className="second hover-item">
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Deals & Promotions</span> 
+                        </li>
+                        <li className="third hover-item">
+                        <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
+                         <span className="text">Referral Program</span> 
+                        </li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
+         
+            </div>
+            <hr className="line" />
+          </div>
+        </div>
+        <div className="footer__bottom">
+          <div className="container">
+            <div className="footer__info">
+              Website Designer:
+              <div className="developer__name">Amirali Soltani</div>
             </div>
           </div>
         </div>
-      </footer>
-    );
+      </div>
+    </footer>
+  );
 }
 
-export default footer
+export default Footer;

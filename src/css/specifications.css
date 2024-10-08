@@ -1,19 +1,17 @@
 .main__content {
-  direction: rtl;
+  direction: ltr;
   margin-top: 15px;
-  text-align: right;
+  text-align: left;
 }
-
 .main__content th {
   font-size: 17px;
+  margin-left: 3px;
 }
-
 .main__content td {
+  margin-left: 3px;
   font-size: 17px;
 }
-
 .main__content .title {
   width: 25%;
   min-width: 143px;
-}
-/*# sourceMappingURL=specifications.css.map */
+}/*# sourceMappingURL=specifications.css.map */

@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./../../../css/header.css";
 import Menu from "./menu";
 import { Link } from "react-router-dom";
-//import SigninLoginBox from "./register/signin__login__box";
+import SigninLoginBox from "./register/signin__login__box";
 import Search from "./search";
 import Basket from "./basket/basket.jsx";
+import {getToken} from "./../../../services/authenticate"
+import {addToFavourites, getFavourites, removeFromFavourites} from "./../../../services/userData"
+import loginContext from "../../contexts/loginContext";
+import {ReadTokenInformation} from "../../../services/ReadTokenInformation"
 
 
 function index() {
+
+  ReadTokenInformation();
+
+
   return (
     <div>
     <header>
       <div className="container">
         <div className="header__content">
-          <div className="header__right">
+        <div className="header__right">
+            <Basket></Basket>
+            <SigninLoginBox className1="regular"></SigninLoginBox>
+          </div>
+          <div className="header__left">
+                <Search></Search>
             <div className="logo">
               <Link to="/">
                 <img
@@ -22,11 +35,6 @@ function index() {
                 />
               </Link>
             </div>
-            <Search></Search>
-          </div>
-          <div className="header__left">
-            {/* <SigninLoginBox className1="regular"></SigninLoginBox> */}
-            <Basket></Basket>
           </div>
         </div>
       </div>

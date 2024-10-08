@@ -1,132 +1,311 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react"; 
 import "./../../../../css/menu.css";
 import { Link } from "react-router-dom";
-import { Fragment } from "react";
-//import SigninLoginBox from "./../register/signin__login__box";
+import SignIn__login__box from "./../register/signin__login__box";
 import menuSearchContext from "../../../contexts/menuSearchContext";
-import all from "../../../../json/categories.json"
+import all from "../../../../json/categories.json";
+import APIProduct from "../../../../services/api-product";
+import blurContext from "../../../contexts/blur";
+
 
 function Menu() {
-  const {menuSearchState, menuSearchDispatch}= useContext(menuSearchContext)
-  let allCategories=all.data
-  console.log(allCategories)
-  //allCategories=allCategories.data
- 
+  const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
+  const [allCategories, setAllCategories] = useState([]);
+  const {blurState,blurDispatch}=useContext(blurContext)
 
-  // componentDidMount() {
-  //   this.props.loadattributeItem();
-  //   this.props.loadAllProducts();
-  //   let { allCategories } = this.props;
-  //   this.setState({ allCategories });
-  // }
+  useEffect(() => {
+    const allCategoriesAPI = new APIProduct('/categories');
+    allCategoriesAPI.getAll()
+      .then(data => {
+        setAllCategories(data);
+      })
+      .catch(error => {
+        console.error('Error fetching categories:', error);
+      });
+  }, []);
 
   const background = (i1) => {
-    let background;
-    if (i1.id === 1) background = "background1";
-    else if (i1.id === 2) background = "background2";
-    else if (i1.id === 3) background = "background3";
-    return background;
+    if (i1.id === 1) return "background1";
+    return "";
   };
 
-  return (
-    <div className="main__menu">
-    <div className="container">
-      <div className="mobile__menu">
-        <img
-          src={require("./../../../../assets/icons/menu-2.png")}
-          onClick={() => {menuSearchDispatch({type:"toggleMenu"})}}
-          alt=""
-        />
-        {/* <SigninLoginBox></SigninLoginBox> */}
-      </div>
-      <div className="menu1">
+  const menuContent=(cat)=>{
+   if(cat.id==4){
+    return(
+
+    <ul className="subcategories-grid">
+      <div className="sub-category-column">
+          <span className="main__title">Shop by product</span>
         <ul>
           {allCategories
-            .filter((c1) => c1.parentId === 0)
-            .map((i1) => (
-              <li style={{ fontWeight: "500" }} key={i1.id}>
-                <Link to={`/category/${i1.id}`}>{i1.title}</Link>
-                <ul className={background(i1)}>
-                  {allCategories
-                    .filter((c2) => c2.parentId === i1.id)
-                    .map((i2) => (
-                      <li key={i2.id}>
-                        <Link to={`/category/${i2.id}`}>
-                          <div className="cat__name">{i2.title}</div>
-                        </Link>
-
-                        <ul className="sub__cat__name">
-                          {allCategories.filter(
-                            (c3) => c3.parentId === i2.id
-                          ).length <= 7 &&
-                            allCategories
-                              .filter((c3) => c3.parentId === i2.id)
-                              .map((i3) => (
-                                <Link
-                                  to={`/last__category/${i3.id}`}
-                                  key={i3.id}
-                                >
-                                  <li>{i3.title}</li>
-                                </Link>
-                              ))}
-
-                          {allCategories.filter(
-                            (c3) => c3.parentId === i2.id
-                          ).length > 7 && (
-                            <Fragment>
-                              {allCategories
-                                .filter((c3) => c3.parentId === i2.id)
-                                .slice(0, 5)
-                                .map((i3) => (
-                                  <Link
-                                    to={`/last__category/${i3.id}`}
-                                    key={i3.id}
-                                  >
-                                    <li>{i3.title}</li>
-                                  </Link>
-                                ))}
-                              {allCategories
-                                .filter((c3) => c3.parentId === i2.id)
-                                .slice(5, 10)
-                                .map((i3) => (
-                                  <Link
-                                    to={`/last__category/${i3.id}`}
-                                    key={i3.id}
-                                  >
-                                    <li>{i3.title}</li>
-                                  </Link>
-                                ))}
-                            </Fragment>
-                          )}
-                        </ul>
-                      </li>
-                    ))}
-                </ul>
-              </li>
+            .filter((c3) => c3.parentId === cat.id)
+            .map((i3) => (
+              <Link to={`/lastCategory/${i3.id}`} key={i3.id}>
+                <li className="sub__title">{i3.description}</li>
+              </Link>
             ))}
         </ul>
       </div>
+
+      {/* Example of Additional Content (images, links, etc.) */}
+      <div className="sub-category-column">
+      <span className="main__title">Shop by Occasion</span>
+<ul class="occasion-list">
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
+<span>Label</span>
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+</ul>
+
+      </div>
+      <div className="sub-category-column">
+      <span className="main__title">Shop by Trending</span>
+      <ul class="trending-list">
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
+<span>Label</span>
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+
+
+</ul>
+      </div>
+      <div className="sub-category-column">
+      <img className="first__image"
+src={require("./../../../../assets/banners/h85.jpg")}
+alt=""
+/>
+        <img
+src={require("./../../../../assets/banners/h85.jpg")}
+alt=""
+/>
+
+
+
+      </div>
+    </ul>
+    )
+   }
+
+   else if(cat.id==30){
+    return(
+
+    <ul className="subcategories-grid">
+      <div className="sub-category-column">
+          <span className="main__title">Shop by product</span>
+        <ul>
+          {allCategories
+            .filter((c3) => c3.parentId === cat.id)
+            .map((i3) => (
+              <Link to={`/lastCategory/${i3.id}`} key={i3.id}>
+                <li className="sub__title">{i3.title}</li>
+              </Link>
+            ))}
+        </ul>
+      </div>
+
+      {/* Example of Additional Content (images, links, etc.) */}
+      <div className="sub-category-column">
+      <span className="main__title">Shop by Occasion</span>
+<ul class="occasion-list">
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
+<span>Label</span>
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+</ul>
+
+      </div>
+      <div className="sub-category-column">
+      <span className="main__title">Shop by Trending</span>
+      <ul class="trending-list">
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
+<span>Label</span>
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
+<span>Label</span>
+
+</div>
+</li>
+
+
+
+</ul>
+      </div>
+      <div className="sub-category-column">
+      <img className="first__image"
+src={require("./../../../../assets/banners/h85.jpg")}
+alt=""
+/>
+        <img
+src={require("./../../../../assets/banners/h85.jpg")}
+alt=""
+/>
+
+
+
+      </div>
+    </ul>
+    )
+   }
+  }
+
+  return (
+    <div className={blurState.blur ? 'main__menu blurred' : 'main__menu'}>
+      <div className="container">
+        <div className="mobile__menu">
+          <img
+            src={require("./../../../../assets/icons/menu-2.png")}
+            onClick={() => { menuSearchDispatch({ type: "toggleMenu" }) }}
+            alt=""
+          />
+          <SignIn__login__box />
+        </div>
+        <div className="menu1">
+          <ul>
+ 
+            {/* Show only subcategories of category with id 1 */}
+            {allCategories
+              .filter((c2) => c2.parentId === 1)
+              .map((i2) => (
+                <li key={i2.id} style={{ fontWeight: "500" }}>
+    <Link to={`/lastCategory/${i2.id}`}>{i2.title}</Link>
+    {menuContent(i2)}
+    </li>
+              ))}
+
+                         {/* Add Brands and Sale options */}
+            <li><Link to="/brands">Brands</Link></li>
+            <li><Link to="/sale">Sale</Link></li>
+
+          </ul>
+        </div>
+
+        {/* {<Brand></Brand>} */}
+      </div>
     </div>
-  </div>
-  )
+  );
 }
 
-export default Menu
-
-
-
-// const mapStateToProps = (state) => ({
-//   allCategories: state.api.apiattributeItem.categories,
-//   statusOfMenu: state.menu.open,
-// });
-
-// function mapDispatchToProps(dispatch) {
-//   return {
-//     loadattributeItem: () => dispatch(loadattributeItem()),
-//     loadAllProducts: () => dispatch(loadAllProducts()),
-//     openMenu: () => dispatch(openMenu()),
-//     closeMenu: () => dispatch(closeMenu()),
-//   };
-// }
-
-// export default connect(mapStateToProps, mapDispatchToProps)(Menu);
+export default Menu;

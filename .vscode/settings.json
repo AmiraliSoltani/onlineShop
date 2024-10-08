@@ -1,0 +1,16 @@
+{
+    "liveSassCompile.settings.formats": [
+      {
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/src/css"  // Save all compiled CSS files into src/css
+      }
+    ],
+    "liveSassCompile.settings.generateMap": true,  // Generate source maps
+    "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+    "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**"
+    ]
+  }
+  

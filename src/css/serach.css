@@ -1,5 +1,6 @@
 .search__box {
-  margin-right: 50px;
+  margin-left: 50px;
+  direction: ltr;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,74 +9,78 @@
           align-items: center;
   position: relative;
 }
-
 @media only screen and (max-width: 992px) {
   .search__box {
-    margin-right: 20px;
+    margin-left: 20px;
   }
 }
-
 @media only screen and (max-width: 480px) {
   .search__box {
-    margin-right: 10px;
+    margin-left: 10px;
   }
 }
-
 @media only screen and (max-width: 992px) {
   .search__box .lets__go {
     display: none;
   }
 }
-
+.search__box .striped-background-search {
+  background: repeating-linear-gradient(45deg, #ffffff, #ffffff 20px, #fafafa 20px, #fafafa 40px);
+  border-radius: 8px; /* Optional: to give rounded corners */
+}
+.search__box .striped-background-search2 {
+  background: repeating-linear-gradient(45deg, #ffffff, #ffffff 20px, #f2f2f2 20px, #f2f2f2 40px);
+  border-radius: 8px; /* Optional: to give rounded corners */
+}
+.search__box .striped-background-search2:hover {
+  background: repeating-linear-gradient(45deg, #f2f2f2, #f2f2f2 20px, #ffffff 20px, #ffffff 40px);
+}
+.search__box .focus {
+  width: 420px !important;
+  outline: none !important;
+  border: none !important; /* Optional: remove border as well */
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-radius: 4px 4px 0px 0px;
+}
 .search__box input {
-  width: 256px;
+  width: 250px;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-
 @media only screen and (max-width: 435px) {
   .search__box input {
     width: 48vw;
   }
 }
-
-.search__box input:focus {
-  width: 368px;
+.search__box input:focus .dropdown__search {
+  visibility: visible;
 }
-
 @media only screen and (max-width: 992px) {
   .search__box input:focus {
     width: 256px;
   }
 }
-
 @media only screen and (max-width: 435px) {
   .search__box input:focus {
     width: 48vw;
   }
 }
-
-.search__box input:focus .search__box .dropdown__search {
-  transform: perspective(400) rotate3d(1, 0, 0, 0);
-  -webkit-transform: perspective(400) rotate3d(1, 0, 0, 0);
-  -moz-transform: perspective(400) rotate3d(1, 0, 0, 0);
-  -ms-transform: perspective(400) rotate3d(1, 0, 0, 0);
-  -o-transform: perspective(400) rotate3d(1, 0, 0, 0);
-}
-
 .search__box button {
-  margin-right: 10px;
+  margin-left: 10px;
   width: 90px;
   background-color: #00b894;
   color: #fff;
   position: relative;
   overflow: hidden;
 }
-
+.search__box button:hover {
+  background-color: #00b894 !important;
+  color: #fff !important;
+}
 .search__box button:hover::after {
   left: 65px;
 }
-
 .search__box button::after {
   content: "";
   background-color: white;
@@ -87,90 +92,175 @@
   -webkit-transform: rotate(134deg);
           transform: rotate(134deg);
   opacity: 0.5;
-  left: -67px;
+  left: -49px;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-
+.search__box .visible {
+  opacity: 1 !important; /* Fully visible */
+  visibility: visible !important; /* Make it visible immediately */
+  -webkit-transition: opacity 0s ease-in, visibility 0s 0s;
+  transition: opacity 0s ease-in, visibility 0s 0s; /* No delay for visibility */
+}
 .search__box .dropdown__search {
   position: absolute;
-  left: 101px;
-  top: 41px;
+  left: 0px;
+  top: 52px;
   z-index: 100;
   background-color: #fff;
-  width: 368px;
-  -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  padding: 8px;
-  transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-  -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-  -moz-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-  -ms-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-  -o-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transform-origin: 50% 0;
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
+  width: 420px;
+  border-radius: 0px 0px 3px 3px;
+  padding: 0px 8px 8px 8px;
+  opacity: 0; /* Fully transparent */
+  visibility: hidden; /* Hidden */
+  /* Transition for opacity and visibility */
+  -webkit-transition: opacity 0.3s ease-out, visibility 0s 0.3s;
+  transition: opacity 0.3s ease-out, visibility 0s 0.3s; /* Visibility delay matches the opacity transition */
 }
-
 @media only screen and (max-width: 992px) {
   .search__box .dropdown__search {
     width: 256px;
     left: 0px;
   }
 }
-
 @media only screen and (max-width: 680px) {
   .search__box .dropdown__search {
     display: none;
   }
 }
-
 .search__box .dropdown__search .without__result {
-  background-color: #ffeaa7;
+  background-color: #FDD5BC;
   padding: 10px;
   text-align: center;
   font-size: 14px;
 }
-
 .search__box .dropdown__search .dropdown__search__main {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 7px 9px;
 }
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__header {
-  background-color: #ffeaa7;
-  padding: 5px;
+.search__box .dropdown__search .dropdown__search__main .line {
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__header .number__of__result {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-slide {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Centers the content vertically */
+  width: auto; /* This allows each slide to take its own width */
+  margin-right: 5px; /* Adjust the spacing between slides */
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-prev::before,
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-next::before {
+  position: absolute;
+  color: grey;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-prev::before {
+  left: 172px;
+  top: -35px;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-next::before {
+  right: 235px;
+  top: -35px;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .text {
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-align: center; /* Center text inside the item */
+  color: grey;
+  border: 1px solid;
+  border-color: lightgrey;
+  border-radius: 9px;
+  padding: 2px 0px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-icons {
+  margin-bottom: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body {
-  padding-top: 5px;
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-icons img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-icons .left2 img {
+  width: 18px;
+  height: 18px;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-icons .left2 span {
+  font-size: 15px;
+  color: grey;
+  margin-left: 5px;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__header {
+  padding: 5px;
+}
+.search__box .dropdown__search .dropdown__search__main .dropdown__search__header .line {
+  width: 100%;
+  height: 2px;
+  background-color: #ff7675;
+  margin-top: -4px;
+  margin-bottom: 1px;
+}
+.search__box .dropdown__search .dropdown__search__main .no-result {
+  color: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: -5px;
+}
+.search__box .dropdown__search .dropdown__search__main .no-result img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.search__box .dropdown__search .dropdown__search__main .suggestions-container {
+  max-height: 400px; /* Adjust to show around 6 items */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  width: 100%;
+  overflow-x: hidden;
+  /* Scrollbar styling for WebKit-based browsers (Chrome, Safari, newer Edge) */
+  /* Optional: Add hover effect for the scrollbar */
+  /* Firefox scrollbar styles (optional, for better cross-browser support) */
+  scrollbar-width: thin; /* Makes scrollbar thinner in Firefox */
+  scrollbar-color: #999 #f1f1f1; /* Thumb and track colors in Firefox */
+}
+.search__box .dropdown__search .dropdown__search__main .suggestions-container::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+.search__box .dropdown__search .dropdown__search__main .suggestions-container::-webkit-scrollbar-thumb {
+  background-color: #999; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Make the thumb round */
+  border: 2px solid transparent; /* Padding around the thumb */
+  background-clip: padding-box; /* Ensure padding remains */
+}
+.search__box .dropdown__search .dropdown__search__main .suggestions-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Make the track round */
+}
+.search__box .dropdown__search .dropdown__search__main .suggestions-container::-webkit-scrollbar-thumb:hover {
+  background-color: #777; /* Darken the scrollbar thumb on hover */
+}
+.search__box .dropdown__search .dropdown__search__main .suggestions-container .dropdown__search__body {
+  padding-top: 3px;
+  padding-bottom: 3px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,123 +269,36 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: auto;
+  text-decoration: none !important;
 }
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__right {
-  width: 24%;
+.search__box .dropdown__search .dropdown__search__main .suggestions-container .dropdown__search__body .left-search .icons {
+  width: 20px;
+  height: 20px;
 }
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__right img {
-  width: 75px;
-  height: 75px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  cursor: pointer;
+.search__box .dropdown__search .dropdown__search__main .suggestions-container .dropdown__search__body .left-search .main-word {
+  font-size: 15px;
+  text-decoration: none !important;
+  margin-left: 10px;
+  color: grey;
 }
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left {
-  width: 76%;
-  padding: 8px;
-  direction: rtl;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media only screen and (max-width: 992px) {
-  .search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left {
-    margin-right: 22px;
-  }
-}
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left .productName {
-  margin-bottom: 10px;
-  text-align: right;
-}
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left .productName > span {
+.search__box .dropdown__search .dropdown__search__main .suggestions-container .dropdown__search__body .categories {
+  text-decoration: none !important;
   font-size: 14px;
-  text-align: right;
-  margin-bottom: 5px;
-  cursor: pointer;
-  direction: rtl;
+  color: grey;
+  margin-right: 8px;
+  padding-top: 2px;
 }
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left .dropdown__search__body__left__icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  direction: rtl;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.search__box .dropdown__search .dropdown__search__main .suggestions-container .dropdown__search__body.selected,
+.search__box .dropdown__search .dropdown__search__main .suggestions-container .dropdown__search__body:hover {
+  background: repeating-linear-gradient(45deg, #ffffff, #ffffff 20px, #f2f2f2 20px, #f2f2f2 40px);
+  border-radius: 8px; /* Optional: to give rounded corners */
 }
-
-@media only screen and (max-width: 992px) {
-  .search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left .dropdown__search__body__left__icons {
-    margin-right: 14px;
-    width: 100%;
-  }
-}
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left .dropdown__search__body__left__icons .basket__price {
-  background-color: #ff7675;
-  height: 33px;
-  border-radius: 3%;
-  text-align: center;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 8px;
-  margin-left: 65px;
-}
-
-@media only screen and (max-width: 992px) {
-  .search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left .dropdown__search__body__left__icons .basket__price {
-    margin-left: 20px;
-  }
-}
-
-.search__box .dropdown__search .dropdown__search__main .dropdown__search__body .dropdown__search__body__left .dropdown__search__body__left__icons img {
-  width: 40px;
-  height: 40px;
-}
-
 .search__box .dropdown__search .dropdown__search__main hr {
-  height: 1px;
-  background-color: #ffeaa7;
+  height: 2px;
+  background-color: #747D8C;
   width: 100%;
   margin: 3px;
 }
-
 .search__box .dropdown__search .dropdown__search__main .dropdown__search__footer {
   width: 100%;
   background-color: #00cec9;
@@ -303,7 +306,6 @@
   cursor: pointer;
   border-radius: 3px;
 }
-
 .search__box .dropdown__search .dropdown__search__main .dropdown__search__footer .result__button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -317,18 +319,15 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .search__box .dropdown__search .dropdown__search__main .dropdown__search__footer .result__button img {
   width: 36px;
   height: 36px;
   margin-left: 10px;
 }
-
 .search__box .dropdown__search__active {
   transform: perspective(400) rotate3d(0, 0, 0, 0deg);
   -webkit-transform: perspective(400) rotate3d(0, 0, 0, 0deg);
   -moz-transform: perspective(400) rotate3d(0, 0, 0, 0deg);
   -ms-transform: perspective(400) rotate3d(0, 0, 0, 0deg);
   -o-transform: perspective(400) rotate3d(0, 0, 0, 0deg);
-}
-/*# sourceMappingURL=serach.css.map */
+}/*# sourceMappingURL=serach.css.map */

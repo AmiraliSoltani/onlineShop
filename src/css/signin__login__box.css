@@ -14,20 +14,12 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-left: 40px;
 }
-
 .signin__login__box .success__login__register {
   margin-left: 20px;
 }
-
 @media only screen and (max-width: 770px) {
   .signin__login__box .success__login__register {
     margin-right: 15px;
   }
-}
-
-.signin__login__box .success__login__register a {
-  text-align: right;
-}
-/*# sourceMappingURL=signin__login__box.css.map */
+}/*# sourceMappingURL=signin__login__box.css.map */

@@ -1,0 +1,95 @@
+@import './../../../scss/variable.scss';
+@import './../../../scss/mixins.scss';
+
+
+.second__box {
+    background-color: #e9ecef;
+    width: 98%;
+    height: 51px;
+    border-radius: 10px;
+    display: flex;
+    direction: ltr;
+    align-items: center;
+    justify-self: start;
+    flex-wrap: wrap;
+    margin-top: -2px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+
+    .product{
+        color:white;
+        font-size: 14px;
+        margin-left: 100px;
+    }
+    .sort__icon {
+        margin-left:5px;
+
+        img {
+            width: 35px;
+            height: 35px;
+            margin-left: 7px;
+            margin-right: 4px;
+
+            @include mq(550) {
+                display: none;      
+                                                }
+        }
+
+        span {
+            font-size: 14px;
+            margin-right: 12px;
+            @include mq(1000) {
+display: none;      
+                                }
+        }
+    }
+
+    .sort__name {
+        display: flex;
+        direction: rtl;
+        align-items: center;
+        justify-self: start;
+
+        .bg-orange{
+            background-color: lightgrey;
+                }
+                .c-white{
+                    color: white;
+                }
+
+        .number5{
+            @include mq(686) {
+                display: none;                                             }
+        }
+        .number3{
+            @include mq(474) {
+                display: none;                                             }
+        }
+        .number2{
+            @include mq(400) {
+                display: none;                                             }
+        }
+
+        span {
+            margin-right: 10px;
+            margin-left: 2px;
+            font-size: 13.4px;
+            cursor: pointer;
+            padding: 7px 10px;
+            background-color: white;
+            border-radius: 10px;
+
+            &:hover {
+
+
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+            }
+
+
+        }
+    }
+
+    .bg-orange{
+background-color: orange;
+    }
+}

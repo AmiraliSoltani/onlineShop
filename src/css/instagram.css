@@ -2,7 +2,6 @@
   margin-top: 30px;
   margin-bottom: 20px;
 }
-
 .instagram .salam {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,14 +15,12 @@
           align-items: center;
   direction: ltr;
 }
-
 .instagram .salam .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 101%;
 }
-
 .instagram .salam .title .top__offer__category {
   color: #000;
   padding: 5px 5px 3px 10px;
@@ -42,22 +39,15 @@
   position: relative;
   cursor: pointer;
   width: 100%;
-  direction: rtl;
+  direction: ltr;
   margin-bottom: 20px;
   height: 50px;
 }
-
-.instagram .salam .title .top__offer__category:hover .icon {
-  animation: icon__animate 2s infinite;
-  -webkit-animation: icon__animate 2s infinite;
-}
-
 .instagram .salam .title .top__offer__category .icon {
-  height: 41px;
-  width: 41px;
-  margin-left: 13px;
+  height: 35px;
+  width: 35px;
+  margin-right: 13px;
 }
-
 .instagram .salam .title .top__offer__category .arrow {
   position: absolute;
   height: 30px;
@@ -66,14 +56,12 @@
   right: 182px;
   visibility: hidden;
 }
-
 .instagram .salam .whole__pics {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-
 .instagram .salam .whole__pics .one__pic {
   cursor: pointer;
   position: relative;
@@ -82,7 +70,6 @@
   width: 250px;
   margin-left: 3px;
 }
-
 .instagram .salam .whole__pics .one__pic .pic .main__pic {
   height: 250px;
   width: 250px;
@@ -94,7 +81,6 @@
   -o-transition: all 2s ease-in-out 0s;
   overflow: hidden;
 }
-
 .instagram .salam .whole__pics .one__pic .pic .instagram__icon {
   position: absolute;
   width: 82px;
@@ -106,14 +92,12 @@
   -webkit-transition: all 0.6s;
   transition: all 0.6s;
 }
-
 .instagram .salam .whole__pics .one__pic:hover .main__pic {
   -webkit-filter: grayscale(2);
           filter: grayscale(2);
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
-
 .instagram .salam .whole__pics .one__pic:hover .instagram__icon {
   width: 65px;
   height: 65px;
@@ -121,4 +105,9 @@
   right: 60px;
   opacity: 1;
 }
-/*# sourceMappingURL=instagram.css.map */
+.instagram .lavender2 {
+  background-color: #CFC3FF;
+}
+.instagram .lavender-strip {
+  background: repeating-linear-gradient(45deg, #CFC3FF, #CFC3FF 40px, #BFB1FF 40px, #BFB1FF 60px);
+}/*# sourceMappingURL=instagram.css.map */

@@ -11,7 +11,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 40px;
  
 
 
@@ -22,9 +21,9 @@
     @include mq(770) {
 margin-right: 15px;
               }
-    a{
-        text-align: right;
-    }
+    // a{
+    //     text-align: right;
+    // }
 }
 
 

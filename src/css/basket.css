@@ -1,7 +1,13 @@
-.basket {
-  position: relative;
+.striped-background-basket {
+  background: repeating-linear-gradient(45deg, #ffffff, #ffffff 10px, #f2f2f2 10px, #f2f2f2 20px);
+  border-radius: 8px; /* Optional: to give rounded corners */
 }
 
+.basket {
+  position: relative;
+  margin-left: 70px;
+  direction: ltr;
+}
 .basket:hover .dropdown__basket {
   transform: perspective(400) rotate3d(1, 0, 0, 0);
   -webkit-transform: perspective(400) rotate3d(1, 0, 0, 0);
@@ -9,12 +15,10 @@
   -ms-transform: perspective(400) rotate3d(1, 0, 0, 0);
   -o-transform: perspective(400) rotate3d(1, 0, 0, 0);
 }
-
 .basket:hover .basket__image .image__1 {
   right: 0px;
   top: -65px;
 }
-
 .basket:hover .basket__image .image__2 {
   right: 0px;
   top: 7px;
@@ -24,21 +28,18 @@
   -ms-transform: rotate(360deg);
   -o-transform: rotate(360deg);
 }
-
 @media only screen and (max-width: 450px) {
   .basket:hover .basket__image .image__2 {
     right: 13px;
     top: 16px;
   }
 }
-
 .basket .basket__image {
   position: relative;
   width: 80px;
   height: 80px;
   overflow: hidden;
 }
-
 .basket .basket__image img {
   width: 70px;
   height: 70px;
@@ -50,21 +51,17 @@
   -ms-transition: all 0.5s cubic-bezier(0.05, 0.25, 0.38, 0.61);
   -o-transition: all 0.5s cubic-bezier(0.05, 0.25, 0.38, 0.61);
 }
-
 .basket .basket__image .image__1 {
   right: 0px;
   top: 7px;
 }
-
 .basket .basket__image .image__2 {
   right: 0px;
   top: 74px;
 }
-
 .basket .shop__item {
   position: absolute;
   background-color: #EAFF0C;
-  padding: 5px;
   border-radius: 50%;
   width: 22px;
   height: 22px;
@@ -73,13 +70,12 @@
   left: 8px;
   top: 46px;
 }
-
 .basket .dropdown__basket {
   position: absolute;
   z-index: 10;
   left: -124px;
   background-color: #fff;
-  width: 240px;
+  width: 260px;
   height: auto;
   -webkit-box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.3);
@@ -93,7 +89,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px;
+  padding: 3px;
   transform: perspective(400) rotate3d(1, 0, 0, -90deg);
   -webkit-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
   -moz-transform: perspective(400) rotate3d(1, 0, 0, -90deg);
@@ -107,26 +103,22 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-
 @media only screen and (max-width: 1370px) {
   .basket .dropdown__basket {
-    left: -18px;
+    left: -150px;
   }
 }
-
 @media only screen and (max-width: 766px) {
   .basket .dropdown__basket {
     display: none;
   }
 }
-
 .basket .dropdown__basket .without__product {
   text-align: center;
   font-size: 16px;
   padding: 8px;
   color: gray;
 }
-
 .basket .dropdown__basket .dropdown__basket__main {
   width: 100%;
   height: 100%;
@@ -139,7 +131,6 @@
           flex-direction: column;
   padding: 7px 9px;
 }
-
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__header {
   width: 100%;
   display: -webkit-box;
@@ -148,25 +139,34 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #ffeaa7;
-  height: 30px;
+  background: repeating-linear-gradient(45deg, #747D8C, #747D8C 20px, #666e7b 20px, #666e7b 40px) !important;
+  padding: 7px;
   text-align: center;
+  color: white;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__header .number__of__commodity {
-  font-size: 14px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__header .title2 {
+  font-size: 15px;
+  font-weight: 500;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  text-align: center;
+  margin-right: 5px;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body {
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__header .number__of__commodity {
+  font-size: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container {
+  max-height: 308px; /* Adjust to show around 6 items */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+  width: 100%;
+  overflow-x: hidden;
+}
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container .dropdown__basket__body {
   padding-top: 5px;
   width: 100%;
   display: -webkit-box;
@@ -175,64 +175,51 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: auto;
+  height: 125px;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body .dropdown__basket__body__right {
-  width: 50%;
-  height: 119px;
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container .dropdown__basket__body .dropdown__basket__body__right {
+  width: 56%;
+  height: 120px;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body .dropdown__basket__body__right img {
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container .dropdown__basket__body .dropdown__basket__body__right img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body .dropdown__basket__body__left {
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container .dropdown__basket__body .dropdown__basket__body__left {
   width: 50%;
   padding: 8px;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body .dropdown__basket__body__left span {
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container .dropdown__basket__body .dropdown__basket__body__left span {
   text-align: right;
   display: block;
   font-weight: 500;
   font-size: 13.5px;
+  text-align: left !important;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body .dropdown__basket__body__left .dropdown__basket__body__left__info {
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container .dropdown__basket__body .dropdown__basket__body__left .dropdown__basket__body__left__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
   padding-top: 2px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body .dropdown__basket__body__left .dropdown__basket__body__left__info:hover .trash__button img {
-  animation: trash__animate 2s infinite;
-  -webkit-animation: trash__animate 2s infinite;
-}
-
-.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body .dropdown__basket__body__left .dropdown__basket__body__left__info .trash__button img {
-  width: 27px;
-  height: 27px;
-  margin-right: 5px;
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__body__container .dropdown__basket__body .dropdown__basket__body__left .dropdown__basket__body__left__info .trash__button img {
+  margin-bottom: 3px;
+  width: 18px;
+  height: 18px;
+  margin-left: 5px;
   cursor: pointer;
 }
-
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer {
   padding: 3px;
   width: 100%;
-  height: 32px;
+  height: 28px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,10 +231,9 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer .dropdown__basket__footer__top {
   background-color: #ff7675;
-  height: 33px;
+  height: 23px;
   border-radius: 1%;
   text-align: center;
   color: white;
@@ -261,19 +247,98 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom {
   width: 100%;
 }
-
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .two-buttons {
+  margin-top: 8px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; /* Center the buttons horizontally */
+  display: grid;
+  grid-template-columns: 47% 47%; /* Two columns, each 35% width */
+  grid-gap: 10px; /* Optional: Add some space between the buttons */
+}
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .two-buttons .view-bag {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 100ms;
+  transition: color 100ms;
+  vertical-align: baseline;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .two-buttons .view-bag:hover {
+  background-color: #D43E76;
+}
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .two-buttons .check-out {
+  background-color: #88CEC6;
+  border-radius: 8px;
+  border-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: color 100ms;
+  transition: color 100ms;
+  vertical-align: baseline;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .two-buttons .check-out:hover {
+  background-color: #5FB0A6;
+}
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .success__button {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 35px;
+  height: 28px;
   margin-top: 10px;
-  background-color: #00b894;
+  background-color: #FDD5BC;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -281,17 +346,18 @@
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 3%;
-  color: white;
+  color: black;
   font-weight: 500;
-  cursor: pointer;
+  font-size: 14px;
 }
-
+.basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .success__button a {
+  color: black;
+}
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .success__button img {
   width: 25px;
   height: 25px;
   margin-left: 5px;
 }
-
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .seeMore__button {
   width: 100%;
   display: -webkit-box;
@@ -311,10 +377,8 @@
   font-weight: 500;
   cursor: pointer;
 }
-
 .basket .dropdown__basket .dropdown__basket__main .dropdown__basket__footer__bottom .seeMore__button img {
   width: 25px;
   height: 25px;
   margin-left: 5px;
-}
-/*# sourceMappingURL=basket.css.map */
+}/*# sourceMappingURL=basket.css.map */

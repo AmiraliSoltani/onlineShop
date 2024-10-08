@@ -1,10 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAIA,AAAA,IAAI,CAAA;EACA,eAAe,EAAE,MAAM;CAC1B",
-    "sources": [
-        "../components/main__page/main__page.scss",
-        "../scss/variable.scss"
-    ],
-    "names": [],
-    "file": "main__page.css"
-}
+{"version":3,"sources":["../components/main__page/main__page.scss","main__page.css"],"names":[],"mappings":"AAIA;EACI,uBAAA;ACHJ","file":"main__page.css"}
