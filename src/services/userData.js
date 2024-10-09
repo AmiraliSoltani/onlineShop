@@ -18,7 +18,7 @@ function deduplicateItems(items) {
 export async function addToFavourites(id) {
   try {
     const response = await axios.put(
-      `http://localhost:8080/favourites/${id}`,
+      `https://backend-register-online-shop.vercel.app/api/favourite/${id}`,
       {},
       {
         headers: {
@@ -43,7 +43,7 @@ export async function addToFavourites(id) {
 export async function removeFromFavourites(id) {
   try {
     const response = await axios.delete(
-      `http://localhost:8080/favourites/${id}`,
+      `https://backend-register-online-shop.vercel.app/api/favourite/${id}`,
       {
         headers: {
           "content-type": "application/json",
