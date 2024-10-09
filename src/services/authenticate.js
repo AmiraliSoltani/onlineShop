@@ -58,7 +58,7 @@ export function removeAuthenticateToken() {
 export async function authenticateUser(data) {
   console.log("hiiiiii");
   try {
-    const response = await axios.post("http://localhost:8080/login", {
+    const response = await axios.post("https://backend-register-online-shop.vercel.app/api/login", {
       username: data.username,
       password: data.password,
     });
@@ -107,13 +107,13 @@ export async function registerUser(data) {
       // SyncbackAndFront();
       console.log("yesssssssssssss");
 
-      console.log(response.data.message);
+      console.log('yesssssssssssss',response.data.message);
       
 
-      console.log(response.data.token);
+      console.log("yesssssssssssss",response.data.token);
       return [true, response.data.user];
     } else {
-      console.log(response.data.message);
+      console.log("noooooo",response.data.message);
       return [false, response.data.message];
     }
   } catch (error) {
