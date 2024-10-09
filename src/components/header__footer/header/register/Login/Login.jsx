@@ -63,7 +63,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
     const left = window.innerWidth / 2 - width / 2;
     const top = window.innerHeight / 2 - height / 2;
 
-    const url = "http://localhost:8080/auth/google";
+    const url = "https://backend-register-online-shop.vercel.app/auth/google";
     const features = `width=${width},height=${height},left=${left},top=${top},resizable,scrollbars=yes,status=1`;
 
     window.open(url, "_blank", features);

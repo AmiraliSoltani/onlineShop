@@ -46,7 +46,7 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal }) {
     const left = window.innerWidth / 2 - width / 2;
     const top = window.innerHeight / 2 - height / 2;
 
-    const url = 'http://localhost:8080/auth/google'; // Your backend Google OAuth URL
+    const url = 'https://backend-register-online-shop.vercel.app/auth/google'; // Your backend Google OAuth URL
     // const url = 'https://backend-register-online-shop-8ruek3xu5-amiralisoltanis-projects.vercel.app/auth/google'; // Your backend Google OAuth URL
 
     const features = `width=${width},height=${height},left=${left},top=${top},resizable,scrollbars=yes,status=1`;
