@@ -65,7 +65,7 @@ export async function removeFromFavourites(id) {
 
 export async function getFavourites() {
   try {
-    const response = await axios.get("http://localhost:8080/favourites", {
+    const response = await axios.get("https://backend-register-online-shop.vercel.app/api/favourites", {
       headers: {
         "content-type": "application/json",
         Authorization: `JWT ${getAuthenticateToken()}`,
@@ -88,7 +88,7 @@ export async function addToLastVisited(id) {
   try {
     console.log("hooooooooooooooooooooooooooooooooooo");
     const response = await axios.put(
-      `http://localhost:8080/lastVisited/${id}`,
+      `https://backend-register-online-shop.vercel.app/api/lastVisited/${id}`,
       {},
       {
         headers: {
@@ -112,8 +112,9 @@ export async function addToLastVisited(id) {
 
 export async function replaceLastSearches(newLastSearches) {
   try {
+    console.log("Replaced last searches2222222222:");
     const response = await axios.put(
-      `http://localhost:8080/replaceLastSearches`,
+      `https://backend-register-online-shop.vercel.app/api/replaceLastSearches`,
       newLastSearches,
       {
         headers: {
@@ -139,7 +140,7 @@ export async function replaceLastSearches(newLastSearches) {
 export async function replaceLastVisited(newLastVisitedProducts) {
   try {
     const response = await axios.put(
-      `http://localhost:8080/replaceLastVisited`,
+      `https://backend-register-online-shop.vercel.app/api/replaceLastVisited`,
       newLastVisitedProducts,
       {
         headers: {
@@ -163,10 +164,10 @@ export async function replaceLastVisited(newLastVisitedProducts) {
 
 
 export async function addToLastSearches(searchObject) {
-  console.log("searchhhhhhhhhhhhhhh");
+  console.log("searchhhhhhhhhhhhhhh",getAuthenticateToken());
   try {
     const response = await axios.put(
-      `http://localhost:8080/LastSearches/`,
+      `https://backend-register-online-shop.vercel.app/api/lastSearches`,
       searchObject,
       {
         headers: {
@@ -191,7 +192,7 @@ export async function addToLastSearches(searchObject) {
 export async function removelastSearches() {
   try {
     const response = await axios.delete(
-      `http://localhost:8080/LastSearches/`,
+      `https://backend-register-online-shop.vercel.app/api/lastSearches`,
       {
         headers: {
           "content-type": "application/json",
@@ -213,7 +214,7 @@ export async function removelastSearches() {
 
 export async function getLastSearches() {
   try {
-    const response = await axios.get("http://localhost:8080/LastSearches", {
+    const response = await axios.get("https://backend-register-online-shop.vercel.app/api/lastSearches", {
       headers: {
         "content-type": "application/json",
         Authorization: `JWT ${getAuthenticateToken()}`,
@@ -235,7 +236,7 @@ export async function getLastSearches() {
 export async function removeFromLastVisited(id) {
   try {
     const response = await axios.delete(
-      `http://localhost:8080/lastVisited/${id}`,
+      `https://backend-register-online-shop.vercel.app/api/lastVisited/${id}`,
       {
         headers: {
           "content-type": "application/json",
@@ -257,7 +258,7 @@ export async function removeFromLastVisited(id) {
 
 export async function getLastVisited() {
   try {
-    const response = await axios.get("http://localhost:8080/lastVisited", {
+    const response = await axios.get("https://backend-register-online-shop.vercel.app/api/lastVisited", {
       headers: {
         "content-type": "application/json",
         Authorization: `JWT ${getAuthenticateToken()}`,
@@ -280,7 +281,7 @@ export async function replaceShoppingCard(shoppingCard) {
   try {
     const deduplicatedShoppingCard = deduplicateItems(shoppingCard); // Deduplicate before sending
     const response = await axios.put(
-      `http://localhost:8080/shoppingCard/`,
+      `https://backend-register-online-shop.vercel.app/api/shoppingCard`,
       deduplicatedShoppingCard,
       {
         headers: {
