@@ -19,7 +19,7 @@
   bottom: -100%; /* Initially hidden below the viewport */
   left: 0;
   right: 0;
-  height: 86%; /* Adjust based on your design */
+  height: 100%; /* Adjust based on your design */
   background-color: white;
   -webkit-box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
@@ -32,7 +32,7 @@
 /* Visible state when the page is activated */
 @media only screen and (max-width: 900px) {
   .slide-up-page.visible {
-    bottom: 0; /* Slide-up to show the component */
+    bottom: -83px; /* Slide-up to show the component */
     -webkit-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out; /* Slide-up effect */
   }
