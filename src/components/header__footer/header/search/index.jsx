@@ -554,10 +554,13 @@ console.log("result5",words)
   // };
 
   const openSearch = () => {
+    console.log("hi23233")
     // Ensure the dropdown is visible
     setInputClassName("form-control mt-3 mb-3 focus")
     setClassName("dropdown__search visible");
     blurDispatch({ type: "activeBlur" });
+    setIsVisible(true);
+
   };
   
   const closeSearch = () => {
@@ -566,6 +569,7 @@ console.log("result5",words)
     blurDispatch({ type: "disactiveBlur" });
     setClassName('dropdown__search');
     setSelectedIndex(-1); // Reset selected index
+
   };
   
 
@@ -573,9 +577,7 @@ console.log("result5",words)
     <Fragment>
      <div>
       {/* Button to trigger the slide-up */}
-      <button className="open-button" onClick={toggleVisibility}>
-        O
-      </button>
+   
 
       {/* Sliding page that comes from the bottom */}
       <div className={`slide-up-page ${isVisible ? "visible" : ""}`}>
