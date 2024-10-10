@@ -18,7 +18,7 @@ function TopSlideshow() {
     arrows: false,
   };
   return (
-    <div className={blurState.blur ? 'container blurred' : 'container'} >
+    <div className={blurState.blur ? 'container-special blurred' : 'container-special'} >
       <div className="main__header">
         <div className="header__right__slider">
           <Slider {...settings1}>

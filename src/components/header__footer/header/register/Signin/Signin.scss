@@ -15,7 +15,9 @@
   width: 90% !important;
 }
 .signin {
-
+  @include mq(1000) {
+    display: none;
+  }
 
     .btn {
         margin-left: 33px;

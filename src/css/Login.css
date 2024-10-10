@@ -2,6 +2,11 @@
   width: 90% !important;
 }
 
+@media only screen and (max-width: 1000px) {
+  .login {
+    display: none;
+  }
+}
 .login .btn {
   background-color: #ffeaa7;
   display: -webkit-box;

@@ -16,16 +16,9 @@
     display: flex;
     align-items: center;
     position: relative;
-    @include mq(992) {
-        margin-left: 20px
-    }
-    @include mq(480) {
-        margin-left: 10px
 
-
-      }
             .lets__go{
-                @include mq(992) {
+                @include mq(100) {
             display: none;
                   }
             }
@@ -62,10 +55,12 @@
         width: 250px;
         transition: 0.4s;
 
-        @include mq(435) {
-            width: 48vw;
-    
+        @include mq(1000) {
+            width: 420px /* This will grow between 500px and 1300px */    
           }
+          @include mq(700) {
+            width: 45vw /* This will grow between 500px and 1300px */
+        }
 
         &:focus {
             // width:420px !important;

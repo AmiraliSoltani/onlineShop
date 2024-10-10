@@ -5,8 +5,18 @@
 
 .basket {
   position: relative;
-  margin-left: 70px;
+  margin-left: 60px;
   direction: ltr;
+}
+@media only screen and (max-width: 1050px) {
+  .basket {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .basket {
+    margin-left: 50px;
+  }
 }
 .basket:hover .dropdown__basket {
   transform: perspective(400) rotate3d(1, 0, 0, 0);
@@ -73,7 +83,7 @@
 .basket .dropdown__basket {
   position: absolute;
   z-index: 10;
-  left: -124px;
+  left: -168px;
   background-color: #fff;
   width: 260px;
   height: auto;
@@ -103,12 +113,7 @@
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-@media only screen and (max-width: 1370px) {
-  .basket .dropdown__basket {
-    left: -150px;
-  }
-}
-@media only screen and (max-width: 766px) {
+@media only screen and (max-width: 1000px) {
   .basket .dropdown__basket {
     display: none;
   }

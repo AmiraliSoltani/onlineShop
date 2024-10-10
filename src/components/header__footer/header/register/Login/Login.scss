@@ -6,6 +6,9 @@
 }
 
 .login {
+  @include mq(1000) {
+    display: none;
+  }
     .btn {
         background-color: #ffeaa7;
         display: flex;

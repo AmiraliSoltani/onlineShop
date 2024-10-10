@@ -46,20 +46,12 @@
   background: repeating-linear-gradient(45deg, #FF7675, #FF7675 10px, #e66564 10px, #e66564 20px);
 }
 
-.container {
+.container-special {
   direction: rtl;
   font-family: IRANSans;
-}
-@media only screen and (max-width: 680px) {
-  .container {
-    overflow-x: hidden;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .container {
-    padding-right: 8px !important;
-    padding-left: 8px !important;
-  }
+  padding: 0 15px;
+  max-width: clamp(400px, 100%, 1200px); /* This will grow between 500px and 1300px */
+  margin: auto;
 }
 
 header {
@@ -72,7 +64,7 @@ header .header__content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 0;
+  padding: 15px 0;
 }
 @media only screen and (max-width: 768px) {
   header .header__content {
@@ -95,6 +87,14 @@ header .header__content .header__left {
       -ms-flex-align: center;
           align-items: center;
 }
+header .header__content .header__left .logo {
+  margin-left: 13px;
+}
+@media only screen and (max-width: 815px) {
+  header .header__content .header__left .logo {
+    display: none;
+  }
+}
 header .header__content .header__left .logo a {
   width: 80px;
   display: inline-block;
@@ -103,10 +103,9 @@ header .header__content .header__left .logo a img {
   height: 100%;
   width: 100%;
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 815px) {
   header .header__content .header__left .logo a img {
-    height: 85%;
-    width: 85%;
+    display: none;
   }
 }
 header .header__right {

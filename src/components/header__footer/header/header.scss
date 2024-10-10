@@ -40,18 +40,23 @@ transform: rotate(45deg);
   }
   
 
-.container {
+.container-special {
     direction: rtl;
     font-family: $main-font;
-    @include mq(680) {
-        overflow-x: hidden;
-      }
-      @include mq(500) {
- padding-right: 8px !important;
- padding-left: 8px !important;
+    padding: 0 15px; // Add some padding for smaller screens
+    max-width: clamp(400px, 100%, 1200px); /* This will grow between 500px and 1300px */
+margin: auto;
 
-              }
 
+    // @include mq(1200) {
+    //     max-width: 1140px ;
+    // }
+
+    //     @include mq(992) {
+    //         max-width: 960px;
+    //     }
+    
+ 
 }
 
 header {
@@ -60,7 +65,7 @@ header {
     .header__content {
         display: flex;
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 15px 0;
         @include mq(768) {
             justify-content: space-around;
           }
@@ -73,7 +78,10 @@ header {
             align-items: center;
 
             .logo {
-               
+               margin-left: 13px;
+               @include mq(815) {
+                display: none;
+                        }
                 a {
                     width: 80px;
                     display: inline-block;
@@ -81,10 +89,10 @@ header {
                     img {
                         height: 100%;
                         width: 100%;
-                        @include mq(450) {
-                            height: 85%;
-                        width: 85%;
-                                  }
+                        @include mq(815) {
+                            display: none;
+                                    }
+                     
 
                     }
                 }

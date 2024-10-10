@@ -19,7 +19,7 @@ function index() {
   return (
     <div>
     <header>
-      <div className="container">
+      <div className="container-special">
         <div className="header__content">
         <div className="header__right">
             <Basket></Basket>
