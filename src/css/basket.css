@@ -18,6 +18,16 @@
     margin-left: 50px;
   }
 }
+@media only screen and (max-width: 500px) {
+  .basket {
+    margin-left: 30px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .basket {
+    display: none; /* This will grow between 500px and 1300px */
+  }
+}
 .basket:hover .dropdown__basket {
   transform: perspective(400) rotate3d(1, 0, 0, 0);
   -webkit-transform: perspective(400) rotate3d(1, 0, 0, 0);

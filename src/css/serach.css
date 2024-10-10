@@ -48,6 +48,11 @@
     width: 45vw;
   }
 }
+@media only screen and (max-width: 450px) {
+  .search__box input {
+    width: 55vw;
+  }
+}
 .search__box input:focus .dropdown__search {
   visibility: visible;
 }
