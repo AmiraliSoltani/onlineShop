@@ -43,8 +43,10 @@
   
   /* Visible state when the page is activated */
   .slide-up-page.visible {
-    bottom: 0; /* Slide-up to show the component */
-    transition: all 0.4s ease-in-out; /* Slide-up effect */
+    @include mq(900) {
+        bottom: 0; /* Slide-up to show the component */
+        transition: all 0.4s ease-in-out; /* Slide-up effect */
+      }
 
   }
   
