@@ -111,6 +111,9 @@ const settings2 = {
     setIsVisible(!isVisible);
   };
   
+  const closeSlidingPage=()=>{
+    setIsVisible(false)
+  }
 
   // Function to get the top searches from the backend
    async function getTopSearches() {
@@ -584,11 +587,11 @@ console.log("result5",words)
    
 
       {/* Sliding page that comes from the bottom */}
-      <div className={`slide-up-page ${isVisible ? "visible" : ""}`}>
-      <div className="dropdown__search__main">
+      <div className={`slide-up-page ${isVisible ? "visible" : ""}  container-special` }>
+        {/* <img src={require("./../../../../assets/icons/close.png")} alt="" className="close" /> */}
+      <div className="dropdown__search__main ">
             <div className="dropdown__search__header">
-              <div className="line">
-              </div>
+     
             </div>
             {(searchInput.length>2 && brandSuggestions.length==0 && categoriesSuggestions.length==0 && productsSuggestions.length==0 ) &&
             <Fragment>
@@ -618,8 +621,9 @@ console.log("result5",words)
                       </div>
 
                       <img
-                      onClick={()=>deleteAllLastSearches()}
-                        src={require("./../../../../assets/icons/trash-2.png")}
+                      className='close'
+                      onClick={()=>closeSlidingPage()}
+                        src={require("./../../../../assets/icons/close.png")}
                         alt=""
                       />
                       </div>
