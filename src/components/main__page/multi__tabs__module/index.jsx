@@ -158,6 +158,16 @@ setMultitabCategories(orderedSelectedCategories);
     }
   }, [value]);
 
+  // var settings2 = {
+  //   ltr: true,
+  //   infinite: false,
+  //   speed: 500,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   nextArrow: <SampleNextArrow />,
+  //   prevArrow: <SamplePrevArrow />,
+  // };
+
   var settings2 = {
     ltr: true,
     infinite: false,
@@ -166,7 +176,42 @@ setMultitabCategories(orderedSelectedCategories);
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1200, // Large devices
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: false,
+        },
+      },
+      {
+        breakpoint: 992, // Tablets
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false,
+        },
+      },
+      {
+        breakpoint: 768, // Small tablets and large phones
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: false,
+        },
+      },
+      {
+        breakpoint: 576, // Phones
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+        },
+      },
+    ],
   };
+  
 
   if (loading) {
     return <MultiTabsSkeletonLoader />;
