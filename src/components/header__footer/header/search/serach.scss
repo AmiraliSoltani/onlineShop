@@ -67,24 +67,13 @@
 
 
         &:focus {
-            // width:420px !important;
-            // outline: none !important;
-            // border: none !important; /* Optional: remove border as well */
-            // box-shadow: none !important;
-            // border-radius: 4px 4px 0px 0px;
-            
-                            .dropdown__search {
-                             visibility: visible;
-                                
-                        
-                        }
-            @include mq(992) {
-                width: 256px;
-              }
-              @include mq(435) {
-                 width: 48vw;
-              }
+            // @include mq(1000) {
+            //     .dropdown__search {
+            //         visibility: visible;  // Only makes the dropdown visible if the viewport is >= 1000px
+            //     }
+            // }
         }
+        
 
     }
 
@@ -124,10 +113,16 @@
     }
 
     .visible{
+  
         // visibility: visible !important;
         opacity: 1 !important;  /* Fully visible */
     visibility: visible !important;  /* Make it visible immediately */
     transition: opacity 0s ease-in, visibility 0s 0s; /* No delay for visibility */
+    @include mq(1000) {
+            visibility: hidden;  // Only makes the dropdown visible if the viewport is >= 1000px
+            opacity: 0 !important;  /* Fully visible */
+
+    }
     }
     .dropdown__search {
         position: absolute;
