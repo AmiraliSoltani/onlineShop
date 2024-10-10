@@ -15,6 +15,8 @@ import 'slick-carousel/slick/slick-theme.css';
 function Search() {
   const [selectedIndex, setSelectedIndex] = useState(-1); // Track the selected suggestion
   const { cardState, cardDispatch } = useContext(cardContext);
+  const [isVisible, setIsVisible] = useState(false);
+
 
   const {blurState,blurDispatch}=useContext(blurContext)
   const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
@@ -105,6 +107,9 @@ const settings2 = {
     }
   }
   
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
   
 
   // Function to get the top searches from the backend
@@ -565,6 +570,173 @@ console.log("result5",words)
   
 
   return (
+    <Fragment>
+     <div>
+      {/* Button to trigger the slide-up */}
+      <button className="open-button" onClick={toggleVisibility}>
+        O
+      </button>
+
+      {/* Sliding page that comes from the bottom */}
+      <div className={`slide-up-page ${isVisible ? "visible" : ""}`}>
+      <div className="dropdown__search__main">
+            <div className="dropdown__search__header">
+              <div className="line">
+              </div>
+            </div>
+            {(searchInput.length>2 && brandSuggestions.length==0 && categoriesSuggestions.length==0 && productsSuggestions.length==0 ) &&
+            <Fragment>
+                <div className="no-result ">
+                  <img src={require("./../../../../assets/icons/decline.png")} alt="" className="icons" />
+                  <span className='main-word'>No matching products found</span>
+                </div>
+                <div className="line">
+                </div>
+                </Fragment>
+           }
+
+
+{((searchInput.length === 0 && cardState.lastSearches.length > 0) || 
+  (searchInput.length > 2 && brandSuggestions.length === 0 && categoriesSuggestions.length === 0 && productsSuggestions.length === 0 && cardState.lastSearches.length > 0)) && 
+  <Fragment>
+
+            <div className="dropdown__search__history">
+              <div className="history">
+                <div className="history-icons">
+              <div className="left2">
+            <img
+                        src={require("./../../../../assets/icons/return.png")}
+                        alt=""
+                      />
+                      <span>Your Last Searches</span>
+                      </div>
+
+                      <img
+                      onClick={()=>deleteAllLastSearches()}
+                        src={require("./../../../../assets/icons/trash-2.png")}
+                        alt=""
+                      />
+                      </div>
+                      <div className="history-trend-search">
+                      <Slider {...settings2}>
+                      {cardState.lastSearches.map(fullSearchObject=>{
+                        return(
+                          <span onClick={()=> handleTrendOrLastClick(fullSearchObject)} className='text striped-background-search2'>{fullSearchObject.mainWord}</span>
+
+                        )
+                      })}  
+                                  </Slider>
+      
+</div>
+                      </div>
+            </div>
+
+            <div className="line"> 
+            </div>
+            </Fragment>
+                      }
+
+{(searchInput.length === 0 || 
+  (searchInput.length > 2 && brandSuggestions.length === 0 && categoriesSuggestions.length === 0 && productsSuggestions.length === 0)) && 
+  <Fragment>
+
+
+
+            <div className="dropdown__search__history">
+              <div className="history">
+                <div className="history-icons">
+              <div className="left2">
+            <img
+                        src={require("./../../../../assets/icons/trending.png")}
+                        alt=""
+                      />
+                      <span>Trending Searches</span>
+                      </div>
+                      </div>
+                      <div className="history-trend-search">
+                      <Slider {...settings2}>
+                      {trendingSearches?.map(trend=>{
+                        return(
+                          <span onClick={()=>handleTrendOrLastClick(trend.fullSearchObject)} className='text striped-background-search2'>{trend.fullSearchObject.term}</span>
+
+                        )
+                      })}
+                      </Slider>
+                      </div>
+
+
+                      </div>
+            </div>
+            </Fragment>
+}
+<div className="suggestions-container">
+
+            {categoriesSuggestions.length>0 && categoriesSuggestions.map((suggest,index) => (
+              <Fragment>
+                <div onClick={()=>handleClickCategpries(suggest)}
+                    className={`dropdown__search__body striped-background-search ${selectedIndex === (index) ? 'selected' : ''}`} // Apply the selected class based on selectedIndex
+                    style={{ cursor: "pointer" }}
+                    key={index}
+                >
+                  <div className="left-search">
+                  <img src={require("./../../../../assets/icons/search-5.png")} alt="" className="icons" />
+                  <span className='main-word'>{suggest.mainWord}</span>
+                  </div>
+                  <span className='categories'>In {suggest.description}</span>
+
+                </div>
+                {categoriesSuggestions[categoriesSuggestions.length - 1] !== suggest && <hr />}
+                </Fragment>
+            ))}
+
+
+{productsSuggestions.length > 0 && productsSuggestions.map((suggest, index) => (
+  <Fragment>
+  <div 
+    key={index}
+    onClick={() => handleClickProduct(suggest)}
+    className={`dropdown__search__body striped-background-search ${selectedIndex === (index) ? 'selected' : ''}`} // Apply the selected class based on selectedIndex
+    style={{ cursor: "pointer" }}
+  >
+    <div className="left-search">
+      <img src={require("./../../../../assets/icons/search-5.png")} alt="" className="icons" />
+      <span className="main-word">{suggest.mainWord}</span>
+    </div>
+    <span className="categories">In {suggest.description}</span>
+    {/* Add hr only if it's not the last suggestion */}
+  </div>
+  {productsSuggestions[productsSuggestions.length - 1] !== suggest && <hr />}
+  </Fragment>
+
+))}
+
+
+{brandSuggestions.length>0 && brandSuggestions.map((suggest,index) => (
+  <Fragment>
+                <div onClick={()=> handleClickBrand(suggest)} 
+                  className={`dropdown__search__body striped-background-search ${selectedIndex === (index) ? 'selected' : ''}`} // Apply the selected class based on selectedIndex
+                  style={{ cursor: "pointer" }}
+                  key={index}
+
+                  >
+                  <div className="left-search">
+                  <img src={require("./../../../../assets/icons/search-5.png")} alt="" className="icons" />
+                  <span className='main-word'>{suggest.mainWord}</span>
+                  </div>
+                  <span className='categories'>In {suggest.description}</span>
+
+                </div>
+                {brandSuggestions[brandSuggestions.length - 1] !== suggest && <hr />}
+            </Fragment>
+            ))}
+
+            </div>
+
+
+          </div>
+      </div>
+    </div>
+
     <div className="search__box"  ref={dropdownRef}>
       <input
         type="text"
@@ -581,6 +753,7 @@ console.log("result5",words)
         <button onClick={()=>handleClick()} className="btn lets__go">
           Let's go
         </button>
+   
       
       <div className={className}>
     
@@ -742,6 +915,8 @@ console.log("result5",words)
         
       </div>
     </div>
+    </Fragment>
+
   );
 }
 
