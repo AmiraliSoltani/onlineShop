@@ -1,3 +1,13 @@
+@media only screen and (max-width: 1000px) {
+  .lineMeu {
+    width: 100%;
+    background-color: #666E7B;
+    visibility: visible !important; /* This will grow between 500px and 1300px */
+    height: 7px;
+    margin-bottom: 20px;
+  }
+}
+
 .blurred {
   -webkit-filter: blur(1.5px);
           filter: blur(1.5px); /* You can adjust the blur amount */
@@ -8,9 +18,9 @@
   min-height: 40px;
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1000px) {
   .main__menu {
-    margin-bottom: 10px;
+    display: none;
   }
 }
 .main__menu .subcategories-grid {
@@ -209,15 +219,6 @@
           justify-content: flex-start;
   cursor: pointer;
 }
-@media only screen and (max-width: 770px) {
-  .main__menu .mobile__menu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-}
 .main__menu .mobile__menu img {
   width: 41px;
   height: 39px;
@@ -229,12 +230,7 @@
 }
 .main__menu .menu1 {
   min-height: 42px;
-}
-@media only screen and (max-width: 770px) {
-  .main__menu .menu1 {
-    display: none;
-    margin-bottom: 10px;
-  }
+  margin-left: 10px;
 }
 .main__menu .menu1 > ul {
   direction: ltr;
@@ -309,11 +305,6 @@
           justify-content: start;
   color: white;
   font-weight: 500;
-}
-@media only screen and (max-width: 1000px) {
-  .main__menu .menu1 > ul > li > ul .cat__name {
-    margin-left: 86px;
-  }
 }
 .main__menu .menu1 > ul > li > ul .sub__cat__name {
   font-size: 16px;

@@ -3,20 +3,29 @@
 
 
 
-
+.lineMeu{
+  @include mq(1000) {
+    width: 100%;
+    background-color: #666E7B;
+    visibility: visible !important; /* This will grow between 500px and 1300px */
+    height: 7px;
+    margin-bottom: 20px;
+}
+}
 
 
 .blurred {
   filter: blur(1.5px); /* You can adjust the blur amount */
 }
+
 .main__menu {
   background-color: #747d8c;
   min-height: 40px;
   margin-bottom: 20px;
+  @include mq(1000) {
+display:none;
+}
 
-  @include mq(770) {
-    margin-bottom: 10px;
-          }
           .subcategories-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr); /* Divide into 4 equal parts */
@@ -216,11 +225,7 @@
             align-items: center;
             justify-content: flex-start;
             cursor: pointer;
-            @include mq(770) {
-              display: flex;
-              padding-top: 5px;
-              padding-bottom: 5px;
-                    }
+        
 img{
   width: 41px;
   height: 39px;
@@ -234,10 +239,8 @@ span{
 
   .menu1 {
     min-height: 42px;
-    @include mq(770) {
-      display: none;
-      margin-bottom: 10px;
-            }
+    margin-left: 10px;
+
     >ul {
       direction: ltr;
       display: flex;
@@ -381,9 +384,7 @@ max-height: 363px;
           // -o-transition: all 0.3s;
 
           .cat__name {
-            @include mq(1000) {
-              margin-left: 86px;
-            }
+        
             margin-left: 20px;
             margin-right:100px;
             font-size: 16px;

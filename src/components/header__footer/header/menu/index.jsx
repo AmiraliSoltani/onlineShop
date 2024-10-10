@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react"; 
+import React, { Fragment, useContext, useEffect, useState } from "react"; 
 import "./../../../../css/menu.css";
 import { Link } from "react-router-dom";
 import SignIn__login__box from "./../register/signin__login__box";
@@ -272,8 +272,11 @@ alt=""
   }
 
   return (
+    <Fragment>
+      <div className="lineMeu"></div>
     <div className={blurState.blur ? 'main__menu blurred' : 'main__menu'}>
-      <div className="container">
+      <div className="container-special">
+
         <div className="mobile__menu">
           <img
             src={require("./../../../../assets/icons/menu-2.png")}
@@ -305,6 +308,7 @@ alt=""
         {/* {<Brand></Brand>} */}
       </div>
     </div>
+    </Fragment>
   );
 }
 
