@@ -560,16 +560,20 @@ console.log("result5",words)
     setClassName("dropdown__search visible");
     blurDispatch({ type: "activeBlur" });
     setIsVisible(true);
+    disableScroll()
 
   };
   
+  const disableScroll = () => {
+    document.body.style.overflow = 'hidden';  // Disable scroll
+  };
+
   const closeSearch = () => {
     // Close the dropdown
     setInputClassName("form-control mt-3 mb-3")
     blurDispatch({ type: "disactiveBlur" });
     setClassName('dropdown__search');
     setSelectedIndex(-1); // Reset selected index
-
   };
   
 
