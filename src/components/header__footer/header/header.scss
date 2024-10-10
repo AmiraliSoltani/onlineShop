@@ -76,10 +76,14 @@ header {
         .header__left {
             display: flex;
             align-items: center;
+            @include mq(900) {
+               width: 100%;
+               }
+         
 
             .logo {
                margin-left: 13px;
-               @include mq(815) {
+               @include mq(1000) {
                 display: none;
                         }
                 a {

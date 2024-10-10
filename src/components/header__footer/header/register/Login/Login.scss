@@ -6,7 +6,7 @@
 }
 
 .login {
-  @include mq(1000) {
+  @include mq(900) {
     display: none;
   }
     .btn {

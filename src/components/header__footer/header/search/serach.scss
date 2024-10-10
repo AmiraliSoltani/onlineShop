@@ -300,6 +300,9 @@ scrollbar-color: #999 #f1f1f1; /* Thumb and track colors in Firefox */
     display: flex;
     align-items: center;
     position: relative;
+    @include mq(900) {
+       margin: auto; /* This will grow between 500px and 1300px */    
+      }
 
     /* Button to open the slide-up page */
 
@@ -336,15 +339,19 @@ scrollbar-color: #999 #f1f1f1; /* Thumb and track colors in Firefox */
             border: none !important; /* Optional: remove border as well */
             box-shadow: none !important;
             border-radius: 4px 4px 0px 0px;
-            @include mq(1000) {
-                width: 420px /* This will grow between 500px and 1300px */    
+            @include mq(900) {
+                width: 80vw /* This will grow between 500px and 1300px */    
               }
               @include mq(700) {
-                width: 45vw /* This will grow between 500px and 1300px */
+                width: 70vw /* This will grow between 500px and 1300px */
             }
             @include mq(460) {
                 width: 68vw /* This will grow between 500px and 1300px */
             }
+            @include mq(380) {
+                width: 60vw /* This will grow between 500px and 1300px */
+            }
+    
             
               }
     input {
@@ -353,14 +360,17 @@ scrollbar-color: #999 #f1f1f1; /* Thumb and track colors in Firefox */
 
         transition: 0.4s;
 
-        @include mq(1000) {
-            width: 420px /* This will grow between 500px and 1300px */    
+        @include mq(900) {
+            width: 80vw /* This will grow between 500px and 1300px */    
           }
           @include mq(700) {
-            width: 45vw /* This will grow between 500px and 1300px */
+            width: 70vw /* This will grow between 500px and 1300px */
         }
         @include mq(460) {
             width: 68vw /* This will grow between 500px and 1300px */
+        }
+        @include mq(380) {
+            width: 60vw /* This will grow between 500px and 1300px */
         }
 
 
@@ -416,7 +426,7 @@ scrollbar-color: #999 #f1f1f1; /* Thumb and track colors in Firefox */
         opacity: 1 !important;  /* Fully visible */
     visibility: visible !important;  /* Make it visible immediately */
     transition: opacity 0s ease-in, visibility 0s 0s; /* No delay for visibility */
-    @include mq(1000) {
+    @include mq(900) {
             visibility: hidden;  // Only makes the dropdown visible if the viewport is >= 1000px
             opacity: 0 !important;  /* Fully visible */
 
@@ -446,11 +456,7 @@ scrollbar-color: #999 #f1f1f1; /* Thumb and track colors in Firefox */
     
 
 
-        @include mq(992) {
-            width: 256px;
-            left:0px
-    
-          }
+     
           @include mq(680) {
             display: none;
           }

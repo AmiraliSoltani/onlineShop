@@ -87,10 +87,15 @@ header .header__content .header__left {
       -ms-flex-align: center;
           align-items: center;
 }
+@media only screen and (max-width: 900px) {
+  header .header__content .header__left {
+    width: 100%;
+  }
+}
 header .header__content .header__left .logo {
   margin-left: 13px;
 }
-@media only screen and (max-width: 815px) {
+@media only screen and (max-width: 1000px) {
   header .header__content .header__left .logo {
     display: none;
   }

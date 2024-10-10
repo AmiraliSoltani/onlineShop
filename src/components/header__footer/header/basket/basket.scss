@@ -23,12 +23,13 @@ background: repeating-linear-gradient(
     @include mq(1000) {
       margin-left: 50px;
     }
-    @include mq(500) {
-      margin-left: 20px;
+    @include mq(928) {
+      margin-left: 25px;
     }
-    @include mq(460) {
+    @include mq(900) {
       display: none; /* This will grow between 500px and 1300px */
-  }
+    }
+
 
     &:hover {
         .dropdown__basket {

@@ -253,6 +253,11 @@
   position: relative;
   /* Button to open the slide-up page */
 }
+@media only screen and (max-width: 900px) {
+  .search__box {
+    margin: auto; /* This will grow between 500px and 1300px */
+  }
+}
 @media only screen and (max-width: 100px) {
   .search__box .lets__go {
     display: none;
@@ -277,19 +282,24 @@
           box-shadow: none !important;
   border-radius: 4px 4px 0px 0px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .search__box .focus {
-    width: 420px;
+    width: 80vw;
   }
 }
 @media only screen and (max-width: 700px) {
   .search__box .focus {
-    width: 45vw;
+    width: 70vw;
   }
 }
 @media only screen and (max-width: 460px) {
   .search__box .focus {
     width: 68vw;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .search__box .focus {
+    width: 60vw;
   }
 }
 .search__box input {
@@ -298,19 +308,24 @@
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .search__box input {
-    width: 420px;
+    width: 80vw;
   }
 }
 @media only screen and (max-width: 700px) {
   .search__box input {
-    width: 45vw;
+    width: 70vw;
   }
 }
 @media only screen and (max-width: 460px) {
   .search__box input {
     width: 68vw;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .search__box input {
+    width: 60vw;
   }
 }
 .search__box button {
@@ -349,7 +364,7 @@
   -webkit-transition: opacity 0s ease-in, visibility 0s 0s;
   transition: opacity 0s ease-in, visibility 0s 0s; /* No delay for visibility */
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .search__box .visible {
     visibility: hidden;
     opacity: 0 !important; /* Fully visible */
@@ -369,12 +384,6 @@
   /* Transition for opacity and visibility */
   -webkit-transition: opacity 0.1s ease-out, visibility 0s 0.1s;
   transition: opacity 0.1s ease-out, visibility 0s 0.1s; /* Visibility delay matches the opacity transition */
-}
-@media only screen and (max-width: 992px) {
-  .search__box .dropdown__search {
-    width: 256px;
-    left: 0px;
-  }
 }
 @media only screen and (max-width: 680px) {
   .search__box .dropdown__search {

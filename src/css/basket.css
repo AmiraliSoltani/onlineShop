@@ -18,12 +18,12 @@
     margin-left: 50px;
   }
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 928px) {
   .basket {
-    margin-left: 20px;
+    margin-left: 25px;
   }
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 900px) {
   .basket {
     display: none; /* This will grow between 500px and 1300px */
   }

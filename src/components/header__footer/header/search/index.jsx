@@ -559,7 +559,7 @@ console.log("result5",words)
     setInputClassName("form-control mt-3 mb-3 focus")
     setClassName("dropdown__search visible");
     blurDispatch({ type: "activeBlur" });
-    setIsVisible(true);
+    //setIsVisible(true);
 
   };
   
