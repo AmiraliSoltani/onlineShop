@@ -13,14 +13,9 @@
     margin-left: 20px;
   }
 }
-@media only screen and (max-width: 1000px) {
-  .basket {
-    margin-left: 50px;
-  }
-}
 @media only screen and (max-width: 928px) {
   .basket {
-    margin-left: 25px;
+    margin-left: 20px;
   }
 }
 @media only screen and (max-width: 900px) {
