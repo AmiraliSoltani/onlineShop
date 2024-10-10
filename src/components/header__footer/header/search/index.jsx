@@ -563,7 +563,7 @@ console.log("result5",words)
     setClassName("dropdown__search visible");
     blurDispatch({ type: "activeBlur" });
     setIsVisible(true);
-    disableScroll()
+    //disableScroll()
 
   };
   
