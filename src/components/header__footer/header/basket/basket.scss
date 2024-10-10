@@ -24,9 +24,9 @@ background: repeating-linear-gradient(
       margin-left: 50px;
     }
     @include mq(500) {
-      margin-left: 30px;
+      margin-left: 20px;
     }
-    @include mq(450) {
+    @include mq(460) {
       display: none; /* This will grow between 500px and 1300px */
   }
 

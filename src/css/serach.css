@@ -48,9 +48,9 @@
     width: 45vw;
   }
 }
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 460px) {
   .search__box input {
-    width: 55vw;
+    width: 68vw;
   }
 }
 .search__box input:focus .dropdown__search {
