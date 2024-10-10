@@ -26,12 +26,27 @@
   background: repeating-linear-gradient(45deg, #f2f2f2, #f2f2f2 20px, #ffffff 20px, #ffffff 40px);
 }
 .search__box .focus {
-  width: 420px !important;
+  width: 420px;
   outline: none !important;
   border: none !important; /* Optional: remove border as well */
   -webkit-box-shadow: none !important;
           box-shadow: none !important;
   border-radius: 4px 4px 0px 0px;
+}
+@media only screen and (max-width: 1000px) {
+  .search__box .focus {
+    width: 420px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .search__box .focus {
+    width: 45vw;
+  }
+}
+@media only screen and (max-width: 460px) {
+  .search__box .focus {
+    width: 68vw;
+  }
 }
 .search__box input {
   width: 250px;

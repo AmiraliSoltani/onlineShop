@@ -44,11 +44,20 @@
                 }
               }
               .focus{
-                  width:420px !important;
+                  width:420px;
             outline: none !important;
             border: none !important; /* Optional: remove border as well */
             box-shadow: none !important;
             border-radius: 4px 4px 0px 0px;
+            @include mq(1000) {
+                width: 420px /* This will grow between 500px and 1300px */    
+              }
+              @include mq(700) {
+                width: 45vw /* This will grow between 500px and 1300px */
+            }
+            @include mq(460) {
+                width: 68vw /* This will grow between 500px and 1300px */
+            }
             
               }
     input {
