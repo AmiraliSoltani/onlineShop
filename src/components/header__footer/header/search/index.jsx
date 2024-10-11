@@ -142,6 +142,7 @@ const deleteAllLastSearches=()=>{
 const handleTrendOrLastClick=(fullSearchObject)=>{
   console.log("fullSearchObject",fullSearchObject.path)
   closeSearch()
+  closeSlidingPage()
   setSelectedIndex(-1)
   postSearchTerm(fullSearchObject)
   cardDispatch({ type: "addLastSearches", payload: fullSearchObject });
@@ -152,6 +153,7 @@ const handleTrendOrLastClick=(fullSearchObject)=>{
 }
 const handleClickProduct = (suggest) => {
     closeSearch()
+    closeSlidingPage()
     setSelectedIndex(-1)
     suggest.path=`/search/category=${suggest.categoryID}&search=${suggest.mainWord}`
     suggest.term=suggest.mainWord
@@ -167,6 +169,8 @@ const handleClickProduct = (suggest) => {
   const handleClickBrand = (suggest) => {
     console.log("suggestbrand",suggest)
     closeSearch()
+    closeSlidingPage()
+
     suggest.path=`/lastCategory/${suggest.categoryID}/brand=${suggest.brandName}`
     suggest.term=suggest.mainWord
     cardDispatch({ type: "addLastSearches", payload: suggest });
@@ -180,6 +184,8 @@ const handleClickProduct = (suggest) => {
 
   const handleClickCategpries = (suggest) => {
     closeSearch()
+    closeSlidingPage()
+
     setSelectedIndex(-1)
     suggest.path=`/lastCategory/${suggest.categoryID}`
     suggest.term=suggest.mainWord
@@ -204,6 +210,8 @@ const handleClickProduct = (suggest) => {
       cardDispatch({ type: "addLastSearches", payload: suggest });
       postSearchTerm(suggest);
       closeSearch();
+      closeSlidingPage()
+
       setSelectedIndex(-1);
       setSearchInput(""); // Clear the input after the search
       navigate(`/search/category=${allCategoriesString}&search=${searchInput}`, {
@@ -506,11 +514,14 @@ console.log("result5",words)
         handleClickCategpries(selectedSuggestion);
       }
       closeSearch();
+      closeSlidingPage()
       setSearchInput(""); // Clear the input after selecting an option
       document.activeElement.blur(); // Unfocus the input after selection
     } else if (e.key === "Enter") {
       handleClick();
       closeSearch();
+      closeSlidingPage()
+
       //setSearchInput(""); // Clear the input after pressing Enter
       document.activeElement.blur(); // Unfocus the input after pressing Enter
     }
@@ -576,7 +587,9 @@ console.log("result5",words)
     setInputClassName("form-control mt-3 mb-3")
     blurDispatch({ type: "disactiveBlur" });
     setClassName('dropdown__search');
-    setSelectedIndex(-1); // Reset selected index
+    setSelectedIndex(-1); // Reset selected indexfd
+    // setIsVisible(false);
+
   };
   
 
@@ -588,7 +601,7 @@ console.log("result5",words)
 
       {/* Sliding page that comes from the bottom */}
       <div className={`slide-up-page ${isVisible ? "visible" : ""}  container-special` }>
-        {/* <img src={require("./../../../../assets/icons/close.png")} alt="" className="close" /> */}
+        <img src={require("./../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
       <div className="dropdown__search__main ">
             <div className="dropdown__search__header">
      
@@ -620,12 +633,7 @@ console.log("result5",words)
                       <span>Your Last Searches</span>
                       </div>
 
-                      <img
-                      className='close'
-                      onClick={()=>closeSlidingPage()}
-                        src={require("./../../../../assets/icons/close.png")}
-                        alt=""
-                      />
+                    
                       </div>
                       <div className="history-trend-search">
                       <Slider {...settings2}>
