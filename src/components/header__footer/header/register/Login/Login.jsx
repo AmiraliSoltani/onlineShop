@@ -120,7 +120,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
              <div className="header-mobile">Log In</div> 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="d-flex flex-row justify-content-between align-items-center">
-                  <div className="col-sm-7">
+                  <div className="w-100">
                     {generalError && (
                       <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
                         {generalError}
@@ -131,10 +131,10 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
                       {...register("username")}
                       type="text"
                       placeholder="enter your username"
-                      className="form-control mt-3 mb-3 width90"
+                      className="form-control mt-3 mb-3 "
                     />
                     {errors.username && (
-                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded width90">
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded ">
                         {errors.username.message}
                       </div>
                     )}
@@ -143,16 +143,17 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
                       {...register("password")}
                       type="password"
                       placeholder="enter your password"
-                      className="form-control mt-3 mb-3 width90 "
+                      className="form-control mt-3 mb-3 "
                     />
                     {errors.password && (
-                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded width90">
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 mb-3 rounded">
                         {errors.password.message}
                       </div>
                     )}
                   </div>
+                  </div>
 
-                  <div className="col-sm-6">
+                  {/* <div className="">
                     <img
                       src={require("../../../../../assets/icons/log-in-with-google-icon.png")}
                       alt="logo"
@@ -163,16 +164,13 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
                       }}
                       onClick={openPopup}
                     />
-                  </div>
-                </div>
-              <Button className="button"  type="submit" variant="primary">
+                  </div> */}
+                  <div className="footerMenu">
+              <button className="button-menu"  type="submit" >
                   Log In
-                </Button>
+                </button>
 
-                <Button className="button" variant="secondary" onClick={() => toggleModal()}  style={{ width: "200px" }}>
-                Create An Account
-                </Button>
-
+                </div>
             </form>
           </div>
         )}

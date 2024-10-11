@@ -1,6 +1,19 @@
 @import './../../../../../scss/variable.scss';
 @import './../../../../../scss/mixins.scss';
 
+
+@keyframes click-bounce {
+  0% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(0.95); /* Shrink a bit */
+  }
+  100% {
+    transform: scale(1); /* Back to normal size */
+  }
+}
+
 .width90{
   width: 90% !important;
 }
@@ -26,11 +39,29 @@ direction: ltr;
 .login_mobile{
 
 .header-mobile{
+  font-weight: bold;
   padding: 10px;
-  background: repeating-linear-gradient(45deg, #FF7675, #FF7675 20px, #e66564 20px, #e66564 40px) !important;;
+  background-color: #FF7675;
+  // background: repeating-linear-gradient(45deg, #FF7675, #FF7675 20px, #e66564 20px, #e66564 40px) !important;;
 }
 
-
+.footerMenu{
+  .button-menu{
+    background-color: #747D8C;
+    padding: 6px;
+    border: 0px;
+    width: 100%;
+    color: white;
+    &:hover{
+      background-color: #8A95A0;
+    }
+    &:active {
+      background-color: #5E6672; /* Darker color when clicked */
+      transform: scale(0.98); /* Slight shrink effect on click */
+      animation: click-bounce 0.4s ease; /* Apply bounce effect */
+    }
+  }
+}
 
 }
 }
