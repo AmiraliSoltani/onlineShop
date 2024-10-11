@@ -16,6 +16,8 @@ const BottomMenu = () => {
     } else {
       setActiveIndex(index);  // Set new active index
     }
+    menuSearchDispatch({ type: "closeMobileSearch" });
+
   
     if (index === 0) {
       if (menuSearchState.MobileMenu || menuSearchState.Account) {
@@ -24,9 +26,10 @@ const BottomMenu = () => {
       }
       navigate("/");
     } else if (index === 2) {
-      if (menuSearchState.MobileMenu || menuSearchState.Account) {
+      if (menuSearchState.MobileMenu || menuSearchState.Account ) {
         menuSearchDispatch({ type: "closeMobileMenu" });
         menuSearchDispatch({ type: "closeAccount" });
+
       }
       navigate("/shoppingProcess");
     } else if (index === 1) {

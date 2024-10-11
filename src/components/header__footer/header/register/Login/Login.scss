@@ -35,35 +35,118 @@ direction: ltr;
   display: flex;
             flex-direction: column;
             justify-content: center;
+            .close{
+              height: 30px;
+              width: 30px;
+              cursor: pointer;
+              position: absolute;
+              top: 23px;
+              right: 108px;
+            }
 
-.login_mobile{
+            .tab-header-container {
+              width: 100%;
+              margin: 0 auto;
+              text-align: center;
+              background-color: #fff;
+              border-radius: 10px;
+              padding: 20px;
+              box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            .header {
+              background-color: #ff7675; /* Light red background */
+              padding: 10px;
+              color: white;
+              border-radius: 10px 10px 0 0;
+              h2 {
+                margin: 0;
+                font-size: 24px;
+              }
+            }
+            
+            .tabs {
+              display: flex;
+              justify-content: space-around;
+              background-color: #f1f2f6;
+              border-bottom: 2px solid #dfe4ea;
+              border-radius: 10px;
+            }
+            
+            .tab {
+              flex: 1;
+              padding: 12px 0;
+              background-color: #f1f2f6;
+              border: 0;
+              cursor: pointer;
+              font-size: 16px;
+              color: #2f3542;
+              transition: background-color 0.3s ease, color 0.3s ease;
+              outline: none;
+              border-radius: 10px 10px 0 0;
+            
+              &:hover {
+                background-color: #747d8c;
+                color: white;
+              }
+            
+              &.active {
+                background-color: #ff7675;
+                color: white;
+                border-bottom: 3px solid #ff6b81; /* Active tab with solid border */
+              }
+            }
+            
+            .tab-content-container {
+              padding: 20px;
+              border: 2px solid #dfe4ea;
+              border-top: 0;
+              background-color: #fff;
+              border-radius: 0 0 10px 10px;
 
-.header-mobile{
-  font-weight: bold;
-  padding: 10px;
-  background-color: #FF7675;
-  // background: repeating-linear-gradient(45deg, #FF7675, #FF7675 20px, #e66564 20px, #e66564 40px) !important;;
-}
+              .login_mobile{
 
-.footerMenu{
-  .button-menu{
-    background-color: #747D8C;
-    padding: 6px;
-    border: 0px;
-    width: 100%;
-    color: white;
-    &:hover{
-      background-color: #8A95A0;
-    }
-    &:active {
-      background-color: #5E6672; /* Darker color when clicked */
-      transform: scale(0.98); /* Slight shrink effect on click */
-      animation: click-bounce 0.4s ease; /* Apply bounce effect */
-    }
-  }
-}
+                .header-mobile{
+                  font-weight: bold;
+                  padding: 10px;
+                  // background-color: #FF7675;
+                  background: repeating-linear-gradient(45deg, #FF7675, #FF7675 20px, #e66564 20px, #e66564 40px) !important;;
+                }
+                
+                .footerMenu{
+                  .button-menu{
+                    background-color: #747D8C;
+                    padding: 6px;
+                    border: 0px;
+                    width: 100%;
+                    color: white;
+                    &:hover{
+                      background-color: #8A95A0;
+                    }
+                    &:active {
+                      background-color: #5E6672; /* Darker color when clicked */
+                      transform: scale(0.98); /* Slight shrink effect on click */
+                      animation: click-bounce 0.4s ease; /* Apply bounce effect */
+                    }
+                  }
+                }
+                
+                }
+            }
+            
+            .tab-content {
+              font-size: 18px;
+              color: #2f3542;
+            }
+            
 
-}
+
+
+
+
+
+
+
 }
 
 /* Visible state when the page is activated */

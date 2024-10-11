@@ -14,6 +14,12 @@ const MenuSearchReducer = (state, action) => {
       case "closeAccount":
         console.log("state123", state);
         return { ...state, Account: false };
+        case "closeMobileSearch":
+          console.log("menuSearchState212222222222", state);
+          return { ...state, MobileSearch: false };
+          case "openMobileSearch":
+          console.log("menuSearchState212222222222", state);
+          return { ...state, MobileSearch: true };
     default:
       return state; // Always return the current state by default, not null
   }

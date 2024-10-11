@@ -44,6 +44,9 @@ useEffect(() => {
     }
   };
 
+
+
+
   document.addEventListener("mousedown", handleClickOutside);
 
   return () => {
@@ -51,6 +54,13 @@ useEffect(() => {
   };
 }, [dropdownRef]);
 
+
+
+useEffect(() => {
+  console.log("menuSearchState21",menuSearchState.MobileSearch)
+  if (!menuSearchState.MobileSearch) {
+    closeSlidingPage()  }
+}, [menuSearchState.MobileSearch]);
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -584,6 +594,8 @@ console.log("result5",words)
     setClassName("dropdown__search visible");
     blurDispatch({ type: "activeBlur" });
     setIsVisible(true);
+    menuSearchDispatch({ type: "openMobileSearch" });
+
     //disableScroll()
 
   };
@@ -611,7 +623,6 @@ console.log("result5",words)
 
       {/* Sliding page that comes from the bottom */}
       <div className={`slide-up-page ${isVisible ? "visible" : ""}  container-special` }>
-        <img src={require("./../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
       <div className="dropdown__search__main ">
             <div className="dropdown__search__header">
      
@@ -777,6 +788,8 @@ console.log("result5",words)
         onKeyDown={handleKey} // Handle enter key
         className={inputClassName}
       />
+              <img src={require("./../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
+
   
         <button onClick={()=>handleClick()} className="btn lets__go">
           Let's go

@@ -32,6 +32,7 @@ function HeaderFooter() {
     login:false,
     Account:false,
     MobileMenu:false,
+    MobileSearch:false,
   };
   const initialblurState = {
     blur:false,

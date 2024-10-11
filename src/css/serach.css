@@ -29,14 +29,6 @@
   padding: 0px 20px;
   z-index: 1000;
 }
-.slide-up-page .close {
-  height: 26px;
-  width: 26px;
-  cursor: pointer;
-  position: absolute;
-  top: -46px;
-  right: 132px;
-}
 
 /* Visible state when the page is activated */
 @media only screen and (max-width: 900px) {
@@ -278,6 +270,20 @@
 @media only screen and (max-width: 900px) {
   .search__box {
     margin: auto; /* This will grow between 500px and 1300px */
+  }
+}
+.search__box .close {
+  height: 23px;
+  width: 23px;
+  cursor: pointer;
+  position: absolute;
+  top: 23px;
+  right: 108px;
+  visibility: hidden;
+}
+@media only screen and (max-width: 900px) {
+  .search__box .close {
+    visibility: visible;
   }
 }
 @media only screen and (max-width: 100px) {

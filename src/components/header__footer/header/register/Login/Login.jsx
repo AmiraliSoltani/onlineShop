@@ -30,6 +30,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   const [generalError, setGeneralError] = useState(false);
   const [getUserData, setGetUserData] = useState(false);
   const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
+  const [activeTab, setActiveTab] = useState(0);
 
   const hasOpened = useRef(false); // Track if modal has opened
 
@@ -112,67 +113,123 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
     };
   }, []);
 
+
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 0:
+        return (
+          <div className="login_mobile">
+          <div className="header-mobile">Log In</div> 
+         <form onSubmit={handleSubmit(onSubmit)}>
+             <div className="d-flex flex-row justify-content-between align-items-center">
+               <div className="w-100">
+                 {generalError && (
+                   <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                     {generalError}
+                   </div>
+                 )}
+
+                 <input
+                   {...register("username")}
+                   type="text"
+                   placeholder="enter your username"
+                   className="form-control mt-3 mb-3 "
+                 />
+                 {errors.username && (
+                   <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded ">
+                     {errors.username.message}
+                   </div>
+                 )}
+
+                 <input
+                   {...register("password")}
+                   type="password"
+                   placeholder="enter your password"
+                   className="form-control mt-3 mb-3 "
+                 />
+                 {errors.password && (
+                   <div className="w-100 bg-danger text-center text-warning p-2 mt-2 mb-3 rounded">
+                     {errors.password.message}
+                   </div>
+                 )}
+               </div>
+               </div>
+
+               {/* <div className="">
+                 <img
+                   src={require("../../../../../assets/icons/log-in-with-google-icon.png")}
+                   alt="logo"
+                   style={{
+                     width: "210px",
+                     height: "43px",
+                     cursor: "pointer",
+                   }}
+                   onClick={openPopup}
+                 />
+               </div> */}
+               <div className="footerMenu">
+           <button className="button-menu"  type="submit" >
+               Log In
+             </button>
+
+             </div>
+         </form>
+       </div>
+        )
+      case 1:
+        return <div className="tab-content">Content for Tab 2</div>;
+      case 2:
+        return <div className="tab-content">Content for Tab 3</div>;
+      default:
+        return null;
+    }
+  };
+
+  const closeSlidingPage=()=>{
+    menuSearchDispatch({ type: "closeAccount" });
+  }
   return (
     <Fragment>
             <div className={`account-menu ${isVisible ? "visible-account" : ""} ` }>
             {!loginState.authenticated && (
-          <div className="login_mobile">
-             <div className="header-mobile">Log In</div> 
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className="d-flex flex-row justify-content-between align-items-center">
-                  <div className="w-100">
-                    {generalError && (
-                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
-                        {generalError}
-                      </div>
-                    )}
+              <Fragment>
+                          <img src={require("./../../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
 
-                    <input
-                      {...register("username")}
-                      type="text"
-                      placeholder="enter your username"
-                      className="form-control mt-3 mb-3 "
-                    />
-                    {errors.username && (
-                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded ">
-                        {errors.username.message}
-                      </div>
-                    )}
+                    <div className="tab-header-container">
+      <div className="header">
+        <h2>Log In</h2> {/* Title */}
+      </div>
 
-                    <input
-                      {...register("password")}
-                      type="password"
-                      placeholder="enter your password"
-                      className="form-control mt-3 mb-3 "
-                    />
-                    {errors.password && (
-                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 mb-3 rounded">
-                        {errors.password.message}
-                      </div>
-                    )}
-                  </div>
-                  </div>
+      <div className="tabs">
+        <button
+          className={`tab ${activeTab === 0 ? 'active' : ''}`}
+          onClick={() => setActiveTab(0)}
+        >
+          Tab 1
+        </button>
+        <button
+          className={`tab ${activeTab === 1 ? 'active' : ''}`}
+          onClick={() => setActiveTab(1)}
+        >
+          Tab 2
+        </button>
+        <button
+          className={`tab ${activeTab === 2 ? 'active' : ''}`}
+          onClick={() => setActiveTab(2)}
+        >
+          Tab 3
+        </button>
+      </div>
 
-                  {/* <div className="">
-                    <img
-                      src={require("../../../../../assets/icons/log-in-with-google-icon.png")}
-                      alt="logo"
-                      style={{
-                        width: "210px",
-                        height: "43px",
-                        cursor: "pointer",
-                      }}
-                      onClick={openPopup}
-                    />
-                  </div> */}
-                  <div className="footerMenu">
-              <button className="button-menu"  type="submit" >
-                  Log In
-                </button>
+      {/* Tab Content */}
+      <div className="tab-content-container">
+        {renderTabContent()}
+      </div>
+    </div>
 
-                </div>
-            </form>
-          </div>
+   
+          </Fragment>
+
         )}
             </div>
 
