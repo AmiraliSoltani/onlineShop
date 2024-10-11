@@ -28,12 +28,6 @@
   overflow: hidden;
   position: relative;
 }
-@media only screen and (max-width: 770px) {
-  .signin .btn {
-    margin-right: 1px !important;
-    padding: 5px 10px;
-  }
-}
 .signin .btn:hover {
   border: 1px solid #ffeaa7;
   background-color: white;

@@ -26,10 +26,7 @@
         flex-direction: column;
         overflow: hidden;
         position: relative;
-        @include mq(770) {
-            margin-right: 1px !important;
-            padding: 5px 10px;
-          }
+
         
 
 

@@ -2,7 +2,7 @@
   width: 90% !important;
 }
 
-.slide-up-RegisterPage {
+.account-menu {
   position: fixed;
   bottom: -140%; /* Initially hidden below the viewport */
   left: 0;
@@ -17,22 +17,12 @@
   padding: 0px 20px;
   z-index: 1000;
 }
-.slide-up-RegisterPage .close {
-  height: 26px;
-  width: 26px;
-  cursor: pointer;
-  position: absolute;
-  top: -46px;
-  right: 132px;
-}
 
 /* Visible state when the page is activated */
-@media only screen and (max-width: 5000px) {
-  .slide-up-RegisterPage.visible {
-    bottom: 0px; /* Slide-up to show the component */
-    -webkit-transition: all 0.4s ease-in-out;
-    transition: all 0.4s ease-in-out; /* Slide-up effect */
-  }
+.account-menu.visible-account {
+  bottom: 0px !important; /* Slide-up to show the component */
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; /* Slide-up effect */
 }
 
 @media only screen and (max-width: 900px) {
@@ -54,15 +44,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-@media only screen and (max-width: 770px) {
-  .login .btn {
-    margin-right: 20px !important;
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: start !important;
-    padding: 5px 10px;
-  }
 }
 .login .btn:hover {
   border: 1px solid #ffeaa7;

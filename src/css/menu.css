@@ -1,3 +1,26 @@
+.mobile-menu {
+  position: fixed;
+  bottom: -140%; /* Initially hidden below the viewport */
+  left: 0;
+  right: 0;
+  height: 100%; /* Adjust based on your design */
+  background-color: white;
+  -webkit-box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; /* Slide-up effect */
+  direction: ltr;
+  padding: 0px 20px;
+  z-index: 1000;
+}
+
+/* Visible state when the page is activated */
+.mobile-menu.visible-mobile {
+  bottom: 0px !important; /* Slide-up to show the component */
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; /* Slide-up effect */
+}
+
 @media only screen and (max-width: 1000px) {
   .lineMeu {
     width: 100%;

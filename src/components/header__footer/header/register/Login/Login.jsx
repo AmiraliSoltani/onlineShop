@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useRef } from "react";
+import React, { useContext, useState, useEffect, useRef, Fragment } from "react";
 import "./../../../../../css/Login.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -49,6 +49,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   
 
   useEffect(() => {
+    // console.log("menuSearchState",menuSearchState.Account)
     if (menuSearchState.Account) {
       setIsVisible(true)
     }
@@ -112,11 +113,11 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   }, []);
 
   return (
-    <div>
-            <div className={`slide-up-RegisterPage ${isVisible ? "visible" : ""}  container-special` }>
+    <Fragment>
+            <div className={`account-menu ${isVisible ? "visible-account" : ""} ` }>
             {!loginState.authenticated && (
-          <div className="login" id="login__modal">
-             <div className="header">Log In</div> 
+          <div className="login_mobile">
+             <div className="header-mobile">Log In</div> 
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="d-flex flex-row justify-content-between align-items-center">
                   <div className="col-sm-7">
@@ -285,7 +286,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
           </div>
         )} */}
       </Modal>
-    </div>
+      </Fragment>
   );
 }
 

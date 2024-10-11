@@ -2,10 +2,7 @@
 
 
 .regular{
-    @include mq(770) {
-        display: none !important;
-        
-              }
+
 }
 .signin__login__box{
     display: flex;
@@ -18,9 +15,7 @@
 
 .success__login__register{
     margin-left: 20px;
-    @include mq(770) {
-margin-right: 15px;
-              }
+
     // a{
     //     text-align: right;
     // }

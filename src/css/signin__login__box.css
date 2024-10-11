@@ -1,9 +1,3 @@
-@media only screen and (max-width: 770px) {
-  .regular {
-    display: none !important;
-  }
-}
-
 .signin__login__box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,9 +11,4 @@
 }
 .signin__login__box .success__login__register {
   margin-left: 20px;
-}
-@media only screen and (max-width: 770px) {
-  .signin__login__box .success__login__register {
-    margin-right: 15px;
-  }
 }/*# sourceMappingURL=signin__login__box.css.map */

@@ -6,7 +6,7 @@
 }
 
 
-.slide-up-RegisterPage {
+.account-menu{
   position: fixed;
   bottom: -140%; /* Initially hidden below the viewport */
   left: 0;
@@ -20,22 +20,15 @@ direction: ltr;
   z-index: 1000;
   // border-radius: 10px 10px 0 0;
 
-  .close{
-height: 26px;
-width: 26px;
-cursor: pointer;
-position: absolute;
-top: -46px;
-right: 132px;
-  }
+
 }
 
 /* Visible state when the page is activated */
-.slide-up-RegisterPage.visible {
-  @include mq(5000) {
-      bottom: 0px; /* Slide-up to show the component */
-      transition: all 0.4s ease-in-out; /* Slide-up effect */
-    }
+.account-menu.visible-account {
+    bottom: 0px !important; /* Slide-up to show the component */
+    transition: all 0.4s ease-in-out; /* Slide-up effect */
+
+
 
 }
 
@@ -51,12 +44,7 @@ right: 132px;
 position: relative;
 margin-left: 20px;
 align-items: center;
-@include mq(770) {
-    margin-right: 20px !important;
-    justify-content: start !important;
-    padding: 5px 10px;
 
-  }
 &:hover{
 border: 1px solid #ffeaa7;
 background-color: white;

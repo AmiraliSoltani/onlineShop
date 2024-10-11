@@ -12,6 +12,18 @@ function Menu() {
   const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
   const [allCategories, setAllCategories] = useState([]);
   const {blurState,blurDispatch}=useContext(blurContext)
+  const [isVisible, setIsVisible] = useState(false);
+
+
+  
+  useEffect(() => {
+    console.log("menuSearchState",menuSearchState.MobileMenu)
+    if (menuSearchState.MobileMenu) {
+      setIsVisible(true)
+    }
+    else  setIsVisible(false)
+  }, [menuSearchState.MobileMenu]);
+
 
   useEffect(() => {
     const allCategoriesAPI = new APIProduct('/categories');
@@ -274,17 +286,14 @@ alt=""
   return (
     <Fragment>
       <div className="lineMeu"></div>
+      <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
+      </div>
+
+
     <div className={blurState.blur ? 'main__menu blurred' : 'main__menu'}>
       <div className="container-special">
 
-        <div className="mobile__menu">
-          <img
-            src={require("./../../../../assets/icons/menu-2.png")}
-            onClick={() => { menuSearchDispatch({ type: "toggleMenu" }) }}
-            alt=""
-          />
-          <SignIn__login__box />
-        </div>
+
         <div className="menu1">
           <ul>
  
