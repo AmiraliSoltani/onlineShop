@@ -74,7 +74,7 @@
   position: absolute;
   color: grey;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-prev::before,
   .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-next::before {
     visibility: hidden; /* This will grow between 500px and 1300px */

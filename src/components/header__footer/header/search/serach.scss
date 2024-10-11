@@ -92,7 +92,7 @@ margin-bottom: 10px;
                   &::before {
                     position: absolute;
                     color: grey;
-                    @include mq(1000) {
+                    @include mq(900) {
                         visibility: hidden; /* This will grow between 500px and 1300px */
                       }                  }
                 }

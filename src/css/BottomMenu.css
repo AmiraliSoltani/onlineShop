@@ -1,0 +1,65 @@
+.bottom-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ccc;
+  padding: 5px 0;
+  z-index: 1000;
+}
+
+.menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  color: #000;
+  -webkit-transition: background-color 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, -webkit-transform 0.3s ease;
+  padding: 10px;
+  cursor: pointer;
+}
+.menu-item:hover {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.menu-icon {
+  width: 18px;
+  height: 18px;
+  margin-bottom: 5px;
+  -webkit-transition: -webkit-filter 0.3s ease;
+  transition: -webkit-filter 0.3s ease;
+  transition: filter 0.3s ease;
+  transition: filter 0.3s ease, -webkit-filter 0.3s ease;
+}
+
+.menu-item.active {
+  border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item.active .menu-icon {
+  -webkit-filter: brightness(1.2);
+          filter: brightness(1.2);
+}/*# sourceMappingURL=BottomMenu.css.map */

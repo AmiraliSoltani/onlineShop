@@ -12,6 +12,7 @@ import loginReducer from "../reducers/loginReducer";
 import blurReducer from "../reducers/blurReducer";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BottomMenu from "./BottomMenu";
 
 function HeaderFooter() {
   const initialCardState = {
@@ -46,6 +47,7 @@ function HeaderFooter() {
         <loginContext.Provider value={{ loginState, loginDispatch }} >
         <Header />
         <Outlet/>
+        <BottomMenu/>
         <Footer />
         <ToastContainer
         position="top-right"
