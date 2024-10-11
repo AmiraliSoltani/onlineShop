@@ -132,6 +132,12 @@ const settings2 = {
     }
   }
   
+  const clearSearch=()=>{
+    setSearchInput(""); // Clear the input
+  setCategoriesSuggestions([]);
+  setBrandSuggestions([]);
+  setProductsSuggestions([]);
+  }
 
 const deleteAllLastSearches=()=>{
   setlastSearches([])
@@ -146,7 +152,7 @@ const handleTrendOrLastClick=(fullSearchObject)=>{
   setSelectedIndex(-1)
   postSearchTerm(fullSearchObject)
   cardDispatch({ type: "addLastSearches", payload: fullSearchObject });
-
+  clearSearch()
   navigate(fullSearchObject.path, {
     state: { refresh: true }, // Pass state along with the navigation
   });
@@ -161,6 +167,7 @@ const handleClickProduct = (suggest) => {
 
 
     postSearchTerm(suggest)
+    clearSearch()
     navigate(`/search/category=${suggest.categoryID}&search=${suggest.mainWord}`, {
       state: { refresh: true }, // Pass state along with the navigation
     });
@@ -176,6 +183,7 @@ const handleClickProduct = (suggest) => {
     cardDispatch({ type: "addLastSearches", payload: suggest });
     postSearchTerm(suggest)
     setSelectedIndex(-1)
+    clearSearch()
     navigate(`/lastCategory/${suggest.categoryID}/brand=${suggest.brandName}`, {
       state: { refresh: true }, // Pass state along with the navigation
     });
@@ -193,6 +201,8 @@ const handleClickProduct = (suggest) => {
     cardDispatch({ type: "addLastSearches", payload: suggest });
 
     postSearchTerm(suggest)
+    clearSearch()
+
     navigate(`/lastCategory/${suggest.categoryID}`, {
       state: { refresh: true }, // Pass state along with the navigation
     });
@@ -213,7 +223,7 @@ const handleClickProduct = (suggest) => {
       closeSlidingPage()
 
       setSelectedIndex(-1);
-      setSearchInput(""); // Clear the input after the search
+      clearSearch()
       navigate(`/search/category=${allCategoriesString}&search=${searchInput}`, {
         state: { refresh: true }, // Pass state along with the navigation
       });

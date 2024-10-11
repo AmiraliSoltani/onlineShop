@@ -73,7 +73,6 @@
 .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-next::before {
   position: absolute;
   color: grey;
-  visibility: hidden; /* Initially hide the arrows */
 }
 .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-prev::before {
   left: 172px;
