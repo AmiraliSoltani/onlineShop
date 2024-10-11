@@ -10,6 +10,7 @@ import { jwtDecode } from "jwt-decode";
 import { ReadTokenInformation } from "../../../../../services/ReadTokenInformation";
 import debounce from "lodash.debounce";
 import { useDebouncedCallback } from 'use-debounce';
+import menuSearchContext from "../../../../contexts/menuSearchContext";
 
 const userService = require("../../../../../services/authenticate");
 
@@ -28,7 +29,11 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   const { loginState, loginDispatch } = useContext(loginContext);
   const [generalError, setGeneralError] = useState(false);
   const [getUserData, setGetUserData] = useState(false);
+  const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
+
   const hasOpened = useRef(false); // Track if modal has opened
+
+  const [isVisible, setIsVisible] = useState(false);
 
 
   useEffect(() => {
@@ -40,6 +45,15 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
     loginDispatch({ type: "closeLogin" });
   }, [loginState.modalLogin]);
 
+
+  
+
+  useEffect(() => {
+    if (menuSearchState.Account) {
+      setIsVisible(true)
+    }
+    else  setIsVisible(false)
+  }, [menuSearchState.Account]);
 
 
   if (getUserData) {
@@ -99,6 +113,74 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
 
   return (
     <div>
+            <div className={`slide-up-RegisterPage ${isVisible ? "visible" : ""}  container-special` }>
+            {!loginState.authenticated && (
+          <div className="login" id="login__modal">
+             <div className="header">Log In</div> 
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <div className="d-flex flex-row justify-content-between align-items-center">
+                  <div className="col-sm-7">
+                    {generalError && (
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                        {generalError}
+                      </div>
+                    )}
+
+                    <input
+                      {...register("username")}
+                      type="text"
+                      placeholder="enter your username"
+                      className="form-control mt-3 mb-3 width90"
+                    />
+                    {errors.username && (
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded width90">
+                        {errors.username.message}
+                      </div>
+                    )}
+
+                    <input
+                      {...register("password")}
+                      type="password"
+                      placeholder="enter your password"
+                      className="form-control mt-3 mb-3 width90 "
+                    />
+                    {errors.password && (
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded width90">
+                        {errors.password.message}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="col-sm-6">
+                    <img
+                      src={require("../../../../../assets/icons/log-in-with-google-icon.png")}
+                      alt="logo"
+                      style={{
+                        width: "210px",
+                        height: "43px",
+                        cursor: "pointer",
+                      }}
+                      onClick={openPopup}
+                    />
+                  </div>
+                </div>
+              <Button className="button"  type="submit" variant="primary">
+                  Log In
+                </Button>
+
+                <Button className="button" variant="secondary" onClick={() => toggleModal()}  style={{ width: "200px" }}>
+                Create An Account
+                </Button>
+
+            </form>
+          </div>
+        )}
+            </div>
+
+
+
+
+
       <div className="login" id="login__button">
         <button className="btn" onClick={() => setShowLoginModal(true)}>
           <span className="login__1">Log In</span>

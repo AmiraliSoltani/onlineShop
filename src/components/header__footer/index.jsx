@@ -28,7 +28,10 @@ function HeaderFooter() {
   };
   const initialMenuSearchState = {
     menu:false,
-    search:false
+    search:false,
+    login:false,
+    Account:false,
+    MobileMenu:false,
   };
   const initialblurState = {
     blur:false,

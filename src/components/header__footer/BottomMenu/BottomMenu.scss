@@ -12,6 +12,11 @@
     border-top: 1px solid #ccc;
     padding: 5px 0;
     z-index: 1000;
+    // visibility: hidden;
+    opacity: 0.8;
+    @include mq(900) {
+        visibility: visible; /* This will grow between 500px and 1300px */
+      }
   }
   
   .menu-item {

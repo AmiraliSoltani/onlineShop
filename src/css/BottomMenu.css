@@ -14,6 +14,12 @@
   border-top: 1px solid #ccc;
   padding: 5px 0;
   z-index: 1000;
+  opacity: 0.8;
+}
+@media only screen and (max-width: 900px) {
+  .bottom-menu {
+    visibility: visible; /* This will grow between 500px and 1300px */
+  }
 }
 
 .menu-item {

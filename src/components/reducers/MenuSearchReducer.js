@@ -1,14 +1,23 @@
 const MenuSearchReducer = (state, action) => {
   switch (action.type) {
     case "toggleMenu":
-      state.menu = !state.menu;
-      break;
+      return { ...state, menu: !state.menu };
     case "toggleSearch":
-      state.search = !state.search;
-      break;
+      return { ...state, search: !state.search };
+    case "toggleMobileMenu":
+      return { ...state, MobileMenu: !state.MobileMenu };
+      case "closeMobileMenu":
+        return { ...state, MobileMenu: false };
+    case "toggleAccount":
+      console.log("state123", state);
+      return { ...state, Account: !state.Account };
+      case "closeAccount":
+        console.log("state123", state);
+        return { ...state, Account: false };
     default:
-      return null;
+      return state; // Always return the current state by default, not null
   }
 };
+
 
 export default MenuSearchReducer;

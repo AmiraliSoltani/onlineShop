@@ -1,9 +1,47 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './BottomMenu.scss';
+import menuSearchContext from '../../contexts/menuSearchContext';
+import { Link, useNavigate } from "react-router-dom";
 
 const BottomMenu = () => {
-  const [activeIndex, setActiveIndex] = useState(0); // Track the active menu item
+  const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
 
+  const [activeIndex, setActiveIndex] = useState(-1); // Track the active menu item
+  const navigate = useNavigate();
+
+
+  const activeClick = (index) => {
+    if (activeIndex === index) {
+      setActiveIndex(-1);  // Toggle off the active index
+    } else {
+      setActiveIndex(index);  // Set new active index
+    }
+  
+    if (index === 0) {
+      if (menuSearchState.MobileMenu || menuSearchState.Account) {
+        menuSearchDispatch({ type: "closeMobileMenu" });
+        menuSearchDispatch({ type: "closeAccount" });
+      }
+      navigate("/");
+    } else if (index === 2) {
+      if (menuSearchState.MobileMenu || menuSearchState.Account) {
+        menuSearchDispatch({ type: "closeMobileMenu" });
+        menuSearchDispatch({ type: "closeAccount" });
+      }
+      navigate("/shoppingProcess");
+    } else if (index === 1) {
+      if (menuSearchState.Account) {
+        menuSearchDispatch({ type: "closeAccount" });
+      }
+      menuSearchDispatch({ type: "toggleMobileMenu" });
+    } else if (index === 3) {
+      if (menuSearchState.MobileMenu) {
+        menuSearchDispatch({ type: "closeMobileMenu" });
+      }
+      menuSearchDispatch({ type: "toggleAccount" });
+    }
+  };
+  
   // Define your icons with and without the "active" state
   const icons = [
     { default: require('../../../assets/icons/home.png'), active: require('../../../assets/icons/home-active.png'), label: "Home Page" },
@@ -18,7 +56,7 @@ const BottomMenu = () => {
         <div
           key={index}
           className={`menu-item ${activeIndex === index ? 'active' : ''}`}
-          onClick={() => setActiveIndex(index)} // Set active index on click
+          onClick={() => activeClick(index)} // Set active index on click
         >
           <img
             src={activeIndex === index ? icon.active : icon.default} // Show active icon if it's selected, else show default
