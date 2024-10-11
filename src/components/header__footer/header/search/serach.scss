@@ -92,8 +92,9 @@ margin-bottom: 10px;
                   &::before {
                     position: absolute;
                     color: grey;
-                    // visibility: hidden; /* Initially hide the arrows */
-                  }
+                    @include mq(1000) {
+                        visibility: hidden; /* This will grow between 500px and 1300px */
+                      }                  }
                 }
               
                 .slick-prev::before {
