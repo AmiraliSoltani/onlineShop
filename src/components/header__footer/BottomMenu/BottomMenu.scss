@@ -75,7 +75,19 @@
     justify-content: space-around; /* Spacing between list items */
 
     li {
-      padding: 10px;
+      padding: 10px 30px;
+      border-right: 1px solid #ccc; /* Adding border between items */
+      border-left: 1px solid #ccc; /* Adding border between items */
+      cursor: pointer;
+      &:hover {
+        color: white;
+        background-color: #747D8C;
+
+      }
+      
+      /* Remove border for the last item */
+     
+
       a, button {
         text-decoration: none;
         color: #000;
@@ -85,8 +97,11 @@
         padding: 0;
         text-align: center;
         &:hover {
-          color: #00796b;
+          color: white;
+          background-color: #747D8C;
+  
         }
+        
       }
     }
   }

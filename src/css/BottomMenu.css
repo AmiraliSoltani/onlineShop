@@ -99,7 +99,15 @@
       justify-content: space-around; /* Spacing between list items */
 }
 .account-accordion ul li {
-  padding: 10px;
+  padding: 10px 30px;
+  border-right: 1px solid #ccc; /* Adding border between items */
+  border-left: 1px solid #ccc; /* Adding border between items */
+  cursor: pointer;
+  /* Remove border for the last item */
+}
+.account-accordion ul li:hover {
+  color: white;
+  background-color: #747D8C;
 }
 .account-accordion ul li a, .account-accordion ul li button {
   text-decoration: none;
@@ -111,5 +119,6 @@
   text-align: center;
 }
 .account-accordion ul li a:hover, .account-accordion ul li button:hover {
-  color: #00796b;
+  color: white;
+  background-color: #747D8C;
 }/*# sourceMappingURL=BottomMenu.css.map */
