@@ -50,10 +50,9 @@
     height: 220px;
   }
   @include mq(768) {
-    background-image: url('./../assets/banners/parallex-8.jpg');
 
     height: 200px;
-    // background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
+    background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
   }
   @include mq(600) {
     height: 180px;

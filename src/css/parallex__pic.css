@@ -94,8 +94,8 @@
 }
 @media only screen and (max-width: 768px) {
   .parallex__background__image {
-    background-image: url("./../assets/banners/parallex-8.jpg");
     height: 200px;
+    background-attachment: scroll;
   }
 }
 @media only screen and (max-width: 600px) {
