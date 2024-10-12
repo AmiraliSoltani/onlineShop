@@ -95,7 +95,10 @@ cardState.cartProducts?.map(cart=>number+=cart?.count)
             className="menu-icon"
           />
           <span>{icon.label}</span>
-          {icon.badge && (
+          {icon.badge==0 && (
+      <span className="badge">{icon.badge}</span>
+    )}
+           {icon.badge>0 && (
       <span className="badge">{icon.badge}</span>
     )}
         </div>

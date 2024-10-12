@@ -1,6 +1,5 @@
 @import './../../../scss/variable.scss';
 @import './../../../scss/mixins.scss';
-
 .blurred {
     filter: blur(1.5px); /* You can adjust the blur amount */
   }
@@ -8,26 +7,36 @@
     width: 100%;
     display: flex;
     height: auto;
-    @include mq(992) {
-        overflow-y: hidden;  // Disable vertical scrolling
-        overflow-x: hidden;  // Disable vertical scrolling
 
-    }
+  
 
     .header__right__slider {
         width: 67%;
         margin-left: 20px;
-        @include mq(992) {
-            width: 100%;
-                  }
-
+        @include mq(900) {
+            margin-left: 15px;
+        }
+      
         img {
             border-radius: 4px;
             width: 100%;
             height: 380px;
-            @include mq(992) {
+            @include mq(1200) {
+                height: 320px;
+            }
+            @include mq(900) {
                 height: 280px;
-                      }
+            }
+            @include mq(768) {
+                height: 240px;
+            }
+            @include mq(600) {
+                height: 200px;
+            }
+            @include mq(480) {
+                height: 180px;
+            }
+
         }
 
         .slick-dots {
@@ -53,10 +62,7 @@
         display: flex;
         flex-direction: column;
         cursor: pointer;
-        @include mq(992) {
-            display: none; // Hide when screen width is below 1000px
-                  }
-
+      
 
     }
 
@@ -72,6 +78,21 @@
                 width: 100%;
                 height: 185px;
                 border-radius: 4px;
+                @include mq(1200) {
+                    height: 155px;
+                }
+                @include mq(900) {
+                    height: 135px;
+                }
+                @include mq(768) {
+                    height: 115px;
+                }
+                @include mq(600) {
+                    height: 95px;
+                }
+                @include mq(480) {
+                    height: 85px;
+                }
 
             }
 
@@ -112,6 +133,22 @@
                 width: 100%;
                 height: 185px;
                 border-radius: 4px;
+                @include mq(1200) {
+                    height: 155px;
+                }
+                @include mq(900) {
+                    height: 135px;
+                }
+                @include mq(768) {
+                    height: 115px;
+                }
+                @include mq(600) {
+                    height: 95px;
+                }
+                @include mq(480) {
+                    height: 85px;
+                }
+
 
             }
 
@@ -141,4 +178,3 @@
             }
         }
     }
-

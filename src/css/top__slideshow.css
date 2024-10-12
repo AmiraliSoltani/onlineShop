@@ -10,19 +10,13 @@
   display: flex;
   height: auto;
 }
-@media only screen and (max-width: 992px) {
-  .main__header {
-    overflow-y: hidden;
-    overflow-x: hidden;
-  }
-}
 .main__header .header__right__slider {
   width: 67%;
   margin-left: 20px;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 900px) {
   .main__header .header__right__slider {
-    width: 100%;
+    margin-left: 15px;
   }
 }
 .main__header .header__right__slider img {
@@ -30,9 +24,29 @@
   width: 100%;
   height: 380px;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
+  .main__header .header__right__slider img {
+    height: 320px;
+  }
+}
+@media only screen and (max-width: 900px) {
   .main__header .header__right__slider img {
     height: 280px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main__header .header__right__slider img {
+    height: 240px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main__header .header__right__slider img {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .main__header .header__right__slider img {
+    height: 180px;
   }
 }
 .main__header .header__right__slider .slick-dots {
@@ -56,11 +70,6 @@
           flex-direction: column;
   cursor: pointer;
 }
-@media only screen and (max-width: 992px) {
-  .main__header .header__left__images {
-    display: none;
-  }
-}
 .main__header .top__image {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,6 +88,31 @@
   width: 100%;
   height: 185px;
   border-radius: 4px;
+}
+@media only screen and (max-width: 1200px) {
+  .main__header .top__image .main__pic {
+    height: 155px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .main__header .top__image .main__pic {
+    height: 135px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main__header .top__image .main__pic {
+    height: 115px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main__header .top__image .main__pic {
+    height: 95px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .main__header .top__image .main__pic {
+    height: 85px;
+  }
 }
 .main__header .top__image .effect {
   position: absolute;
@@ -117,6 +151,31 @@
   width: 100%;
   height: 185px;
   border-radius: 4px;
+}
+@media only screen and (max-width: 1200px) {
+  .main__header .buttom__image img {
+    height: 155px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .main__header .buttom__image img {
+    height: 135px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .main__header .buttom__image img {
+    height: 115px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main__header .buttom__image img {
+    height: 95px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .main__header .buttom__image img {
+    height: 85px;
+  }
 }
 .main__header .buttom__image .effect {
   position: absolute;
