@@ -67,6 +67,7 @@
   }
 }
 .parallex__background__image {
+  width: 98.8%;
   margin-top: 10px;
   background-image: url("./../assets/banners/parallex-7.jpg");
   background-attachment: fixed;
@@ -81,10 +82,30 @@
   display: flex;
   direction: ltr;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1200px) {
   .parallex__background__image {
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .parallex__background__image {
+    height: 220px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .parallex__background__image {
+    background-image: url("./../assets/banners/parallex-8.jpg");
     height: 200px;
-    background-attachment: scroll;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .parallex__background__image {
+    height: 180px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .parallex__background__image {
+    height: 160px;
   }
 }
 
@@ -113,9 +134,29 @@
   font-weight: bold;
   margin-left: 25px;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 1200px) {
   .text__in__parallex .top__text {
-    font-size: 3vw;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .text__in__parallex .top__text {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .text__in__parallex .top__text {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text__in__parallex .top__text {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .text__in__parallex .top__text {
+    font-size: 16px;
   }
 }
 .text__in__parallex .buttom__text {
@@ -127,13 +168,37 @@
   padding: 10px 15px;
   margin-top: 42px;
 }
-@media only screen and (max-width: 769px) {
-  .text__in__parallex .buttom__text {
-    font-size: 3vw;
-    margin-top: 20px;
-  }
-}
 .text__in__parallex .buttom__text:hover {
   animation: icon__animate2 1s;
   -webkit-animation: icon__animate2 1s;
+}
+@media only screen and (max-width: 1200px) {
+  .text__in__parallex .buttom__text {
+    font-size: 20px;
+    padding: 8px 12px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .text__in__parallex .buttom__text {
+    font-size: 18px;
+    padding: 7px 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .text__in__parallex .buttom__text {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .text__in__parallex .buttom__text {
+    font-size: 14px;
+    padding: 5px 7px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .text__in__parallex .buttom__text {
+    font-size: 12px;
+    padding: 4px 6px;
+  }
 }/*# sourceMappingURL=parallex__pic.css.map */
