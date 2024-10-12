@@ -35,14 +35,7 @@ direction: ltr;
   display: flex;
             flex-direction: column;
             justify-content: center;
-            .close{
-              height: 30px;
-              width: 30px;
-              cursor: pointer;
-              position: absolute;
-              top: 23px;
-              right: 108px;
-            }
+           
 
             .tab-header-container {
               width: 100%;
@@ -55,10 +48,26 @@ direction: ltr;
             }
             
             .header {
-              background-color: #ff7675; /* Light red background */
-              padding: 10px;
+              // background-color: #ff7675; /* Light red background */
+              padding: 12px;
               color: white;
               border-radius: 10px 10px 0 0;
+              position: relative;
+              margin-bottom: 28px;
+              background: repeating-linear-gradient(
+                45deg,            /* Angle of stripes */
+                #747D8C,          /* Starting color */
+                #747D8C 20px,     /* Width of the first stripe */
+                #666e7b 20px,     /* Darker color starts here */
+                #666e7b 40px      /* Total width of two stripes */
+              ) !important;              .close{
+                height: 30px;
+                width: 30px;
+                cursor: pointer;
+                position: absolute;
+                top:9px;
+                right: 33px;
+              }
               h2 {
                 margin: 0;
                 font-size: 24px;
@@ -70,7 +79,6 @@ direction: ltr;
               justify-content: space-around;
               background-color: #f1f2f6;
               border-bottom: 2px solid #dfe4ea;
-              border-radius: 10px;
             }
             
             .tab {
@@ -83,7 +91,6 @@ direction: ltr;
               color: #2f3542;
               transition: background-color 0.3s ease, color 0.3s ease;
               outline: none;
-              border-radius: 10px 10px 0 0;
             
               &:hover {
                 background-color: #747d8c;
@@ -98,7 +105,7 @@ direction: ltr;
             }
             
             .tab-content-container {
-              padding: 20px;
+              padding: 12px 20px 20px 20px;
               border: 2px solid #dfe4ea;
               border-top: 0;
               background-color: #fff;
@@ -115,13 +122,13 @@ direction: ltr;
                 
                 .footerMenu{
                   .button-menu{
-                    background-color: #747D8C;
-                    padding: 6px;
+                    background-color: #00B894;
+                    padding: 7px;
                     border: 0px;
                     width: 100%;
                     color: white;
                     &:hover{
-                      background-color: #8A95A0;
+                      background-color: #00996D;
                     }
                     &:active {
                       background-color: #5E6672; /* Darker color when clicked */

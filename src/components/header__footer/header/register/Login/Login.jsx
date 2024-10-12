@@ -119,7 +119,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
       case 0:
         return (
           <div className="login_mobile">
-          <div className="header-mobile">Log In</div> 
+          {/* <div className="header-mobile">Log In</div>  */}
          <form onSubmit={handleSubmit(onSubmit)}>
              <div className="d-flex flex-row justify-content-between align-items-center">
                <div className="w-100">
@@ -193,11 +193,12 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
             <div className={`account-menu ${isVisible ? "visible-account" : ""} ` }>
             {!loginState.authenticated && (
               <Fragment>
-                          <img src={require("./../../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
 
                     <div className="tab-header-container">
       <div className="header">
-        <h2>Log In</h2> {/* Title */}
+      <img src={require("./../../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
+
+        <h2>Welcome</h2> {/* Title */}
       </div>
 
       <div className="tabs">
@@ -205,19 +206,19 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
           className={`tab ${activeTab === 0 ? 'active' : ''}`}
           onClick={() => setActiveTab(0)}
         >
-          Tab 1
+          Log In
         </button>
         <button
           className={`tab ${activeTab === 1 ? 'active' : ''}`}
           onClick={() => setActiveTab(1)}
         >
-          Tab 2
+          Sign In
         </button>
         <button
           className={`tab ${activeTab === 2 ? 'active' : ''}`}
           onClick={() => setActiveTab(2)}
         >
-          Tab 3
+          Google
         </button>
       </div>
 
