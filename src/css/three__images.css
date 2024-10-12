@@ -247,7 +247,7 @@
   .three__images .right__images .top__right__images .button,
   .three__images .right__images .buttom__right__images .button {
     border: 1px solid grey;
-    font-size: 10px;
+    font-size: 9px;
     padding: 2px 2px;
   }
 }
