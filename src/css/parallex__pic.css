@@ -72,7 +72,7 @@
   background-image: url("./../assets/banners/parallex-7.jpg");
   background-attachment: fixed;
   background-position: center;
-  height: 230px;
+  height: 220px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
@@ -84,23 +84,21 @@
 }
 @media only screen and (max-width: 1200px) {
   .parallex__background__image {
-    height: 200px;
+    height: 220px;
   }
 }
 @media only screen and (max-width: 900px) {
   .parallex__background__image {
-    height: 170px;
+    height: 180px;
   }
 }
 @media only screen and (max-width: 768px) {
   .parallex__background__image {
-    height: 150px;
+    height: 160px;
   }
 }
 @media only screen and (max-width: 600px) {
   .parallex__background__image {
-    background-image: url("./../assets/banners/parallex-8.jpg");
-    background-attachment: scroll;
     height: 140px;
   }
 }
@@ -129,7 +127,7 @@
 }
 .text__in__parallex .top__text {
   color: #fff;
-  font-size: 27px;
+  font-size: 25px;
   width: auto;
   text-align: right;
   font-weight: bold;
@@ -137,27 +135,47 @@
 }
 @media only screen and (max-width: 1200px) {
   .text__in__parallex .top__text {
-    font-size: 24px;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .text__in__parallex .top__text {
     font-size: 22px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 910px) {
   .text__in__parallex .top__text {
     font-size: 20px;
   }
 }
+@media only screen and (max-width: 840px) {
+  .text__in__parallex .top__text {
+    font-size: 19px;
+  }
+}
+@media only screen and (max-width: 795px) {
+  .text__in__parallex .top__text {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .text__in__parallex .top__text {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 685px) {
+  .text__in__parallex .top__text {
+    font-size: 14px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .text__in__parallex .top__text {
-    font-size: 18px;
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 570px) {
+  .text__in__parallex .top__text {
+    font-size: 12px;
   }
 }
 @media only screen and (max-width: 480px) {
   .text__in__parallex .top__text {
-    font-size: 16px;
+    font-size: 11px;
   }
 }
 .text__in__parallex .buttom__text {

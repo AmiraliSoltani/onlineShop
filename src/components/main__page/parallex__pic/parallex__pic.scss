@@ -34,7 +34,7 @@
   background-image: url('./../assets/banners/parallex-7.jpg');
   background-attachment: fixed;
   background-position: center;
-  height: 230px;
+  height: 220px;
   background-repeat: no-repeat;
   background-size: cover; // Cover the entire container without empty spaces
   border-radius: 5px;
@@ -44,18 +44,18 @@
 
   // Responsive height adjustments
   @include mq(1200) {
-    height: 200px;
+    height: 220px;
   }
   @include mq(900) {
-    height: 170px;
+    height: 180px;
   }
   @include mq(768) {
 
-    height: 150px;
+    height: 160px;
   }
   @include mq(600) {
-    background-image: url('./../assets/banners/parallex-8.jpg');
-    background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
+    // background-image: url('./../assets/banners/parallex-8.jpg');
+    // background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
     height: 140px;
   }
   @include mq(480) {
@@ -73,7 +73,7 @@
 
   .top__text {
     color: #fff;
-    font-size: 27px;
+    font-size: 25px;
     width: auto;
     text-align: right;
     font-weight: bold;
@@ -81,19 +81,33 @@
 
     // Responsive font-size adjustments
     @include mq(1200) {
-      font-size: 24px;
-    }
-    @include mq(900) {
       font-size: 22px;
     }
-    @include mq(768) {
+    @include mq(910) {
       font-size: 20px;
     }
-    @include mq(600) {
-      font-size: 18px;
+    @include mq(840) {
+      font-size: 19px;
     }
+    @include mq(795) {
+        font-size: 17px;
+      }
+
+      @include mq(730) {
+        font-size: 16px;
+      }
+      @include mq(685) {
+        font-size: 14px;
+      }
+    @include mq(600) {
+      font-size: 13px;
+    }
+    @include mq(570) {
+        font-size: 12px;
+      }
+
     @include mq(480) {
-      font-size: 16px;
+      font-size: 11px;
     }
   }
 
