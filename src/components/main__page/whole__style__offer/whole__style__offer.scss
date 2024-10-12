@@ -190,7 +190,10 @@
             }
 
             .product3 {
-            
+                @include mq(900) {
+                    display: none !important
+                }
+             
             }
 
             .one__product {
@@ -199,6 +202,10 @@
                 flex-direction: column;
                 align-items: start;
                 position: relative;
+                @include mq(900) {
+                    width: 47%;
+
+                }
 
                 .product__images {
                     width: 100%;
@@ -212,8 +219,11 @@
                         // height: 420px;
                         height:  calc(29vw * 1.13);;
                         border-radius: 4px;
+                        @include mq(900) {
+                            height:  calc(49vw * 1.13);;
+        
+                        }
 
-                        
                     }
                 }
 
@@ -576,8 +586,8 @@
                     background-color: black;
 
                     .circle {
-                        height: 27px;
-                        width: 27px;
+                        height: 25px;
+                        width: 25px;
                         border: 3px solid white;
                         border-radius: 15px;
                         position: absolute;
@@ -590,6 +600,23 @@
                         -moz-transition: all 0.4s ease-in-out 0s;
                         -ms-transition: all 0.4s ease-in-out 0s;
                         -o-transition: all 0.4s ease-in-out 0s;
+                        @include mq(1200) {
+
+                        }
+                        @include mq(900) {
+
+                        }
+                        @include mq(768) {
+
+                        }
+                        @include mq(600) {
+                            height: 22px;
+                            width: 22px;
+                        }
+                        @include mq(480) {
+                            height: 21px;
+                            width: 21px;
+                        }
 
                         &:hover {
                             border: 7px solid white;
@@ -610,13 +637,13 @@
                     }
 
                     .circle-1-1 {
-                        top: 111px;
-                        left: 176px;
+                        top: 10%;
+                        left:30%;
                     }
 
                     .circle-1-2 {
-                        top: 222px;
-                        left: 228px;
+                        top: 20%;
+                        left: 25%;
                     }
 
                     .circle-1-3 {
@@ -630,13 +657,13 @@
                     }
 
                     .circle-2-2 {
-                        top: 267px;
-                        left: 129px;
+                        top: 27%;
+                        left: 12%;
                     }
 
                     .circle-2-3 {
-                        top: 374px;
-                        left: 243px;
+                        top: 37%;
+                        left: 24%;
 
                         &:hover {
                             .add__to__cart__float {
@@ -652,18 +679,18 @@
                     }
 
                     .circle-3-1 {
-                        top: 139px;
-                        right: 164px;
+                        top: 13%;
+                        right: 16%;
                     }
 
                     .circle-3-2 {
-                        top: 234px;
-                        left: 218px;
+                        top:23%;
+                        left: 21%;
                     }
 
                     .circle-3-3 {
-                        top: 367px;
-                        left: 149px;
+                        top: 35%;
+                        left: 15%;
                     }
                 }
             }

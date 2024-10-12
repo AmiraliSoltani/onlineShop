@@ -54,7 +54,7 @@ function WholeStyleOffer({allProducts}) {
   };
 
   const position = (x, y) => {
-    let position = { top: `${y}px`, left: `${x}px` };
+    let position = { top: `${y}%`, left: `${x}%` };
     return position;
   };
 
@@ -143,13 +143,13 @@ function WholeStyleOffer({allProducts}) {
                   />
                 </div>
                 <div className="circle__and__add__to__cart">
-                  <div className="circle" style={position(176, 111)}>
+                  <div className="circle" style={position(17, 11)}>
                     {makingProduct(product1)}
                   </div>
-                  <div className="circle" style={position(228, 222)}>
+                  <div className="circle" style={position(22, 22)}>
                     {makingProduct(product2)}
                   </div>
-                  <div className="circle" style={position(129, 299)}>
+                  <div className="circle" style={position(12, 29)}>
                     {makingProduct(product3)}
                   </div>
                 </div>
@@ -163,13 +163,13 @@ function WholeStyleOffer({allProducts}) {
                   />
                 </div>
                 <div className="circle__and__add__to__cart">
-                  <div className="circle" style={position(150, 132)}>
+                  <div className="circle" style={position(15, 13)}>
                     {makingProduct(product4)}
                   </div>
-                  <div className="circle" style={position(129, 267)}>
+                  <div className="circle" style={position(12, 26)}>
                     {makingProduct(product5)}
                   </div>
-                  <div className="circle" style={position(243, 374)}>
+                  <div className="circle" style={position(24, 37)}>
                     {makingProduct(product6)}
                   </div>
                 </div>
@@ -183,13 +183,13 @@ function WholeStyleOffer({allProducts}) {
                   />
                 </div>
                 <div className="circle__and__add__to__cart">
-                  <div className="circle " style={position(164, 139)}>
+                  <div className="circle " style={position(16, 13)}>
                     {makingProduct(product7)}
                   </div>
-                  <div className="circle " style={position(218, 234)}>
+                  <div className="circle " style={position(21, 23)}>
                     {makingProduct(product8)}
                   </div>
-                  <div className="circle" style={position(149, 367)}>
+                  <div className="circle" style={position(14, 36)}>
                     {makingProduct(product9)}
                   </div>
                 </div>
