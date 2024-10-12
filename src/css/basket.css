@@ -77,7 +77,7 @@
 .basket .shop__item {
   position: absolute;
   background-color: #EAFF0C;
-  border-radius: 50%;
+  border-radius: 6px;
   width: 22px;
   height: 22px;
   text-align: center;

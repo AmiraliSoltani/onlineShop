@@ -38,7 +38,7 @@ cardState.cartProducts?.map(cart=>number+=cart?.count)
               className="image__2"
             />
           </div>
-          <span className="shop__item">{cardState.cartProducts.length}</span>
+          <span className="shop__item">{number}</span>
           <div className="dropdown__basket">
             {cardState.cartProducts.length === 0 && (
               <div className="without__product">your basket is empty</div>
@@ -65,10 +65,10 @@ cardState.cartProducts?.map(cart=>number+=cart?.count)
   console.log("Product222222222222222:", product);
 
   return (
-    <Fragment key={product.product._id}>
+    <Fragment key={product.product.id}>
       <div className="dropdown__basket__body">
         <div className="dropdown__basket__body__right">
-          <Link to={`/product/${product.product._id}`}>
+          <Link to={`/product/${product.product.id}`}>
             <img
               src={
                 product.product.productPic[

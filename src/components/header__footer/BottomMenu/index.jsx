@@ -4,12 +4,14 @@ import menuSearchContext from '../../contexts/menuSearchContext';
 import { Link, useNavigate } from "react-router-dom";
 import loginContext from '../../contexts/loginContext';
 import { removeAuthenticateToken } from '../../../services/authenticate';
+import cardContext from '../../contexts/cardContext';
 
 const BottomMenu = () => {
   const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
   const {loginState, loginDispatch}= useContext(loginContext)
   const [labelUser, setLabelUser] = useState("My Account");
   const [showAccountAccordion, setShowAccountAccordion] = useState(false); // For handling the accordion
+  const {cardState, cardDispatch}= useContext(cardContext)
 
   useEffect(() => {
     if (loginState.authenticated) {
@@ -29,6 +31,10 @@ const BottomMenu = () => {
     setShowAccountAccordion(false)
     setActiveIndex(-1)
   }
+
+  let number =0;
+cardState.cartProducts?.map(cart=>number+=cart?.count)
+
 
   const activeClick = (index) => {
     if (activeIndex === index) {
@@ -71,7 +77,7 @@ const BottomMenu = () => {
   const icons = [
     { default: require('../../../assets/icons/home.png'), active: require('../../../assets/icons/home-active.png'), label: "Home Page" },
     { default: require('../../../assets/icons/menu.png'), active: require('../../../assets/icons/menu-active.png'), label: "Categories" },
-    { default: require('../../../assets/icons/basket.png'), active: require('../../../assets/icons/basket-active.png'), label: "Shopping Cart" },
+    { default: require('../../../assets/icons/basket.png'), active: require('../../../assets/icons/basket-active.png'), label: "Shopping Cart" , badge: number },
     { default: require('../../../assets/icons/user.png'), active: require('../../../assets/icons/user-active.png'), label: labelUser }
   ];
 
@@ -89,6 +95,9 @@ const BottomMenu = () => {
             className="menu-icon"
           />
           <span>{icon.label}</span>
+          {icon.badge && (
+      <span className="badge">{icon.badge}</span>
+    )}
         </div>
       ))}
 
