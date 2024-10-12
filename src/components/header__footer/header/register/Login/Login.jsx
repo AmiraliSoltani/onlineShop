@@ -177,9 +177,24 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
        </div>
         )
       case 1:
-        return <div className="tab-content">Content for Tab 2</div>;
+        return <div className="tab-content">
+           
+          
+          </div>;
       case 2:
-        return <div className="tab-content">Content for Tab 3</div>;
+        return <div className="tab-content">
+            <img
+                      src={require("../../../../../assets/icons/log-in-with-google-icon.png")}
+                      alt="logo"
+                      style={{
+                        width: "210px",
+                        height: "43px",
+                        cursor: "pointer",
+                      }}
+                      onClick={openPopup}
+                    />
+        
+        </div>;
       default:
         return null;
     }
@@ -216,7 +231,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
         </button>
         <button
           className={`tab ${activeTab === 2 ? 'active' : ''}`}
-          onClick={() => setActiveTab(2)}
+          onClick={openPopup}
         >
           Google
         </button>
