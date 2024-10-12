@@ -80,11 +80,14 @@
                         }
                         @include mq(600) {
                             padding: 2px 2px 3px 6px;
-                            font-size: 16px;   
+                            font-size: 16px;  
+                            height: 42px; 
+ 
                         }
                         @include mq(480) {
-                            padding: 2px 2px 3px 6px;
-                            font-size: 15px;   
+                            padding: 0px;
+                            font-size: 15px;  
+                            height: 38px; 
                         }
                     .icon {
                         height: 41px;
