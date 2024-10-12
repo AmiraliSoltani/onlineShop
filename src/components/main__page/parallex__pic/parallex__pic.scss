@@ -34,7 +34,7 @@
   background-image: url('./../assets/banners/parallex-7.jpg');
   background-attachment: fixed;
   background-position: center;
-  height: 270px;
+  height: 230px;
   background-repeat: no-repeat;
   background-size: cover; // Cover the entire container without empty spaces
   border-radius: 5px;
@@ -44,21 +44,22 @@
 
   // Responsive height adjustments
   @include mq(1200) {
-    height: 220px;
+    height: 200px;
   }
   @include mq(900) {
-    height: 200px;
+    height: 170px;
   }
   @include mq(768) {
 
-    height: 180px;
+    height: 150px;
   }
   @include mq(600) {
+    background-image: url('./../assets/banners/parallex-8.jpg');
     background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
-    height: 160px;
+    height: 140px;
   }
   @include mq(480) {
-    height: 130px;
+    height: 110px;
   }
 }
 
