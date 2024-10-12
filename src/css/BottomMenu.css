@@ -99,11 +99,25 @@
       justify-content: space-around; /* Spacing between list items */
 }
 .account-accordion ul li {
-  padding: 10px 10px;
-  border-right: 1px solid #ccc; /* Adding border between items */
-  border-left: 1px solid #ccc; /* Adding border between items */
+  padding: 10px 10px; /* Add more padding for better spacing */
+  position: relative;
   cursor: pointer;
+  /* Add a left border (between the current and previous item) */
+  /* Remove the border for the first item */
   /* Remove border for the last item */
+}
+.account-accordion ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 50%;
+  border-left: 1px solid #ccc; /* Border between items */
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.account-accordion ul li:first-child::before {
+  border: none;
 }
 .account-accordion ul li:hover {
   color: white;

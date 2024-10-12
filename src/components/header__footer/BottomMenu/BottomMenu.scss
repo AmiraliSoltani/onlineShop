@@ -75,10 +75,25 @@
     justify-content: space-around; /* Spacing between list items */
 
     li {
-      padding: 10px 10px;
-      border-right: 1px solid #ccc; /* Adding border between items */
-      border-left: 1px solid #ccc; /* Adding border between items */
+      padding: 10px 10px; /* Add more padding for better spacing */
+      position: relative;
       cursor: pointer;
+
+      /* Add a left border (between the current and previous item) */
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        height: 50%;
+        border-left: 1px solid #ccc; /* Border between items */
+        transform: translateY(-50%);
+      }
+
+      /* Remove the border for the first item */
+      &:first-child::before {
+        border: none;
+      }
       &:hover {
         color: white;
         background-color: #747D8C;
