@@ -11,4 +11,9 @@
 }
 .signin__login__box .success__login__register {
   margin-left: 20px;
+}
+@media only screen and (max-width: 900px) {
+  .signin__login__box .success__login__register {
+    display: none; /* This will grow between 500px and 1300px */
+  }
 }/*# sourceMappingURL=signin__login__box.css.map */

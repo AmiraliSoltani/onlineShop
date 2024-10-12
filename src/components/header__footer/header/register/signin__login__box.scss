@@ -15,7 +15,9 @@
 
 .success__login__register{
     margin-left: 20px;
-
+    @include mq(900) {
+        display: none; /* This will grow between 500px and 1300px */
+      }
     // a{
     //     text-align: right;
     // }
