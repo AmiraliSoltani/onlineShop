@@ -16,7 +16,7 @@ function ThreeImages() {
               <div className="detail__image">
                 <span className="title"></span>
               </div>
-              <span className="button">Women's Summer Collection</span>
+              <span className="button">Summer Collection</span>
             </div>
           </Link>
           <Link to="/last__category/1/range=1">
@@ -28,7 +28,7 @@ function ThreeImages() {
               <div className="detail__image">
                 <span className="title"></span>
               </div>
-              <span className="button">Women's Beauty Essentials</span>
+              <span className="button">Beauty Essentials</span>
             </div>
           </Link>
         </div>

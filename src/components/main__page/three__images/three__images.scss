@@ -1,11 +1,10 @@
 @import './../../../scss/variable.scss';
 @import './../../../scss/mixins.scss';
 
-
-
 .three__images {
   display: flex;
-  align-items: center;
+  align-items: start; /* Align both columns at the top */
+
   width: 100%;
   margin-top: 15px;
   justify-content: start;
@@ -19,8 +18,8 @@
     display: flex;
     flex-direction: column;
 
-
-    .top__right__images {
+    .top__right__images,
+    .buttom__right__images {
       width: 100%;
       position: relative;
       margin-bottom: 10px;
@@ -57,7 +56,6 @@
         left: 37px;
         position: absolute;
         border-radius: 5px;
-
         right: 37px;
         top: 8px;
         transform: scale(0, 1);
@@ -77,10 +75,8 @@
         border-left: 4px solid $white;
         border-right: 4px solid $white;
         bottom: 4px;
-        content: "";
         left: 37px;
         border-radius: 5px;
-
         position: absolute;
         right: 37px;
         top: 8px;
@@ -96,7 +92,6 @@
         -o-transition: all 0.6s ease-in-out 0s;
       }
 
-
       img {
         width: 100%;
         height: 185px;
@@ -107,6 +102,7 @@
         -moz-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
         -ms-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
         -o-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
+
         @include mq(1200) {
           height: 160px;
         }
@@ -130,7 +126,6 @@
         left: 17px;
 
         .title {
-          position: relative;
           font-size: 20px;
           padding: 10px;
           font-weight: 500;
@@ -140,18 +135,10 @@
           &:hover {
             &::after {
               transform: scale(1);
-              -webkit-transform: scale(1);
-              -moz-transform: scale(1);
-              -ms-transform: scale(1);
-              -o-transform: scale(1);
             }
 
             &::before {
               transform: scale(1);
-              -webkit-transform: scale(1);
-              -moz-transform: scale(1);
-              -ms-transform: scale(1);
-              -o-transform: scale(1);
             }
           }
 
@@ -166,17 +153,7 @@
             right: 0px;
             top: 0px;
             transform: scale(0, 1);
-            -webkit-transform: scale(0, 1);
-            -moz-transform: scale(0, 1);
-            -ms-transform: scale(0, 1);
-            -o-transform: scale(0, 1);
             transition: all 0.3s ease-in-out 0s;
-            -webkit-transition: all 0.3s ease-in-out 0s;
-            -moz-transition: all 0.3s ease-in-out 0s;
-            -ms-transition: all 0.3s ease-in-out 0s;
-            -o-transition: all 0.3s ease-in-out 0s;
-
-
           }
 
           &::before {
@@ -185,21 +162,12 @@
             border-left: 2px solid $black;
             border-right: 2px solid $black;
             bottom: 0px;
-            content: "";
             left: 0px;
             position: absolute;
             right: 0px;
             top: 0px;
             transform: scale(1, 0);
-            -webkit-transform: scale(1, 0);
-            -moz-transform: scale(1, 0);
-            -ms-transform: scale(1, 0);
-            -o-transform: scale(1, 0);
             transition: all 0.3s ease-in-out 0s;
-            -webkit-transition: all 0.3s ease-in-out 0s;
-            -moz-transition: all 0.3s ease-in-out 0s;
-            -ms-transition: all 0.3s ease-in-out 0s;
-            -o-transition: all 0.3s ease-in-out 0s;
           }
         }
       }
@@ -211,281 +179,170 @@
         border-radius: 4px;
         border: 2px solid grey;
         position: absolute;
-        font-size: 15px;
-        top: 116px;
-        left: 23px;
+        font-size: 14px;
+        bottom: 10%;
+        left: 0%;
         font-weight: 500;
         cursor: pointer;
         transition: all 0.6s ease-in-out 0s;
-        -webkit-transition: all 0.6s ease-in-out 0s;
-        -moz-transition: all 0.6s ease-in-out 0s;
-        -ms-transition: all 0.6s ease-in-out 0s;
-        -o-transition: all 0.6s ease-in-out 0s;
+        @include mq(1200) {
+          font-size: 14px;
+          padding: 7px 10px;
+        }
+      
+        @include mq(900) {
+          font-size: 13px;
+          padding: 6px 8px;
+          border: 1px solid grey;
 
+        }
+      
+        @include mq(768) {
+          border: 1px solid grey;
+          font-size: 12px;
+          padding: 4px 6px;
+        }
+      
+        @include mq(600) {
+          border: 1px solid grey;
+
+          font-size: 11px;
+          padding: 3px 3px;
+        }
+      
+        @include mq(480) {
+          border: 1px solid grey;
+
+          font-size: 10px;
+          padding: 2px 2px;
+        }
         &:hover {
           background-color: $white;
           color: $lightgreen;
-
         }
       }
-
-
-
     }
+  }
 
-    .buttom__right__images {
-      width: 100%;
+  .left {
+    width: 60%;
+
+    .left__image {
       position: relative;
+      width: 100%;
+      overflow: hidden;
       cursor: pointer;
-      font-size: 15px;
 
       &:hover {
         .button {
-          transform: translate(40px, 0);
+          transform: translate(95px, 0);
         }
 
         &::after {
           transform: scale(1);
-          -webkit-transform: scale(1);
-          -moz-transform: scale(1);
-          -ms-transform: scale(1);
-          -o-transform: scale(1);
         }
 
         &::before {
           transform: scale(1);
-          -webkit-transform: scale(1);
-          -moz-transform: scale(1);
-          -ms-transform: scale(1);
-          -o-transform: scale(1);
         }
       }
 
       &::after {
-        border-bottom: 3px solid $white;
-        border-top: 3px solid $white;
-        bottom: 4px;
-        content: "";
+        border-bottom: 8px solid $white;
+        border-top: 8px solid $white;
+        bottom: 20px;
         border-radius: 5px;
-
-        left: 35px;
+        content: "";
+        left: 78px;
         position: absolute;
-        right: 35px;
-        top: 4px;
+        right: 61px;
+        top: 20px;
         transform: scale(0, 1);
-        -webkit-transform: scale(0, 1);
-        -moz-transform: scale(0, 1);
-        -ms-transform: scale(0, 1);
-        -o-transform: scale(0, 1);
         transition: all 0.6s ease-in-out 0s;
-        -webkit-transition: all 0.6s ease-in-out 0s;
-        -moz-transition: all 0.6s ease-in-out 0s;
-        -ms-transition: all 0.6s ease-in-out 0s;
-        -o-transition: all 0.6s ease-in-out 0s;
       }
 
       &::before {
         content: "";
-        border-left: 3px solid $white;
-        border-right: 3px solid $white;
-        bottom: 4px;
+        border-left: 8px solid $white;
+        border-right: 8px solid $white;
+        bottom: 20px;
         border-radius: 5px;
-
         content: "";
-        left: 35px;
+        left: 78px;
         position: absolute;
-        right: 35px;
-        top: 4px;
+        right: 61px;
+        top: 20px;
         transform: scale(1, 0);
-        -webkit-transform: scale(1, 0);
-        -moz-transform: scale(1, 0);
-        -ms-transform: scale(1, 0);
-        -o-transform: scale(1, 0);
         transition: all 0.6s ease-in-out 0s;
-        -webkit-transition: all 0.6s ease-in-out 0s;
-        -moz-transition: all 0.6s ease-in-out 0s;
-        -ms-transition: all 0.6s ease-in-out 0s;
-        -o-transition: all 0.6s ease-in-out 0s;
       }
-
 
       img {
         width: 100%;
-        height: 185px;
+        height: 380px;
         border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
+
         @include mq(1200) {
-          height: 160px;
+          height: 330px;
         }
         @include mq(900) {
-          height: 140px;
+          height: 290px;
         }
         @include mq(768) {
-          height: 120px;
+          height: 250px;
         }
         @include mq(600) {
-          height: 100px;
+          height: 210px;
         }
         @include mq(480) {
-          height: 90px;
+          height: 190px;
         }
-
       }
 
       .button {
-        background-color: $orange;
+        background-color: $pink;
         color: $white;
-        padding: 9px;
+        padding: 10px;
         border-radius: 4px;
         border: 2px solid grey;
         position: absolute;
         font-size: 17px;
-        top: 116px;
-        left: 23px;
+        bottom: 10%;
+        left: 0%;
         font-weight: 500;
         cursor: pointer;
         transition: all 0.6s ease-in-out 0s;
-        -webkit-transition: all 0.6s ease-in-out 0s;
-        -moz-transition: all 0.6s ease-in-out 0s;
-        -ms-transition: all 0.6s ease-in-out 0s;
-        -o-transition: all 0.6s ease-in-out 0s;
-        font-size: 15px;
-
-        &:hover {
-          background-color: $white;
-          color: $orange;
-
+        @include mq(1200) {
+          font-size: 15px;
+          padding: 8px 12px;
         }
+      
+        @include mq(900) {
+          font-size: 14px;
+          padding: 7px 10px;
+        }
+      
+        @include mq(768) {
+          font-size: 13px;
+          padding: 6px 8px;
+        }
+      
+        @include mq(600) {
+          font-size: 12px;
+          padding: 5px 7px;
+        }
+      
+        @include mq(480) {
+          font-size: 11px;
+          padding: 4px 6px;
+        }
+      
       }
     }
   }
-
-  .left{
-width: 60%;
-
-  .left__image {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    cursor: pointer;
-
-    &:hover {
-      .button {
-        transform: translate(50px, 0);
-      }
-
-      &::after {
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-      }
-
-      &::before {
-        transform: scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform: scale(1);
-        -ms-transform: scale(1);
-        -o-transform: scale(1);
-      }
-    }
-
-    &::after {
-      border-bottom: 8px solid $white;
-      border-top: 8px solid $white;
-      bottom: 20px;
-      border-radius: 5px;
-
-      content: "";
-      left: 78px;
-      position: absolute;
-      right: 61px;
-      top: 20px;
-      transform: scale(0, 1);
-      -webkit-transform: scale(0, 1);
-      -moz-transform: scale(0, 1);
-      -ms-transform: scale(0, 1);
-      -o-transform: scale(0, 1);
-      transition: all 0.6s ease-in-out 0s;
-      -webkit-transition: all 0.6s ease-in-out 0s;
-      -moz-transition: all 0.6s ease-in-out 0s;
-      -ms-transition: all 0.6s ease-in-out 0s;
-      -o-transition: all 0.6s ease-in-out 0s;
-    }
-
-    &::before {
-      content: "";
-      border-left: 8px solid $white;
-      border-right: 8px solid $white;
-      bottom: 20px;
-      border-radius: 5px;
-
-      content: "";
-      left: 78px;
-      position: absolute;
-      right: 61px;
-      top: 20px;
-      transform: scale(1, 0);
-      -webkit-transform: scale(1, 0);
-      -moz-transform: scale(1, 0);
-      -ms-transform: scale(1, 0);
-      -o-transform: scale(1, 0);
-      transition: all 0.6s ease-in-out 0s;
-      -webkit-transition: all 0.6s ease-in-out 0s;
-      -moz-transition: all 0.6s ease-in-out 0s;
-      -ms-transition: all 0.6s ease-in-out 0s;
-      -o-transition: all 0.6s ease-in-out 0s;
-    }
-
-    img {
-      width: 100%;
-      height: 380px;
-      border-radius: 5px;
-      cursor: pointer;
-      // position: relative;
-      transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
-      -webkit-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
-      -moz-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
-      -ms-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
-      -o-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
-      @include mq(1200) {
-        height: 330px;
-      }
-      @include mq(900) {
-        height: 290px;
-      }
-      @include mq(768) {
-        height: 250px;
-      }
-      @include mq(600) {
-        height: 210px;
-      }
-      @include mq(480) {
-        height: 190px;
-      }
-    }
-
-    .button {
-      background-color: $pink;
-      color: $white;
-      padding: 10px;
-      border-radius: 4px;
-      border: 2px solid grey;
-      position: absolute;
-      font-size: 17px;
-      top: 275px;
-      left: 67px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.6s ease-in-out 0s;
-      -webkit-transition: all 0.6s ease-in-out 0s;
-      -moz-transition: all 0.6s ease-in-out 0s;
-      -ms-transition: all 0.6s ease-in-out 0s;
-      -o-transition: all 0.6s ease-in-out 0s;
-    }
-  }
 }
-}
-.left{
+
+.left {
   font-size: 30px;
 }
