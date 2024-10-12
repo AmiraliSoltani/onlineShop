@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 import "./../../../../../css/Signin.css";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
@@ -13,7 +13,8 @@ import { ReadTokenInformation } from "../../../../../services/ReadTokenInformati
 
 const userService = require("../../../../../services/authenticate");
 
-function Signin({ showRegisterModal, setShowRegisterModal, toggleModal }) {
+function Signin({ showRegisterModal, setShowRegisterModal, toggleModal,tab=false}) {
+  console.log("tab1",tab)
   const schema = z.object({
     username: z.string().email("Please enter a valid email address"),
     password: z.string().min(5, "Password needs at least 5 letters"),
@@ -83,8 +84,91 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal }) {
     };
   }, []);
 
+
+
+
   return (
-    <div>
+    <Fragment>
+    {tab && <Fragment>
+      <form onSubmit={handleSubmit(onSubmit)} noValidate>
+                <div className="d-flex flex-row justify-content-between align-items-center">
+                  <div className="w-100">
+                    {generalError && (
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                        {generalError}
+                      </div>
+                    )}
+                    <input
+                      {...register("name")}
+                      type="text"
+                      placeholder="Enter your first name"
+                      className=" w-100 form-control mt-3 mb-3"
+                    />
+                    {errors.name && (
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded ">
+                        {errors.name.message}
+                      </div>
+                    )}
+
+                    <input
+                      {...register("lastName")}
+                      type="text"
+                      placeholder="Enter your last name"
+                      className=" w-100 form-control mt-3 mb-3"
+
+                    />
+                    {errors.lastName && (
+                      <div 
+                      className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded  "
+                     >
+                        {errors.lastName.message}
+                      </div>
+                    )}
+
+                    <input
+                      {...register("username")}
+                      type="email"
+                      placeholder="Enter your email"
+                      className=" w-100 form-control mt-3 mb-3"
+                    />
+                    {errors.username && (
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded  "
+                     >
+
+                        {errors.username.message}
+                      </div>
+                    )}
+
+                    <input
+                      {...register("password")}
+                      type="password"
+                      placeholder="Enter your password"
+                      className=" w-100 form-control mt-3 mb-3"
+                    />
+                    {errors.password && (
+                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded  "
+                      >
+                        {errors.password.message}
+                      </div>
+                    )}
+                  </div>
+
+                </div>
+                <div className="footerMenu">
+           <button className="button-menu"  type="submit" >
+               Sign In
+             </button>
+
+             </div>
+
+
+            </form>
+      </Fragment>
+    
+    }
+    {!tab &&  <div>
+
+
       <div className="signin" id="signin__button">
         <button onClick={() => setShowRegisterModal(true)} className="btn ">
           <span className="signin__1">Sign In</span>
@@ -208,9 +292,11 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal }) {
           {loginState.authenticated && <div>Welcome back!</div>}
         </div>
       </Modal>
-    </div>
+    </div>}
+    </Fragment>
   );
 }
+
 
 export default Signin;
 

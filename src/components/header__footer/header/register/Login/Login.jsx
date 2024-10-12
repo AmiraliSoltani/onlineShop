@@ -11,6 +11,7 @@ import { ReadTokenInformation } from "../../../../../services/ReadTokenInformati
 import debounce from "lodash.debounce";
 import { useDebouncedCallback } from 'use-debounce';
 import menuSearchContext from "../../../../contexts/menuSearchContext";
+import Signin from "../Signin/Signin";
 
 const userService = require("../../../../../services/authenticate");
 
@@ -179,7 +180,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
       case 1:
         return <div className="tab-content">
            
-          
+          <Signin tab={true}></Signin>
           </div>;
       case 2:
         return <div className="tab-content">

@@ -2,6 +2,24 @@
   background-color: #e6bfa6 !important;
 }
 
+.footerMenu .button-menu {
+  background-color: #00B894;
+  padding: 7px;
+  border: 0px;
+  width: 100%;
+  color: white;
+}
+.footerMenu .button-menu:hover {
+  background-color: #00996D;
+}
+.footerMenu .button-menu:active {
+  background-color: #5E6672; /* Darker color when clicked */
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98); /* Slight shrink effect on click */
+  -webkit-animation: click-bounce 0.4s ease;
+          animation: click-bounce 0.4s ease; /* Apply bounce effect */
+}
+
 .modal-content {
   width: 110% !important;
 }

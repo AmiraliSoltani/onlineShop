@@ -7,6 +7,24 @@
 }
 }
 
+.footerMenu{
+  .button-menu{
+    background-color: #00B894;
+    padding: 7px;
+    border: 0px;
+    width: 100%;
+    color: white;
+    &:hover{
+      background-color: #00996D;
+    }
+    &:active {
+      background-color: #5E6672; /* Darker color when clicked */
+      transform: scale(0.98); /* Slight shrink effect on click */
+      animation: click-bounce 0.4s ease; /* Apply bounce effect */
+    }
+  }
+}
+
 .modal-content{
   width: 110% !important;
 }
