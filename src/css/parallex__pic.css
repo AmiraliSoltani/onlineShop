@@ -212,19 +212,21 @@
 }
 @media only screen and (max-width: 768px) {
   .text__in__parallex .buttom__text {
-    font-size: 16px;
+    font-size: 15px;
     padding: 6px 8px;
   }
 }
 @media only screen and (max-width: 600px) {
   .text__in__parallex .buttom__text {
-    font-size: 14px;
+    font-size: 12px;
     padding: 5px 7px;
+    margin-top: 28px;
   }
 }
 @media only screen and (max-width: 480px) {
   .text__in__parallex .buttom__text {
-    font-size: 12px;
+    font-size: 11px;
     padding: 4px 6px;
+    margin-top: 28px;
   }
 }/*# sourceMappingURL=parallex__pic.css.map */

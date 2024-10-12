@@ -139,16 +139,20 @@
       padding: 7px 10px;
     }
     @include mq(768) {
-      font-size: 16px;
+      font-size: 15px;
       padding: 6px 8px;
     }
     @include mq(600) {
-      font-size: 14px;
+      font-size: 12px;
       padding: 5px 7px;
+      margin-top: 28px;
+
     }
     @include mq(480) {
-      font-size: 12px;
+      font-size: 11px;
       padding: 4px 6px;
+      margin-top: 28px;
+
     }
   }
 }
