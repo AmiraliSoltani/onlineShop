@@ -68,9 +68,12 @@ header {
         padding: 15px 0;
         @include mq(768) {
             justify-content: space-around;
+
           }
           @include mq(500) {
             justify-content: space-between;
+            padding: 10px 0;
+
           }
 
         .header__left {
