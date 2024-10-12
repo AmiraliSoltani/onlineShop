@@ -55,7 +55,7 @@
                     justify-content: flex-start;
                     align-items: center;
                     position: relative;
-                    cursor: pointer;
+                    cursor: default !important;
                     width: 100%;
                     direction: ltr;
                     margin-bottom: 10px;
@@ -68,18 +68,43 @@
                         #FFB3B3 40px,  /* Slightly darker color for the stripe */
                         #FFB3B3 60px   /* Total width of two stripes (light + dark) */
                       ) !important;
-                      
-                    // &:hover {
-                    //     .icon {
-                    //         animation: icon__animate 2s infinite;
-                    //         -webkit-animation: icon__animate 2s infinite;
-                    //     }
-                    // }
-
+                      @include mq(1200) {
+                        padding: 5px 5px 3px 10px;
+                        font-size: 18px;   
+                                     }
+                        @include mq(900) {
+                            font-size: 17px;   
+                        }
+                        @include mq(768) {
+                            font-size: 17px;   
+                        }
+                        @include mq(600) {
+                            font-size: 16px;   
+                        }
+                        @include mq(480) {
+                            font-size: 15px;   
+                        }
                     .icon {
                         height: 41px;
                         width: 41px;
                         margin-right: 13px;
+                        @include mq(1200) {
+                       
+                                         }
+                            @include mq(900) {
+                                  
+                            }
+                            @include mq(768) {
+                               
+                            }
+                            @include mq(600) {
+                                height: 35px;
+                                width: 35px; 
+                            }
+                            @include mq(480) {
+                                height: 32px;
+                        width: 32px;  
+                            }
                     }
 
                     .arrow {

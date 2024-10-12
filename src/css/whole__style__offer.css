@@ -79,17 +79,55 @@
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  cursor: pointer;
+  cursor: default !important;
   width: 100%;
   direction: ltr;
   margin-bottom: 10px;
   height: 50px;
   background: repeating-linear-gradient(45deg, #FFD6D6, #FFD6D6 40px, #FFB3B3 40px, #FFB3B3 60px) !important;
 }
+@media only screen and (max-width: 1200px) {
+  .whole__style__offer .main__offer .top__offer .title .top__offer__category {
+    padding: 5px 5px 3px 10px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .whole__style__offer .main__offer .top__offer .title .top__offer__category {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .whole__style__offer .main__offer .top__offer .title .top__offer__category {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .whole__style__offer .main__offer .top__offer .title .top__offer__category {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .whole__style__offer .main__offer .top__offer .title .top__offer__category {
+    font-size: 15px;
+  }
+}
 .whole__style__offer .main__offer .top__offer .title .top__offer__category .icon {
   height: 41px;
   width: 41px;
   margin-right: 13px;
+}
+@media only screen and (max-width: 600px) {
+  .whole__style__offer .main__offer .top__offer .title .top__offer__category .icon {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .whole__style__offer .main__offer .top__offer .title .top__offer__category .icon {
+    height: 32px;
+    width: 32px;
+  }
 }
 .whole__style__offer .main__offer .top__offer .title .top__offer__category .arrow {
   position: absolute;
