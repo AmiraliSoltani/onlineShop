@@ -113,6 +113,11 @@
     @include mq(480) {
       font-size: 11px;
     }
+    @include mq(390) {
+        font-size: 10px;
+
+  
+      }
   }
 
   .buttom__text {
@@ -151,8 +156,14 @@
     @include mq(480) {
       font-size: 11px;
       padding: 4px 6px;
-      margin-top: 28px;
+      margin-top: 20px;
 
     }
+    @include mq(390) {
+        font-size: 10px;
+        padding: 4px 6px;
+        margin-top: 20px;
+  
+      }
   }
 }
