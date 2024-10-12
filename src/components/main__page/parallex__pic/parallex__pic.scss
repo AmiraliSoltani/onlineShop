@@ -54,8 +54,8 @@
     height: 160px;
   }
   @include mq(600) {
-    // background-image: url('./../assets/banners/parallex-8.jpg');
-    // background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
+    background-image: url('./../assets/banners/parallex-8.jpg');
+    background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
     height: 140px;
   }
   @include mq(480) {
@@ -70,6 +70,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include mq(600) {
+    width: 69%;
+
+  }
 
   .top__text {
     color: #fff;

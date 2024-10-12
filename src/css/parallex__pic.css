@@ -99,6 +99,8 @@
 }
 @media only screen and (max-width: 600px) {
   .parallex__background__image {
+    background-image: url("./../assets/banners/parallex-8.jpg");
+    background-attachment: scroll;
     height: 140px;
   }
 }
@@ -124,6 +126,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  .text__in__parallex {
+    width: 69%;
+  }
 }
 .text__in__parallex .top__text {
   color: #fff;
