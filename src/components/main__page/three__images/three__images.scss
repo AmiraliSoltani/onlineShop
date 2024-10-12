@@ -14,18 +14,11 @@
   text-align: right;
 
   .right__images {
-    width: 45%;
+    width: 37%;
     margin-left: 15px;
     display: flex;
     flex-direction: column;
-    @include mq(1000) {
-      width: 55%;
 
-            }
-            @include mq(770) {
-display: none;        
-                    }
-    
 
     .top__right__images {
       width: 100%;
@@ -106,7 +99,7 @@ display: none;
 
       img {
         width: 100%;
-        height: 198px;
+        height: 185px;
         border-radius: 5px;
         cursor: pointer;
         transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
@@ -114,10 +107,21 @@ display: none;
         -moz-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
         -ms-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
         -o-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
-        // &:hover{
-        //     transform: scale(1.2) rotate(5deg);
-
-        // }
+        @include mq(1200) {
+          height: 160px;
+        }
+        @include mq(900) {
+          height: 140px;
+        }
+        @include mq(768) {
+          height: 120px;
+        }
+        @include mq(600) {
+          height: 100px;
+        }
+        @include mq(480) {
+          height: 90px;
+        }
       }
 
       .detail__image {
@@ -307,8 +311,23 @@ display: none;
 
       img {
         width: 100%;
-        height: 198px;
+        height: 185px;
         border-radius: 5px;
+        @include mq(1200) {
+          height: 160px;
+        }
+        @include mq(900) {
+          height: 140px;
+        }
+        @include mq(768) {
+          height: 120px;
+        }
+        @include mq(600) {
+          height: 100px;
+        }
+        @include mq(480) {
+          height: 90px;
+        }
 
       }
 
@@ -341,16 +360,8 @@ display: none;
   }
 
   .left{
-width: 70%;
-@include mq(1000) {
-  width: 55%;
+width: 60%;
 
-        }
-        @include mq(770) {
-          width: 100%;
-
-                              }
-  
   .left__image {
     position: relative;
     width: 100%;
@@ -428,7 +439,7 @@ width: 70%;
 
     img {
       width: 100%;
-      height: 404px;
+      height: 380px;
       border-radius: 5px;
       cursor: pointer;
       // position: relative;
@@ -437,11 +448,21 @@ width: 70%;
       -moz-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
       -ms-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
       -o-transition: all 0.7s cubic-bezier(.05, .25, .38, .61);
-
-      @include mq(770) {
-        height: 361px;
-
-                            }
+      @include mq(1200) {
+        height: 330px;
+      }
+      @include mq(900) {
+        height: 290px;
+      }
+      @include mq(768) {
+        height: 250px;
+      }
+      @include mq(600) {
+        height: 210px;
+      }
+      @include mq(480) {
+        height: 190px;
+      }
     }
 
     .button {

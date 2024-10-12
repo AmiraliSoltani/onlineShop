@@ -21,13 +21,23 @@
   transition: all 0.4s ease-in-out; /* Slide-up effect */
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .lineMeu {
     width: 100%;
     background-color: #666E7B;
     visibility: visible !important; /* This will grow between 500px and 1300px */
     height: 7px;
     margin-bottom: 20px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .lineMeu {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .lineMeu {
+    margin-bottom: 10px;
   }
 }
 
@@ -41,7 +51,7 @@
   min-height: 40px;
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 900px) {
   .main__menu {
     display: none;
   }

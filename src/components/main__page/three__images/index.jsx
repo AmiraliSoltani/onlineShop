@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function ThreeImages() {
   return (
-    <div className="container">
+    <div className="container-special">
       <div className="three__images">
         <div className="right__images">
           <Link to="/last__category/1/optionalFilter=Summer">

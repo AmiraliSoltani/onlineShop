@@ -29,12 +29,19 @@ direction: ltr;
 }
 
 .lineMeu{
-  @include mq(1000) {
+  @include mq(900) {
     width: 100%;
     background-color: #666E7B;
     visibility: visible !important; /* This will grow between 500px and 1300px */
     height: 7px;
     margin-bottom: 20px;
+}
+@include mq(700) {
+  margin-bottom: 15px;
+}
+
+@include mq(500) {
+  margin-bottom: 10px;
 }
 }
 
@@ -47,7 +54,7 @@ direction: ltr;
   background-color: #747d8c;
   min-height: 40px;
   margin-bottom: 20px;
-  @include mq(1000) {
+  @include mq(900) {
 display:none;
 }
 

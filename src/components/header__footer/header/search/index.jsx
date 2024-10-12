@@ -123,6 +123,9 @@ const settings2 = {
   
   const closeSlidingPage=()=>{
     setIsVisible(false)
+    blurDispatch({ type: "disactiveBlur" });
+    setClassName('dropdown__search');
+    setSelectedIndex(-1); // Reset selected indexfd
   }
 
   // Function to get the top searches from the backend

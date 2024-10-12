@@ -15,7 +15,7 @@
   text-align: right;
 }
 .three__images .right__images {
-  width: 45%;
+  width: 37%;
   margin-left: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -24,16 +24,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-@media only screen and (max-width: 1000px) {
-  .three__images .right__images {
-    width: 55%;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .three__images .right__images {
-    display: none;
-  }
 }
 .three__images .right__images .top__right__images {
   width: 100%;
@@ -105,7 +95,7 @@
 }
 .three__images .right__images .top__right__images img {
   width: 100%;
-  height: 198px;
+  height: 185px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.7s cubic-bezier(0.05, 0.25, 0.38, 0.61);
@@ -113,6 +103,31 @@
   -moz-transition: all 0.7s cubic-bezier(0.05, 0.25, 0.38, 0.61);
   -ms-transition: all 0.7s cubic-bezier(0.05, 0.25, 0.38, 0.61);
   -o-transition: all 0.7s cubic-bezier(0.05, 0.25, 0.38, 0.61);
+}
+@media only screen and (max-width: 1200px) {
+  .three__images .right__images .top__right__images img {
+    height: 160px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .three__images .right__images .top__right__images img {
+    height: 140px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .three__images .right__images .top__right__images img {
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .three__images .right__images .top__right__images img {
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .three__images .right__images .top__right__images img {
+    height: 90px;
+  }
 }
 .three__images .right__images .top__right__images .detail__image {
   position: absolute;
@@ -275,8 +290,33 @@
 }
 .three__images .right__images .buttom__right__images img {
   width: 100%;
-  height: 198px;
+  height: 185px;
   border-radius: 5px;
+}
+@media only screen and (max-width: 1200px) {
+  .three__images .right__images .buttom__right__images img {
+    height: 160px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .three__images .right__images .buttom__right__images img {
+    height: 140px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .three__images .right__images .buttom__right__images img {
+    height: 120px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .three__images .right__images .buttom__right__images img {
+    height: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .three__images .right__images .buttom__right__images img {
+    height: 90px;
+  }
 }
 .three__images .right__images .buttom__right__images .button {
   background-color: #ff7675;
@@ -302,17 +342,7 @@
   color: #ff7675;
 }
 .three__images .left {
-  width: 70%;
-}
-@media only screen and (max-width: 1000px) {
-  .three__images .left {
-    width: 55%;
-  }
-}
-@media only screen and (max-width: 770px) {
-  .three__images .left {
-    width: 100%;
-  }
+  width: 60%;
 }
 .three__images .left .left__image {
   position: relative;
@@ -383,7 +413,7 @@
 }
 .three__images .left .left__image img {
   width: 100%;
-  height: 404px;
+  height: 380px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.7s cubic-bezier(0.05, 0.25, 0.38, 0.61);
@@ -392,9 +422,29 @@
   -ms-transition: all 0.7s cubic-bezier(0.05, 0.25, 0.38, 0.61);
   -o-transition: all 0.7s cubic-bezier(0.05, 0.25, 0.38, 0.61);
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 1200px) {
   .three__images .left .left__image img {
-    height: 361px;
+    height: 330px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .three__images .left .left__image img {
+    height: 290px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .three__images .left .left__image img {
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .three__images .left .left__image img {
+    height: 210px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .three__images .left .left__image img {
+    height: 190px;
   }
 }
 .three__images .left .left__image .button {
