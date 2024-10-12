@@ -34,7 +34,7 @@
     .main__offer {
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 98.8%;
         flex-direction: column;
 
         .top__offer {
@@ -146,38 +146,24 @@
             display: flex;
             justify-content: space-around;
 
-            @include mq(1200) {
-                justify-content: space-around;
-            }
+         
 
             .product1 {
                 @include mq(1200) {
                     width: 38% !important;
                 }
-                @include mq(995) {
-                    width: 45% !important;
-                }
-                @include mq(769) {
-                    width: 75% !important;
-                }
+             
             }
 
             .product2 {
                 @include mq(1200) {
                     width: 38% !important;
                 }
-                @include mq(995) {
-                    width: 45% !important;
-                }
-                @include mq(769) {
-                    display: none !important;
-                }
+              
             }
 
             .product3 {
-                @include mq(1200) {
-                    display: none !important;
-                }
+            
             }
 
             .one__product {

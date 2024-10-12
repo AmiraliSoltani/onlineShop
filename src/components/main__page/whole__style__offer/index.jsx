@@ -119,7 +119,7 @@ function WholeStyleOffer({allProducts}) {
    
     return (
       <div className="whole__style__offer">
-        <div className="container">
+        <div className="container-special">
           <div className="main__offer">
             <div className="top__offer">
               <div className="title">

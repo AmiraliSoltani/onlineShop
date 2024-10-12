@@ -64,16 +64,25 @@
 }
 
 .text__in__parallex {
-  width: 55%;
+  width: 60%;
   display: flex;
   direction: rtl;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @include mq(900) {
+    width: 65%;
+
+  }
   @include mq(600) {
     width: 69%;
 
   }
+  @include mq(400) {
+    width: 74%;
+
+  }
+
 
   .top__text {
     color: #fff;
