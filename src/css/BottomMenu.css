@@ -14,11 +14,11 @@
   border-top: 1px solid #ccc;
   padding: 5px 0;
   z-index: 1000;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 @media only screen and (max-width: 900px) {
   .bottom-menu {
-    visibility: visible; /* This will grow between 500px and 1300px */
+    visibility: visible;
   }
 }
 
@@ -68,4 +68,48 @@
 .menu-item.active .menu-icon {
   -webkit-filter: brightness(1.2);
           filter: brightness(1.2);
+}
+
+/* Updated account accordion to display in a row above the bottom menu */
+.account-accordion {
+  position: absolute;
+  bottom: 100%; /* Positioned just above the bottom menu */
+  left: 0;
+  width: 100%;
+  background-color: white;
+  border-top: 1px solid #ccc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 0;
+  z-index: 999;
+  background-color: #f1f2f6;
+}
+.account-accordion ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around; /* Spacing between list items */
+}
+.account-accordion ul li {
+  padding: 10px;
+}
+.account-accordion ul li a, .account-accordion ul li button {
+  text-decoration: none;
+  color: #000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: center;
+}
+.account-accordion ul li a:hover, .account-accordion ul li button:hover {
+  color: #00796b;
 }/*# sourceMappingURL=BottomMenu.css.map */
