@@ -72,7 +72,7 @@
   background-image: url("./../assets/banners/parallex-7.jpg");
   background-attachment: fixed;
   background-position: center;
-  height: 300px;
+  height: 270px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
@@ -84,27 +84,28 @@
 }
 @media only screen and (max-width: 1200px) {
   .parallex__background__image {
-    height: 250px;
+    height: 220px;
   }
 }
 @media only screen and (max-width: 900px) {
   .parallex__background__image {
-    height: 220px;
+    height: 200px;
   }
 }
 @media only screen and (max-width: 768px) {
   .parallex__background__image {
-    height: 200px;
+    height: 180px;
   }
 }
 @media only screen and (max-width: 600px) {
   .parallex__background__image {
-    height: 180px;
+    background-attachment: scroll;
+    height: 160px;
   }
 }
 @media only screen and (max-width: 480px) {
   .parallex__background__image {
-    height: 160px;
+    height: 130px;
   }
 }
 
