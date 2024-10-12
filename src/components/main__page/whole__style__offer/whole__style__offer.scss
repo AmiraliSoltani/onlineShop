@@ -170,6 +170,7 @@
         }
 
         .buttom__offer__slider {
+            direction: ltr;
             width: 100%;
             padding-top: 10px;
             background-color: $white;
@@ -179,16 +180,12 @@
          
 
             .product1 {
-                @include mq(1200) {
-                    width: 38% !important;
-                }
+          
              
             }
 
             .product2 {
-                @include mq(1200) {
-                    width: 38% !important;
-                }
+      
               
             }
 
@@ -197,13 +194,14 @@
             }
 
             .one__product {
-                width: 31%;
+                width: 29%;
                 display: flex;
                 flex-direction: column;
                 align-items: start;
                 position: relative;
 
                 .product__images {
+                    width: 100%;
                     display: flex;
                     direction: ltr;
                     justify-content: start;
@@ -211,7 +209,8 @@
 
                     img {
                         width: 100%;
-                        height: 420px;
+                        // height: 420px;
+                        height:  calc(29vw * 1.13);;
                         border-radius: 4px;
                     }
                 }
