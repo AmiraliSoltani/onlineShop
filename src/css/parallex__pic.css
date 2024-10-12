@@ -95,7 +95,6 @@
 @media only screen and (max-width: 768px) {
   .parallex__background__image {
     height: 200px;
-    background-attachment: scroll;
   }
 }
 @media only screen and (max-width: 600px) {

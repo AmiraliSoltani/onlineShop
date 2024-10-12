@@ -52,9 +52,10 @@
   @include mq(768) {
 
     height: 200px;
-    background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
   }
   @include mq(600) {
+    // background-attachment: scroll; // Disable fixed background on smaller screens to avoid issues
+
     height: 180px;
   }
   @include mq(480) {
