@@ -219,7 +219,6 @@
 }
 .amazing__offer .main__offer .buttom__offer__slider .see-more2 {
   color: black;
-  width: 95% !important;
   height: 280px;
   font-size: 21px;
   display: -webkit-box !important;
@@ -233,6 +232,33 @@
           align-items: center;
   border-radius: 5px;
   text-decoration: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media only screen and (max-width: 980px) {
+  .amazing__offer .main__offer .buttom__offer__slider .see-more2 {
+    height: 33.3333333333vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .amazing__offer .main__offer .buttom__offer__slider .see-more2 {
+    height: 44vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .amazing__offer .main__offer .buttom__offer__slider .see-more2 {
+    height: 41.25vw;
+  }
+}
+.amazing__offer .main__offer .buttom__offer__slider .see-more2 span {
+  text-align: center;
+}
+.amazing__offer .main__offer .buttom__offer__slider .see-more2 .arrow-icon {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
 }
 .amazing__offer .main__offer .buttom__offer__slider .one__product {
   width: 100% !important;

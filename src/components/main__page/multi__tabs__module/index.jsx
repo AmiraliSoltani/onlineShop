@@ -413,7 +413,13 @@ setMultitabCategories(orderedSelectedCategories);
               })}
               <Link to={`/lastCategory/${show}`}  className="no-decoration" style={{textDecoration:"none !important"}}>
               <div className={`see-more2 bg-${line}`} >
-See all the products
+
+<span> See all the products</span>
+<img
+                className="arrow-icon"
+                src={require("./../../../assets/icons/arrow-right.png")}
+                alt="logo"
+              />
               </div>
 </Link>
             </Slider>
