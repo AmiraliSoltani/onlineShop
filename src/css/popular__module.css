@@ -416,7 +416,7 @@
   margin-bottom: 5px;
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon {
-  margin-left: 30px;
+  margin-left: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,12 +460,29 @@
   -moz-transition: all 2s ease-in-out 0s;
   -ms-transition: all 2s ease-in-out 0s;
   -o-transition: all 2s ease-in-out 0s;
-  width: 47px;
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   padding: 5px;
+}
+@media only screen and (max-width: 900px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
+    height: 24px;
+    width: 24px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
+    height: 21px;
+    width: 21px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
+    height: 18px;
+    width: 18px;
+  }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .pluse {
   position: absolute;
