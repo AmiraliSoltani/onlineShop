@@ -54,7 +54,23 @@
             position: relative;
             cursor: pointer;
             height: 58px;
-  
+            @include mq(980) {
+              font-size: 15px;
+
+          }
+          @include mq(900) {
+            font-size: 14px;
+
+        }
+        @include mq(870) {
+          font-size: 13px;
+
+      }
+      @include mq(650) {
+        font-size: 12px;
+        height: 49px;
+    }
+          
             // &:hover {
             //   .icon {
             //     animation: icon__animate 2s infinite;
@@ -71,9 +87,26 @@
               width: 40px;
               margin-right: 12px;
               margin-left: 0px !important;
-              @media (max-width: 990px) {
-                display: none;
-              }
+              @include mq(940) {
+                margin-right: 8px;
+                height: 37px;
+                width:37px;
+            }
+            @include mq(870) {
+              margin-right: 5px;
+              height: 37px;
+              width:37px;
+          }
+          @include mq(809) {
+            margin-right: 5px;
+            height: 35px;
+            width:35px;
+        }
+        @include mq(650) {
+          margin-right: 5px;
+          height: 31px;
+          width:31px;
+      }
               // &::before,
               // &::after {
               //   content: "";
@@ -105,21 +138,17 @@
   
             .arrow {
               position: absolute;
-              height: 30px;
-              width: 30px;
-              top: 44px;
-              right: 182px;
+              height: 17px;
+              width: 17px;
+              top: 53px;
+              left: 7px;
               transform: rotate(90deg);
               visibility: visible;
-              @media (max-width: 1200px) {
-                right: 120px;
-              }
-              @media (max-width: 990px) {
-                right: 80px;
-              }
-              @media (max-width: 768px) {
-                right: 50px;
-              }
+              @include mq(650) {
+                top: 44px;
+
+            }
+                
             }
           }
   
@@ -816,7 +845,9 @@
     #ebe7c3 60px  /* Total width of two stripes (light + dark) */
   ) !important;
   
-
+  @include mq(820) {
+display: none !important;
+}
 }
 
   }

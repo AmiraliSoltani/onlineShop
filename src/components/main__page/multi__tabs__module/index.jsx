@@ -97,7 +97,7 @@ function MultiTabsModule(props) {
           })
       }
       console.log("lastttttttttttt",cardState.lastVisitedProducts,LastVisitedCategories)
-      const choices = [1, 801, 7, 11, 800];
+      const choices = [12, 801, 7, 11, 800];
 
 // Combine LastVisitedCategories with choices, ensuring no duplicates and correct order
 const mergedChoices = [...LastVisitedCategories];

@@ -73,40 +73,74 @@
   cursor: pointer;
   height: 58px;
 }
+@media only screen and (max-width: 980px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category {
+    font-size: 12px;
+    height: 49px;
+  }
+}
 .amazing__offer .main__offer .top__offer .top__offer__category .icon {
   height: 40px;
   width: 40px;
   margin-right: 12px;
   margin-left: 0px !important;
 }
-@media (max-width: 990px) {
+@media only screen and (max-width: 940px) {
   .amazing__offer .main__offer .top__offer .top__offer__category .icon {
-    display: none;
+    margin-right: 8px;
+    height: 37px;
+    width: 37px;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category .icon {
+    margin-right: 5px;
+    height: 37px;
+    width: 37px;
+  }
+}
+@media only screen and (max-width: 809px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category .icon {
+    margin-right: 5px;
+    height: 35px;
+    width: 35px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category .icon {
+    margin-right: 5px;
+    height: 31px;
+    width: 31px;
   }
 }
 .amazing__offer .main__offer .top__offer .top__offer__category .arrow {
   position: absolute;
-  height: 30px;
-  width: 30px;
-  top: 44px;
-  right: 182px;
+  height: 17px;
+  width: 17px;
+  top: 53px;
+  left: 7px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   visibility: visible;
 }
-@media (max-width: 1200px) {
+@media only screen and (max-width: 650px) {
   .amazing__offer .main__offer .top__offer .top__offer__category .arrow {
-    right: 120px;
-  }
-}
-@media (max-width: 990px) {
-  .amazing__offer .main__offer .top__offer .top__offer__category .arrow {
-    right: 80px;
-  }
-}
-@media (max-width: 768px) {
-  .amazing__offer .main__offer .top__offer .top__offer__category .arrow {
-    right: 50px;
+    top: 44px;
   }
 }
 .amazing__offer .main__offer .top__offer .arrow__bg-orange {
@@ -709,4 +743,9 @@
 }
 .amazing__offer .bg-4 {
   background: repeating-linear-gradient(45deg, #EEE8AA, #EEE8AA 40px, #ebe7c3 40px, #ebe7c3 60px) !important;
+}
+@media only screen and (max-width: 820px) {
+  .amazing__offer .bg-4 {
+    display: none !important;
+  }
 }/*# sourceMappingURL=multi__tabs__module.css.map */
