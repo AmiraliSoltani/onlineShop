@@ -1,4 +1,5 @@
 @import './../../../scss/variable.scss';
+@import './../../../scss/mixins.scss';
 
 
 .instagram {
@@ -12,45 +13,78 @@
 
         .title {
             display: flex;
-width: 98.8%;
-.top__offer__category{
-    color: $black;
-    padding: 5px 5px 3px 10px;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 3px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-    width: 100%;
-    direction: ltr;
-    margin-bottom: 20px;
-    height: 50px;
+            width: 98.8%;
+        }
 
-//     &:hover{
-//         .icon{
-//             animation: icon__animate 2s infinite;
-// -webkit-animation: icon__animate 2s infinite;
-//         }
-//     }
+        .top__offer__category {
+            color: $black;
+            padding: 5px 5px 3px 10px;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 3px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+            width: 100%;
+            direction: ltr;
+            margin-bottom: 20px;
+            height: 50px;
+            @include mq(1200) {
+                padding: 5px 5px 3px 10px;
+                font-size: 18px;   
+                             }
+                @include mq(900) {
+                    font-size: 17px; 
+                    margin-bottom: 10px;
+  
+                }
+                @include mq(768) {
+                    font-size: 17px;   
+                }
+                @include mq(600) {
+                    padding: 2px 2px 3px 6px;
+                    font-size: 16px;  
+                    height: 42px; 
 
-    .icon{
-        height: 35px;
-        width: 35px;
-        margin-right: 13px;
-    }
-    .arrow{
-        position: absolute;
-        height: 30px;
-        width: 30px;
-        top: 44px;
-right: 182px;
-visibility: hidden;
-
-    }
-}
+                }
+                @include mq(480) {
+                    padding: 0px;
+                    font-size: 15px;  
+                    height: 38px; 
+                }
+            .icon {
+                height: 38px;
+                width: 38px;
+                margin-right: 13px;
+                @include mq(1200) {
+               
+                                 }
+                    @include mq(900) {
+                          
+                    }
+                    @include mq(768) {
+                       
+                    }
+                    @include mq(600) {
+                        height: 32px;
+                        width: 32px; 
+                    }
+                    @include mq(480) {
+                        height: 27px;
+                width: 27px;  
+                    }
+            }
+         
+            .arrow {
+                position: absolute;
+                height: 30px;
+                width: 30px;
+                top: 44px;
+                right: 182px;
+                visibility: hidden;
+            }
         }
 
         .whole__pics {
@@ -62,8 +96,37 @@ visibility: hidden;
                 position: relative;
                 overflow: hidden;
                 height: 240px;
-                width: 16.5%;
+                width: 16.2%;
                 margin-left: 3px;
+
+                @include mq(1200) {}
+
+                @include mq(900) {
+                    width: 16.2%;
+                }
+
+                @include mq(800) {
+                    height: 220px;
+                    width: 19.4%;
+                }
+                @include mq(700) {
+                    width: 24.3%;
+                }
+                @include mq(600) {
+                    height: 200px;
+                }
+                @include mq(500) {
+                    height: 180px;
+                }
+                @include mq(450) {
+                    height: 155px;
+                }
+                @include mq(410) {
+                    height: 130px;
+                }
+
+
+        
 
                 .pic {
                     .main__pic {
@@ -75,6 +138,21 @@ visibility: hidden;
                         -ms-transition: all 2s ease-in-out 0s;
                         -o-transition: all 2s ease-in-out 0s;
                         overflow: hidden;
+                        @include mq(800) {
+                            height: 220px;
+                        }
+                        @include mq(600) {
+                            height: 200px;
+                        }
+                        @include mq(500) {
+                            height: 180px;
+                        }
+                        @include mq(450) {
+                            height: 155px;
+                        }
+                        @include mq(410) {
+                            height: 130px;
+                        }
                     }
 
                     .instagram__icon {
@@ -86,7 +164,6 @@ visibility: hidden;
                         z-index: 10;
                         opacity: 0;
                         transition: all 0.6s;
-
                     }
                 }
 
@@ -102,30 +179,105 @@ visibility: hidden;
                         top: 102px;
                         right: 60px;
                         opacity: 1;
-
                     }
                 }
             }
-        }
 
+            
+.pic6{
+    @include mq(1200) {
+                       
     }
-    .lavender2{
-        background-color:$lavender2;
-      }
-
-      .lavender-strip{
-
-          background: repeating-linear-gradient(
-      45deg,         /* Angle of stripes */
-      #CFC3FF,       /* Lighter starting color of the stripe */
-      #CFC3FF 40px,  /* Lighter width of the stripe */
-      #BFB1FF 40px,  /* Slightly darker ending color of the stripe */
-      #BFB1FF 60px   /* Total width of two stripes (light + dark) */
-    );
-
-      }
-
-
-
+@include mq(900) {
 
 }
+@include mq(800) {
+display: none;
+}
+@include mq(600) {
+
+}
+@include mq(480) {
+
+}
+   }
+
+               
+.pic5{
+    @include mq(1200) {
+                       
+    }
+@include mq(900) {
+
+}
+@include mq(700) {
+display: none;
+}
+@include mq(600) {
+
+}
+@include mq(480) {
+
+}
+   }
+
+               
+.pic3{
+    @include mq(1200) {
+                       
+    }
+@include mq(900) {
+
+}
+@include mq(768) {
+
+}
+@include mq(600) {
+
+}
+@include mq(480) {
+
+}
+   }
+
+               
+.pic4{
+    @include mq(1200) {
+                       
+    }
+@include mq(900) {
+
+}
+@include mq(768) {
+
+}
+@include mq(600) {
+
+}
+@include mq(480) {
+
+}
+   }
+
+
+
+        }
+    }
+
+    .lavender2 {
+        background-color: $lavender2;
+    }
+
+    .lavender-strip {
+        background: repeating-linear-gradient(
+            45deg,         /* Angle of stripes */
+            #CFC3FF,       /* Lighter starting color of the stripe */
+            #CFC3FF 40px,  /* Lighter width of the stripe */
+            #BFB1FF 40px,  /* Slightly darker ending color of the stripe */
+            #BFB1FF 60px   /* Total width of two stripes (light + dark) */
+        );
+    }
+}
+
+
+

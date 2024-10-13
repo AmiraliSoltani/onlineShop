@@ -8,7 +8,7 @@
   display: flex;
   width: 98.8%;
 }
-.instagram .salam .title .top__offer__category {
+.instagram .salam .top__offer__category {
   color: #000;
   padding: 5px 5px 3px 10px;
   font-size: 18px;
@@ -30,12 +30,55 @@
   margin-bottom: 20px;
   height: 50px;
 }
-.instagram .salam .title .top__offer__category .icon {
-  height: 35px;
-  width: 35px;
+@media only screen and (max-width: 1200px) {
+  .instagram .salam .top__offer__category {
+    padding: 5px 5px 3px 10px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .instagram .salam .top__offer__category {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .instagram .salam .top__offer__category {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .instagram .salam .top__offer__category {
+    padding: 2px 2px 3px 6px;
+    font-size: 16px;
+    height: 42px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .instagram .salam .top__offer__category {
+    padding: 0px;
+    font-size: 15px;
+    height: 38px;
+  }
+}
+.instagram .salam .top__offer__category .icon {
+  height: 38px;
+  width: 38px;
   margin-right: 13px;
 }
-.instagram .salam .title .top__offer__category .arrow {
+@media only screen and (max-width: 600px) {
+  .instagram .salam .top__offer__category .icon {
+    height: 32px;
+    width: 32px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .instagram .salam .top__offer__category .icon {
+    height: 27px;
+    width: 27px;
+  }
+}
+.instagram .salam .top__offer__category .arrow {
   position: absolute;
   height: 30px;
   width: 30px;
@@ -54,8 +97,44 @@
   position: relative;
   overflow: hidden;
   height: 240px;
-  width: 16.5%;
+  width: 16.2%;
   margin-left: 3px;
+}
+@media only screen and (max-width: 900px) {
+  .instagram .salam .whole__pics .one__pic {
+    width: 16.2%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .instagram .salam .whole__pics .one__pic {
+    height: 220px;
+    width: 19.4%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .instagram .salam .whole__pics .one__pic {
+    width: 24.3%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .instagram .salam .whole__pics .one__pic {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .instagram .salam .whole__pics .one__pic {
+    height: 180px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .instagram .salam .whole__pics .one__pic {
+    height: 155px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .instagram .salam .whole__pics .one__pic {
+    height: 130px;
+  }
 }
 .instagram .salam .whole__pics .one__pic .pic .main__pic {
   height: 240px;
@@ -67,6 +146,31 @@
   -ms-transition: all 2s ease-in-out 0s;
   -o-transition: all 2s ease-in-out 0s;
   overflow: hidden;
+}
+@media only screen and (max-width: 800px) {
+  .instagram .salam .whole__pics .one__pic .pic .main__pic {
+    height: 220px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .instagram .salam .whole__pics .one__pic .pic .main__pic {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .instagram .salam .whole__pics .one__pic .pic .main__pic {
+    height: 180px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .instagram .salam .whole__pics .one__pic .pic .main__pic {
+    height: 155px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .instagram .salam .whole__pics .one__pic .pic .main__pic {
+    height: 130px;
+  }
 }
 .instagram .salam .whole__pics .one__pic .pic .instagram__icon {
   position: absolute;
@@ -91,6 +195,16 @@
   top: 102px;
   right: 60px;
   opacity: 1;
+}
+@media only screen and (max-width: 800px) {
+  .instagram .salam .whole__pics .pic6 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .instagram .salam .whole__pics .pic5 {
+    display: none;
+  }
 }
 .instagram .lavender2 {
   background-color: #CFC3FF;

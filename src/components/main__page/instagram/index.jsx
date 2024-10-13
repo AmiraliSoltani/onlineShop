@@ -19,7 +19,7 @@ function Instagram() {
         </div>
         <div className="whole__pics">
           {numbers.map((n) => (
-            <div className="one__pic" key={n}>
+            <div className={`one__pic pic${n}`} key={n}>
               <div className="pic">
                 <img
                   className="main__pic"
