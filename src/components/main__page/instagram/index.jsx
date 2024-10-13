@@ -2,11 +2,11 @@ import React from "react";
 import "./../../../css/instagram.css";
 
 function Instagram() {
-  const numbers = [1, 2, 3, 4, 5, 6, 7];
+  const numbers = [1, 2, 3, 4, 5, 6];
 
   return (
     <div className="instagram">
-      <div className="container salam">
+      <div className="container-special salam">
         <div className="title">
           <div className={`top__offer__category lavender-strip`}>
             <img
