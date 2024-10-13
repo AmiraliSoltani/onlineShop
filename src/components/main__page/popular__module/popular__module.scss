@@ -349,18 +349,21 @@
                 }
 
                 .product__detail {
-
+display: flex;
+position: relative;
                     .product__box__color {
                         margin-bottom: 12px;
+                        width: 95%;
 
                         ul {
                             display: flex;
                             margin-top: 10px;
                             margin-bottom: 7px;
-                            justify-content: start;
+                            justify-content: end;
                             direction: ltr;
                             padding: 0px;
-                            margin-left: 8px;
+                            // margin-left: 65px;
+                            margin-right: 5px;
 
 
                             li {
@@ -377,6 +380,11 @@
                                 @include mq(600) {
                                     height: 24px;
                                     width: 24px;
+                                }
+                                @include mq(500) {
+                                    height: 22px;
+                                    width: 22px;
+                                   margin-left: 3px;
                                 }
 
                                 &:hover {
@@ -408,7 +416,7 @@
                     }
 
                     .product__price__and__icon {
-                        margin-left:14px;
+                        margin-left:9px;
                         display: flex;
                         direction: ltr;
                         justify-content: start;
@@ -447,6 +455,7 @@
                         }
 
                         .icon__basket {
+                            position: relative;
                             padding: 4px;
                             background-color: #747D8C;
                             border-radius: 4px;
@@ -463,27 +472,31 @@
                                 height: 35px;
                                 padding: 5px;
                                 @include mq(900) {
-                                    height: 24px;
-                                    width: 24px;
+                                    height: 32px;
+                                    width: 32px;
                                 }
                                 @include mq(800) {
-                                    height: 21px;
-                                    width: 21px;
+                                    height: 30px;
+                                    width: 30px;
                                 }
                                 @include mq(700) {
-                                    height: 18px;
-                                    width: 18px;
+                                    height: 29px;
+                                    width: 29px;
+                                }
+                                @include mq(500) {
+                                    height: 26px;
+                                    width: 26px;
                                 }
                             }
 
                             .pluse {
                                 position: absolute;
-                                top: 21px;
-                                width: 13px;
-                                height: 13px;
-                                right: 165px;
-                                visibility: hidden;
+                                top: 48%;
+                                width: 10px;
+                                height: 10px;
+                                right: 41%;
                             }
+                            
                         }
 
                         .poduct__price {
@@ -491,28 +504,66 @@
                             font-size: 15px;
                             text-align: right;
                             font-weight: bold;
+                            top: 13px;
+                            left: 5px;
                             position: absolute;
-                            top: 12px;
-                            left: 59px;
-                            z-index: -1;
+                            @include mq(900) {
+                                font-size: 13px;
+
+                            }
+                            @include mq(700) {
+                                font-size: 12px;
+
+                            }
+                            @include mq(500) {
+                                font-size: 11px;
+
+                            }
 
                         }
 
                         .discount__price {
                             text-decoration: line-through;
                             font-size: 13px;
-                            top: 7px;
-                            left: 64px
+                            top: 9px;
+                            left: 5px;
+                            @include mq(900) {
+                                font-size: 13px;
+
+                            }
+                            @include mq(700) {
+                                font-size: 12px;
+
+                            }
+                            @include mq(500) {
+                                font-size: 11px;
+
+                            }
                         }
 
                         .discount__price__main {
                             color: $orange;
-                            font-size: 15px;
+                            font-size: 14px;
                             position: absolute;
-                            top: 24px;
-                            left: 64px;
+                            top: 26px;
+                            left: 4px;
                             z-index: -1;
                             font-weight: bold;
+                            @include mq(900) {
+                                font-size: 13px;
+                                top: 23px;
+
+                            }
+                            @include mq(600) {
+                                font-size: 12px;
+                                top: 23px;
+
+                            }
+                            @include mq(500) {
+                                font-size: 11px;
+                                top: 20px;
+
+                            }
 
                         }
 

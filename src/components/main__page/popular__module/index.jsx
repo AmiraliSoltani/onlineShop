@@ -211,47 +211,37 @@ return <PopularModuleSkeletonLoader></PopularModuleSkeletonLoader>
                       </div>
                     </Link>
                     <div className="product__detail">
+                    <div className="product__price__and__icon">
+  <span className={getPriceClasses(product)}>
+    {parseFloat(product.price)}&nbsp;$
+  </span>
+  {product.off != 0 && (
+    <span className="discount__price__main">
+      {(parseInt(product.price) * (100 - parseInt(product.off)) / 100)}&nbsp;$
+    </span>
+  )}
+
+ 
+</div>
                       <div className="product__box__color">
-                        <ul>
-                          {getcolors(product, allAttributeItemS).map((a) => (
-                            <li
-                              key={a.class}
-                              className={a.class}
-                              onMouseEnter={() => handleImageChange(product.id, product.productPic[a.class])}
-                              onMouseLeave={() => handleImageReset(product.id, defaultImage)}
-                            ></li>
-                          ))}
-                        </ul>
-                      </div>
-                      <Link to={`/product/${product.id}`}>
+                      <ul>
+  {getcolors(product, allAttributeItemS)
+    .slice(0, 3) // Get the first 3 items
+    .map((a) => (
+      <li
+        key={a.class}
+        className={a.class}
+        onMouseEnter={() => handleImageChange(product.id, product.productPic[a.class])}
+        onMouseLeave={() => handleImageReset(product.id, defaultImage)}
+      ></li>
+    ))}
+</ul>
 
-                      <div className="product__price__and__icon">
-                        <div className="icon__basket">
-                          <img
-                            className="add__basket"
-                            src={require("./../../../assets/icons/bag-4.png")}
-                            alt=""
-                          />
-                          <img
-                            className="pluse"
-                            src={require("./../../../assets/icons/plus.png")}
-                            alt=""
-                          />
-                        </div>
-                        <span className={getPriceClasses(product)}>
-                          {parseFloat(product.price).toFixed(2)} $
-                        </span>
-                        {product.off != 0 && (
-                          <span className="discount__price__main">
-                            {(parseInt(product.price) * (100 - parseInt(product.off)) / 100).toFixed(2)} $
-                          </span>
-                        )}
-
-                          <span className="add__to__cart">
-                            Let's see It
-                          </span>
                       </div>
-                        </Link>
+
+
+
+                  
                     </div>
                   </div>
                 );

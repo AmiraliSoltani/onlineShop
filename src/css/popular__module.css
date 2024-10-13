@@ -362,8 +362,15 @@
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
+.last__offer .main__offer .buttom__offer__slider .one__product .product__detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color {
   margin-bottom: 12px;
+  width: 95%;
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul {
   display: -webkit-box;
@@ -371,12 +378,12 @@
   display: flex;
   margin-top: 10px;
   margin-bottom: 7px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
   direction: ltr;
   padding: 0px;
-  margin-left: 8px;
+  margin-right: 5px;
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul li {
   height: 30px;
@@ -398,6 +405,13 @@
     width: 24px;
   }
 }
+@media only screen and (max-width: 500px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul li {
+    height: 22px;
+    width: 22px;
+    margin-left: 3px;
+  }
+}
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul li:hover {
   border: 2px solid black;
 }
@@ -416,7 +430,7 @@
   margin-bottom: 5px;
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon {
-  margin-left: 14px;
+  margin-left: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -451,6 +465,7 @@
   visibility: visible;
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket {
+  position: relative;
   padding: 4px;
   background-color: #747D8C;
   border-radius: 4px;
@@ -468,54 +483,106 @@
 }
 @media only screen and (max-width: 900px) {
   .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
-    height: 24px;
-    width: 24px;
+    height: 32px;
+    width: 32px;
   }
 }
 @media only screen and (max-width: 800px) {
   .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
-    height: 21px;
-    width: 21px;
+    height: 30px;
+    width: 30px;
   }
 }
 @media only screen and (max-width: 700px) {
   .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
-    height: 18px;
-    width: 18px;
+    height: 29px;
+    width: 29px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .add__basket {
+    height: 26px;
+    width: 26px;
   }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .icon__basket .pluse {
   position: absolute;
-  top: 21px;
-  width: 13px;
-  height: 13px;
-  right: 165px;
-  visibility: hidden;
+  top: 48%;
+  width: 10px;
+  height: 10px;
+  right: 41%;
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .poduct__price {
   color: black;
   font-size: 15px;
   text-align: right;
   font-weight: bold;
+  top: 13px;
+  left: 5px;
   position: absolute;
-  top: 12px;
-  left: 59px;
-  z-index: -1;
+}
+@media only screen and (max-width: 900px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .poduct__price {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .poduct__price {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .poduct__price {
+    font-size: 11px;
+  }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price {
   text-decoration: line-through;
   font-size: 13px;
-  top: 7px;
-  left: 64px;
+  top: 9px;
+  left: 5px;
+}
+@media only screen and (max-width: 900px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price {
+    font-size: 11px;
+  }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price__main {
   color: #ff7675;
-  font-size: 15px;
+  font-size: 14px;
   position: absolute;
-  top: 24px;
-  left: 64px;
+  top: 26px;
+  left: 4px;
   z-index: -1;
   font-weight: bold;
+}
+@media only screen and (max-width: 900px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price__main {
+    font-size: 13px;
+    top: 23px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price__main {
+    font-size: 12px;
+    top: 23px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .discount__price__main {
+    font-size: 11px;
+    top: 20px;
+  }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .add__to__cart {
   position: absolute;
