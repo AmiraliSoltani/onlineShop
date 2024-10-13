@@ -199,8 +199,8 @@ return <PopularModuleSkeletonLoader></PopularModuleSkeletonLoader>
                       <div className="product__images">
                         <div className="overlay__name">
                           <span>
-                            {product.title_En.slice(0, 25)}
-                            {product.title_En.length > 25 && <span>...</span>}
+                            {product.title_En.slice(0, 23)}
+                            {product.title_En.length > 23 && <span>...</span>}
                           </span>
                         </div>
                         <img

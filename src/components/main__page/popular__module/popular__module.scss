@@ -67,7 +67,7 @@
                 width: 100%;
                 height: 50px;
                 direction:ltr;
-                margin-bottom: 15px;
+                margin-bottom: 5px;
 
 
                 @include mq(1200) {
@@ -76,22 +76,27 @@
                                  }
                     @include mq(900) {
                         font-size: 17px; 
-                        margin-bottom: 10px;
+                        margin-bottom: 5px;
       
                     }
                     @include mq(768) {
-                        font-size: 17px;   
+                        font-size: 17px; 
+                        margin-bottom: 5px;
+  
                     }
                     @include mq(600) {
                         padding: 2px 2px 3px 6px;
                         font-size: 16px;  
                         height: 42px; 
-    
+                        margin-bottom: 5px;
+
                     }
                     @include mq(480) {
                         padding: 0px;
                         font-size: 15px;  
                         height: 38px; 
+                        margin-bottom: 5px;
+
                     }
                 .icon {
                     height: 38px;
@@ -176,13 +181,16 @@
 
         .buttom__offer__slider {
             width: 100%;
-            padding-top: 10px;
+            padding-top: 5px;
             background-color: $white;
 
             &:hover {
                 .slick-arrow {
                     visibility: visible;
 
+                    @include mq(500) {
+                        visibility: hidden;
+                     }
                 }
             }
 
@@ -229,6 +237,15 @@
                         height:23px;
                         font-size: 11px;
                         padding: 15px;
+                        left:10px
+
+                    }
+                    @include mq(500) {
+                        width: 20px;
+                        height:20px;
+                        font-size: 10px;
+                        padding: 14px;
+                        left:8px;
 
                     }
                 }
@@ -277,6 +294,12 @@
                             height: 30px;
 
                         }
+                        @include mq(500) {
+                            padding: 2px 1px !important;
+                            font-size: 9px;
+                            height: 30px;
+
+                        }
                     }
 
                     img {
@@ -292,7 +315,7 @@
                             height: calc(33vw / 0.75);
                         }
                         @include mq(500) {
-                            height: calc(33vw / 0.75);
+                            height: calc(33vw / 0.80);
                         }
                         
                         // @include mq(1100) {
@@ -336,6 +359,9 @@
                             margin-bottom: 7px;
                             justify-content: start;
                             direction: ltr;
+                            padding: 0px;
+                            margin-left: 8px;
+
 
                             li {
                                 height: 30px;
@@ -344,6 +370,14 @@
                                 border-radius: 20px;
                                 margin-left: 5px;
                                 cursor: pointer;
+                                @include mq(900) {
+                                    height: 27px;
+                                    width: 27px;
+                                }
+                                @include mq(600) {
+                                    height: 24px;
+                                    width: 24px;
+                                }
 
                                 &:hover {
                                     border: 2px solid black;
@@ -503,12 +537,17 @@
 
     .slick-next {
         right: -1px;
-
+        @include mq(500) {
+           display: none;
+        }
     }
 
     .slick-prev {
         left: -12px;
         z-index: 10;
+        @include mq(500) {
+            display: none;
+        }
     }
 
     .red{
