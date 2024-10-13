@@ -320,17 +320,17 @@
 }
 @media only screen and (max-width: 980px) {
   .last__offer .main__offer .buttom__offer__slider .one__product .product__images img {
-    height: 35.7142857143vw;
+    height: 33.3333333333vw;
   }
 }
 @media only screen and (max-width: 650px) {
   .last__offer .main__offer .buttom__offer__slider .one__product .product__images img {
-    height: 47.1428571429vw;
+    height: 44vw;
   }
 }
 @media only screen and (max-width: 500px) {
   .last__offer .main__offer .buttom__offer__slider .one__product .product__images img {
-    height: 50vw;
+    height: 44vw;
   }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__images img:hover {

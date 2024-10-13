@@ -286,13 +286,13 @@
                         border-radius: 4px;
                         cursor: pointer;
                         @include mq(980) {
-                            height: calc(25vw / 0.70);
+                            height: calc(25vw / 0.75);
                         }
                         @include mq(650) {
-                            height: calc(33vw / 0.70);
+                            height: calc(33vw / 0.75);
                         }
                         @include mq(500) {
-                            height: calc(33vw / 0.66);
+                            height: calc(33vw / 0.75);
                         }
                         
                         // @include mq(1100) {
