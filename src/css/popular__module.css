@@ -119,8 +119,8 @@
 @media only screen and (max-width: 480px) {
   .last__offer .main__offer .top__offer .top__offer__category {
     padding: 0px;
-    font-size: 15px;
-    height: 38px;
+    font-size: 14px;
+    height: 35px;
     margin-bottom: 5px;
   }
 }

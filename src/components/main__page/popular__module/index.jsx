@@ -138,16 +138,20 @@ function PopularModule({ categoryId, typeProp, allCategories, allProducts }) {
         breakpoint: 980, // When the screen is 1200px or less
         settings: {
           slidesToShow: 4, // Show 4 slides instead of 5
+          slidesToScroll: 4,
+
         },
       },
       {
         breakpoint: 650, // When the screen is 992px or less
         settings: {
           slidesToShow: 3, // Show 3 slides instead of 5
+          slidesToScroll: 3,
+
         },
       },
       {
-        breakpoint: 50, // When the screen is 768px or less
+        breakpoint: 1, // When the screen is 768px or less
         settings: {
           slidesToShow: 2, // Show 2 slides instead of 5
         },
