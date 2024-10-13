@@ -47,7 +47,7 @@
     .main__offer {
         display: flex;
         align-items: center;
-        width: 101%;
+        width: 99%;
         flex-direction: column;
 
         .top__offer {
@@ -67,26 +67,61 @@
                 width: 100%;
                 height: 50px;
                 direction:ltr;
+                margin-bottom: 15px;
 
-                // &:hover {
-                //     .icon {
-                //         animation: icon__animate 2s infinite;
-                //         -webkit-animation: icon__animate 2s infinite;
-                //     }
-                // }
-span{
-    width: 90%;
-    display: flex;
-}
+
+                @include mq(1200) {
+                    padding: 5px 5px 3px 10px;
+                    font-size: 18px;   
+                                 }
+                    @include mq(900) {
+                        font-size: 17px; 
+                        margin-bottom: 10px;
+      
+                    }
+                    @include mq(768) {
+                        font-size: 17px;   
+                    }
+                    @include mq(600) {
+                        padding: 2px 2px 3px 6px;
+                        font-size: 16px;  
+                        height: 42px; 
+    
+                    }
+                    @include mq(480) {
+                        padding: 0px;
+                        font-size: 15px;  
+                        height: 38px; 
+                    }
+                .icon {
+                    height: 38px;
+                    width: 38px;
+                    margin-right: 13px;
+                    @include mq(1200) {
+                   
+                                     }
+                        @include mq(900) {
+                              
+                        }
+                        @include mq(768) {
+                           
+                        }
+                        @include mq(600) {
+                            height: 32px;
+                            width: 32px; 
+                        }
+                        @include mq(480) {
+                            height: 27px;
+                    width: 27px;  
+                        }
+                }
+             
+
 .plus{
     width: 2%;
     text-decoration: none;
 }
-                .icon {
-                    height: 41px;
-                    width: 41px;
-                    margin-right: 5px;
-                }
+            
 
                 .arrow {
                     position: absolute;
@@ -160,18 +195,42 @@ span{
 
                 .tag__discount {
                     position: absolute;
-                    border-radius: 30px;
+                    border-radius: 12px;
                     width: 41px;
                     height: 41px;
                     background-color: #ff7675;
-                    top: 3px;
-                    left: 18px;
+                    top: 1px;
+                    left: 13px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     padding: 19px;
                     font-weight: 500;
                     z-index: 10;
+                    font-size: 16px;
+                    @include mq(1000) {
+                        width: 38px;
+                        height: 38px;
+                        font-size: 15px;
+                    }
+                    @include mq(850) {
+                        width: 35px;
+                        height: 35px;
+                        font-size: 14px;
+                    }
+                    @include mq(750) {
+                        width: 30px;
+                        height:30px;
+                        font-size: 13px;
+                        padding: 17px;
+                    }
+                    @include mq(600) {
+                        width: 23px;
+                        height:23px;
+                        font-size: 11px;
+                        padding: 15px;
+
+                    }
                 }
 
                 .product__images {
@@ -189,27 +248,72 @@ span{
                     .overlay__name {
                         border-radius: 4px;
                         position: absolute;
-                        width: 85%;
-                        height: 40px;
+                        width: 90%;
+                         height: 40px;
                         background-color: white;
                         opacity: 1;
                         display: flex;
                         align-items: center;
                         justify-content: space-around;
                         direction: ltr;
-                        padding: 5px;
-                        font-size: 14px;
-                        right: 17px;
-                        top: 227px;
+                        padding: 5px 2px;
+                        font-size: 13px;
+                        right: 5%;
+                        bottom: 5%;
                         font-weight: 500;
-                        color:black
+                        color:black;
+                        @include mq(1100) {
+                            font-size: 12px;
+                        }
+                        @include mq(850) {
+                            padding: 4px 2px;
+                            font-size: 11px;
+                            height: 34px;
+
+                        }
+                        @include mq(750) {
+                            padding: 2px 1px !important;
+                            font-size: 10px;
+                            height: 30px;
+
+                        }
                     }
 
                     img {
-                        width: 207px;
-                        height: 285px;
+                        width: 96%;
+                        height: 300px;
+
                         border-radius: 4px;
                         cursor: pointer;
+                        @include mq(980) {
+                            height: calc(25vw / 0.70);
+                        }
+                        @include mq(650) {
+                            height: calc(33vw / 0.70);
+                        }
+                        @include mq(500) {
+                            height: calc(33vw / 0.66);
+                        }
+                        
+                        // @include mq(1100) {
+                        //     height: 280px;
+                        // }
+                        // @include mq(980) {
+                        //     height: 300px;
+                        // }
+                        // @include mq(800) {
+                        //     height: 270px;
+                        // }
+                        // @include mq(750) {
+                        //     height: 230px;
+                        // }
+                        // @include mq(600) {
+                        //     height: 220px;
+                        // }
+                        // @include mq(550) {
+                        //     height: 210px;
+                        // }
+
 
                         &:hover {
                             box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);

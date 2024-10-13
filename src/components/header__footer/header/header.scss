@@ -42,7 +42,7 @@ transform: rotate(45deg);
 
 .container-special {
     direction: rtl;
-    font-family: $main-font;
+    //font-family: $main-font;
     padding: 0 15px; // Add some padding for smaller screens
     max-width: clamp(400px, 100%, 1200px); /* This will grow between 500px and 1300px */
 margin: auto;

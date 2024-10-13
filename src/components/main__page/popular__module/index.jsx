@@ -133,14 +133,34 @@ function PopularModule({ categoryId, typeProp, allCategories, allProducts }) {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 980, // When the screen is 1200px or less
+        settings: {
+          slidesToShow: 4, // Show 4 slides instead of 5
+        },
+      },
+      {
+        breakpoint: 650, // When the screen is 992px or less
+        settings: {
+          slidesToShow: 3, // Show 3 slides instead of 5
+        },
+      },
+      {
+        breakpoint: 50, // When the screen is 768px or less
+        settings: {
+          slidesToShow: 2, // Show 2 slides instead of 5
+        },
+      },
+    ],
   };
-
+  
   if (loading) {
 return <PopularModuleSkeletonLoader></PopularModuleSkeletonLoader>
   }
   return (
     <div className="last__offer">
-      <div className="container">
+      <div className="container-special">
         <div className="main__offer">
           <div className="top__offer">
             <div className={`top__offer__category orange-striped`}>
@@ -151,11 +171,11 @@ return <PopularModuleSkeletonLoader></PopularModuleSkeletonLoader>
               />
               {type === "visit" && <span> Recently Popular Products</span>}
               {type === "sold" && <span> Recently Bestselling Products</span>}
-              {type === "visit" &&
+              {/* {type === "visit" &&
               <Link to={`/lastCategory/1/&order=popularity_desc`} className="plus">
                 <span style={{fontSize:"29px",color:"white"}}> + </span>
               </Link>
-              }
+              } */}
               {type === "sold" &&
               <Link to={`/last__category/${categoryId}/order=numberInStock.sold_desc`} className="plus">
                 <span style={{fontSize:"29px",color:"white"}}> + </span>
@@ -164,7 +184,6 @@ return <PopularModuleSkeletonLoader></PopularModuleSkeletonLoader>
             </div>
           </div>
 
-          <div className="middle__offer__slider"></div>
           <div className="buttom__offer__slider">
             <Slider {...settings2}>
               {mostVisitedProduct?.map((product) => {

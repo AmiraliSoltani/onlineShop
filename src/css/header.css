@@ -48,7 +48,6 @@
 
 .container-special {
   direction: rtl;
-  font-family: IRANSans;
   padding: 0 15px;
   max-width: clamp(400px, 100%, 1200px); /* This will grow between 500px and 1300px */
   margin: auto;

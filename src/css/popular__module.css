@@ -57,7 +57,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 101%;
+  width: 99%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -88,21 +88,59 @@
   width: 100%;
   height: 50px;
   direction: ltr;
+  margin-bottom: 15px;
 }
-.last__offer .main__offer .top__offer .top__offer__category span {
-  width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media only screen and (max-width: 1200px) {
+  .last__offer .main__offer .top__offer .top__offer__category {
+    padding: 5px 5px 3px 10px;
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .last__offer .main__offer .top__offer .top__offer__category {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .last__offer .main__offer .top__offer .top__offer__category {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .last__offer .main__offer .top__offer .top__offer__category {
+    padding: 2px 2px 3px 6px;
+    font-size: 16px;
+    height: 42px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .last__offer .main__offer .top__offer .top__offer__category {
+    padding: 0px;
+    font-size: 15px;
+    height: 38px;
+  }
+}
+.last__offer .main__offer .top__offer .top__offer__category .icon {
+  height: 38px;
+  width: 38px;
+  margin-right: 13px;
+}
+@media only screen and (max-width: 600px) {
+  .last__offer .main__offer .top__offer .top__offer__category .icon {
+    height: 32px;
+    width: 32px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .last__offer .main__offer .top__offer .top__offer__category .icon {
+    height: 27px;
+    width: 27px;
+  }
 }
 .last__offer .main__offer .top__offer .top__offer__category .plus {
   width: 2%;
   text-decoration: none;
-}
-.last__offer .main__offer .top__offer .top__offer__category .icon {
-  height: 41px;
-  width: 41px;
-  margin-right: 5px;
 }
 .last__offer .main__offer .top__offer .top__offer__category .arrow {
   position: absolute;
@@ -169,12 +207,12 @@
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .tag__discount {
   position: absolute;
-  border-radius: 30px;
+  border-radius: 12px;
   width: 41px;
   height: 41px;
   background-color: #ff7675;
-  top: 3px;
-  left: 18px;
+  top: 1px;
+  left: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,6 +225,37 @@
   padding: 19px;
   font-weight: 500;
   z-index: 10;
+  font-size: 16px;
+}
+@media only screen and (max-width: 1000px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .tag__discount {
+    width: 38px;
+    height: 38px;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .tag__discount {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .tag__discount {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+    padding: 17px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .tag__discount {
+    width: 23px;
+    height: 23px;
+    font-size: 11px;
+    padding: 15px;
+  }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__images {
   display: -webkit-box;
@@ -204,7 +273,7 @@
 .last__offer .main__offer .buttom__offer__slider .one__product .product__images .overlay__name {
   border-radius: 4px;
   position: absolute;
-  width: 85%;
+  width: 90%;
   height: 40px;
   background-color: white;
   opacity: 1;
@@ -217,18 +286,52 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   direction: ltr;
-  padding: 5px;
-  font-size: 14px;
-  right: 17px;
-  top: 227px;
+  padding: 5px 2px;
+  font-size: 13px;
+  right: 5%;
+  bottom: 5%;
   font-weight: 500;
   color: black;
 }
+@media only screen and (max-width: 1100px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__images .overlay__name {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__images .overlay__name {
+    padding: 4px 2px;
+    font-size: 11px;
+    height: 34px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__images .overlay__name {
+    padding: 2px 1px !important;
+    font-size: 10px;
+    height: 30px;
+  }
+}
 .last__offer .main__offer .buttom__offer__slider .one__product .product__images img {
-  width: 207px;
-  height: 285px;
+  width: 96%;
+  height: 300px;
   border-radius: 4px;
   cursor: pointer;
+}
+@media only screen and (max-width: 980px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__images img {
+    height: 35.7142857143vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__images img {
+    height: 47.1428571429vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .last__offer .main__offer .buttom__offer__slider .one__product .product__images img {
+    height: 50vw;
+  }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product .product__images img:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
