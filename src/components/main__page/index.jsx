@@ -46,7 +46,7 @@ function Main__page() {
   return (
     <>
       <TopSlideshow />
-      {/* <MultiTabsModule allCategories={allCategories} allProducts={allProducts}/> */}
+      <MultiTabsModule allCategories={allCategories} allProducts={allProducts}/>
       <ThreeImages />
       <PopularModule categoryId="1" typeProp={"visit"} allCategories={allCategories} allProducts={allProducts}/>
       <ParallexPic />

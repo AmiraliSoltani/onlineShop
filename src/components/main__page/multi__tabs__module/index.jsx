@@ -219,7 +219,7 @@ setMultitabCategories(orderedSelectedCategories);
 
   return (
     <div className={blurState.blur ? 'amazing__offer blurred' : 'amazing__offer'}>
-      <div className="container">
+      <div className="container-special">
         <div className="main__offer">
         <div className="top__offer">
   {/* {multitabCategories.length !== 0 && multitabCategories.map((category) => {
