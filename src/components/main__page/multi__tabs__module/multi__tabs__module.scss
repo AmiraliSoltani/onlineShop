@@ -192,13 +192,16 @@
         }
   
         .buttom__offer__slider {
-          width: 100%;
+          width: 99%;
           //padding-top: 10px;
           background-color: $white;
   
           &:hover {
             .slick-arrow {
               visibility: visible;
+              @include mq(500) {
+                visibility: hidden;
+             }
             }
           }
 
@@ -219,7 +222,7 @@
           }
   
           .one__product {
-            width: 94% !important;
+            width: 100% !important;
             display: flex;
             flex-direction: column;
             align-items: start;
@@ -229,7 +232,7 @@
             .tag__discount {
               z-index: 10;
               position: absolute;
-              border-radius: 30px;
+              border-radius: 12px;
               width: 41px;
               height: 41px;
               background-color: #ff7675;
@@ -241,6 +244,38 @@
               padding: 19px;
               font-weight: 500;
               direction: ltr;
+              @include mq(1000) {
+                width: 38px;
+                height: 38px;
+                font-size: 15px;
+            }
+            @include mq(850) {
+                width: 35px;
+                height: 35px;
+                font-size: 14px;
+            }
+            @include mq(750) {
+                width: 30px;
+                height:30px;
+                font-size: 13px;
+                padding: 17px;
+            }
+            @include mq(600) {
+                width: 23px;
+                height:23px;
+                font-size: 11px;
+                padding: 15px;
+                left:10px
+
+            }
+            @include mq(500) {
+                width: 20px;
+                height:20px;
+                font-size: 10px;
+                padding: 14px;
+                left:8px;
+
+            }
             }
   
             .product__images {
@@ -249,88 +284,176 @@
               width: 100%;
               position: relative;
   
-              .overlay {
-                position: absolute;
-                left: 26px;
-                top: 294px;
-                width: 37px;
-                height: 30px;
-                transition: all 0.5s;
+          
   
                 .product__star {
+                  width: 0px;
+                  height: 0px;
                   ul {
                     cursor: pointer;
-                    position: relative;
   
                     .star__icon {
                       .without__color {
                         height: 25px;
                         width: 25px;
-                        margin-left: 16px;
+                        margin-left: 10px;
                         fill: gray;
                         position: absolute;
-                        top: -15px;
-                        left: -37px;
+                        bottom: -35px;
+                        left: 0px;
                         transition: all 0.5s;
+                        @include mq(550) {
+                          height: 20px;
+                          width: 20px;
+                        }
+                        @include mq(450) {
+                          height: 18px;
+                          width: 18px;
+                        }
+
                       }
   
                       .positive {
                         fill: $orange;
                       }
+                      .number1 {
+                        @include mq(550) {
+
+                        bottom: 10px;
+                        left:0px;
+                        transition-delay: 0.2s;
+                        }
+                        @include mq(450) {
+
+                          bottom: 10px;
+                          left:0px;
+                          transition-delay: 0.2s;
+                          }
+                      }
+
+                      .number2 {
+                        @include mq(550) {
+
+                        bottom: 10px;
+                        left:23px;
+                        transition-delay: 0.4s;
+                        }
+                        @include mq(450) {
+
+                          bottom: 10px;
+                          left:20px;
+                          transition-delay: 0.2s;
+                          }
+                      }
+
+                      .number3 {
+                        @include mq(550) {
+
+                        bottom: 10px;
+                        left:46px;
+                        transition-delay: 0.6s;
+                        }
+                        @include mq(450) {
+
+                          bottom: 10px;
+                          left:40px;
+                          transition-delay: 0.2s;
+                          }
+                      }
+
+                      .number4 {
+                        @include mq(550) {
+
+                        bottom: 10px;
+                        left:69px;
+                        transition-delay: 0.8s;
+                        }
+                        @include mq(450) {
+
+                          bottom: 10px;
+                          left:60px;
+                          transition-delay: 0.2s;
+                          }
+                      }
+
+                      .number5 {
+                        @include mq(550) {
+
+                        bottom: 10px;
+                        left:92px;
+                        transition-delay: 1.0s;
+                        }
+                        @include mq(450) {
+
+                          bottom: 10px;
+                          left:80px;
+                          transition-delay: 0.2s;
+                          }
+                      }
+
                     }
                   }
                 }
-              }
+              
   
               &:hover {
                 //box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
-                .overlay {
-                  opacity: 1;
+           
   
                   .product__star {
+                 
                     ul {
                       .star__icon {
                         .number1 {
-                          top: -58px;
-                          left:-37px;
+                          bottom: 10px;
+                          left:0px;
                           transition-delay: 0.2s;
                         }
   
                         .number2 {
-                          top: -58px;
-                          left: -7px;
+                          bottom: 10px;
+                          left:29px;
                           transition-delay: 0.4s;
                         }
   
                         .number3 {
-                          top: -58px;
-                          left: 23px;
+                          bottom: 10px;
+                          left:58px;
                           transition-delay: 0.6s;
                         }
   
                         .number4 {
-                          top: -58px;
-                          left: 53px;
+                          bottom: 10px;
+                          left:87px;
                           transition-delay: 0.8s;
                         }
   
                         .number5 {
-                          top: -58px;
-                          left: 93px;
+                          bottom: 10px;
+                          left:114px;
                           transition-delay: 1.0s;
                         }
                       }
                     }
                   }
-                }
+                
               }
             }
   
             .main__pic {
-              width: 210px;
-              height: 285px;
+              width: 96%;
+                        height: 280px;
               border-radius: 4px;
               cursor: pointer;
+              @include mq(980) {
+                height: calc(25vw / 0.75);
+            }
+            @include mq(650) {
+                height: calc(33vw / 0.75);
+            }
+            @include mq(500) {
+                height: calc(33vw / 0.80);
+            }
             }
   
             .product__detail {
@@ -338,13 +461,14 @@
               direction: rtl;
   
               .product__box__color {
-                width: 85%;
+                width: 89%;
   
                 ul {
                   display: flex;
                   margin-top: 10px;
                   margin-bottom: 7px;
                   justify-content: start;
+                  padding: 0px;
                   //margin-right: 7px;
   
                   li {
@@ -354,6 +478,21 @@
                     border-radius: 20px;
                     margin-left: 5px;
                     cursor: pointer;
+                    @include mq(900) {
+                      height: 27px;
+                      width: 27px;
+                  }
+                  @include mq(600) {
+                      height: 24px;
+                      width: 24px;
+                      margin-left: 1px;
+
+                  }
+                  @include mq(500) {
+                    margin-left: 1px;
+                      height: 22px;
+                      width: 22px;
+                  }
   
                     &:hover {
                       border: 2px solid black;
@@ -411,6 +550,21 @@
                 font-size: 15px;
                 margin-bottom: 5px;
                 direction: ltr;
+                @include mq(1100) {
+                  font-size: 14px;
+              }
+              @include mq(850) {
+                  font-size: 13px;
+
+              }
+              @include mq(750) {
+                  font-size: 12px;
+
+              }
+              @include mq(500) {
+                  font-size: 11px;
+
+              }
               }
   
               .product__price__and__icon {
@@ -422,11 +576,35 @@
                   font-size: 14px;
                   text-align: right;
                   font-weight: bold;
+                  @include mq(900) {
+                    font-size: 13px;
+
+                }
+                @include mq(700) {
+                    font-size: 12px;
+
+                }
+                @include mq(500) {
+                    font-size: 11px;
+
+                }
                 }
   
                 .discount__price {
                   text-decoration: line-through;
                   font-size: 14px;
+                  @include mq(900) {
+                    font-size: 13px;
+
+                }
+                @include mq(700) {
+                    font-size: 12px;
+
+                }
+                @include mq(500) {
+                    font-size: 11px;
+
+                }
                 }
   
                 .discount {
@@ -434,6 +612,18 @@
                   font-weight: bold;
                   color: $orange;
                   margin-left: 10px;
+                  @include mq(900) {
+                    font-size: 13px;
+
+                }
+                @include mq(700) {
+                    font-size: 12px;
+
+                }
+                @include mq(500) {
+                    font-size: 11px;
+
+                }
                 }
   
                 img {

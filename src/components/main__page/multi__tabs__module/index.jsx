@@ -178,37 +178,28 @@ setMultitabCategories(orderedSelectedCategories);
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
-        breakpoint: 1200, // Large devices
+        breakpoint: 980, // When the screen is 1200px or less
         settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: false,
+          slidesToShow: 4, // Show 4 slides instead of 5
+          slidesToScroll: 4,
+
         },
       },
       {
-        breakpoint: 992, // Tablets
+        breakpoint: 650, // When the screen is 992px or less
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: false,
+          slidesToShow: 3, // Show 3 slides instead of 5
+          slidesToScroll: 3,
+
         },
       },
       {
-        breakpoint: 768, // Small tablets and large phones
+        breakpoint: 1, // When the screen is 768px or less
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          infinite: false,
+          slidesToShow: 2, // Show 2 slides instead of 5
         },
       },
-      {
-        breakpoint: 576, // Phones
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-        },
-      },
+      
     ],
   };
   
@@ -291,7 +282,7 @@ setMultitabCategories(orderedSelectedCategories);
           <div className="buttom__offer__slider">
             <Slider {...settings2} key={show}>
       
-              {multitabsProduct?.slice(0,8).map((product) => {
+              {multitabsProduct?.slice(0,12).map((product) => {
                 const defaultImage = product.productPic[Object.keys(product.productPic)[0]];
                 const currentImage = imageStates[product.id] || defaultImage;
 
@@ -302,7 +293,12 @@ setMultitabCategories(orderedSelectedCategories);
                     )}
                     <Link to={`/product/${product.id}`}>
                       <div className="product__images">
-                        <div className="overlay">
+                      <img
+                            className="main__pic"
+                            src={currentImage}
+                            alt="product"
+                            onError={(e) => handleImageError(e, product.id)}
+                          />
                           <div className="product__star">
                             <ul>
                               {getStars(product.comments).map(
@@ -366,16 +362,8 @@ setMultitabCategories(orderedSelectedCategories);
                               )}
                             </ul>
                           </div>
-                        </div>
 
-                        <div className="pic">
-                          <img
-                            className="main__pic"
-                            src={currentImage}
-                            alt="product"
-                            onError={(e) => handleImageError(e, product.id)}
-                          />
-                        </div>
+                         
                       </div>
                     </Link>
                     <div className="product__detail">
@@ -403,8 +391,8 @@ setMultitabCategories(orderedSelectedCategories);
                       </div>
 
                       <div className="product__name">
-                        {product.title_En.slice(0, 26)}
-                        {product.title_En.length > 26 && <span>...</span>}
+                        {product.title_En.slice(0, 24)}
+                        {product.title_En.length > 24 && <span>...</span>}
                       </div>
                       <div className="product__price__and__icon">
                         <span className={getPriceClasses(product)}>

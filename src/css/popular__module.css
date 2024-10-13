@@ -200,7 +200,6 @@
   }
 }
 .last__offer .main__offer .buttom__offer__slider .one__product {
-  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -219,7 +218,7 @@
   width: 41px;
   height: 41px;
   background-color: #ff7675;
-  top: 1px;
+  top: 5px;
   left: 13px;
   display: -webkit-box;
   display: -ms-flexbox;
