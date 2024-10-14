@@ -73,7 +73,7 @@ const Product = () => {
   }, [productId]);
 
     useEffect(() => {
-    window.scrollTo(0, 117); // Scroll to the top when the component mounts
+    window.scrollTo(0, 105); // Scroll to the top when the component mounts
   }, [location.pathname]);
 
   useEffect(() => {
@@ -383,8 +383,9 @@ const Product = () => {
   return (
     <div className={blurState.blur ? 'main blurred' : "main"}>
       <div className="top__page">
-        <div className="container">
+        <div className="container-special">
           <div className="breadcrumb1">
+            <div className="sixty"></div>
             {state.product !== undefined && (
               <Breadcrumb>
 <Breadcrumb.Item onClick={()=>navigate(`/`)}>
@@ -395,7 +396,7 @@ const Product = () => {
                     return (
                       <Breadcrumb.Item key={c.id}>
                         <Link to={`/lastCategory/${c.id}`}>
-                          &nbsp; {c.title}
+                          {c.title}
                         </Link>
                       </Breadcrumb.Item>
                     );
@@ -715,7 +716,7 @@ Unfortunately, this item is out of stock.                    </span>
                     slideOnThumbnailOver={state.slideOnThumbnailOver}
                   />
                 </div>
-                <div className="share">
+                {/* <div className="share">
                   <span> Let's Share this Product</span>
                   <img
                     className="icon1"
@@ -737,7 +738,7 @@ Unfortunately, this item is out of stock.                    </span>
                     src={require("./../../assets/icons/twitter.png")}
                     alt=""
                   />
-                </div>
+                </div> */}
               </div>
             </div>
           )}

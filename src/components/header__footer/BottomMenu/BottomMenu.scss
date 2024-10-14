@@ -13,8 +13,8 @@
   padding: 5px 0;
   z-index: 1000;
   opacity: 0.9;
-  
-  @include mq(900) {
+  visibility: hidden;
+  @include mq(100) {
     visibility: visible;
   }
 }

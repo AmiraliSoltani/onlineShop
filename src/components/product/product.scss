@@ -77,21 +77,38 @@
         width: 100%;
         min-height: 610px;
 
-        .container {
+        .container-special {
             width: 100%;
             direction: ltr;
 
             .breadcrumb1 {
                 direction: ltr !important;
                 display: flex; 
-                justify-content: center;
-                margin-left: 405px;
+                justify-content: start;
                 text-decoration: none !important;
+                .sixty{
+                    width: 53%;
+                    @include mq(700) {
+width: 0%;
+                    }
+                }
                 .breadcrumb-item {
                     text-decoration: none !important;
 
                     font-size: 15px;
                     color: grey;
+                    @include mq(900) {
+                        font-size: 14px;
+
+                    }
+                    @include mq(800) {
+                        font-size: 13px;
+
+                    }
+                    @include mq(800) {
+                        font-size: 12px;
+
+                    }
 
                     a {
                         color: grey;
@@ -118,24 +135,19 @@
                 height: 100%;
                 justify-content: space-between;
                 @include mq(700) {
-                    flex-direction: column;
-                }
+                   flex-direction: column-reverse;
 
+                }
+          
                 .detail__product__right {
-                    min-width: 492px;
-                    width: 48%;
+                    // min-width: 492px;
+                    width: 47%;
                     display: flex;
                     align-items: start;
                     justify-content: start;
                     direction: ltr;
                     flex-direction: column;
-                    @include mq(800) {
-                        min-width: 414px;
-                    }
-                    @include mq(700) {
-                        width: 100%;
-                        min-width: none;
-                    }
+             
 
                     .price {
                         display: flex;
@@ -147,6 +159,14 @@
                             font-size: 23px;
                             font-weight: 500;
                             color: #ff7675;
+                            @include mq(900) {
+                                font-size: 22px;
+
+                            }
+                            @include mq(800) {
+                                font-size: 21px;
+
+                            }
                         }
 
                         .before__discount__price {
@@ -155,12 +175,29 @@
                             color: grey;
                             margin-left: 15px;
                             margin-right: 16px;
+                            @include mq(900) {
+                                font-size: 19px;
+
+                            }
+                            @include mq(800) {
+                                font-size: 18px;
+
+                            }
                         }
 
                         .discount__price {
                             color: $orange;
                             margin-right: 15px;
-                            font-weight: 400;
+                            font-weight: 500;
+                            font-size: 23px;
+                            @include mq(900) {
+                                font-size: 22px;
+
+                            }
+                            @include mq(800) {
+                                font-size: 21px;
+
+                            }
                         }
 
                         .discount__icon {
@@ -171,6 +208,16 @@
                             img {
                                 width: 50px;
                                 height: 50px;
+                                @include mq(900) {
+                                    width: 46px;
+                                    height: 46px;
+    
+                                }
+                                @include mq(800) {
+                                    width: 44px;
+                                    height: 44px;
+    
+                                }
                             }
                         }
 
@@ -179,6 +226,14 @@
                             direction: ltr;
                             color: $white;
                             font-size: 20px;
+                            @include mq(900) {
+                                font-size: 18px;
+
+                            }
+                            @include mq(800) {
+                                font-size: 17px;
+
+                            }
 
                         }
 
@@ -210,7 +265,17 @@
                                 font-size: 28px;
                                 font-weight: 500;
                                 color: black;
+                                @include mq(900) {
+                                    font-size: 25px;
+                                }
+                                @include mq(800) {
+                                    font-size: 23px;
+                                }
+                                @include mq(700) {
+                                    font-size: 22px;
+                                }
                             }
+                            
                         }
 
                         .brand{
@@ -218,6 +283,16 @@
                             text-decoration: none;
                             font-size: 20px;
                             text-decoration: none;
+                            font-weight: 500;
+                            @include mq(900) {
+                               font-size: 19px;
+
+                            }
+                            @include mq(800) {
+                                font-size: 18px;
+
+
+                            }
                             span{
                                 text-decoration: none;
 
@@ -273,6 +348,14 @@
                             font-size: 21px;
                             font-weight: 500;
                             margin-left: 10px;
+                            @include mq(900) {
+                                font-size: 20px;
+
+                            }
+                            @include mq(800) {
+                                font-size: 19px;
+
+                            }
                             // cursor: pointer;
 
                         }
@@ -320,8 +403,8 @@
                     // }
                     
                     .the__box__of__discount {
-                        margin-top: 17px;
-                        margin-bottom: 17px;
+                        margin-top: 22px;
+                        margin-bottom: 13px;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
@@ -416,24 +499,10 @@
 
                             }
                             .category{
-                                @include mq(800) {
-                                    margin-top: 11px;
-                                    margin-bottom: 3px;
-                                }
-                                @include mq(700) {
-                                    margin-top: 0px;
-                                    margin-bottom: 0px
-                                }
+                          
                             }
                             .stock{
-                                @include mq(800) {
-                                    margin-top: 11px;
-                                    margin-bottom: 3px
-                                }
-                                @include mq(700) {
-                                    margin-top: 0px;
-                                    margin-bottom: 0px
-                                }
+                           
                             }
 
                             .waranty {
@@ -450,21 +519,42 @@
                             width: 100%;
                             display: flex;
                             align-items: center;
+                            justify-content: space-between;
 
                             .title__color {
-                                display: flex;
-                                
-                                width: 18%;
+                                display: flex;  
+                                width: 41%;
+                                @include mq(1100) {
+                                    width: 45%;    
+                                }
 
                             }
 
                             span {
                                 font-size: 20px;
                                 font-weight: 500;
+                                @include mq(900) {
+                                    font-size: 18px;
+                                }
+                                @include mq(800) {
+                                    font-size: 17px;
+                                }
+                                @include mq(700) {
+                                    font-size: 16px;
+                                }
                             }
 
                             .title {
                                 color: gray;
+                                @include mq(900) {
+                                    font-size: 18px;
+                                }
+                                @include mq(800) {
+                                    font-size: 17px;
+                                }
+                                @include mq(700) {
+                                    font-size: 16px;
+                                }
                             }
 
 
@@ -474,8 +564,13 @@
                                 margin-bottom: 7px;
                                 justify-content: start;
                                 direction: ltr;
-                                margin-right: 7px;
-
+                                padding: 0px;
+                                width: 100%;
+                                @include mq(1000) {
+                                    margin-left: 20px;
+    
+                                }
+                       
                              
 
 
@@ -497,7 +592,16 @@
                                     margin-left: 5px;
                                     cursor: pointer;
                                     position: relative;
-
+                                    @include mq(900) {
+                                        height: 35px;
+                                        width: 35px;
+                                    }
+                                    @include mq(800) {
+                                        height: 32px;
+                                        width: 32px;
+                                    }
+                                    @include mq(700) {
+                                    }
                                     .orange {
                                         background-color: #ff7675;
                                     }
@@ -548,11 +652,23 @@
 
                             .title__size {
                                 display: flex;
-                                width: 18%;
+                                width: 41%;
+                                @include mq(1100) {
+                                    width: 45%;    
+                                }
 
                                 span {
                                     font-size: 20px;
                                     font-weight: 500;
+                                    @include mq(900) {
+                                        font-size: 18px;
+                                    }
+                                    @include mq(800) {
+                                        font-size: 17px;
+                                    }
+                                    @include mq(700) {
+                                        font-size: 16px;
+                                    }
                                 }
 
                                 .title {
@@ -576,8 +692,12 @@
                                 margin-bottom: 7px;
                                 justify-content: start;
                                 direction: ltr;
-                                margin-right: 7px;
-
+                                padding: 0px;
+                                width: 100%;
+                                @include mq(1000) {
+                                    margin-left: 20px;
+    
+                                }
                        
 
 
@@ -593,10 +713,10 @@
                                 }
 
                                 li {
-                                    height: 49px;
-                                    width: 57PX;
+                                    height: 45px;
+                                    width: 46px;
                                     /* border: 2px solid grey; */
-                                    border-radius: 16px;
+                                    border-radius: 14px;
                                     margin-left: 5px;
                                     display: flex;
                                     align-items: center;
@@ -604,16 +724,31 @@
                                     font-size: 19px;
                                     background-color: #e9ecef;
                                     position: relative;
+                                    @include mq(900) {
+                                        height: 40px;
+                                        width: 42px;
+        
+                                    }
+                                    @include mq(800) {
+                                        height: 38px;
+                                        width: 40px;
+        
+                                    }
 
                                     .out__of__stock {
-                                        height: 61px;
+                                        height: 50px;
                                         width: 2px;
                                         position: absolute;
                                         transform: rotate(50deg);
                                         z-index: 5;
                                         background-color: gray;
-                                        top: -6px;
-                                        left: 26px;
+                                        top: -3px;
+                                        left: 22px;
+                                        @include mq(900) {
+                                            height: 46px;
+                                            left: 20px;
+
+                                        }
                                     }
 
 
@@ -631,9 +766,7 @@
                         align-items: center;
                         justify-content: start;
                         margin-top: 15px;
-                        @include mq(800) {
-                            display: none;
-                        }
+                  
 
                         .icon {
                             margin-left: 5px;
@@ -644,13 +777,29 @@
                             -moz-transition: all 1s;
                             -ms-transition: all 1s;
                             -o-transition: all 1s;
+                            @include mq(800) {
+                                height: 45px;
+                                width: 50px;
 
+                            }
                         }
 
                         span {
                             font-size: 17px;
                             font-weight: 500;
                             color: gray;
+                            @include mq(900) {
+                                font-size: 16px;
+
+                            }
+                            @include mq(800) {
+                                font-size: 14px;
+
+                            }
+                            @include mq(730) {
+                                font-size: 13px;
+
+                            }
                         }
 
                         .size__info {
@@ -659,9 +808,7 @@
                             margin-right: 42px;
                             align-items: center;
                             flex-direction: column;
-                            @include mq(934) {
-                                margin-left: 44px;
-                            }
+                      
                             cursor: pointer;
 
                             &:hover {
@@ -679,9 +826,7 @@
                             flex-direction: column;
                             margin-right: 42px;
                             cursor: pointer;
-                            @include mq(934) {
-                                margin-left: 23px;
-                            }
+                       
 
                             &:hover {
                                 .icon {
@@ -710,6 +855,7 @@
                     }
 
                     .buttons {
+                        width: 100%;
                         display: flex;
                         align-items: center;
                         justify-content: start;
@@ -719,10 +865,19 @@
                         .wish__list {
                            margin-left: 15px;
                             cursor: pointer;
+                            @include mq(800) {
+                                margin-left: 10px;
+                                 
+                              }
 
                             .icon {
                                 height: 50px;
                                 width: 50px;
+                                @include mq(800) {
+                                    height: 40px;
+                                    width: 40px;
+                                   
+                                }
 
                             }
                         }
@@ -746,6 +901,14 @@
                             -o-transition: all 0.5s;
 
                             cursor: pointer;
+                            @include mq(900) {
+                                padding: 8px 30px;
+
+                            }
+                            @include mq(800) {
+                                padding: 7px 20px;
+
+                            }
 
                             &:hover {
                                 animation: icon__animate2 1s infinite;
@@ -761,9 +924,10 @@
                                 margin-left: 10px;
                                 height: 35px;
                                 width: 35px;
-                                @include mq(996) {
-                                    display: none;
-                
+                                @include mq(800) {
+                                    height: 30px;
+                                width: 30px;
+    
                                 }
                             }
 
@@ -771,9 +935,9 @@
                                 font-size: 20px;
                                 font-weight: 550;
                                 color: $white;
-                                @include mq(996) {
-                                    padding: 4px;
-                
+                                @include mq(800) {
+                                    font-size: 18px;
+    
                                 }
                             }
 
@@ -789,6 +953,18 @@
                                 -moz-transition: all 0.5s;
                                 -ms-transition: all 0.5s;
                                 -o-transition: all 0.5s;
+                                @include mq(900) {
+                                    top: 25px;
+                                    height: 10px;
+                                    width: 9px;
+                                    right: 44px;
+                                }
+                                @include mq(800) {
+                                    top: 21px;
+                                    height: 9px;
+                                    width: 9px;
+                                    right: 31px;
+                                }
 
                             }
                         }
@@ -812,6 +988,21 @@
                             margin-right: 2px;
                             direction: ltr;
                             padding: 0px 10px;
+                            @include mq(900) {
+
+                            }
+                            @include mq(800) {
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                background-color: #e9ecef;
+                                /* padding: 8px 40px; */
+                                width: 75px;
+                                height: 44px;
+                                margin-right: 2px;
+                                direction: ltr;
+                                padding: 0px 10px;
+                            }
 
                             button {
                                 font-size: 30px;
@@ -829,6 +1020,11 @@
                                 color: $black;
                                 font-size: 25px;
                                 cursor: unset;
+                                @include mq(800) {
+                                  font-size: 22px;
+                                   
+                                }
+
                             }
                         }
 
@@ -921,33 +1117,25 @@
 
 
                 .image__galery__left {
-                    max-width: 443px;
-                    max-height:443px;
-                    @include mq(1113) {
-                        max-width: 45vh;
-                        max-height:45vh;
-
-    
-                    }
-                    @include mq(950) {
-                        max-width: 46vh;
-                        max-height:45vh;
-
-    
-                    }
-                    @include mq(900) {
-                        max-width: 40vh;
-                    }
-                    @include mq(839) {
-                        max-width: 36vh;
-                    }
-                    @include mq(800) {
-                        max-width: 46vh;
-                    }
+                    // max-width: 443px;
+                    max-height:443px !important;
+                    width: 48%;
+                    margin-top: -35px;
                     @include mq(700) {
-                        max-width: 100vh;
+                        margin-top: -0px;
+                        width: 100%;
                     }
-                  
+               .image-gallery-image{
+                // height:443px !important;
+                // max-height:443px !important;
+                
+                max-height:calc(100vh - 90px) !important;
+                @include mq(700) {
+                    width: 100%;
+                    max-height:calc(90vw) !important;
+
+                }
+               }
                 }
                 
                 .share {
@@ -958,11 +1146,7 @@
                     margin-top: 10px;
                     width: 100%;
                     margin-top: 27px;
-                    @include mq(700) {
-                        margin-bottom: 20px;
-                        margin-top: 17px;
-
-                    }
+            
 
                     span {
                         font-size: 18px;
@@ -971,14 +1155,7 @@
                         margin-left: 30px;
                         margin-right: 15px;
                         
-                        @include mq(970) {
-                            margin-right: 4px;
-        
-                        }
-                        @include mq(894) {
-                            font-size: 17px;
-
-                        }
+                    
                     }
 
                     .icon1 {
@@ -1087,10 +1264,7 @@
                             -moz-transition: all 0.5s;
                             -ms-transition: all 0.5s;
                             -o-transition: all 0.5s;
-                            @include mq(476) {
-                                display: none;
-                                                    }
-                            
+                  
 
                         }
                     }

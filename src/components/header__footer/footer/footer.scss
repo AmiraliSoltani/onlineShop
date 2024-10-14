@@ -34,7 +34,7 @@
 
   .footer__top {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-bottom: 20px;
     @include mq(1000) {
       justify-content: space-between;
@@ -124,7 +124,7 @@
       margin-bottom: -5px;
       margin-top: 10px;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: space-around;
       direction: ltr;
       @include mq(1000) {
         justify-content: space-between;
