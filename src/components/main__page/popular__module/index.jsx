@@ -215,18 +215,7 @@ return <PopularModuleSkeletonLoader></PopularModuleSkeletonLoader>
                       </div>
                     </Link>
                     <div className="product__detail">
-                    <div className="product__price__and__icon">
-  <span className={getPriceClasses(product)}>
-    {parseFloat(product.price)}&nbsp;$
-  </span>
-  {product.off != 0 && (
-    <span className="discount__price__main">
-      {(parseInt(product.price) * (100 - parseInt(product.off)) / 100)}&nbsp;$
-    </span>
-  )}
 
- 
-</div>
                       <div className="product__box__color">
                       <ul>
   {getcolors(product, allAttributeItemS)
@@ -243,7 +232,18 @@ return <PopularModuleSkeletonLoader></PopularModuleSkeletonLoader>
 
                       </div>
 
+                      <div className="product__price__and__icon">
+  <span className={getPriceClasses(product)}>
+    {parseFloat(product.price).toFixed(2)}&nbsp;$
+  </span>
+  {product.off != 0 && (
+    <span className="discount__price__main">
+      {(parseInt(product.price) * (100 - parseInt(product.off)) / 100).toFixed(2)}&nbsp;$
+    </span>
+  )}
 
+ 
+</div>
 
                   
                     </div>

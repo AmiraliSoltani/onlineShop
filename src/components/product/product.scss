@@ -1037,6 +1037,11 @@ display: none;
                                 cursor: pointer;
                                 border: 0px;
                                 width: 15px;
+                                @include mq(700) {
+                                    font-size: 27px;
+
+                
+                                }
 
                                 &:focus {
                                     outline: 0px;

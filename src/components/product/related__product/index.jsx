@@ -89,11 +89,35 @@ const RelatedProduct = ({ product, allProducts, allAttributeItemS }) => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
+    responsive: [
+      {
+        breakpoint: 980, // When the screen is 1200px or less
+        settings: {
+          slidesToShow: 4, // Show 4 slides instead of 5
+          slidesToScroll: 4,
+
+        },
+      },
+      {
+        breakpoint: 650, // When the screen is 992px or less
+        settings: {
+          slidesToShow: 3, // Show 3 slides instead of 5
+          slidesToScroll: 3,
+
+        },
+      },
+      {
+        breakpoint: 1, // When the screen is 768px or less
+        settings: {
+          slidesToShow: 2, // Show 2 slides instead of 5
+        },
+      },
+    ],
   };
 
   return (
     <div className="last__offer">
-      <div className="container">
+      <div className="container-special">
         <div className="main__offer">
           <div className="top__offer">
             <div className="top__offer__category orange-striped">
@@ -123,8 +147,8 @@ const RelatedProduct = ({ product, allProducts, allAttributeItemS }) => {
                         <div className="product__images">
                           <div className="overlay__name">
                             <span>
-                              {product.title_En.slice(0, 29)}
-                              {product.title_En.length > 28 && <span> ...</span>}
+                              {product.title_En.slice(0, 23)}
+                              {product.title_En.length > 23 && <span> ...</span>}
                             </span>
                           </div>
                           <img
@@ -137,7 +161,7 @@ const RelatedProduct = ({ product, allProducts, allAttributeItemS }) => {
 
                       <div className="product__detail">
                         <div className="product__box__color">
-                          <ul>
+                          <ul style={{justifyContent:"start"}}>
                             {getcolors(product, allAttributeItemS).map((a) => (
                               <li
                                 key={a.class}
@@ -150,18 +174,7 @@ const RelatedProduct = ({ product, allProducts, allAttributeItemS }) => {
                         </div>
 
                         <div className="product__price__and__icon">
-                          <div className="icon__basket">
-                            <img
-                              className="add__basket"
-                              src={require("./../../../assets/icons/bag-4.png")}
-                              alt=""
-                            />
-                            <img
-                              className="pluse"
-                              src={require("./../../../assets/icons/plus.png")}
-                              alt=""
-                            />
-                          </div>
+                         
                           <span className={getPriceClasses(product)}>
                             {parseFloat(product.price).toFixed(2)} $
                           </span>

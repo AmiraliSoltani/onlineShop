@@ -1117,6 +1117,11 @@
   border: 0px;
   width: 15px;
 }
+@media only screen and (max-width: 700px) {
+  .main .top__page .container-special .top__right__and__left .detail__product__right .buttons .number__product button {
+    font-size: 27px;
+  }
+}
 .main .top__page .container-special .top__right__and__left .detail__product__right .buttons .number__product button:focus {
   outline: 0px;
 }

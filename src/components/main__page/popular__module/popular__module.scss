@@ -351,15 +351,16 @@
                 .product__detail {
 display: flex;
 position: relative;
+flex-direction: column;
                     .product__box__color {
-                        margin-bottom: 12px;
-                        width: 95%;
+                        margin-bottom: 6px;
+                        width: 100%;
 
                         ul {
                             display: flex;
                             margin-top: 10px;
-                            margin-bottom: 7px;
-                            justify-content: end;
+                            margin-bottom: 2px;
+                            justify-content: start;
                             direction: ltr;
                             padding: 0px;
                             // margin-left: 65px;
@@ -504,9 +505,7 @@ position: relative;
                             font-size: 15px;
                             text-align: right;
                             font-weight: bold;
-                            top: 13px;
-                            left: 5px;
-                            position: absolute;
+                            
                             @include mq(900) {
                                 font-size: 13px;
 
@@ -525,8 +524,7 @@ position: relative;
                         .discount__price {
                             text-decoration: line-through;
                             font-size: 13px;
-                            top: 9px;
-                            left: 5px;
+                         
                             @include mq(900) {
                                 font-size: 13px;
 
@@ -544,9 +542,7 @@ position: relative;
                         .discount__price__main {
                             color: $orange;
                             font-size: 14px;
-                            position: absolute;
-                            top: 26px;
-                            left: 4px;
+margin-left: 8px;                            
                             z-index: -1;
                             font-weight: bold;
                             @include mq(900) {
