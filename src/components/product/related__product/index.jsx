@@ -82,7 +82,7 @@ const RelatedProduct = ({ product, allProducts, allAttributeItemS }) => {
   };
 
   var settings2 = {
-    rtl: true,
+    ltr: true,
     infinite: false,
     speed: 500,
     slidesToShow: 5,  // Change to show 5 products instead of 6
