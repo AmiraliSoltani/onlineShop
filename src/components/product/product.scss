@@ -542,7 +542,7 @@ width: 0%;
                                     font-size: 17px;
                                 }
                                 @include mq(700) {
-                                    font-size: 16px;
+                                    font-size: 17px;
                                 }
                             }
 
@@ -555,7 +555,7 @@ width: 0%;
                                     font-size: 17px;
                                 }
                                 @include mq(700) {
-                                    font-size: 16px;
+                                    font-size: 17px;
                                 }
                             }
 
@@ -570,6 +570,10 @@ width: 0%;
                                 width: 100%;
                                 @include mq(1000) {
                                     margin-left: 20px;
+    
+                                }
+                                @include mq(700) {
+                                    margin-left: 0px;
     
                                 }
                        
@@ -669,7 +673,7 @@ width: 0%;
                                         font-size: 17px;
                                     }
                                     @include mq(700) {
-                                        font-size: 16px;
+                                        font-size: 17px;
                                     }
                                 }
 
@@ -682,6 +686,15 @@ width: 0%;
                             .chose {
                                 background-color: black;
                                 color: white;
+                                @include mq(900) {
+                                    font-size: 18px;
+                                }
+                                @include mq(800) {
+                                    font-size: 17px;
+                                }
+                                @include mq(700) {
+                                    font-size: 17px;
+                                }
                             }
 
                             .not__allowed {
@@ -698,6 +711,10 @@ width: 0%;
                                 width: 100%;
                                 @include mq(1000) {
                                     margin-left: 20px;
+    
+                                }
+                                @include mq(700) {
+                                    margin-left: 0px;
     
                                 }
                        
@@ -904,6 +921,7 @@ display: none;
                             -moz-transition: all 0.5s;
                             -ms-transition: all 0.5s;
                             -o-transition: all 0.5s;
+                            justify-content: center;
 
                             cursor: pointer;
                             @include mq(900) {
@@ -912,6 +930,10 @@ display: none;
                             }
                             @include mq(800) {
                                 padding: 7px 20px;
+
+                            }
+                            @include mq(700) {
+                                flex:1;
 
                             }
 
@@ -1120,9 +1142,12 @@ display: none;
 
 
 .product-line{
-    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 3px;
     width: 100%;
-    background-color: red;
+    // background-color: #666E7B;
+    background-color:#E9ECEF;
     display: none;
     @include mq(700) {
         display: flex;
@@ -1154,7 +1179,12 @@ display: none;
                 }
                 @include mq(700) {
                     width: 100%;
-                    max-height:calc(100vw) !important;
+                    max-height:calc(100vh - 200px) !important;
+
+                }
+                @include mq(500) {
+                    width: 100%;
+                    max-height:calc(100vh) !important;
 
                 }
                }
