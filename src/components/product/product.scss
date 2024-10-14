@@ -766,6 +766,9 @@ width: 0%;
                         align-items: center;
                         justify-content: start;
                         margin-top: 15px;
+                        @include mq(900) {
+display: none;        
+                        }
                   
 
                         .icon {
@@ -1130,6 +1133,14 @@ width: 0%;
                 // max-height:443px !important;
                 
                 max-height:calc(100vh - 90px) !important;
+                @include mq(1000) {
+                    max-height:calc(100vw) !important;
+
+                }
+                @include mq(900) {
+                    max-height:calc(100vh ) !important;
+
+                }
                 @include mq(700) {
                     width: 100%;
                     max-height:calc(100vw) !important;
