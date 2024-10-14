@@ -695,7 +695,7 @@ Unfortunately, this item is out of stock.                    </span>
                   </div>
                 </div>
               </div>
-
+                  <div className="product-line"></div>
               <div className="image__galery__left">
                 <div className="galery" onClick={handleGalleryClick}>
                   <ImageGallery

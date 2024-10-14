@@ -147,7 +147,9 @@ width: 0%;
                     justify-content: start;
                     direction: ltr;
                     flex-direction: column;
-             
+                    @include mq(700) {
+                        width: 100%;
+                    }
 
                     .price {
                         display: flex;
@@ -1117,7 +1119,16 @@ display: none;
                 }
 
 
+.product-line{
+    height: 2px;
+    width: 100%;
+    background-color: red;
+    display: none;
+    @include mq(700) {
+        display: flex;
 
+    }
+}
 
                 .image__galery__left {
                     // max-width: 443px;
@@ -1134,7 +1145,7 @@ display: none;
                 
                 max-height:calc(100vh - 90px) !important;
                 @include mq(1000) {
-                    max-height:calc(100vw) !important;
+                    max-height:calc(100vh) !important;
 
                 }
                 @include mq(900) {
