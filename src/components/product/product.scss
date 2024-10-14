@@ -1132,7 +1132,7 @@ width: 0%;
                 max-height:calc(100vh - 90px) !important;
                 @include mq(700) {
                     width: 100%;
-                    max-height:calc(90vw) !important;
+                    max-height:calc(100vw) !important;
 
                 }
                }
