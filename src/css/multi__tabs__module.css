@@ -220,7 +220,6 @@
 .amazing__offer .main__offer .buttom__offer__slider .see-more2 {
   color: black;
   height: 280px;
-  font-size: 21px;
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -254,6 +253,23 @@
 }
 .amazing__offer .main__offer .buttom__offer__slider .see-more2 span {
   text-align: center;
+  font-weight: 500;
+  font-size: 21px;
+}
+@media only screen and (max-width: 900px) {
+  .amazing__offer .main__offer .buttom__offer__slider .see-more2 span {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .amazing__offer .main__offer .buttom__offer__slider .see-more2 span {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .amazing__offer .main__offer .buttom__offer__slider .see-more2 span {
+    font-size: 15px;
+  }
 }
 .amazing__offer .main__offer .buttom__offer__slider .see-more2 .arrow-icon {
   width: 60px;
@@ -617,6 +633,11 @@
 @media only screen and (max-width: 500px) {
   .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__name {
     font-size: 11px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__name {
+    font-size: 10px;
   }
 }
 .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon {

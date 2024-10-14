@@ -242,7 +242,6 @@
             color: black;
             // width: 95% !important;
             height: 280px;
-            font-size: 21px;
             display: flex !important;
             justify-content: center;
             align-items: center;
@@ -260,6 +259,23 @@
           }
           span{
 text-align: center;
+font-weight: 500;
+font-size: 21px;
+
+@include mq(900) {
+  font-size: 17px;
+
+}
+
+@include mq(700) {
+  font-size: 16px;
+
+}
+@include mq(500) {
+  font-size: 15px;
+
+}
+
           }
           .arrow-icon{
             width: 60px;
@@ -612,6 +628,10 @@ text-align: center;
                   font-size: 11px;
 
               }
+              @include mq(470) {
+                font-size: 10px;
+
+            }
               }
   
               .product__price__and__icon {

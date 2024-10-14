@@ -12,37 +12,46 @@ function Footer() {
   return (
     <footer  className={blurState.blur ? 'blurred' : ''}>
       <div className="mainfooter">
-        <div className="container">
+        <div className="container-special">
           <div className="footer__top">
             <div className="footer__top__image image1">
               <img src={require("./../../../assets/icons/free.png")} alt="" />
-              <span>Free shipping on first order</span>
+              <span className='large-tile'>Free shipping on first order</span>
+              <span className='little-tile'>Free shipping</span>
+
             </div>
             <div className="footer__top__image image2">
               <img src={require("./../../../assets/icons/24.png")} alt="" />
-              <span>Fast packaging & shipping</span>
+              <span  className='large-tile'>Fast packaging & shipping</span>
+              <span  className='little-tile'>Fast packaging </span>
+
             </div>
             <div className="footer__top__image image3">
               <img src={require("./../../../assets/icons/shield.png")} alt="" />
-              <span>Authenticity guarantee</span>
+              <span  className='large-tile'>Authenticity guarantee</span>
+              <span  className='little-tile'> guarantee</span>
+
             </div>
             <div className="footer__top__image image4">
               <img
                 src={require("./../../../assets/icons/time-and-date.png")}
                 alt=""
               />
-              <span>24/7 Customer support</span>
+              <span  className='large-tile'>24/7 Customer support</span>
+              <span  className='little-tile'>24/7 support</span>
+
             </div>
           </div>
           <hr />
         </div>
 
         <div className="footer__middle">
-          <div className="container">
+          <div className="container-special">
             <div className="footer__middle__main">
             <div className="footer__middle__left">
                 <div className="footer__middle__left__first">
-                  <span>Follow us on social media</span>
+                  <span className='larg-follow'>Follow us on social media</span>
+                  <span className='little-follow'>Follow us</span>
                   <ul>
                     <li>
                       <img
@@ -83,7 +92,7 @@ function Footer() {
               <div className="footer__middle__right">
                 <ul>
                   <li>
-                    <span>Shopping Guide</span>
+                    <span className='footer_title'>Shopping Guide</span>
                     <ul className="sub_cat">
                       <li className='hover-item'>
                         <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
@@ -100,7 +109,7 @@ function Footer() {
                     </ul>
                   </li>
                   <li>
-                    <span>Customer Services</span>
+                    <span className='footer_title'>Customer Services</span>
                     <ul className="sub_cat">
                     <li className='hover-item'>
                         <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
@@ -117,7 +126,7 @@ function Footer() {
                     </ul>
                   </li>
                   <li>
-                    <span>Exclusive Offers</span>
+                    <span className='footer_title'>Exclusive Offers</span>
                     <ul className="sub_cat">
                     <li className='hover-item'>
                         <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
@@ -141,7 +150,7 @@ function Footer() {
           </div>
         </div>
         <div className="footer__bottom">
-          <div className="container">
+          <div className="container-special">
             <div className="footer__info">
               Website Designer:
               <div className="developer__name">Amirali Soltani</div>
