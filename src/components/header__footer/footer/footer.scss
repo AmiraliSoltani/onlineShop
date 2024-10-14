@@ -36,8 +36,8 @@
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    @include mq(850) {
-      justify-content: space-evenly;
+    @include mq(1000) {
+      justify-content: space-between;
 
    }
   
@@ -126,14 +126,29 @@
       display: flex;
       justify-content: space-evenly;
       direction: ltr;
-      @include mq(850) {
-        justify-content: space-evenly;
+      @include mq(1000) {
+        justify-content: space-between;
 
     }
  
       .footer__middle__right {
-        width: 60%;
-   
+        width: 62%;
+        @include mq(1000) {
+          width: 68%;
+  
+      }
+      @include mq(850) {
+        width: 69%;
+
+    }
+    @include mq(800) {
+      width: 70%;
+
+  }
+  @include mq(600) {
+    width: 65%;
+
+}
 
         > ul {
           display: flex;
@@ -142,13 +157,38 @@
           justify-content: space-between;
           padding: 0;
           margin: 0;
-    
+          @include mq(1000) {
+            width: 100%;
 
+        }
+        @include mq(600) {
+justify-content: space-evenly;
+      }
+        .third-column{
+          @include mq(600) {
+display: none !important;
+        }
+        }
           > li {
       
             .footer_title{
               font-weight: 500;
+              @include mq(1000) {
+                font-size: 14px;
 
+            }
+            @include mq(780) {
+              font-size: 13px;
+
+          }
+          @include mq(660) {
+            font-size: 12px;
+
+        }
+        @include mq(500) {
+          font-size: 11px;
+
+      }
             }
             span {
               margin-bottom: 10px;
@@ -189,7 +229,10 @@
                 position: relative;
                 display: flex;
                 align-items: center;
+                @include mq(850) {
+                  margin-top: 7px;
 
+              }
                 &:hover{
                   .subcat-image{
                    scale: 1.1;
@@ -201,8 +244,27 @@
               .text{
                 transition: transform 0.3s ease, box-shadow 0.3s ease;
                     will-change: transform; /* Inform the browser in advance */
+                    @include mq(1000) {
+                      font-size: 14px;
+    
+                  }
+                  @include mq(850) {
+                    font-size: 13px;
+  
+                }
+                @include mq(780) {
+                  font-size: 12px;
+    
+              }
+              @include mq(500) {
+                font-size: 11px;
 
+            }
+            @include mq(450) {
+              font-size: 10px;
 
+          }
+ 
               }
                 .subcat-image {
                   width: 15px;
@@ -210,7 +272,26 @@
                   margin-right: 9px;
                   z-index: 2; /* Keep the image on top of the circle */
                   position: relative;
+                  @include mq(850) {
+                    margin-right: 5px;
+  
+                }
+                @include mq(780) {
+                  margin-right: 2px;
 
+              }
+              @include mq(660) {
+                margin-right: 0px;
+                width: 10px;
+                height: 10px;
+            }
+          //   @include mq(600) {
+          //     margin-right: 0px;
+          //     width: 5px;
+          //     height: 5px;
+          //     margin-bottom: 3px;
+
+          // }
                 }
               
                 // &:before {
@@ -244,7 +325,6 @@
 
             ul {
               .third {
-              
               }
 
               .second {
@@ -255,6 +335,7 @@
                 margin-top: 13px;
                 cursor: pointer;
                 font-size: 14px;
+            
 
                 &:hover {
                   &::after {
@@ -286,6 +367,10 @@
           justify-content: space-evenly;
   
       }
+      @include mq(600) {
+        width: 31%;
+
+    }
      
         .footer__middle__left__first {
           .larg-follow{
@@ -341,6 +426,10 @@ display: none;
               margin-top: 8px;
 
           }
+          @include mq(450) {
+            margin-top: 4px;
+
+        }
 
               &:hover {
                 img {
@@ -378,6 +467,11 @@ display: none;
         height: 23px;
   
       }
+      @include mq(450) {
+        width: 21px;
+      height: 21px;
+
+    }
               }
             }
           }
@@ -411,6 +505,12 @@ display: none;
           height: 28px;
     
         }
+        @include mq(450) {
+          width: 27px;
+        height: 27px;
+  
+      }
+
 
               &:hover {
                 // animation: phone__animate 1.3s;
@@ -427,12 +527,19 @@ display: none;
           }
           @include mq(700) {
             font-size: 12px;
-    
+            margin-left: 10px;
+
         }
         @include mq(500) {
           font-size: 11px;
-  
+          margin-left: 12px;
+
       }
+      @include mq(450) {
+        font-size: 10px;
+        margin-left: 9px;
+
+    }
           }
         }
       }

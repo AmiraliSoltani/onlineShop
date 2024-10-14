@@ -91,12 +91,12 @@ function Footer() {
               </div>
               <div className="footer__middle__right">
                 <ul>
-                  <li>
+                  <li >
                     <span className='footer_title'>Shopping Guide</span>
                     <ul className="sub_cat">
                       <li className='hover-item'>
                         <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
-                         <span className="text">Shipping Information</span> 
+                         <span className="text">Shipping Info</span> 
                         </li>
                         <li className="second hover-item">
                         <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
@@ -125,9 +125,9 @@ function Footer() {
                         </li>
                     </ul>
                   </li>
-                  <li>
+                  <li className='third-column'>
                     <span className='footer_title'>Exclusive Offers</span>
-                    <ul className="sub_cat">
+                    <ul className="sub_cat ">
                     <li className='hover-item'>
                         <img src={require("./../../../assets/icons/record.png")} alt="" className="subcat-image" />
                          <span className="text">Loyalty Program</span> 

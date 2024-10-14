@@ -64,11 +64,11 @@
           justify-content: space-evenly;
   margin-bottom: 20px;
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1000px) {
   .mainfooter .footer__top {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .mainfooter .footer__top .footer__top__image {
@@ -168,15 +168,35 @@
           justify-content: space-evenly;
   direction: ltr;
 }
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1000px) {
   .mainfooter .footer__middle .footer__middle__main {
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .mainfooter .footer__middle .footer__middle__main .footer__middle__right {
-  width: 60%;
+  width: 62%;
+}
+@media only screen and (max-width: 1000px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right {
+    width: 68%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right {
+    width: 69%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right {
+    width: 65%;
+  }
 }
 .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul {
   display: -webkit-box;
@@ -190,8 +210,45 @@
   padding: 0;
   margin: 0;
 }
+@media only screen and (max-width: 1000px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul .third-column {
+    display: none !important;
+  }
+}
 .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .footer_title {
   font-weight: 500;
+}
+@media only screen and (max-width: 1000px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .footer_title {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .footer_title {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .footer_title {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .footer_title {
+    font-size: 11px;
+  }
 }
 .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li span {
   margin-bottom: 10px;
@@ -240,6 +297,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media only screen and (max-width: 850px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item {
+    margin-top: 7px;
+  }
+}
 .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item:hover .subcat-image {
   scale: 1.1;
 }
@@ -254,12 +316,54 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, -webkit-transform 0.3s ease, -webkit-box-shadow 0.3s ease;
   will-change: transform; /* Inform the browser in advance */
 }
+@media only screen and (max-width: 1000px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .text {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .text {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .text {
+    font-size: 10px;
+  }
+}
 .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .subcat-image {
   width: 15px;
   height: 15px;
   margin-right: 9px;
   z-index: 2; /* Keep the image on top of the circle */
   position: relative;
+}
+@media only screen and (max-width: 850px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .subcat-image {
+    margin-right: 5px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .subcat-image {
+    margin-right: 2px;
+  }
+}
+@media only screen and (max-width: 660px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li .sub_cat li.hover-item .subcat-image {
+    margin-right: 0px;
+    width: 10px;
+    height: 10px;
+  }
 }
 .mainfooter .footer__middle .footer__middle__main .footer__middle__right > ul > li ul li {
   margin-top: 13px;
@@ -274,6 +378,11 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__left {
+    width: 31%;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -347,6 +456,11 @@
     margin-top: 8px;
   }
 }
+@media only screen and (max-width: 450px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__first ul li {
+    margin-top: 4px;
+  }
+}
 .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__first ul li:hover img {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -388,6 +502,12 @@
     height: 23px;
   }
 }
+@media only screen and (max-width: 450px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__first ul li img {
+    width: 21px;
+    height: 21px;
+  }
+}
 .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__second {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,6 +545,12 @@
     height: 28px;
   }
 }
+@media only screen and (max-width: 450px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__second .icon__image img {
+    width: 27px;
+    height: 27px;
+  }
+}
 .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__second .phone__number {
   font-size: 15px;
   margin-left: 12px;
@@ -437,11 +563,19 @@
 @media only screen and (max-width: 700px) {
   .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__second .phone__number {
     font-size: 12px;
+    margin-left: 10px;
   }
 }
 @media only screen and (max-width: 500px) {
   .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__second .phone__number {
     font-size: 11px;
+    margin-left: 12px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .mainfooter .footer__middle .footer__middle__main .footer__middle__left .footer__middle__left__second .phone__number {
+    font-size: 10px;
+    margin-left: 9px;
   }
 }
 .mainfooter .footer__bottom .footer__info {
