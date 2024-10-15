@@ -1282,7 +1282,7 @@
 }
 .main .buttom__page__tabs .tabs .custom .filter__title {
   cursor: pointer;
-  width: 100%;
+  width: 33%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1295,9 +1295,49 @@
           align-items: center;
   border-left: 2px solid gray;
 }
+@media only screen and (max-width: 900px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title {
+    padding: 5px 8px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title {
+    padding: 4px 5px;
+  }
+}
 .main .buttom__page__tabs .tabs .custom .filter__title span {
   font-size: 19px;
   font-weight: 500;
+}
+@media only screen and (max-width: 900px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title span {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title span {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title span {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title span {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title span {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title span {
+    font-size: 12px;
+  }
 }
 .main .buttom__page__tabs .tabs .custom .filter__title .title__icon {
   height: 35px;
@@ -1308,6 +1348,18 @@
   -moz-transition: all 0.5s;
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
+}
+@media only screen and (max-width: 700px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title .title__icon {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main .buttom__page__tabs .tabs .custom .filter__title .title__icon {
+    height: 25px;
+    width: 25px;
+  }
 }
 .main .buttom__page__tabs .tabs .custom2 {
   display: -webkit-box;

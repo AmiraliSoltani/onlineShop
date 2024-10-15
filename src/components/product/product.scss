@@ -1300,7 +1300,7 @@ display: none;
 
                 .filter__title {
                     cursor: pointer;
-                    width: 100%;
+                    width: 33%;
                     display: flex;
                     justify-content: start;
                      // background-color: $green;
@@ -1308,10 +1308,35 @@ display: none;
                      // border-radius: 7px;
                     align-items: center;
                     border-left: 2px solid gray;
+                    @include mq(900) {
+                        padding: 5px 8px;
+                    }
+                    @include mq(700) {
+                        padding: 4px 5px;
+                    }
 
                         span {
                             font-size: 19px;
                             font-weight: 500;
+                            @include mq(900) {
+                                font-size: 17px;
+                            }
+                            @include mq(700) {
+                                font-size: 16px;
+                            }
+                            @include mq(600) {
+                                font-size: 15px;
+                            }
+                            @include mq(500) {
+                                font-size: 14px;
+                            }
+                            @include mq(450) {
+                                font-size: 13px;
+                            }
+                            @include mq(430) {
+                                font-size: 12px;
+                            }
+                        
                         }
 
                         .title__icon {
@@ -1324,7 +1349,14 @@ display: none;
                             -ms-transition: all 0.5s;
                             -o-transition: all 0.5s;
                   
-
+                            @include mq(700) {
+                                height: 30px;
+                                width: 30px;
+                            }
+                            @include mq(500) {
+                                height: 25px;
+                                width: 25px;
+                            }
                         }
                     }
             }

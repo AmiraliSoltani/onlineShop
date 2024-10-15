@@ -126,7 +126,6 @@ flex-direction: column;
     }
     span{
         font-size: 20px;
-        background-color: $yellow;
         color: $white;
         font-weight: 500;
         @include mq(700) {

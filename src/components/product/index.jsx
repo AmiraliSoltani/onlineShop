@@ -276,7 +276,7 @@ const Product = () => {
   const getClassNameOfTabs = (name) => {
     let className = 'filter__title';
     let { tabs } = state;
-    if (tabs[name] === true) className += ' c-white orange-striped';
+    if (tabs[name] === true) className += ' c-white orange';
     return className;
   };
 
@@ -750,7 +750,7 @@ Unfortunately, this item is out of stock.                    </span>
 
       {state.product!==undefined && (
         <div className="buttom__page__tabs">
-          <div className="container">
+          <div className="container-special">
             <div ref={commentsRef}>
               <div className="tabs">
                 <div className="custom">
@@ -768,7 +768,7 @@ Unfortunately, this item is out of stock.                    </span>
                       src={require("./../../assets/icons/writing.png")}
                       alt=""
                     />
-                    <span>Specifications</span>
+                    <span>Features</span>
                   </div>
                   <div className={getClassNameOfTabs("Comment")} onClick={()=>setTabs("Comment")}>
                     <img
