@@ -36,6 +36,8 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
   const progressRefs = useRef({});
   const writeReviewFlag = useRef(false); // Flag to prevent double dispatch
   const [maxProgressWidth, setMaxProgressWidth] = useState(400);
+const [mobileRview,setMobileReview]=useState(false);
+const [mobileWriteReview,setMobileWriteReview]=useState(false);
 
   const schema = z.object({
     title: z.string().min(2,"Your title should be at least 2 charecter"),
@@ -59,10 +61,13 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
       console.log("resizeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
       const width = window.innerWidth;
       if (width <= 700) {
+        setMobileReview(true)
         setMaxProgressWidth(200);
       } else if (width <= 900) {
+        setMobileReview(true)
         setMaxProgressWidth(300);
       } else {
+        setMobileReview(false)
         setMaxProgressWidth(400);
       }
     };
@@ -214,7 +219,9 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
   const writeReview = () => {
     if (loginState.authenticated) {
       console.log("Authenticated user, opening write modal");
-      setShowWriteModal(true);
+
+      if(!mobileRview) setShowWriteModal(true);
+      else setMobileWriteReview(true)
     } else {
       // console.log("Unauthenticated user, dispatching openLogin");
       // loginDispatch({ type: "openLogin" });
@@ -289,7 +296,30 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
 
   return (
     <Fragment>
+{mobileWriteReview && 
+ <Fragment>
+              <div className={`account-menu ${mobileWriteReview ? "visible-account" : ""} ` }>
 
+                    <div className="tab-header-container">
+      <div className="header">
+      <img src={require("../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>setMobileWriteReview(false)} />
+
+        <h2>Welcome</h2> {/* Title */}
+      </div>
+
+      <div className="tabs">
+        <button
+          className={`tab`}
+        >
+          Log In
+        </button>
+      </div>
+
+    
+    </div>
+    </div>
+ </Fragment>
+}
     <div className="content">
       <div className="comment">
         <div className="top__comment">
