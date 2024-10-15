@@ -32,6 +32,130 @@
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+.account-menu .tab-header-container .write .icon {
+  margin-top: 22px;
+  margin-bottom: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.account-menu .tab-header-container .write .icon ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+.account-menu .tab-header-container .write .icon ul .star__icon {
+  margin-left: 5px;
+}
+.account-menu .tab-header-container .write .icon ul .star__icon svg {
+  width: 22px;
+  height: 22px;
+  fill: gray;
+  cursor: pointer;
+}
+.account-menu .tab-header-container .write .icon ul .star__icon svg:hover, .account-menu .tab-header-container .write .icon ul .star__icon svg:hover ~ .star__icon svg {
+  fill: #feca57;
+}
+.account-menu .tab-header-container .write .icon ul .star__icon .positive {
+  fill: #feca57;
+}
+.account-menu .tab-header-container .write .icon span {
+  font-size: 18px;
+  color: gray;
+  margin-left: 10px;
+}
+.account-menu .tab-header-container .write .import__images {
+  margin-top: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.account-menu .tab-header-container .write .import__images .upload_photo {
+  background-color: #bdc3c7;
+  cursor: pointer;
+  width: 125px;
+  height: 115px;
+  font-size: 42px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 21px;
+}
+.account-menu .tab-header-container .write .import__images .title {
+  color: gray;
+  font-size: 18px;
+  text-align: center;
+}
+.account-menu .tab-header-container .write .import__images .group__of__upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 16px;
+}
+.account-menu .tab-header-container .write .import__images ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.account-menu .tab-header-container .write .import__images ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 50px;
+  width: 50px;
+  background-color: #bdc3c7;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.account-menu .tab-header-container .write .form-check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
+}
+.account-menu .tab-header-container .write .form-check .form-check-input {
+  top: 4px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  top: -5px;
+  right: 10px;
+  cursor: pointer;
+  zoom: 1.5;
+}
+.account-menu .tab-header-container .write .form-check .form-check-label {
+  font-size: 14px !important;
+  margin-right: 48px;
+}
 .account-menu .header {
   padding: 12px;
   color: white;

@@ -28,6 +28,124 @@
                 border-radius: 10px;
                 // padding: 20px;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                .write {
+
+                    .icon {
+                      margin-top: 22px;
+                      margin-bottom: 22px;
+                      display: flex;
+                      align-items: center;
+                  
+                      ul {
+                        display: flex;
+                        margin-bottom: 0px;
+                        margin-right: 10px;
+                  
+                        .star__icon {
+                          margin-left: 5px;
+                  
+                          svg {
+                            width: 22px;
+                            height: 22px;
+                            fill: gray;
+                            cursor: pointer;
+                  
+                            &:hover,
+                            &:hover ~ .star__icon svg {
+                              fill: $yellow;
+                            }
+                          }
+                  
+                          .positive {
+                            fill: $yellow;
+                          }
+                        }
+                      }
+                  
+                      span {
+                        font-size: 18px;
+                        color: gray;
+                        margin-left: 10px;
+                      }
+                    }
+                  
+                    .import__images {
+                      margin-top: 15px;
+                      align-items: center;
+                  
+                      .upload_photo {
+                        background-color: #bdc3c7;
+                        cursor: pointer;
+                        width: 125px;
+                        height: 115px;
+                        font-size: 42px;
+                        color: white;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-left: 21px;
+                      }
+                  
+                      .title {
+                        color: gray;
+                        font-size: 18px;
+                        text-align: center;
+                      }
+                  
+                      .group__of__upload {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 16px;
+                      }
+                  
+                      ul {
+                        display: flex;
+                  
+                        li {
+                          display: flex;
+                          cursor: pointer;
+                          color: $white;
+                          align-items: center;
+                          justify-content: center;
+                          height: 50px;
+                          width: 50px;
+                          background-color: $silver;
+                          margin-right: 10px;
+                          border-radius: 10px;
+                        }
+                      }
+                    }
+                  
+                    .form-group {
+                      .main__review {
+                        // height: 120px;
+                      }
+                    }
+                  
+                    .form-check {
+                      display: flex;
+                      align-items: center;
+                      margin-top: 25px;
+                  
+                      .form-check-input {
+                        top: 4px;
+                        right: 10px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        top: -5px;
+                        right: 10px;
+                        cursor: pointer;
+                        zoom: 1.5;
+                      }
+                  
+                      .form-check-label {
+                        font-size: 14px !important;
+                        margin-right: 48px;
+                      }
+                    }
+                  }
+                  
               }
               
               .header {
@@ -147,7 +265,7 @@
   
   
   }
-  
+
 .yellow-striped {
     background: repeating-linear-gradient(
       45deg,            /* Angle of stripes */

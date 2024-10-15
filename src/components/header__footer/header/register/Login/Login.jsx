@@ -206,7 +206,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   }
   return (
     <Fragment>
-            <div className={`account-menu ${isVisible ? "visible-account" : ""} ` }>
+            <div className={`account-menu container-special ${isVisible ? "visible-account" : ""} ` }>
             {!loginState.authenticated && (
               <Fragment>
 

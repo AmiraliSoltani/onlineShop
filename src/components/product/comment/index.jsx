@@ -300,21 +300,98 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
  <Fragment>
               <div className={`account-menu ${mobileWriteReview ? "visible-account" : ""} ` }>
 
-                    <div className="tab-header-container">
-      <div className="header">
+       <div className="tab-header-container">
+      
+
+
+
+      <div className="write">
+      {!submit ? (
+        <div>
+          <div className="header">
       <img src={require("../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>setMobileWriteReview(false)} />
 
-        <h2>Welcome</h2> {/* Title */}
+        <h2>Write your review</h2> {/* Title */}
       </div>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <Form.Group>
+              <input
+                {...register("title", { required: "Title is required" })}
+                type="text"
+                placeholder="Enter your title"
+                className="form-control mt-3 mb-3"
+                id="comment__title"
+              />
+              {errors.title && (
+                <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                  {errors.title.message}
+                </div>
+              )}
+            </Form.Group>
 
-      <div className="tabs">
-        <button
-          className={`tab`}
-        >
-          Log In
-        </button>
-      </div>
+            <div className="icon">
+              <span>Rate it!</span>
+              <ul>
+                {vote.map((v, index) => (
+                  <li
+                    key={index}
+                    className="star__icon"
+                    onMouseEnter={() => setHoveredStar(v[1])}
+                    onMouseLeave={() => setHoveredStar(0)} // Reset on mouse out
+                    onClick={() => {
+                      setPersonalVote(v[1]);
+                      setClickedStar(v[1]); // Store clicked star
+                    }}
+                  >
+                    <svg className={getClassName(v[1])} viewBox="0 -10 511.98685 511">
+                      <path d="M510.652344 185.902344C507.300781 175.535156 498.105469 168.171875 487.226562 167.191406L339.453125 153.773438 281.019531 16.972656C276.710938 6.949219 266.898438 0.460938 255.996094 0.460938C245.09375 0.460938 235.269531 6.949219 230.960938 16.972656L172.527344 153.746094 24.730469 167.164062C13.871094 168.167969 4.699219 175.507812 1.328125 185.902344C-2.042969 196.269531.257813 207.640625 8.472656 214.808594L120.171875 312.769531 87.234375 457.859375C84.824219 468.527344 88.964844 479.554688 97.816406 485.953125 102.574219 489.390625 108.140625 491.140625 113.753906 491.140625C118.59375 491.140625 123.394531 489.835938 127.703125 487.257812L255.171875 411.074219 382.59375 487.257812C391.917969 492.867188 403.671875 492.355469 412.503906 485.953125 421.359375 479.535156 425.496094 468.503906 423.085938 457.859375L390.148438 312.769531 501.847656 214.808594C510.0625 207.621094 513.199219 196.269531 509.828125 185.882812ZM0 0" />
+                    </svg>
+                  </li>
+                ))}
+              </ul>
+              {vote[1] > 0 && (
+                <span style={{ marginRight: "10px", fontSize: "20px", color: "#ff7675", fontWeight: "500" }}>
+                  {vote[0]}
+                </span>
+              )}
+            </div>
 
+            {personalVote === -1 && (
+              <div className="w-100 bg-danger text-center text-warning p-2 mt-2 mb-4 rounded">
+                You have to vote
+              </div>
+            )}
+
+            <Form.Group>
+              <textarea
+                {...register("body", { required: "Review body is required" })}
+                placeholder="Enter your main review"
+                className="form-control mt-3 mb-3"
+                style={{ height: "90px" }}
+              />
+              {errors.body && (
+                <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                  {errors.body.message}
+                </div>
+              )}
+            </Form.Group>
+
+            <Button className="button" variant="primary" type="submit" style={{ padding: "5px" }}>
+              Submit
+            </Button>
+          </form>
+        </div>
+      ) : (
+        <div className="success__write">
+          <h3>Successfully Submitted</h3>
+          <p>{`Dear user,`}</p>
+          <p>We have received your review. After a quick check, we will post it on the site.</p>
+          <Button variant="primary" >
+            Got it!
+          </Button>
+        </div>
+      )}
+    </div>
     
     </div>
     </div>
