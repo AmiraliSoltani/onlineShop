@@ -572,6 +572,16 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media only screen and (max-width: 900px) {
+  .content .buttom__comment .one__comment .right__comment {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .content .buttom__comment .one__comment .right__comment {
+    margin-right: 16px;
+  }
+}
 .content .buttom__comment .one__comment .right__comment .avatar {
   margin-bottom: 10px;
 }
@@ -581,6 +591,7 @@
 }
 .content .buttom__comment .one__comment .right__comment .name span {
   font-size: 16px;
+  font-weight: 500;
 }
 .content .buttom__comment .one__comment .right__comment .date {
   text-align: center;
@@ -594,6 +605,21 @@
   padding: 10px 30px;
   width: 55%;
   position: relative;
+}
+@media only screen and (max-width: 900px) {
+  .content .buttom__comment .one__comment .left__comment {
+    width: 65%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .content .buttom__comment .one__comment .left__comment {
+    width: 73%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .content .buttom__comment .one__comment .left__comment {
+    padding: 10px 20px;
+  }
 }
 .content .buttom__comment .one__comment .left__comment::before {
   content: "";
@@ -618,17 +644,38 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media only screen and (max-width: 700px) {
+  .content .buttom__comment .one__comment .left__comment .top__left__comment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+}
 .content .buttom__comment .one__comment .left__comment .stars {
-  margin-left: 10px;
+  margin-left: 20px;
+}
+@media only screen and (max-width: 700px) {
+  .content .buttom__comment .one__comment .left__comment .stars {
+    margin-left: 0px;
+    margin-bottom: 8px;
+  }
 }
 .content .buttom__comment .one__comment .left__comment .stars ul {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 0px;
-}
-.content .buttom__comment .one__comment .left__comment .stars ul .star__icon {
-  margin-left: 5px;
+  padding: 0px;
 }
 .content .buttom__comment .one__comment .left__comment .stars ul .star__icon svg {
   width: 17px;
@@ -638,17 +685,41 @@
 .content .buttom__comment .one__comment .left__comment .stars ul .star__icon .positive {
   fill: #fff;
 }
+.content .buttom__comment .one__comment .left__comment .stars ul .star__icon:not(:first-child) {
+  margin-left: 5px;
+}
 .content .buttom__comment .one__comment .left__comment .title span {
-  font-size: 18px;
+  font-size: 17px;
   color: white;
   text-align: left;
+  font-weight: 500;
+}
+@media only screen and (max-width: 900px) {
+  .content .buttom__comment .one__comment .left__comment .title span {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .content .buttom__comment .one__comment .left__comment .title span {
+    font-size: 15px;
+  }
 }
 .content .buttom__comment .one__comment .left__comment .buttom__left__comment {
   text-align: left;
 }
 .content .buttom__comment .one__comment .left__comment .buttom__left__comment span {
-  font-size: 17px;
+  font-size: 16px;
   color: white;
+}
+@media only screen and (max-width: 900px) {
+  .content .buttom__comment .one__comment .left__comment .buttom__left__comment span {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .content .buttom__comment .one__comment .left__comment .buttom__left__comment span {
+    font-size: 14px;
+  }
 }
 .content .buttom__comment .one__comment .images {
   display: -webkit-box;

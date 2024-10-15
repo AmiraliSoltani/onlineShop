@@ -478,6 +478,11 @@ width: 8%;
             flex-direction: column;
             width: 25%;
             align-items: center;
+            @include mq(900) {
+margin-right: 10px;            }
+@include mq(500) {
+    margin-right: 16px;   
+}
             .avatar{
                 margin-bottom: 10px;
                 .icon{
@@ -490,6 +495,7 @@ width: 8%;
 
                 span{
                     font-size: 16px;
+                    font-weight: 500;
                 }
             }
             .date{
@@ -507,6 +513,17 @@ width: 8%;
     padding: 10px 30px;
 width: 55%;
 position: relative;
+@include mq(900) {
+    width: 65%;    
+}
+@include mq(800) {
+    width: 73%;    
+}
+@include mq(700) {
+    padding: 10px 20px;
+
+}
+
 &::before{
     content: '';
     display: block;
@@ -519,21 +536,31 @@ position: relative;
     background-color: #1abc9c;
     border-right: 34px solid transparent;
     transform: rotate(0deg);
+
 }      
       .top__left__comment{
                 display: flex;
                 margin-bottom: 10px;
                 align-items: center;
-
+                @include mq(700) {
+                    flex-direction: column-reverse; 
+                    justify-content: start;
+                    align-items: start;
+                }
             }
 .stars{
-    margin-left: 10px;
-
+    margin-left: 20px;
+    @include mq(700) {
+        margin-left: 0px;
+margin-bottom: 8px;
+    }
     ul{
+        justify-content: start;
         display: flex;
         margin-bottom: 0px;
+        padding: 0px;
             .star__icon{
-                margin-left: 5px;
+                // margin-left: 5px;
                 svg{
                    width: 17px; 
                    height: 17px;
@@ -544,24 +571,37 @@ position: relative;
 
                 }
             }
+            .star__icon:not(:first-child) {
+                margin-left: 5px;
+            }
         
     }
 }
 .title{
     span{
-        font-size: 18px;
+        font-size: 17px;
         color: white;
         text-align: left;
-        // @include mq(800) {
-        //     font-size: 17px;
-        // }
+        font-weight: 500;
+        @include mq(900) {
+            font-size: 16px;
+        }
+        @include mq(600) {
+            font-size: 15px;
+        }
     }
 }
 .buttom__left__comment{
  text-align: left;
     span{
-     font-size: 17px;
+     font-size: 16px;
      color: white;
+     @include mq(900) {
+        font-size: 15px;
+    }
+    @include mq(600) {
+        font-size: 14px;
+    }
     }
         }
     }//left__comment
