@@ -7,11 +7,42 @@
   font-size: 17px;
   margin-left: 3px;
 }
+@media only screen and (max-width: 800px) {
+  .main__content th {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main__content th {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main__content th {
+    font-size: 14px;
+  }
+}
 .main__content td {
   margin-left: 3px;
   font-size: 17px;
 }
+@media only screen and (max-width: 800px) {
+  .main__content td {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .main__content td {
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main__content td {
+    font-size: 14px;
+  }
+}
 .main__content .title {
   width: 25%;
   min-width: 143px;
+  font-weight: 500;
 }/*# sourceMappingURL=specifications.css.map */

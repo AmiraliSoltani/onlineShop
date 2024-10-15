@@ -138,7 +138,7 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
     return;
   }
 
-    const maxProgressWidth = 400;
+    const maxProgressWidth = 200;
     const targetWidth = (number / max) * maxProgressWidth;
     const duration = 2000;
     const stepTime = duration / number;
@@ -330,6 +330,14 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
             {finalAverage > 0 && (
               <span className="text2">{`${product.comments.length} reviews`}</span>
             )}
+              <div className="write button yellow appear" onClick={writeReview}>
+            <img
+              className="icon"
+              src={require("./../../../assets/icons/pencil.png")}
+              alt=""
+            />
+            <span>Write your review</span>
+          </div>
             <div className="write2 button yellow-striped" onClick={writeReview}>
               <img
                 className="icon"
@@ -365,7 +373,7 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
               </Fragment>
             ))}
           </div>
-          <div className="write button yellow-striped" onClick={writeReview}>
+          <div className="write button yellow disappear" onClick={writeReview}>
             <img
               className="icon"
               src={require("./../../../assets/icons/pencil.png")}
@@ -375,6 +383,7 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
           </div>
         </div>
       </div>
+    
      {product.comments.length>0 && <div className="line orange-striped"></div>} 
 
       <div className="buttom__comment">

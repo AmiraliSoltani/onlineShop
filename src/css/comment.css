@@ -3,6 +3,45 @@
   color: #333; /* Set a text color that contrasts the background */
 }
 
+.yellow {
+  background-color: #FECA57;
+}
+
+@media only screen and (max-width: 1100px) {
+  .disappear {
+    display: none !important;
+  }
+}
+
+.appear {
+  display: none !important;
+}
+@media only screen and (max-width: 1100px) {
+  .appear {
+    margin-top: 28px;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    height: 50px !important;
+    padding: 10px !important;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .appear {
+    height: 46px !important;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .appear {
+    height: 43px !important;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .appear {
+    margin-top: 18px;
+  }
+}
+
 .Toastify__toast-body {
   -webkit-box-flex: 0 !important;
       -ms-flex: 0 auto !important;
@@ -33,7 +72,7 @@
 .content {
   direction: ltr;
   margin-right: 10px;
-  margin-top: 32px;
+  margin-top: 18px;
 }
 .content .comment {
   display: -webkit-box;
@@ -57,9 +96,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
 }
 .content .comment .top__comment .result {
@@ -136,34 +174,22 @@
   border-radius: 10px;
   cursor: pointer;
 }
-@media only screen and (max-width: 1034px) {
-  .content .comment .top__comment .result .write2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
 .content .comment .top__comment .result .write2 .icon {
   width: 32px;
   height: 32px;
-}
-@media only screen and (max-width: 804px) {
-  .content .comment .top__comment .result .write2 .icon {
-    display: none;
-  }
 }
 .content .comment .top__comment .result .write2 span {
   font-size: 20px;
   color: #fff;
   font-weight: 500;
 }
-@media only screen and (max-width: 700px) {
-  .content .comment .top__comment .result .write2 span {
-    font-size: 16px;
-  }
-}
 .content .comment .top__comment .result .text {
   font-size: 25px;
+}
+@media only screen and (max-width: 550px) {
+  .content .comment .top__comment .result .text {
+    font-size: 21px;
+  }
 }
 .content .comment .top__comment .result .without__review {
   margin-bottom: 10px;
@@ -171,9 +197,19 @@
   font-size: 25px;
   font-weight: 500;
 }
+@media only screen and (max-width: 550px) {
+  .content .comment .top__comment .result .without__review {
+    font-size: 21px;
+  }
+}
 .content .comment .top__comment .result .number {
   font-size: 43px;
   font-weight: 500;
+}
+@media only screen and (max-width: 550px) {
+  .content .comment .top__comment .result .number {
+    font-size: 35px;
+  }
 }
 .content .comment .top__comment .result .icon ul {
   display: -webkit-box;
@@ -207,6 +243,22 @@
   font-weight: 500;
   margin-top: 15px;
 }
+@media only screen and (max-width: 900px) {
+  .content .comment .top__comment .result .text2 {
+    font-size: 22px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .content .comment .top__comment .result .text2 {
+    font-size: 21px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .content .comment .top__comment .result .text2 {
+    margin-top: 10px;
+    font-size: 19px;
+  }
+}
 .content .comment .top__comment .custom__chart {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,14 +267,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 75px;
 }
-@media only screen and (max-width: 804px) {
-  .content .comment .top__comment .custom__chart {
-    margin-right: 10px;
-  }
-}
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 550px) {
   .content .comment .top__comment .custom__chart {
     display: none;
   }
@@ -232,6 +278,18 @@
   margin-right: 25px;
   color: #bdc3c7;
   width: 20%;
+}
+@media only screen and (max-width: 900px) {
+  .content .comment .top__comment .custom__chart .title {
+    font-size: 17px;
+    margin-right: 18px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .content .comment .top__comment .custom__chart .title {
+    font-size: 16px;
+    margin-right: 18px;
+  }
 }
 .content .comment .top__comment .custom__chart .diagram {
   direction: ltr;
@@ -266,6 +324,16 @@
   display: inline-block;
   padding: 4px 11px;
 }
+@media only screen and (max-width: 900px) {
+  .content .comment .top__comment .custom__chart .custom__percent {
+    width: 10%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .content .comment .top__comment .custom__chart .custom__percent {
+    width: 16%;
+  }
+}
 .content .comment .top__comment .custom__chart .custom__percent::before {
   content: "";
   display: block;
@@ -299,6 +367,16 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #e9ecef;
+}
+@media only screen and (max-width: 900px) {
+  .content .comment .top__comment .custom__chart .custom__progress__bar {
+    width: 300px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .content .comment .top__comment .custom__chart .custom__progress__bar {
+    width: 200px;
+  }
 }
 .content .comment .top__comment .custom__chart .custom__progress__bar .custom__progress {
   width: 4px;
@@ -400,7 +478,6 @@
   top: 1px;
 }
 .content .comment .top__comment .write {
-  margin-left: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -411,20 +488,56 @@
   padding: 10px 13px;
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
-@media only screen and (max-width: 1034px) {
-  .content .comment .top__comment .write {
-    display: none;
-  }
+.content .comment .top__comment .write:hover {
+  background-color: #3A3A3A;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 .content .comment .top__comment .write .icon {
   width: 32px;
   height: 32px;
 }
+@media only screen and (max-width: 1100px) {
+  .content .comment .top__comment .write .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .content .comment .top__comment .write .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .content .comment .top__comment .write .icon {
+    width: 26px;
+    height: 26px;
+  }
+}
 .content .comment .top__comment .write span {
-  font-size: 20px;
-  color: #fff;
+  font-size: 19px;
   font-weight: 500;
+  margin-left: 12px;
+}
+@media only screen and (max-width: 1100px) {
+  .content .comment .top__comment .write span {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .content .comment .top__comment .write span {
+    font-size: 17px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .content .comment .top__comment .write span {
+    font-size: 15px;
+    margin-left: 8px;
+  }
 }
 .content .line {
   height: 4px;
@@ -505,24 +618,8 @@
       -ms-flex-align: center;
           align-items: center;
 }
-@media only screen and (max-width: 900px) {
-  .content .buttom__comment .one__comment .left__comment .top__left__comment {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: self-start;
-        -ms-flex-align: self-start;
-            align-items: self-start;
-  }
-}
 .content .buttom__comment .one__comment .left__comment .stars {
   margin-left: 10px;
-}
-@media only screen and (max-width: 900px) {
-  .content .buttom__comment .one__comment .left__comment .stars {
-    margin-bottom: 10px;
-  }
 }
 .content .buttom__comment .one__comment .left__comment .stars ul {
   display: -webkit-box;
@@ -545,11 +642,6 @@
   font-size: 18px;
   color: white;
   text-align: left;
-}
-@media only screen and (max-width: 800px) {
-  .content .buttom__comment .one__comment .left__comment .title span {
-    font-size: 17px;
-  }
 }
 .content .buttom__comment .one__comment .left__comment .buttom__left__comment {
   text-align: left;

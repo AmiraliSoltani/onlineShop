@@ -1,4 +1,5 @@
 @import './../../../scss/variable.scss';
+@import './../../../scss/mixins.scss';
 
 
 .main__content{
@@ -9,14 +10,34 @@
 th{
         font-size: 17px;
         margin-left: 3px;
+        @include mq(800) {
+            font-size: 16px;
+                                }
+                                @include mq(700) {
+                                    font-size: 15px;
+                                }
+                                @include mq(600) {
+                                    font-size: 14px;
+                                }
 }
 td{
     margin-left: 3px;
     font-size: 17px;
+    @include mq(800) {
+        font-size: 16px;
+                            }
+                            @include mq(700) {
+                                font-size: 15px;
+                            }
+                            @include mq(600) {
+                                font-size: 14px;
+                            }
 
 }
 .title{
     width: 25%;
     min-width: 143px;
+    font-weight: 500;
+
 }
 }
