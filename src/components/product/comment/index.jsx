@@ -35,6 +35,7 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
   const percentRefs = useRef({});
   const progressRefs = useRef({});
   const writeReviewFlag = useRef(false); // Flag to prevent double dispatch
+  const [maxProgressWidth, setMaxProgressWidth] = useState(400);
 
   const schema = z.object({
     title: z.string().min(2,"Your title should be at least 2 charecter"),
@@ -52,6 +53,28 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
     setShowMessageModal(false);
     setShowLoginModal(true);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 700) {
+        setMaxProgressWidth(200);
+      } else if (width < 900) {
+        setMaxProgressWidth(300);
+      } else {
+        setMaxProgressWidth(400);
+      }
+    };
+
+    // Set the initial width based on the current window width
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   console.log("loginState",loginState)
 
@@ -138,7 +161,7 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
     return;
   }
 
-    const maxProgressWidth = 200;
+    // const maxProgressWidth = 200;
     const targetWidth = (number / max) * maxProgressWidth;
     const duration = 2000;
     const stepTime = duration / number;
