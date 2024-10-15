@@ -56,10 +56,11 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
 
   useEffect(() => {
     const handleResize = () => {
+      console.log("resizeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee")
       const width = window.innerWidth;
-      if (width < 700) {
+      if (width <= 700) {
         setMaxProgressWidth(200);
-      } else if (width < 900) {
+      } else if (width <= 900) {
         setMaxProgressWidth(300);
       } else {
         setMaxProgressWidth(400);
@@ -148,6 +149,7 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
   };
 
   const progress = (id, number, max) => {
+    console.log("resizeeeeeeeeeeeee2")
     if (!percentRefs.current[id] || !progressRefs.current[id + 1]) {
       console.error(`Element with id ${id} or ${id + 1} not found`);
       return;
@@ -162,7 +164,9 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
   }
 
     // const maxProgressWidth = 200;
-    const targetWidth = (number / max) * maxProgressWidth;
+    // const targetWidth = (number / max) * maxProgressWidth;
+    const targetWidth = Math.min((number / max) * maxProgressWidth, maxProgressWidth);
+
     const duration = 2000;
     const stepTime = duration / number;
     let currentWidth = 0;
@@ -196,7 +200,7 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
       progressRefs.current[key + 1] = document.getElementById(key + 1);
       progress(key, finalStar.find((star) => star[0] === key)[1], max);
     });
-  }, [finalStar, max]);
+  }, [finalStar, max,maxProgressWidth]);
 
   const resetModal = () => {
     setShowLoginModal(false);
@@ -284,6 +288,8 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
   
 
   return (
+    <Fragment>
+
     <div className="content">
       <div className="comment">
         <div className="top__comment">
@@ -641,6 +647,8 @@ const [clickedStar, setClickedStar] = useState(0); // Track clicked star
       </Modal>
         )}
     </div>
+    </Fragment>
+
   );
 }
 
