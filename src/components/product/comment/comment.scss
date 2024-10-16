@@ -7,6 +7,9 @@
     border: 0px;
     font-size: 20px;
     margin-bottom: 3px;
+    &:hover{
+        background-color: #666E7B !important;
+    }
 }
 .account-menu{
     position: fixed;

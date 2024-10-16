@@ -5,6 +5,9 @@
   font-size: 20px;
   margin-bottom: 3px;
 }
+.button-submit:hover {
+  background-color: #666E7B !important;
+}
 
 .account-menu {
   position: fixed;

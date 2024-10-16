@@ -290,7 +290,7 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
     setPersonalVote(0);
     setClickedStar(0); // Reset clicked star after submit
     setSubmit(true);
-    setShowSuccessfullModal(true)
+    if(!mobileRview)setShowSuccessfullModal(true)
   };
   
 
@@ -383,10 +383,17 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
         </div>
       ) : (
         <div className="success__write">
-          <h3>Successfully Submitted</h3>
-          <p>{`Dear user,`}</p>
-          <p>We have received your review. After a quick check, we will post it on the site.</p>
-          <Button variant="primary" >
+              <div className="header">
+      <img src={require("../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>setMobileWriteReview(false)} />
+
+      <h2>Successfully Submitted</h2>{/* Title */}
+      </div>
+          
+          <p>{`Dear ${loginState.user.name},`}</p>
+          <p>We have received your review.</p>
+          <p>After a quick check, we will post it on the site.</p>
+
+          <Button className="button-submit" variant="primary" >
             Got it!
           </Button>
         </div>
