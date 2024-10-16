@@ -1191,6 +1191,8 @@
   .main .top__page .container-special .top__right__and__left .image__galery__left .image-gallery-image {
     width: 100%;
     max-height: calc(100vw - 30px) !important;
+    -o-object-fit: unset;
+       object-fit: unset;
   }
 }
 .main .top__page .container-special .top__right__and__left .share {

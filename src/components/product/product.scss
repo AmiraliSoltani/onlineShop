@@ -1198,6 +1198,7 @@ display: none;
                 @include mq(500) {
                     width: 100%;
                     max-height:calc(100vw - 30px) !important;
+                    object-fit: unset;
 
                 }
                }
