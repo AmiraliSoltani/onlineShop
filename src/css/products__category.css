@@ -99,6 +99,11 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+@media only screen and (max-width: 550px) {
+  .whole__product .m .main__offer .buttom__offer__slider {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .whole__product .m .main__offer .buttom__offer__slider .no-products-message {
   grid-column: span 4; /* Span across 4 columns */
   text-align: center;
@@ -162,15 +167,6 @@
     height: 30px;
     font-size: 13px;
     padding: 17px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .whole__product .m .main__offer .buttom__offer__slider .one__product .tag__discount {
-    width: 20px;
-    height: 20px;
-    font-size: 10px;
-    padding: 14px;
-    left: 8px;
   }
 }
 .whole__product .m .main__offer .buttom__offer__slider .one__product a .product__images {
