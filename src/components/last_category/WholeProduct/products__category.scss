@@ -94,9 +94,9 @@
   @include mq(740) {
     grid-template-columns: repeat(3, 1fr);
 }
-@include mq(550) {
-  grid-template-columns: repeat(2, 1fr);
-}
+// @include mq(550) {
+//   grid-template-columns: repeat(2, 1fr);
+// }
 
         .no-products-message {
           grid-column: span 4; /* Span across 4 columns */

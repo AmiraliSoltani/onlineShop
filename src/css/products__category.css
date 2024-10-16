@@ -99,11 +99,6 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media only screen and (max-width: 550px) {
-  .whole__product .m .main__offer .buttom__offer__slider {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 .whole__product .m .main__offer .buttom__offer__slider .no-products-message {
   grid-column: span 4; /* Span across 4 columns */
   text-align: center;
