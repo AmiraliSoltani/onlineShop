@@ -314,7 +314,7 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
         <h2>Write your review</h2> {/* Title */}
       </div>
           <form onSubmit={handleSubmit(onSubmit)}>
-            <Form.Group>
+            <Form.Group style={{margin:"0px 10px"}}>
               <input
                 {...register("title", { required: "Title is required" })}
                 type="text"
@@ -357,12 +357,12 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
             </div>
 
             {personalVote === -1 && (
-              <div className="w-100 bg-danger text-center text-warning p-2 mt-2 mb-4 rounded">
+              <div className="w-100 bg-danger text-center text-warning p-2 mt-2 mb-4 rounded" style={{marginLeft:"10px"}}>
                 You have to vote
               </div>
             )}
 
-            <Form.Group>
+            <Form.Group style={{margin:"0px 10px"}}>
               <textarea
                 {...register("body", { required: "Review body is required" })}
                 placeholder="Enter your main review"
@@ -370,13 +370,13 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
                 style={{ height: "90px" }}
               />
               {errors.body && (
-                <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded" style={{marginBottom:"20px"}}>
                   {errors.body.message}
                 </div>
               )}
             </Form.Group>
 
-            <Button className="button" variant="primary" type="submit" style={{ padding: "5px" }}>
+            <Button className="button-submit" variant="primary" type="submit" >
               Submit
             </Button>
           </form>

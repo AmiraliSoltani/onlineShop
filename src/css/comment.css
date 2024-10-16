@@ -1,3 +1,11 @@
+.button-submit {
+  width: 100%;
+  background-color: #FF7675;
+  border: 0px;
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
 .account-menu {
   position: fixed;
   bottom: -140%; /* Initially hidden below the viewport */
@@ -41,6 +49,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 10px;
 }
 .account-menu .tab-header-container .write .icon ul {
   display: -webkit-box;
@@ -174,7 +183,7 @@
 }
 .account-menu .header h2 {
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
 }
 .account-menu .tabs {
   display: -webkit-box;

@@ -1,7 +1,13 @@
 @import './../../../scss/variable.scss';
 @import './../../../scss/mixins.scss';
 
-
+.button-submit{
+    width: 100%;
+    background-color: #FF7675;
+    border: 0px;
+    font-size: 20px;
+    margin-bottom: 3px;
+}
 .account-menu{
     position: fixed;
     bottom: -140%; /* Initially hidden below the viewport */
@@ -35,6 +41,7 @@
                       margin-bottom: 22px;
                       display: flex;
                       align-items: center;
+                      margin-left: 10px;
                   
                       ul {
                         display: flex;
@@ -171,7 +178,7 @@
                 }
                 h2 {
                   margin: 0;
-                  font-size: 24px;
+                  font-size: 22px;
                 }
               }
               
