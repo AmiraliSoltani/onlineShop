@@ -1,27 +1,27 @@
 .main {
   direction: ltr;
 }
-.main .container {
+.main .container-special {
   direction: ltr !important;
 }
 @media only screen and (max-width: 1200px) {
-  .main .container {
+  .main .container-special {
     max-width: 1200px !important;
   }
 }
-.main .container .breadcrumb .breadcrumb-item {
+.main .container-special .breadcrumb .breadcrumb-item {
   font-size: 15px;
   color: grey;
   text-decoration: none;
 }
-.main .container .breadcrumb .breadcrumb-item a {
+.main .container-special .breadcrumb .breadcrumb-item a {
   color: grey;
   text-decoration: none;
 }
-.main .container .breadcrumb .breadcrumb-item::before {
+.main .container-special .breadcrumb .breadcrumb-item::before {
   margin-left: 8px;
 }
-.main .container .breadcrumb .breadcrumb-item:hover a {
+.main .container-special .breadcrumb .breadcrumb-item:hover a {
   color: #ff7675;
   text-decoration: none;
 }
@@ -29,7 +29,7 @@
   -webkit-filter: blur(1.5px);
           filter: blur(1.5px); /* You can adjust the blur amount */
 }
-.main .whole__category .container .main__search {
+.main .whole__category .container-special .main__search {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,15 +41,15 @@
           align-items: flex-start;
   width: 100%;
 }
-.main .whole__category .container .main__search .left__search__products {
+.main .whole__category .container-special .main__search .left__search__products {
   width: 81%;
 }
 @media only screen and (max-width: 900px) {
-  .main .whole__category .container .main__search .left__search__products {
+  .main .whole__category .container-special .main__search .left__search__products {
     width: 100%;
   }
 }
-.main .whole__category .container .main__search .left__search__products .whole__left__search {
+.main .whole__category .container-special .main__search .left__search__products .whole__left__search {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

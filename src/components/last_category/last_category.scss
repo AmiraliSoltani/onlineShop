@@ -4,7 +4,7 @@
 .main{
     direction: ltr;
 
-.container{
+.container-special{
     direction: ltr !important;
         @include mq(1200) {
             max-width: 1200px !important;                                             }
@@ -41,7 +41,7 @@
     filter: blur(1.5px); /* You can adjust the blur amount */
   }
 .whole__category{
-.container{
+.container-special{
 
 
 .main__search{
