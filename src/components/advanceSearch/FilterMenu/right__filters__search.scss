@@ -16,17 +16,17 @@
 }
 
 .right__search__filters {
-    @include mq(900) {
-        display: none;
- }
-                                               min-width: 219px;
+                                        min-width: 219px;
     width: 20%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     // min-width: 219px;
-    margin-right: 10px;
-
+    margin-right: 20px;
+    @include mq(900) {
+        display: none;
+ }
+       
     .filter__1__categories {
         display: flex;
         flex-direction: column;
