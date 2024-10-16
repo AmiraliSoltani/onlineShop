@@ -130,7 +130,7 @@ function PopularModule({ categoryId, typeProp, allCategories, allProducts }) {
     infinite: false,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 5,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [

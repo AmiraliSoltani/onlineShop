@@ -213,6 +213,7 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
     setShowWriteModal(false);
     setSubmit(false);
     setShowSuccessfullModal(false)
+    setMobileWriteReview(false)
   };
 
 
@@ -384,17 +385,17 @@ const [mobileWriteReview,setMobileWriteReview]=useState(false);
       ) : (
         <div className="success__write">
               <div className="header">
-      <img src={require("../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>setMobileWriteReview(false)} />
+      <img src={require("../../../assets/icons/close.png")} alt="" className="close"  onClick={resetModal} />
 
-      <h2>Successfully Submitted</h2>{/* Title */}
+      <h2 style={{fontSize:"20px"}}>Successfully Submitted</h2>{/* Title */}
       </div>
           
-          <p>{`Dear ${loginState.user.name},`}</p>
-          <p>We have received your review.</p>
-          <p>After a quick check, we will post it on the site.</p>
+          <p className="user-title">{`Dear ${loginState.user.name},`}</p>
+          <p className="confirm-title">We have received your review.</p>
+          <p className="confirm-title">After a quick check, we will post it on the site.</p>
 
-          <Button className="button-submit" variant="primary" >
-            Got it!
+          <Button style={{fontSize:"20px" , marginTop:"10px"}} className="button-submit" variant="primary" onClick={resetModal}>
+           Sounds Nice!
           </Button>
         </div>
       )}

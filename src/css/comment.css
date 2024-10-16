@@ -1,3 +1,16 @@
+.user-title {
+  font-size: 17px;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.confirm-title {
+  font-size: 16px;
+  text-align: left;
+  margin-left: 20px;
+}
+
 .button-submit {
   width: 100%;
   background-color: #FF7675;
