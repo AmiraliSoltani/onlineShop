@@ -1165,7 +1165,7 @@
 @media only screen and (max-width: 500px) {
   .main .top__page .container-special .top__right__and__left .image__galery__left {
     width: 100%;
-    max-height: calc(100vw - 20px) !important;
+    max-height: calc(100vw - 15px) !important;
   }
 }
 .main .top__page .container-special .top__right__and__left .image__galery__left .image-gallery-image {
@@ -1190,9 +1190,7 @@
 @media only screen and (max-width: 500px) {
   .main .top__page .container-special .top__right__and__left .image__galery__left .image-gallery-image {
     width: 100%;
-    max-height: calc(100vw - 20px) !important;
-    -o-object-fit: unset;
-       object-fit: unset;
+    max-height: calc(100vw - 15px) !important;
   }
 }
 .main .top__page .container-special .top__right__and__left .share {

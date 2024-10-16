@@ -1174,7 +1174,7 @@ display: none;
                     }
                     @include mq(500) {
                         width: 100%;
-                        max-height:calc(100vw - 20px) !important;
+                        max-height:calc(100vw - 15px) !important;
     
                     }
                .image-gallery-image{
@@ -1197,8 +1197,8 @@ display: none;
                 }
                 @include mq(500) {
                     width: 100%;
-                    max-height:calc(100vw - 20px) !important;
-                    object-fit: unset;
+                    max-height:calc(100vw - 15px) !important;
+                    // object-fit: unset;
 
                 }
                }
