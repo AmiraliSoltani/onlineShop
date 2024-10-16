@@ -1,6 +1,6 @@
 .second__box {
   background-color: #e9ecef;
-  width: 98%;
+  width: 100%;
   height: 51px;
   border-radius: 10px;
   display: -webkit-box;
@@ -14,16 +14,19 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: -2px;
-  margin-left: 20px;
   margin-bottom: 5px;
 }
 .second__box .product {
   color: white;
   font-size: 14px;
-  margin-left: 100px;
 }
 .second__box .sort__icon {
   margin-left: 5px;
+}
+@media only screen and (max-width: 907px) {
+  .second__box .sort__icon {
+    margin-left: -1px;
+  }
 }
 .second__box .sort__icon img {
   width: 35px;
@@ -43,6 +46,11 @@
 @media only screen and (max-width: 1000px) {
   .second__box .sort__icon span {
     display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .second__box .sort__icon span {
+    display: inline;
   }
 }
 .second__box .sort__name {
@@ -79,7 +87,7 @@
 .second__box .sort__name span {
   margin-right: 10px;
   margin-left: 2px;
-  font-size: 13.4px;
+  font-size: 12.4px;
   cursor: pointer;
   padding: 7px 10px;
   background-color: white;

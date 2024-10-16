@@ -44,7 +44,7 @@ class SecondBox extends Component {
           ))}
 {/* <span className="number">{finalBeforePagination.length}</span> */}
         </div>
-        <span className="product">{finalBeforePagination.length} Products</span>
+        {/* <span className="product">{finalBeforePagination.length} Products</span> */}
 
       </div>
     );
