@@ -14,16 +14,16 @@
 }
 .main .container-special .breadcrumb .breadcrumb-item {
   font-size: 14.5px;
-  color: grey;
+  color: #A0A0A0;
   text-decoration: none;
   font-weight: 500;
 }
 .main .container-special .breadcrumb .breadcrumb-item a {
-  color: grey;
+  color: #A0A0A0;
   text-decoration: none;
 }
 .main .container-special .breadcrumb .breadcrumb-item::before {
-  margin-left: 8px;
+  color: #A0A0A0;
 }
 .main .container-special .breadcrumb .breadcrumb-item:hover a {
   color: #ff7675;

@@ -2058,7 +2058,7 @@ const handleValue = (event) => {
 
 return (
   <div className={blurState.blur ? 'main blurred' : "main"}>
-      <div className="container">
+      <div className="container-special">
         <div className="breadcrumb11">
 {/* <Breadcrumb>
 <Breadcrumb.Item onClick={()=>navigate(`/`)}>
@@ -2085,7 +2085,7 @@ return (
       </div>
 
       <div className="whole__category">
-        <div className="container">
+        <div className="container-special">
           <div className="main__search">
             <FilterMenu
             resetPrice={resetPrice}

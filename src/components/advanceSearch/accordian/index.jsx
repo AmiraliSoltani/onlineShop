@@ -43,7 +43,7 @@ const CustomAccordion = ({ colors , handelColorClick , listOfColors}) => {
         />
         
         <span onClick={toggleAccordion}>Color</span>
-        {showColorReset && <span className="reset" onClick={()=>handelColorClick(-1)}>Reset</span>}
+        {showColorReset && <span className="reset2" onClick={()=>handelColorClick(-1)}>Reset</span>}
 
       </div>
       {isOpen && (

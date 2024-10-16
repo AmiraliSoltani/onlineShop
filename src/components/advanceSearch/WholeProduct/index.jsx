@@ -75,7 +75,7 @@ function WholeProduct({ finalPaginateProducts , loading }) {
 
   return (
 <div className="whole__product">
-  <div className="container">
+  <div className="m">
     <div className="main__offer">
       {loading ? (
         <ProductLoader /> // Show skeleton loader if loading
@@ -91,7 +91,7 @@ function WholeProduct({ finalPaginateProducts , loading }) {
                   {product.off != 0 && (
                     <div className="tag__discount">{product.off}%</div>
                   )}
-                  <Link to={`/product/${product.id}`}>
+                  <Link to={`/product/${product.id}`} style={{width:"100%"}}>
                     <div className="product__images">
                       <div className="overlay">
                         <div className="product__star">

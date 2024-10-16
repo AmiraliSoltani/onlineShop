@@ -1,5 +1,5 @@
 .reset {
-  margin-left: 16px;
+  margin-right: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -10,6 +10,26 @@
   font-size: 14px !important;
 }
 .reset:hover {
+  opacity: 1;
+}
+
+.reset2 {
+  margin-left: 19px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2px;
+  opacity: 0.6;
+  cursor: pointer;
+  padding: 0px !important;
+  font-size: 14px !important;
+}
+@media only screen and (max-width: 1200px) {
+  .reset2 {
+    margin-left: 12px;
+  }
+}
+.reset2:hover {
   opacity: 1;
 }
 
@@ -50,9 +70,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   background-color: #ff7675;
   padding: 9px;
@@ -86,10 +106,12 @@
 .right__search__filters .filter__1__categories .filter__content ul li .first__category {
   font-size: 16px;
   margin-left: 5px;
+  font-weight: 500;
 }
 .right__search__filters .filter__1__categories .filter__content ul li .child__categories {
-  font-size: 16px;
+  font-size: 14.7px;
   margin-left: 5px;
+  font-weight: 500;
 }
 .right__search__filters .filter__1__categories .filter__content ul li .check__box .main__check__box {
   height: 25px;
@@ -165,6 +187,7 @@
 .right__search__filters .filter__2__categories .search__word span {
   font-size: 15px;
   margin-left: 8px;
+  font-weight: 500;
 }
 .right__search__filters .filter__2__categories .filter__title {
   display: -webkit-box;
@@ -204,6 +227,7 @@
   border: 2px solid gray;
   background-color: beige;
   margin-right: 16px;
+  font-weight: 500;
 }
 .right__search__filters .filter__2__categories .filter__content .icon__search {
   width: 35px;
@@ -227,9 +251,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   background-color: #ff7675;
   padding: 9px;
@@ -239,7 +263,6 @@
   font-size: 16px;
   font-weight: 500;
   color: #fff;
-  padding: 0px 80px 0px 0px;
 }
 .right__search__filters .filter__10__categories .filter__content {
   margin-right: 6px;
@@ -284,6 +307,7 @@
   font-size: 14px;
   color: gray;
   margin-left: 8px;
+  font-weight: 500;
 }
 .right__search__filters .filter__10__categories .filter__content ul li:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -306,9 +330,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
   background-color: #55efc4;
   padding: 9px;
@@ -318,7 +342,6 @@
   font-size: 16px;
   font-weight: 500;
   color: #fff;
-  padding: 0px 65px 0px 0px;
 }
 .right__search__filters .filter__3__categories .filter__content {
   margin-right: 6px;
@@ -363,6 +386,7 @@
   font-size: 14px;
   color: gray;
   margin-left: 8px;
+  font-weight: 500;
 }
 .right__search__filters .filter__3__categories .filter__content ul li:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -465,6 +489,7 @@
 .right__search__filters .filter__4__categories .filter__content .whole__filter__1 span {
   font-size: 14px;
   color: gray;
+  font-weight: 500;
 }
 .right__search__filters .filter__4__categories .filter__content .whole__filter__1:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -569,6 +594,7 @@
   font-size: 14px;
   color: gray;
   margin-left: 8px;
+  font-weight: 500;
 }
 .right__search__filters .accordion__container__size .filter__content ul li:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
@@ -673,6 +699,7 @@
   font-size: 14px;
   color: gray;
   margin-left: 8px;
+  font-weight: 500;
 }
 .right__search__filters .accordion__container__brand .filter__content ul li:hover {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);

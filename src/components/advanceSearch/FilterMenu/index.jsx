@@ -614,9 +614,9 @@ return (
       </Accordion>
     </div> */}
 
-
+{allColors.length>0 &&
       <CustomAccordion colors={allColors} handelColorClick={handelColorClick} listOfColors={listOfColors}/>
-
+}
 
       {allSizes.length>0 &&
       <div className="accordion__container__size">
@@ -628,7 +628,7 @@ return (
           onClick={toggleAccordionSize }
         />
         <span onClick={toggleAccordionSize }>Size</span>
-        {showSizeReset && <span className="reset" onClick={()=>handelSizeClick(-1)}>Reset</span>}
+        {showSizeReset && <span className="reset2" onClick={()=>handelSizeClick(-1)}>Reset</span>}
 
       </div>
       {isOpen && (
@@ -670,7 +670,7 @@ return (
             onClick={toggleAccordionBrand}
           />
           <span onClick={toggleAccordionBrand}>Brand</span>
-          {showBrandReset && <span className="reset" onClick={()=>handelBrandClick(-1)}>Reset</span>}
+          {showBrandReset && <span className="reset2" onClick={()=>handelBrandClick(-1)}>Reset</span>}
 
         </div>
         {isOpenBrand && (

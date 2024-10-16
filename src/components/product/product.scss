@@ -1170,6 +1170,12 @@ display: none;
                         width: 100%;
                         max-height:calc(100vh) !important;
 
+                
+                    }
+                    @include mq(500) {
+                        width: 100%;
+                        max-height:calc(100vh - 30px) !important;
+    
                     }
                .image-gallery-image{
                 // height:443px !important;
@@ -1191,7 +1197,7 @@ display: none;
                 }
                 @include mq(500) {
                     width: 100%;
-                    max-height:calc(100vw) !important;
+                    max-height:calc(100vh - 30px) !important;
 
                 }
                }

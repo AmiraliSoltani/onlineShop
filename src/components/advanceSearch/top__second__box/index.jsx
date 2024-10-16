@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import "./../../../css/top__second__box_advance_search.css";
+import "./../../../css/top__second__box.css";
 
 class SecondBox extends Component {
   state = {};
@@ -25,7 +25,7 @@ class SecondBox extends Component {
     let { handleSort, handelClickOrder , finalBeforePagination } = this.props;
     
     return (
-      <div className="second__box">
+      <div className="second__box ">
 
         <div className="sort__icon">
           <img src={require("./../../../assets/icons/filter.png")} alt="sort" />
@@ -44,7 +44,7 @@ class SecondBox extends Component {
           ))}
 {/* <span className="number">{finalBeforePagination.length}</span> */}
         </div>
-        <span className="product">{finalBeforePagination.length} Products</span>
+        {/* <span className="product">{finalBeforePagination.length} Products</span> */}
 
       </div>
     );

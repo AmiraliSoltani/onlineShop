@@ -489,6 +489,7 @@ return (
 
 
     {/* next filter */}
+    {RangePriceClassName.length>0 &&
     <div className="filter__3__categories ">
       <div className="filter__title ">
         <span>Price Range</span>
@@ -537,7 +538,7 @@ return (
 
 
     </div>
-
+}
   
 
     {/* next filter
@@ -591,7 +592,7 @@ return (
           onClick={toggleAccordionSize }
         />
         <span onClick={toggleAccordionSize }>Size</span>
-        {showSizeReset && <span className="reset" onClick={()=>handelSizeClick(-1)}>Reset</span>}
+        {showSizeReset && <span className="reset2" onClick={()=>handelSizeClick(-1)}>Reset</span>}
 
       </div>
       {isOpen && (
@@ -633,7 +634,7 @@ return (
             onClick={toggleAccordionBrand}
           />
           <span onClick={toggleAccordionBrand}>Brand</span>
-          {showBrandReset && <span className="reset" onClick={()=>handelBrandClick(-1)}>Reset</span>}
+          {showBrandReset && <span className="reset2" onClick={()=>handelBrandClick(-1)}>Reset</span>}
 
         </div>
         {isOpenBrand && (

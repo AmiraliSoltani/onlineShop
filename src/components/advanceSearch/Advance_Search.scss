@@ -7,11 +7,9 @@
 .main{
     direction: ltr;
 
-.container{
+.container-special{
     direction: ltr !important;
-        @include mq(1200) {
-            max-width: 1200px !important;                                             }
-    
+
 
     .breadcrumb{
         .breadcrumb-item{
@@ -36,7 +34,7 @@
 
 }
 .whole__category{
-.container{
+.container-special{
 
 
 .main__search{

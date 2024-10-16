@@ -11,17 +11,18 @@
           justify-content: start;
   width: 100%;
   background-color: #fdd5bc;
-  padding: 8px 12px;
+  padding: 8px 7px;
   border-radius: 7px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  cursor: pointer;
 }
 .accordion__container .filter__title span {
   font-size: 16px;
   font-weight: 500;
   color: white;
+  cursor: pointer;
+  padding: 0px 70px 0px 0px;
 }
 .accordion__container .filter__title .title__icon {
   height: 26px;
@@ -137,4 +138,4 @@
 }
 .accordion__container .bg-sourLemon {
   background-color: #ffeaa7 !important;
-}
+}/*# sourceMappingURL=customAccordian.css.map */

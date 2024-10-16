@@ -4,20 +4,27 @@
 .whole__product {
   margin-top: 15px;
   position: relative;
+  width: 100%;
+  // margin-left: 15px;
 
-  .container {
-    @media (max-width: 1100px) {
-      max-width: 1100px;
-      width: 1100px;
-    }
+  .m {
+    width: 100%;
+
+    // @media (max-width: 1100px) {
+    //   max-width: 1100px;
+    //   width: 1100px;
+    // }
 
     .main__offer {
       display: flex;
       align-items: center;
       width: 100%;
       flex-direction: column;
-      margin-left: 11px;
+      // margin-left: 11px;
+      @include mq(1000) {
+        margin-left: 0px;
 
+    }
       .top__offer {
         display: flex;
         width: 100%;
@@ -47,15 +54,15 @@
           right: 182px;
           transform: rotate(90deg);
           visibility: visible;
-          @media (max-width: 1200px) {
-            right: 120px;
-          }
-          @media (max-width: 990px) {
-            right: 80px;
-          }
-          @media (max-width: 768px) {
-            right: 50px;
-          }
+          // @media (max-width: 1200px) {
+          //   right: 120px;
+          // }
+          // @media (max-width: 990px) {
+          //   right: 80px;
+          // }
+          // @media (max-width: 768px) {
+          //   right: 50px;
+          // }
         }
       }
 
@@ -73,16 +80,39 @@
 
       .buttom__offer__slider {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid Layout */
-        gap: 15px; /* Gap between the items */
-        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        // grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Grid Layout */
+        gap: 12px; /* Gap between the items */
+        width: 99%;
         background-color: $white;
+ 
+      @include mq(1000) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include mq(900) {
+      grid-template-columns: repeat(4, 1fr);
+  }
+  @include mq(740) {
+    grid-template-columns: repeat(3, 1fr);
+}
+@include mq(550) {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Gap between the items */
+
+}@include mq(450) {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px; /* Gap between the items */
+
+}
+
         .no-products-message {
           grid-column: span 4; /* Span across 4 columns */
           text-align: center;
-          font-size: 18px;
           margin-top: 20px;
           width: 100%; /* Ensure it spans the entire width */
+          font-weight: 500;
+    font-size: 21px;
+    color: grey;
         }
         
         .one__product {
@@ -91,12 +121,12 @@
           align-items: start;
           position: relative;
           margin-bottom: 15px;
-          min-width: 200px;
+          //min-width: 200px;
           
           .tag__discount {
             z-index: 10;
             position: absolute;
-            border-radius: 30px;
+            border-radius: 12px;
             width: 35px;
             height: 35px;
             background-color: #ff7675;
@@ -108,14 +138,58 @@
             padding: 19px;
             font-weight: 500;
             direction: ltr;
+            @include mq(1000) {
+              width: 38px;
+              height: 38px;
+              font-size: 15px;
           }
+          @include mq(850) {
+              width: 35px;
+              height: 35px;
+              font-size: 14px;
+          }
+          // @include mq(750) {
+          //     width: 30px;
+          //     height:30px;
+          //     font-size: 13px;
+          //     padding: 17px;
+          // }
+          @include mq(600) {
+              width: 30px;
+              height:30px;
+              font-size: 13px;
+              padding: 17px;
+              // left:10px
+
+          }
+      
+          }
+a{
+
 
           .product__images {
             display: flex;
             justify-content: center;
             width: 100%;
             position: relative;
+            height: 303px;
+            // height: 22vw;
+            object-fit: cover;
+            @include mq(1100) {
+              height: 270px;
 
+          }
+          @include mq(1000) {
+            height: 303px;
+
+        }
+
+      @include mq(820) {
+        height: 270px;
+    }
+    @include mq(600) {
+      height: 240px;
+  }
             .overlay {
               position: absolute;
               left: 26px;
@@ -135,30 +209,128 @@
                       top: -36px;
                       left: -35px;
                       z-index: 10;
+                      @include mq(1100) {
+                        top: -65px;
+          
+                    }
+                    @include mq(1000) {
+                      top: -36px;
+        
+                  }
+                  @include mq(820) {
+                    top: -65px;
+      
+                }
+                @include mq(600) {
+                  top: -92px;
+    
+              }
                     }
 
                     .number2 {
                       top: -36px;
                       left: -5px;
                       z-index: 9;
+                      @include mq(1100) {
+                        top: -65px;
+                        left: -10px;
+
+                    }
+                    @include mq(1000) {
+                      top: -36px;
+                      left: -5px;
+                  }
+                  @include mq(820) {
+                    top: -65px;
+                    left: -10px;
+
+                }
+                @include mq(600) {
+                  top: -92px;
+                  left: -12px;
+
+              }
+                    
                     }
 
                     .number3 {
                       top: -36px;
                       left: 25px;
                       z-index: 8;
+                      @include mq(1100) {
+                        top: -65px;
+                        left: 15px;
+
+                    }
+                    @include mq(1000) {
+                      top: -36px;
+                      left: 25px;
+                  }
+                  @include mq(820) {
+                    top: -65px;
+                    left: 15px;
+
+                }
+                @include mq(600) {
+                  top: -92px;
+                  left: 12px;
+
+              }
+                
                     }
 
                     .number4 {
                       top: -36px;
                       left: 55px;
                       z-index: 7;
+                      @include mq(1100) {
+                        top: -65px;
+                        left: 40px;
+
+                    }
+                    @include mq(1000) {
+                      top: -36px;
+                      left: 55px;
+
+                  }
+                  @include mq(820) {
+                    top: -65px;
+                    left: 40px;
+
+                }
+                @include mq(600) {
+                  top: -92px;
+                  left:36px;
+
+              }
+                
                     }
 
                     .number5 {
                       top: -36px;
                       left: 85px;
                       z-index: 6;
+                      @include mq(1100) {
+                        top: -65px;
+                        left: 65px;
+
+                    }
+                    @include mq(1000) {
+                      top: -36px;
+                      left: 85px;
+                  }
+                  @include mq(820) {
+                    top: -65px;
+                    left: 65px;
+
+                }
+                @include mq(600) {
+                  top: -92px;
+                  left: 60px;
+
+              }
+                
+                
                     }
                     .without__color {
                       height: 25px;
@@ -167,6 +339,16 @@
                       fill: gray;
                       position: absolute;
                       transition: all 0.5s;
+                      @include mq(1100) {
+                        height: 22px;
+                        width: 22px;
+          
+                    }
+                    @include mq(600) {
+                      height: 20px;
+                      width: 20px;
+        
+                  }
                     }
 
                     .positive {
@@ -185,15 +367,17 @@
               }
             }
           }
-
-          .main__pic {
-            width: 100%;
-            height: 100%;
-            min-height: 300px;
-            border-radius: 4px;
-            cursor: pointer;
+          .pic{
+width: 100%;
+height: 100%;
+            .main__pic {
+              width: 100%;
+              height: 100%;
+              border-radius: 4px;
+              cursor: pointer;
+            }
           }
-
+        }
           .product__detail {
             width: 100%;
             direction: rtl;
@@ -218,6 +402,17 @@
                     border-radius: 20px;
                     margin-left: 5px;
                     cursor: pointer;
+                    @include mq(1100) {
+                      height: 26px;
+                      width: 26px;
+      
+                  }
+                  @include mq(600) {
+                    height: 22px;
+                    width: 22px;
+    
+                }
+
 
                     &:hover {
                       border: 2px solid black;
@@ -280,11 +475,25 @@
                   font-size: 15px;
                   text-align: right;
                   font-weight: bold;
+                  @include mq(1100) {
+                    font-size: 14px;
+                }
+                @include mq(600) {
+                  font-size: 13px;
+              }
+
                 }
 
                 .discount__price {
                   text-decoration: line-through;
                   font-size: 15px;
+                  @include mq(1100) {
+                    font-size: 14px;
+                }
+                @include mq(600) {
+                  font-size: 13px;
+              }
+
                 }
 
                 .discount {
@@ -292,6 +501,13 @@
                   font-weight: bold;
                   color: $orange;
                   margin-left: 5px;
+                  @include mq(1100) {
+                    font-size: 14px !important;
+                }
+                @include mq(600) {
+                  font-size: 13px;
+              }
+
                 }
 
                 img {
@@ -306,6 +522,10 @@
               font-size: 15px;
               margin-bottom: 5px;
               direction: ltr;
+              @include mq(1100) {
+                font-size: 14px;
+
+            }
             }
           }
         }

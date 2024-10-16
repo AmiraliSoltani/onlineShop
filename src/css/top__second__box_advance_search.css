@@ -1,5 +1,9 @@
+.striped-background {
+  background: repeating-linear-gradient(45deg, #f9f9f9, #f9f9f9 10px, #ececec 10px, #ececec 20px);
+  border-radius: 8px; /* Optional: to give rounded corners */
+}
+
 .second__box {
-  background-color: #e9ecef;
   width: 100%;
   height: 51px;
   border-radius: 10px;
@@ -19,14 +23,10 @@
 .second__box .product {
   color: white;
   font-size: 14px;
+  font-weight: 500;
 }
 .second__box .sort__icon {
   margin-left: 5px;
-}
-@media only screen and (max-width: 907px) {
-  .second__box .sort__icon {
-    margin-left: -1px;
-  }
 }
 .second__box .sort__icon img {
   width: 35px;
@@ -42,15 +42,11 @@
 .second__box .sort__icon span {
   font-size: 14px;
   margin-right: 12px;
+  font-weight: 500;
 }
 @media only screen and (max-width: 1000px) {
   .second__box .sort__icon span {
     display: none;
-  }
-}
-@media only screen and (max-width: 900px) {
-  .second__box .sort__icon span {
-    display: inline;
   }
 }
 .second__box .sort__name {
@@ -88,6 +84,7 @@
   margin-right: 10px;
   margin-left: 2px;
   font-size: 12.4px;
+  font-weight: 500;
   cursor: pointer;
   padding: 7px 10px;
   background-color: white;

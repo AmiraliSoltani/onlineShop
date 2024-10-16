@@ -113,9 +113,11 @@
 .whole__product .m .main__offer .buttom__offer__slider .no-products-message {
   grid-column: span 4; /* Span across 4 columns */
   text-align: center;
-  font-size: 18px;
   margin-top: 20px;
   width: 100%; /* Ensure it spans the entire width */
+  font-weight: 500;
+  font-size: 21px;
+  color: grey;
 }
 .whole__product .m .main__offer .buttom__offer__slider .one__product {
   display: -webkit-box;

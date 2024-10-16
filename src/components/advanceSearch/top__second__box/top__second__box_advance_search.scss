@@ -1,9 +1,20 @@
 @import './../../../scss/variable.scss';
 @import './../../../scss/mixins.scss';
 
+.striped-background {
+    background: repeating-linear-gradient(
+      45deg,  /* Angle of stripes */
+      #f9f9f9,  /* Starting color of stripe */
+      #f9f9f9 10px,  /* Width of stripe */
+      #ececec 10px,  /* Ending color of stripe */
+      #ececec 20px   /* Total width of two stripes (light + dark) */
+    );
+    //padding: 20px; /* Adjust padding as needed */
+    border-radius: 8px; /* Optional: to give rounded corners */
+  }
 
 .second__box {
-    background-color: #e9ecef;
+    //background-color: #e9ecef;
     width: 100%;
     height: 51px;
     border-radius: 10px;
@@ -16,18 +27,18 @@
     // margin-left: 20px;
     margin-bottom: 5px;
 
+ 
+
     .product{
         color:white;
         font-size: 14px;
         // margin-left: 100px;
+        font-weight: 500;
+
     }
     .sort__icon {
         margin-left:5px;
 
-        @include mq(907) {
-            margin-left:-1px;
-
-        }
         img {
             width: 35px;
             height: 35px;
@@ -42,12 +53,10 @@
         span {
             font-size: 14px;
             margin-right: 12px;
+            font-weight: 500;
             @include mq(1000) {
 display: none;      
                                 }
-                                @include mq(900) {
-                                    display: inline;      
-                                                                    }
         }
     }
 
@@ -81,6 +90,7 @@ display: none;
             margin-right: 10px;
             margin-left: 2px;
             font-size: 12.4px;
+            font-weight: 500;
             cursor: pointer;
             padding: 7px 10px;
             background-color: white;
