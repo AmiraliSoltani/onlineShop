@@ -18,7 +18,7 @@
       height: 100%;
       transition: transform 0.6s ease; /* Slow down shrinking */
       transform-origin: right; /* Shrink from right to left */
-      transition: all 0.3s ease-in-out; /* Slide-up effect */
+      transition: all 0.1s ease-in-out; /* Slide-up effect */
 
   
       img {
@@ -72,6 +72,7 @@
       align-items: center;
       width: auto; /* Each slide takes its own width based on content */
       margin-right: 15px; /* Space between the slides */
+
     }
   
     .one-filter span {
