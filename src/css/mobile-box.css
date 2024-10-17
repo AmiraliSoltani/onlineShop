@@ -87,7 +87,7 @@
   margin-right: 12px;
   font-weight: 500;
 }
-.mobile_box .all .slick-slide {
+.mobile_box .slick-slide {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -97,12 +97,12 @@
   width: auto; /* This allows each slide to take its own width */
   margin-right: 15px; /* Adjust the spacing between slides */
 }
-.mobile_box .all .one-filter img {
+.mobile_box .one-filter img {
   width: 15px;
   height: 15px;
   margin-right: 4px;
 }
-.mobile_box .all .one-filter span {
+.mobile_box .one-filter span {
   text-align: center;
   font-size: 15px;
   font-weight: 500;

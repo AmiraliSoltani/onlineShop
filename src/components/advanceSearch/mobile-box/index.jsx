@@ -27,7 +27,7 @@ const MobileBox = () => {
             <span>Filter</span>
 
         </div>
-        <div className="all">
+        {/* <div className="all"> */}
         <Slider {...settings2}>
            <div className='one-filter'>
             <span>
@@ -36,9 +36,7 @@ const MobileBox = () => {
            </div> 
            <div className='one-filter'>
              <span>
-           <img src={require("./../../../assets/icons/down.png")} alt="sort" />
                 only Discounted
-                
                  </span>
              </div> 
            <div className='one-filter'>
@@ -59,7 +57,7 @@ const MobileBox = () => {
 
 
                                   </Slider>
-                                  </div>
+                                  {/* </div> */}
 
 </div>
   )
