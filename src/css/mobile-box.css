@@ -9,13 +9,16 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; /* Smooth transition for shrinking/expanding */
+  /* When the user returns to the first slide, revert changes */
 }
 .mobile_box .sort, .mobile_box .filter {
   cursor: pointer;
   background-color: #e9ecef;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+          flex: 0 0 auto; /* Fix the width of .sort and .filter */
   padding: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -27,24 +30,52 @@
       -ms-flex-align: center;
           align-items: center;
   height: 100%;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease; /* Slow down shrinking */
+  -webkit-transform-origin: right;
+          transform-origin: right; /* Shrink from right to left */
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; /* Slide-up effect */
 }
 .mobile_box .sort img, .mobile_box .filter img {
   width: 28px;
   height: 28px;
   margin-left: 7px;
   margin-right: 4px;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease; /* Slow down image shrinking */
 }
 .mobile_box .sort span, .mobile_box .filter span {
   text-align: center;
   font-size: 15px;
   margin-right: 12px;
   font-weight: 500;
+  -webkit-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease; /* Smooth fading out of the text */
+}
+.mobile_box.is-scrolling .sort span, .mobile_box.is-scrolling .filter span {
+  display: none; /* Completely remove the text */
+}
+.mobile_box:not(.is-scrolling) .sort, .mobile_box:not(.is-scrolling) .filter {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1); /* Back to normal size */
+}
+.mobile_box:not(.is-scrolling) .sort img, .mobile_box:not(.is-scrolling) .filter img {
+  -webkit-transform: scale(1);
+          transform: scale(1); /* Back to normal size */
+}
+.mobile_box:not(.is-scrolling) .sort span, .mobile_box:not(.is-scrolling) .filter span {
+  display: block; /* Show the text again */
 }
 .mobile_box .slider-container {
   -webkit-box-flex: 1;
       -ms-flex: 1;
-          flex: 1;
-  overflow: hidden;
+          flex: 1; /* Allow the slider to take the remaining space */
+  overflow: hidden; /* Hide content that overflows the container */
 }
 .mobile_box .slick-slide {
   display: -webkit-inline-box;
@@ -53,8 +84,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: auto;
-  margin-right: 15px;
+  width: auto; /* Each slide takes its own width based on content */
+  margin-right: 15px; /* Space between the slides */
 }
 .mobile_box .one-filter span {
   display: -webkit-box;
@@ -68,7 +99,7 @@
           align-items: center;
   font-size: 14px;
   font-weight: 500;
-  white-space: nowrap;
+  white-space: nowrap; /* Prevent text wrapping */
   border: 1px solid lightgrey;
   border-radius: 6px;
   padding: 10px;
