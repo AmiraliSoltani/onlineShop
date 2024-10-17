@@ -27,6 +27,7 @@ import FilterMenu from "./FilterMenu";
 import "../../css/last_category.css"
 import APIProduct from "../../services/api-product";
 import blurContext from "../contexts/blur";
+import MobileBox from "./mobile-box";
 
 function LastCategory(props) {
   const[finishHandlingURL,setFinishHandlingURL]=useState(false)
@@ -2087,6 +2088,7 @@ return (
       <div className="whole__category">
         <div className="container-special">
           <div className="main__search">
+
             <FilterMenu
             resetPrice={resetPrice}
             toggleCategoryInUrl={toggleCategoryInUrl}
@@ -2137,6 +2139,10 @@ return (
             />
             <div className="left__search__products">
               <div className="whole__left__search">
+              <MobileBox>
+
+</MobileBox>
+
               <SecondBox
                   handelClickOrder={handelClickOrder}
                   Sort={sort}

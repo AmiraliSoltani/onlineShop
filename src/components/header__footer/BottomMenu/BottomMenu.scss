@@ -14,7 +14,7 @@
   z-index: 1000;
   opacity: 0.9;
   visibility: hidden;
-  @include mq(100) {
+  @include mq(900) {
     visibility: visible;
   }
 }
