@@ -30,13 +30,31 @@ const MobileBox = () => {
         <div className="all">
         <Slider {...settings2}>
            <div className='one-filter'>
-            <span>Categories</span>
+            <span>
+            <img src={require("./../../../assets/icons/down.png")} alt="sort" />
+            Categories</span>
            </div> 
-           <div className='one-filter'> <span>only Discounted </span></div> 
-           <div className='one-filter'>  <span>Price Range</span></div> 
-           <div className='one-filter'>  <span>Color</span></div> 
-           <div className='one-filter'>  <span>Size</span></div> 
-           <div className='one-filter'>  <span>Brand</span></div> 
+           <div className='one-filter'>
+             <span>
+           <img src={require("./../../../assets/icons/down.png")} alt="sort" />
+                only Discounted
+                
+                 </span>
+             </div> 
+           <div className='one-filter'>
+              <span>
+              <img src={require("./../../../assets/icons/down.png")} alt="sort" />
+              Price Range</span>
+              </div> 
+           <div className='one-filter'>  <span>
+           <img src={require("./../../../assets/icons/down.png")} alt="sort" />
+            Color</span></div> 
+           <div className='one-filter'>  <span>
+           <img src={require("./../../../assets/icons/down.png")} alt="sort" />
+            Size</span></div> 
+           <div className='one-filter'>  <span>
+           <img src={require("./../../../assets/icons/down.png")} alt="sort" />
+            Brand</span></div> 
 
 
 
