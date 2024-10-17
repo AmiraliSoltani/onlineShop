@@ -10,8 +10,8 @@
       -ms-flex-align: center;
           align-items: center;
   justify-self: start;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   margin-top: -2px;
   gap: 10px;
 }
@@ -73,11 +73,6 @@
   margin-right: 12px;
   font-weight: 500;
 }
-.mobile_box .product {
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
-}
 .mobile_box .sort__icon {
   margin-left: 5px;
 }
@@ -106,4 +101,39 @@
   .mobile_box .sort__icon span {
     display: none;
   }
+}
+.mobile_box .all .slick-slide {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Centers the content vertically */
+  width: auto; /* This allows each slide to take its own width */
+  margin-right: 15px; /* Adjust the spacing between slides */
+}
+.mobile_box .all .one-filter span {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent text from wrapping */
+  text-align: center; /* Center text inside the item */
+  color: grey;
+  border: 1px solid;
+  border-color: lightgrey;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  height: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }/*# sourceMappingURL=mobile-box.css.map */

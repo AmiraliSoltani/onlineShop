@@ -10,7 +10,7 @@
     direction: ltr;
     align-items: center;
     justify-self: start;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-top: -2px;
     // margin-left: 20px;
     //margin-bottom: 5px;
@@ -69,13 +69,7 @@ img {
     }
  }
 
-    .product{
-        color:white;
-        font-size: 14px;
-        // margin-left: 100px;
-        font-weight: 500;
 
-    }
     .sort__icon {
         margin-left:5px;
 
@@ -103,4 +97,44 @@ display: none;
                                 }
         }
     }
+
+.all{
+
+    .slick-slide {
+        // display: inline-block;
+        display: inline-flex;
+        //justify-content: center; /* Centers the content horizontally */
+        align-items: center; /* Centers the content vertically */
+        width: auto; /* This allows each slide to take its own width */
+        margin-right: 15px; /* Adjust the spacing between slides */
+      }
+    .one-filter{
+       
+
+        span{
+                    text-align: center;
+                    font-size: 15px;
+                    font-weight: 500;
+                    white-space: nowrap; /* Prevent text from wrapping */
+                    text-align: center; /* Center text inside the item */
+    
+                    color: grey;
+                    border: 1px solid;
+                    border-color: lightgrey;
+                    border-radius: 6px;
+                    padding: 10px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    height: 36px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+        }
+    }
+}
+
+
+
 }
