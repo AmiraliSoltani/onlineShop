@@ -5,7 +5,7 @@ import Slider from 'react-slick';
 const MobileBox = () => {
   const [isScrolling, setIsScrolling] = useState(false);
   const [isAtFirstSlide, setIsAtFirstSlide] = useState(true);
-  const totalSlides = 6; // Total number of slides
+  const totalSlides = 2; // Total number of slides
   const scrollLimit = 1; // Set your desired scroll limit
 
   const settings2 = {
@@ -13,7 +13,6 @@ const MobileBox = () => {
     infinite: false,
     speed: 500,
     slidesToScroll: 1,
-    slidesToShow: 3, // Number of slides to show at once
     variableWidth: true,
     onSwipe: () => handleSlideScroll(),  // Detect user swipe
     afterChange: (index) => handleSlideChange(index), // Detect slide index
