@@ -354,7 +354,7 @@ background-color: #FF7675;
   border-radius: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap:5px;
 
   .sort, .filter {
     cursor: pointer;
@@ -434,7 +434,7 @@ background-color: #FF7675;
       display: inline-flex;
       align-items: center;
       width: auto; /* Each slide takes its own width based on content */
-      margin-right: 15px; /* Space between the slides */
+      margin-right: 5px; /* Space between the slides */
 
     }
   

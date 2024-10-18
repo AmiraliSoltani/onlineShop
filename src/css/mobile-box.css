@@ -338,7 +338,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 .mobile_box .sort, .mobile_box .filter {
   cursor: pointer;
@@ -415,7 +415,7 @@
       -ms-flex-align: center;
           align-items: center;
   width: auto; /* Each slide takes its own width based on content */
-  margin-right: 15px; /* Space between the slides */
+  margin-right: 5px; /* Space between the slides */
 }
 .mobile_box .one-filter span {
   display: -webkit-box;
