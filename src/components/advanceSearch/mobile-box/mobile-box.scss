@@ -1,3 +1,6 @@
+@import './../../../scss/variable.scss';
+@import './../../../scss/mixins.scss';
+
 .mobile_box {
     width: 100%;
     height: 51px;
@@ -11,19 +14,21 @@
       cursor: pointer;
       background-color: #e9ecef;
       flex: 0 0 auto; /* Fix the width of .sort and .filter */
-      padding: 6px;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100%;
+      height: 37px;
       transition: transform 0.6s ease; /* Slow down shrinking */
       transform-origin: right; /* Shrink from right to left */
       transition: all 0.1s ease-in-out; /* Slide-up effect */
+      border-radius: 6px;
+      color: white;
+
 
   
       img {
-        width: 28px;
-        height: 28px;
+        width: 24px;
+        height: 24px;
         margin-left: 7px;
         margin-right: 4px;
         transition: transform 0.6s ease; /* Slow down image shrinking */
@@ -82,12 +87,14 @@
       font-size: 14px;
       font-weight: 500;
       white-space: nowrap; /* Prevent text wrapping */
-      border: 1px solid lightgrey;
+    //   border: 1px solid lightgrey;
       border-radius: 6px;
       padding: 10px;
       cursor: pointer;
-      height: 36px;
-      color: grey;
+      height: 37px;
+      color: white;
+    //   background-color: #FF7675;
+
     }
   
     .one-filter img {
@@ -95,5 +102,69 @@
       height: 15px;
       margin-right: 4px;
     }
+
+
+
+
+
+    .bg-blue {
+        background-color: #74b9ff !important;
+      }
+    
+      .bg-orange {
+        background-color: #ff7675 !important;
+      }
+    
+      .bg-red {
+        background-color: #f53b57 !important;
+      }
+    
+      .bg-grey {
+        background-color: grey !important;
+      }
+    
+      .bg-white {
+        background-color: #fff !important;
+      }
+    
+      .bg-yellow {
+        background-color: yellow !important;
+      }
+    
+      .bg-lemon {
+        background-color: #2d3436 !important;
+      }
+    
+      .bg-pink {
+        background-color: pink !important;
+      }
+    
+      .bg-brown {
+        background-color: #dabb9f !important;
+      }
+    
+      .bg-lightgreen {
+        background-color: green !important;
+      }
+    
+      .bg-pale {
+        background-color: #eee8aa !important;
+      }
+    
+      .bg-coral {
+        background-color: $coral !important;
+      }
+    
+      .bg-tea {
+        background-color: $tea !important;
+      }
+    
+      .bg-lavender {
+        background-color: $lavender !important;
+      }
+    
+      .bg-sourLemon {
+        background-color: $sourLemon !important;
+      }
   }
   
