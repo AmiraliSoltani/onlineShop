@@ -190,7 +190,7 @@ background-color: #FF7675;
               
               .header-filter {
                 // background-color: #ff7675; /* Light red background */
-                padding: 12px;
+                padding: 6px;
                 color: white;
                 border-radius: 10px 10px 0 0;
                 position: relative;
@@ -217,6 +217,39 @@ background-color: #FF7675;
                 }
               }
               .main-part{
+
+                .check__box__color {
+                    .main__check__box {
+                      height: 30px;
+                      width: 30px;
+                      border: 2px solid #808080;
+                      border-radius: 20px;
+                      margin-left: 5px;
+                      cursor: pointer;
+                      position: relative;
+          
+                      .check__box__image {
+                        position: absolute;
+                        width: 18px;
+                        height: 26px;
+                        top: -3px;
+                        left: 5px;
+                        visibility: hidden;
+                      }
+                    }
+          
+                    &:hover {
+                      .main__check__box {
+                        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+          
+                        // .check__box__image {
+                        //   visibility: visible;
+                        // }
+                      }
+                    }
+                  }
+
+
 
                 li {
                     display: flex;

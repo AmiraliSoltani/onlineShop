@@ -203,7 +203,7 @@
   margin-right: 48px;
 }
 .account-menu .header-filter {
-  padding: 12px;
+  padding: 6px;
   color: white;
   border-radius: 10px 10px 0 0;
   position: relative;
@@ -221,6 +221,27 @@
 .account-menu .header-filter h2 {
   margin: 0;
   font-size: 22px;
+}
+.account-menu .main-part .check__box__color .main__check__box {
+  height: 30px;
+  width: 30px;
+  border: 2px solid #808080;
+  border-radius: 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  position: relative;
+}
+.account-menu .main-part .check__box__color .main__check__box .check__box__image {
+  position: absolute;
+  width: 18px;
+  height: 26px;
+  top: -3px;
+  left: 5px;
+  visibility: hidden;
+}
+.account-menu .main-part .check__box__color:hover .main__check__box {
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }
 .account-menu .main-part li {
   display: -webkit-box;

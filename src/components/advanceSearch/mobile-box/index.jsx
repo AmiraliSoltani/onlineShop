@@ -11,9 +11,12 @@ const MobileBox = (props) => {
   const scrollLimit = 1; // Set your desired scroll limit
   const [isMobileFilter, setIsMobileFilter] = useState(false);
   const [isMobileSort, setIsMobileSort] = useState(false);
+  const [isMobileBrand, setIsMobileBrand] = useState(false);
+  const [isMobileColor, setIsMobileColor] = useState(false);
+  const [isMobilePrice, setIsMobilePrice] = useState(false);
   const [isMobileSize, setIsMobileSize] = useState(false);
-
-
+  const [isMobileCategries, setIsMobileCategories] = useState(false);
+  const[showColorReset,setShowColorReset]=useState(false)
   const[showPriceReset,setShowPriceReset]=useState(false)
   const[showBrandReset,setShowBrandReset]=useState(false)
   const[showSizeReset,setShowSizeReset]=useState(false)
@@ -71,6 +74,27 @@ let finalPaginateProducts=props.finalPaginateProducts
   };
 
  
+  useEffect(() => {
+    setShowColorReset(false)
+    if(Object.keys(listOfColors).length === 0) setShowColorReset(false)
+    else{
+      Object.values(listOfColors).forEach((value) => {
+        if(value)  setShowColorReset(true)
+      });
+  }
+  }, [listOfColors]);
+
+  const getClassnameOfColor = (name) => {
+    console.log("listOfColors22",listOfColors)
+    let className = "check__box__image";
+    if (listOfColors[name] !== undefined) {
+      if (listOfColors[name] === true) {
+        className += " visible";
+      }
+    }
+    return className;
+  };
+
 
   const getClassnameOfCategoryBox =(categoryId)=>{
     console.log("category_visible1 ,",categoryId)
@@ -219,17 +243,7 @@ console.log("RangePriceClassName",RangePriceClassName)
     return className;
   };
 
-  const getClassnameOfColor = (name) => {
-    //let { listOfColors } = props;
-    let className = "check__box__image";
-    if (listOfColors[name] !== undefined) {
-      if (listOfColors[name] === true) {
-        className += " visible";
-      }
-    }
-    return className;
-  };
-
+  
   const getClassnameOfallAttribiutes = (name) => {
     let { allAttributesSelected } = props;
     let className = "check__box__image";
@@ -313,6 +327,11 @@ console.log("RangePriceClassName",RangePriceClassName)
     setIsMobileFilter(false);
 setIsMobileSize(false)
 setIsMobileSort(false)
+setIsMobileBrand(false)
+setIsMobileColor(false)
+setIsMobilePrice(false)
+setIsMobileCategories(false)
+
   }
   const openSort=()=>{
     setIsMobileFilter(true);
@@ -323,6 +342,43 @@ setIsMobileSort(false)
     setIsMobileFilter(true);
     setIsMobileSize(true)
   }
+
+  const openBrand=()=>{
+    setIsMobileFilter(true);
+    setIsMobileBrand(true)
+  }
+
+  const openColor=()=>{
+    setIsMobileFilter(true);
+    setIsMobileColor(true)
+  }
+
+  const openPrice=()=>{
+    setIsMobileFilter(true);
+    setIsMobilePrice(true)
+  }
+
+  const openCategories=()=>{
+    setIsMobileFilter(true);
+    setIsMobileCategories(true)
+  }
+
+  const orders = [
+    { name: "Most Expensive", path: "price", sort: "desc" },
+    { name: "Cheapest", path: "price", sort: "asc" },
+    { name: "Newest", path: "_id", sort: "desc" },
+    { name: "Most Popular", path: "popularity", sort: "desc" },
+    { name: "Best Selling", path: "sold", sort: "desc" },
+    { name: "Most Viewed", path: "visited", sort: "desc" },
+  ];
+
+  const getClassName = (order, index) => {
+    let { Sort } = props;
+    let className = `number${index}`;
+    if (Sort.path === order.path && Sort.order === order.sort)
+      className += " bg-orange c-white";
+    return className;
+  };
 
 
   const {
@@ -349,7 +405,8 @@ setIsMobileSort(false)
     PresentURL,
     categoryId,
     originalSearch,
-    filters
+    filters,
+    handelClickOrder
   } = props;
 
   return (
@@ -367,6 +424,21 @@ setIsMobileSort(false)
        
                <h2>Sort</h2> {/* Title */}
              </div>
+
+             <div className="main-part">
+
+             {orders.map((order, index) => (
+            <span
+              className={getClassName(order, index)}
+              onClick={() => handelClickOrder(order)}
+              key={index}
+            >
+              {order.name}
+            </span>
+
+          ))}
+</div>
+
              <div className="footer-button">      
                    <Button className="button-submit" variant="primary" onClick={closemMobileFilter}  >See the products </Button>
                    <Button className="button-reset" variant="primary" >
@@ -418,7 +490,7 @@ setIsMobileSort(false)
 
   <div className="footer-button">      
         <Button className="button-submit" variant="primary" onClick={closemMobileFilter}  >See the products </Button>
-        <Button className="button-reset" variant="primary" >
+        <Button className="button-reset" variant="primary" onClick={()=>handelSizeClick(-1)}>
           Reset
         </Button>
         </div> 
@@ -428,6 +500,221 @@ setIsMobileSort(false)
 
 </div>
 </Fragment>}
+
+
+{isMobilePrice && <Fragment>
+
+<div className="tab-header-container">
+  
+  <div className="write">
+    <div>
+      <div className="header-filter">
+  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+   onClick={closemMobileFilter} />
+
+    <h2>price Range</h2> {/* Title */}
+  </div>
+
+<div className="main-part">
+{RangePriceClassName.map((range, index) => (
+            <Fragment key={index}>
+              {getRangeOfPrice(
+                range.name,
+                range.firtRange,
+                range.secondRange,
+                index
+              ) && (
+                <li onClick={() => handelPriceClick(index)}>
+                  <div className="check__box">
+                    <div className="main__check__box">
+                      <img
+                        className={getClassnameOfBox(
+                          RangePriceClassName[index].status
+                        )}
+                        src={require("./../../../assets/icons/tick_g.png")}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  {index === 0 && (
+                    <span>{`Below ${range.secondRange}$ `}</span>
+                  )}
+                  {index === RangePriceClassName.length - 1 && (
+                    <span>{`Above ${range.firtRange}$ `}</span>
+                  )}
+                  {index >= 1 && index <= 4 && (
+                    <span>
+                      {`Between ${range.firtRange}$ and ${range.secondRange + 1}$`}
+                    </span>
+                  )}
+                </li>
+              )}
+            </Fragment>
+          ))}
+
+</div>
+
+
+  <div className="footer-button">      
+        <Button className="button-submit" variant="primary" onClick={closemMobileFilter}  >See the products </Button>
+        <Button className="button-reset" variant="primary" onClick={()=>handelPriceClick(-1)}>
+          Reset
+        </Button>
+        </div> 
+    </div>
+  
+</div>
+
+</div>
+</Fragment>}
+
+
+{isMobileColor && <Fragment>
+
+<div className="tab-header-container">
+  
+  <div className="write">
+    <div>
+      <div className="header-filter">
+  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+   onClick={closemMobileFilter} />
+
+    <h2>Color</h2> {/* Title */}
+  </div>
+
+<div className="main-part">
+{allColors.map((c, index) => (
+              <li key={index} onClick={() => handelColorClick(c)}>
+                <div className="check__box__color">
+                  <div className={`main__check__box bg-${c.class}`}>
+                    <img
+                      className={getClassnameOfColor(c.class)}
+                      src={require("./../../../assets/icons/tick-gray.png")}
+                      alt="Selected"
+                    />
+                  </div>
+                </div>
+              </li>
+            ))}
+</div>
+
+
+  <div className="footer-button">      
+        <Button className="button-submit" variant="primary" onClick={closemMobileFilter}  >See the products </Button>
+        <Button className="button-reset" variant="primary" onClick={()=>handelColorClick(-1)}>
+          Reset
+        </Button>
+        </div> 
+    </div>
+  
+</div>
+
+</div>
+</Fragment>}
+
+
+
+{isMobileCategries && <Fragment>
+
+<div className="tab-header-container">
+  
+  <div className="write">
+    <div>
+      <div className="header-filter">
+  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+   onClick={closemMobileFilter} />
+
+    <h2>Categories</h2> {/* Title */}
+  </div>
+
+<div className="main-part">
+{allCategoryIDS.map((categoryId, index) => (
+            <Fragment key={index}>
+             
+                <li onClick={() => props.toggleCategoryInUrl(categoryId)}>
+                  <div className="check__box">
+                    <div className="main__check__box">
+                      <img
+                        className={getClassnameOfCategoryBox(categoryId)}
+                        src={require("./../../../assets/icons/tick.png")}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                 <span>{getCategoryFirst(categoryId)} </span>
+                
+                </li>
+              
+            </Fragment>
+          ))}
+</div>
+
+
+  <div className="footer-button">      
+        <Button className="button-submit" variant="primary" onClick={closemMobileFilter}  >See the products </Button>
+        <Button className="button-reset" variant="primary" onClick={()=>props.toggleCategoryInUrl(-1)}>
+          Reset
+        </Button>
+        </div> 
+    </div>
+  
+</div>
+
+</div>
+</Fragment>}
+
+
+{isMobileBrand && <Fragment>
+
+<div className="tab-header-container">
+  
+  <div className="write">
+    <div>
+      <div className="header-filter">
+  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+   onClick={closemMobileFilter} />
+
+    <h2> Brand</h2> {/* Title */}
+  </div>
+
+<div className="main-part">
+{allBrands.map((brand, index) => (
+                <Fragment key={index}>
+                  <li onClick={() => handelBrandClick(brand)}>
+                    <div className="check__box">
+                      <div className="main__check__box">
+                        <img
+                          className={getClassnameOfBrand(brand)}
+                          src={require("./../../../assets/icons/tick-gray.png")}
+                          alt="Selected"
+                        />
+                      </div>
+                    </div>
+                    {/* Render the brand name */}
+                    <span>{brand}</span>
+                  </li>
+                </Fragment>
+              ))}
+</div>
+
+
+  <div className="footer-button">      
+        <Button className="button-submit" variant="primary" onClick={closemMobileFilter}  >See the products </Button>
+        <Button className="button-reset" variant="primary" onClick={()=>handelBrandClick(-1)} >
+          Reset
+        </Button>
+        </div> 
+    </div>
+  
+</div>
+
+</div>
+</Fragment>}
+
+
+
+
+
            </div>
       
 
@@ -447,22 +734,22 @@ setIsMobileSort(false)
       <div className="slider-container">
         <Slider ref={sliderRef} {...settings2}>
           <div className='one-filter'>
-            <span className='bg-orange' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
+            <span className='bg-orange' onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
           </div>
           <div className='one-filter'>
             <span className='bg-yellow' onClick={openSort} >   Only Discounted</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-lightgreen' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
+            <span className='bg-lightgreen' onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-tea' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
+            <span className='bg-tea' onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
           </div>
           <div className='one-filter'>
             <span className='bg-brown' onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-coral' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
+            <span className='bg-coral' onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
           </div>
         </Slider>
       </div>
