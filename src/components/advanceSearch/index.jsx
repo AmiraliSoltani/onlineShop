@@ -2139,7 +2139,60 @@ return (
             />
             <div className="left__search__products">
               <div className="whole__left__search">
-              <MobileBox>
+              <MobileBox
+                     handelClickOrder={handelClickOrder}
+                     Sort={sort}
+                     handleSort={handleSort}
+                     finalBeforePagination={finalBeforePagination}
+                     resetPrice={resetPrice}
+                     toggleCategoryInUrl={toggleCategoryInUrl}
+                     selectedCategoryIDS={selectedCategoryIDS}
+                     allCategoryIDS={allCategoryIDS}
+                      finalPaginateProducts={finalPaginateProducts}
+                                     loading={loading}
+                      allBrands={getUniqueBrands()}
+                      selectedBrands={selectedBrands}
+                      handelBrandClick={handelBrandClick}
+                                     handelSizeClick={handelSizeClick}
+                                     getRangeOfSize={getRangeOfSize}
+                                     listOfSizes={listOfSizes}
+                       originalSearch={originalSearch}
+                       handelPriceClick={handelPriceClick}
+                       handelClickInStock={handelClickInStock}
+                       handelClickDiscount={handelClickDiscount}
+                       handelColorClick={handelColorClick}
+                       handelAllAttributesClick={handelAllAttributesClick}
+                       getAllAttributes={getAllAttributes}
+                       getRangeOfColor={getRangeOfColor}
+                       //deletallFilters={deletallFilters}
+                       PresentURL={PresentURL}
+                       initialAccordion={initialAccordion}
+                       initialColors={initialColors}
+                       //optionalFilters={optionalFilters}
+                       categoryId={parseInt(categoryId)}
+                       allCategories={allCategories}
+                       handleValue={handleValue}
+                       handleSearch={handelSearch}
+                       products={products}
+                       filterdBySearchWord={filterdBySearchWord}
+                       searchWords={searchWordMenu}
+                       RangePriceClassName={RangePriceClassName}
+                       handleFilterOfPrice={handleFilterOfPrice}
+                       handleStock={handleStock}
+                       stock={stock}
+                       discount={discount}
+                       handleDiscount={handleDiscount}
+                       accordian={accordian}
+                       handleAccordian={handleAccordian}
+                       allAttributeItemS={allAttributeItems}
+                       listOfColors={listOfColors}
+                       handleColor={handleColor}
+                       handleAllAttributes={handleAllAttributes}
+                       allAttributesSelected={allAttributesSelected}
+                     
+                     
+            
+                     >
 
 </MobileBox>
 
