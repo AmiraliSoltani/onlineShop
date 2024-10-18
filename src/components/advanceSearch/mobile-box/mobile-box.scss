@@ -1,71 +1,83 @@
+
+      
 @import './../../../scss/variable.scss';
 @import './../../../scss/mixins.scss';
 
 .mobile_box {
-    width: 100%;
-    height: 51px;
-    border-radius: 10px;
+  width: 100%;
+  height: 51px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .sort, .filter {
+    cursor: pointer;
+    background-color: #e9ecef;
+    flex: 0 0 auto; // Fix the width of .sort and .filter
     display: flex;
+    justify-content: center; // Ensure content (image, text) stays centered
     align-items: center;
-    gap: 10px;
-    transition: all 0.3s ease; /* Smooth transition for shrinking/expanding */
-  
+    height: 37px;
+    border-radius: 6px;
+    color: white;
+
+    width: 100px; // Set initial width
+    transition: width 0.5s ease-in-out, opacity 0.5s ease; // Transition for width and opacity
+
+    img {
+      width: 24px;
+      height: 24px;
+      transition: opacity 0.5s ease; // Ensure smooth fade-out for the image if needed
+    }
+
+    span {
+      text-align: center;
+      font-size: 15px;
+      margin-right: 12px;
+      font-weight: 500;
+      opacity: 1; // Initially visible
+      transition: opacity 0.5s ease; // Smooth fade-out for the text
+    }
+  }
+
+  &.is-scrolling {
     .sort, .filter {
-      cursor: pointer;
-      background-color: #e9ecef;
-      flex: 0 0 auto; /* Fix the width of .sort and .filter */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 37px;
-      transition: transform 0.6s ease; /* Slow down shrinking */
-      transform-origin: right; /* Shrink from right to left */
-      transition: all 0.1s ease-in-out; /* Slide-up effect */
-      border-radius: 6px;
-      color: white;
-
-
-  
+      width: 40px; // Shrink to 40px over 5 seconds
+      
       img {
-        width: 24px;
-        height: 24px;
-        margin-left: 7px;
-        margin-right: 4px;
-        transition: transform 0.6s ease; /* Slow down image shrinking */
+        margin-left: 0; // Remove left margin to center the image properly
+        margin-right: 0; // Remove right margin
       }
-  
+
       span {
-        text-align: center;
-        font-size: 15px;
-        margin-right: 12px;
-        font-weight: 500;
-        transition: opacity 0.6s ease; /* Smooth fading out of the text */
+        opacity: 0; // Gradually fade out the text
+        visibility: hidden; // Hide after fading out
+        display: none; // Remove the span from the layout completely
+
       }
     }
-  
-    &.is-scrolling {
-        .sort, .filter {
-          img {
-          }
-          span {
-            display: none; /* Completely remove the text */
-          }
-        }
-      }
+  }
+
+  &:not(.is-scrolling) {
+    .sort, .filter {
+      width: 100px; // Back to normal size
       
-      /* When the user returns to the first slide, revert changes */
-      &:not(.is-scrolling) {
-        .sort, .filter {
-          transform: scaleX(1); /* Back to normal size */
-          img {
-            transform: scale(1); /* Back to normal size */
-          }
-          span {
-            display: block; /* Show the text again */
-          }
-        }
+      img {
+        margin-left: 7px; // Reapply margin to position image properly
+        margin-right: 4px; // Reapply right margin
       }
-      
+
+      span {
+        opacity: 1; // Make text visible again
+        visibility: visible; // Ensure text is visible when opacity is restored
+      }
+    }
+  }
+
+
+
+
   
     .slider-container {
       flex: 1; /* Allow the slider to take the remaining space */

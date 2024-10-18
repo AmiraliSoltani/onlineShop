@@ -9,16 +9,13 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; /* Smooth transition for shrinking/expanding */
-  /* When the user returns to the first slide, revert changes */
 }
 .mobile_box .sort, .mobile_box .filter {
   cursor: pointer;
   background-color: #e9ecef;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
-          flex: 0 0 auto; /* Fix the width of .sort and .filter */
+          flex: 0 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,48 +26,49 @@
       -ms-flex-align: center;
           align-items: center;
   height: 37px;
-  -webkit-transition: -webkit-transform 0.6s ease;
-  transition: -webkit-transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease; /* Slow down shrinking */
-  -webkit-transform-origin: right;
-          transform-origin: right; /* Shrink from right to left */
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out; /* Slide-up effect */
   border-radius: 6px;
   color: white;
+  width: 100px;
+  -webkit-transition: width 0.5s ease-in-out, opacity 0.5s ease;
+  transition: width 0.5s ease-in-out, opacity 0.5s ease;
 }
 .mobile_box .sort img, .mobile_box .filter img {
   width: 24px;
   height: 24px;
-  margin-left: 7px;
-  margin-right: 4px;
-  -webkit-transition: -webkit-transform 0.6s ease;
-  transition: -webkit-transform 0.6s ease;
-  transition: transform 0.6s ease;
-  transition: transform 0.6s ease, -webkit-transform 0.6s ease; /* Slow down image shrinking */
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
 }
 .mobile_box .sort span, .mobile_box .filter span {
   text-align: center;
   font-size: 15px;
   margin-right: 12px;
   font-weight: 500;
-  -webkit-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease; /* Smooth fading out of the text */
+  opacity: 1;
+  -webkit-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+}
+.mobile_box.is-scrolling .sort, .mobile_box.is-scrolling .filter {
+  width: 40px;
+}
+.mobile_box.is-scrolling .sort img, .mobile_box.is-scrolling .filter img {
+  margin-left: 0;
+  margin-right: 0;
 }
 .mobile_box.is-scrolling .sort span, .mobile_box.is-scrolling .filter span {
-  display: none; /* Completely remove the text */
+  opacity: 0;
+  visibility: hidden;
+  display: none;
 }
 .mobile_box:not(.is-scrolling) .sort, .mobile_box:not(.is-scrolling) .filter {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1); /* Back to normal size */
+  width: 100px;
 }
 .mobile_box:not(.is-scrolling) .sort img, .mobile_box:not(.is-scrolling) .filter img {
-  -webkit-transform: scale(1);
-          transform: scale(1); /* Back to normal size */
+  margin-left: 7px;
+  margin-right: 4px;
 }
 .mobile_box:not(.is-scrolling) .sort span, .mobile_box:not(.is-scrolling) .filter span {
-  display: block; /* Show the text again */
+  opacity: 1;
+  visibility: visible;
 }
 .mobile_box .slider-container {
   -webkit-box-flex: 1;
