@@ -456,10 +456,10 @@
   background-color: #fff !important;
 }
 .mobile_box .bg-yellow {
-  background-color: yellow !important;
+  background-color: #FECA57 !important;
 }
 .mobile_box .bg-lemon {
-  background-color: #2d3436 !important;
+  background-color: #FFD6D6 !important;
 }
 .mobile_box .bg-pink {
   background-color: pink !important;
@@ -468,13 +468,13 @@
   background-color: #dabb9f !important;
 }
 .mobile_box .bg-lightgreen {
-  background-color: green !important;
+  background-color: #55EFC4 !important;
 }
 .mobile_box .bg-pale {
-  background-color: #eee8aa !important;
+  background-color: #FCD4BB !important;
 }
-.mobile_box .bg-coral {
-  background-color: #FDD5BC !important;
+.mobile_box .bg-blue {
+  background-color: #81ecec !important;
 }
 .mobile_box .bg-tea {
   background-color: #C5E8D0 !important;

@@ -434,12 +434,12 @@ setIsMobileSort(false)
 
 
     <div className={`mobile_box ${isScrolling && !isAtFirstSlide ? 'is-scrolling' : ''}`}> 
-      <div className="sort bg-orange " onClick={openSort}>
+      <div className="sort bg-pale " onClick={openSort}>
         <img src={require("./../../../assets/icons/sort.png")} alt="sort" />
         <span>Sort</span>
       </div>
 
-      <div className="filter bg-orange" onClick={openSort}>
+      <div className="filter bg-blue" onClick={openSort}>
         <img src={require("./../../../assets/icons/filter-mobile-2.png")} alt="filter" />
         <span>Filter</span>
       </div>
@@ -450,19 +450,19 @@ setIsMobileSort(false)
             <span className='bg-orange' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-orange' onClick={openSort} >   Only Discounted</span>
+            <span className='bg-yellow' onClick={openSort} >   Only Discounted</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-orange' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
+            <span className='bg-lightgreen' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-orange' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
+            <span className='bg-tea' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-orange' onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
+            <span className='bg-brown' onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-orange' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
+            <span className='bg-coral' onClick={openSort}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
           </div>
         </Slider>
       </div>
