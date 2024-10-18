@@ -387,7 +387,7 @@ setIsMobileSort(false)
   
   <div className="write">
     <div>
-      <div className="header">
+      <div className="header-filter">
   <img src={require("../../../assets/icons/close.png")} alt="" className="close"
    onClick={closemMobileFilter} />
 

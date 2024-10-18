@@ -188,20 +188,22 @@ background-color: #FF7675;
                   
               }
               
-              .header {
+              .header-filter {
                 // background-color: #ff7675; /* Light red background */
                 padding: 12px;
                 color: white;
                 border-radius: 10px 10px 0 0;
                 position: relative;
                 margin-bottom: 28px;
-                background: repeating-linear-gradient(
-                  45deg,            /* Angle of stripes */
-                  #747D8C,          /* Starting color */
-                  #747D8C 20px,     /* Width of the first stripe */
-                  #666e7b 20px,     /* Darker color starts here */
-                  #666e7b 40px      /* Total width of two stripes */
-                ) !important;              .close{
+                background-color: #CFC3FF;
+                // background: repeating-linear-gradient(
+                //   45deg,            /* Angle of stripes */
+                //   #747D8C,          /* Starting color */
+                //   #747D8C 20px,     /* Width of the first stripe */
+                //   #666e7b 20px,     /* Darker color starts here */
+                //   #666e7b 40px      /* Total width of two stripes */
+                // ) !important; 
+                             .close{
                   height: 30px;
                   width: 30px;
                   cursor: pointer;

@@ -202,15 +202,15 @@
   font-size: 14px !important;
   margin-right: 48px;
 }
-.account-menu .header {
+.account-menu .header-filter {
   padding: 12px;
   color: white;
   border-radius: 10px 10px 0 0;
   position: relative;
   margin-bottom: 28px;
-  background: repeating-linear-gradient(45deg, #747D8C, #747D8C 20px, #666e7b 20px, #666e7b 40px) !important;
+  background-color: #CFC3FF;
 }
-.account-menu .header .close {
+.account-menu .header-filter .close {
   height: 30px;
   width: 30px;
   cursor: pointer;
@@ -218,7 +218,7 @@
   top: 11px;
   right: 20px;
 }
-.account-menu .header h2 {
+.account-menu .header-filter h2 {
   margin: 0;
   font-size: 22px;
 }
