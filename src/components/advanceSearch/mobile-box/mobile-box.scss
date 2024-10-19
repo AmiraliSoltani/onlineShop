@@ -316,7 +316,11 @@ justify-content: start;
 gap: 12px;
 flex-wrap: wrap;
 flex-direction: column;
+.filter-color{
+    max-height: 300px;
+    overflow-y: scroll;
                 .check__box__color {
+                    
                     margin: 4px;
                     .main__check__box_filter {
                       height: 28px;
@@ -350,7 +354,7 @@ flex-direction: column;
                       }
                     }
                   }
-
+                }
 
 
                 li {

@@ -320,10 +320,14 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.account-menu .main-part .check__box__color {
+.account-menu .main-part .filter-color {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.account-menu .main-part .filter-color .check__box__color {
   margin: 4px;
 }
-.account-menu .main-part .check__box__color .main__check__box_filter {
+.account-menu .main-part .filter-color .check__box__color .main__check__box_filter {
   height: 28px;
   width: 28px;
   border: 2px solid #808080;
@@ -332,10 +336,10 @@
   cursor: pointer;
   position: relative;
 }
-.account-menu .main-part .check__box__color .main__check__box_filter span {
+.account-menu .main-part .filter-color .check__box__color .main__check__box_filter span {
   margin-left: 35px;
 }
-.account-menu .main-part .check__box__color .main__check__box_filter .check__box__image {
+.account-menu .main-part .filter-color .check__box__color .main__check__box_filter .check__box__image {
   position: absolute;
   width: 18px;
   height: 26px;
@@ -343,7 +347,7 @@
   left: 5px;
   visibility: hidden;
 }
-.account-menu .main-part .check__box__color:hover .main__check__box {
+.account-menu .main-part .filter-color .check__box__color:hover .main__check__box {
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 }

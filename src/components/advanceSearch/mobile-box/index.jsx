@@ -421,9 +421,13 @@ setIsMobilePrice(false)
 
   const getClassName = (order, index) => {
     let { Sort } = props;
-    let className = `number${index}`;
-    if (Sort.path === order.path && Sort.order === order.sort)
-      className += " bg-orange c-white";
+    // let className = `number${index}`;
+    // if (Sort.path === order.path && Sort.order === order.sort)
+    //   className += " bg-orange c-white";
+    // return className;
+
+    let className = "check__box__image";
+    if (Sort.path === order.path && Sort.order === order.sort) className += " visible";
     return className;
   };
 
@@ -469,7 +473,7 @@ setIsMobilePrice(false)
              </div>
 
              <div className="main-part">
-
+{/* 
              {orders.map((order, index) => (
             <span
               className={getClassName(order, index)}
@@ -479,7 +483,25 @@ setIsMobilePrice(false)
               {order.name}
             </span>
 
-          ))}
+          ))} */}
+
+{orders.map((order, index) => (
+    <Fragment key={index}>
+      <li onClick={() => handelClickOrder(order)}>
+        <div className="check__box">
+          <div className="main__check__box">
+            <img
+              className={getClassName(order,index)}
+              src={require("./../../../assets/icons/tick-gray.png")}
+              alt="Selected"
+            />
+          </div>
+        </div>
+        {/* Render the size description */}
+        <span> {order.name}</span>
+      </li>
+    </Fragment>
+  ))}
 </div>
 
              <div className="footer-button">      
@@ -723,7 +745,7 @@ setIsMobilePrice(false)
 
 
     <div className={`mobile_box ${isScrolling && !isAtFirstSlide ? 'is-scrolling' : ''}`}> 
-      <div className="sort bg-pale " onClick={openSort}>
+      <div className="sort " onClick={openSort}>
         <img src={require("./../../../assets/icons/sort.png")} alt="sort" />
         <span>Sort</span>
       </div>
@@ -739,7 +761,7 @@ setIsMobilePrice(false)
             <span className={categoriesHeader? "br-orange bg-orange" : "br-orange" } onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
           </div>
           <div className='one-filter'>
-            <span  className={discountHeader? "br-yellow bg-yellow" : "br-yellow" }  onClick={openSort} >   Only Discounted</span>
+            <span  className={discountHeader? "br-yellow bg-yellow" : "br-yellow" }  onClick={handelClickDiscount} >   Only Discounted</span>
           </div>
           <div className='one-filter'>
             <span className={priceHeader? "br-lightgreen bg-lightgreen" : "br-lightgreen" } onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
