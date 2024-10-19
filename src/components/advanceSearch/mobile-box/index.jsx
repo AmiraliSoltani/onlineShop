@@ -495,7 +495,7 @@ setIsMobilePrice(false)
  {isMobileSize && <Fragment>
 
 
-    <div className="header-filter-new bg-lavender ">
+    <div className="header-filter-new ">
         <span>Size</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />
@@ -536,7 +536,7 @@ setIsMobilePrice(false)
 
 {isMobilePrice && <Fragment>
 
-    <div className="header-filter-new bg-lightgreen" >
+    <div className="header-filter-new " >
         <span>Price Range</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />
@@ -673,7 +673,7 @@ setIsMobilePrice(false)
 
 {isMobileBrand && <Fragment>
 
-    <div className="header-filter-new bg-coral">
+    <div className="header-filter-new ">
         <span>Brand</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />

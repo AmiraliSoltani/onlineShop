@@ -22,7 +22,7 @@
   -webkit-box-flex: 5;
       -ms-flex: 5 1;
           flex: 5 1;
-  background-color: #747D8C;
+  background-color: #FF7675;
   border: 0px;
   font-size: 17px;
   margin-bottom: 3px;
@@ -37,7 +37,7 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  background-color: gray;
+  background-color: #00B894;
   border: 0px;
   font-size: 17px;
   margin-bottom: 3px;
@@ -137,6 +137,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #747D8C;
 }
 .account-menu .header-filter-new img {
   width: 23px;
@@ -145,7 +146,7 @@
 }
 .account-menu .header-filter-new span {
   font-weight: 500;
-  font-size: 21px;
+  font-size: 18px;
   margin-left: 10px;
 }
 .account-menu .tab-header-container {

@@ -22,7 +22,7 @@
 margin-top: 20px;
 .button-submit{
     flex: 5 1;
-    background-color: #747D8C;
+    background-color: #FF7675;
     border: 0px;
     font-size: 17px;
     margin-bottom: 3px;
@@ -35,7 +35,7 @@ margin-top: 20px;
 }
 .button-reset{
     flex: 2;
-    background-color: gray;
+    background-color: #00B894;
     border: 0px;
     font-size: 17px;
     margin-bottom: 3px;
@@ -125,7 +125,8 @@ margin-top: 20px;
               .bg-sourLemon {
                 background-color: $sourLemon !important;
               }
-              .header-filter-new{
+
+    .header-filter-new{
                 padding: 6px;
                 justify-content: space-between;
     color: white;
@@ -137,6 +138,7 @@ margin-top: 20px;
     font-size: 22px;
     text-align: center;
     align-items: center;
+    background-color: #747D8C;
     img{
         width: 23px;
         height: 23px;
@@ -144,7 +146,7 @@ margin-top: 20px;
     }
     span{
         font-weight: 500;
-        font-size: 21px;
+        font-size: 18px;
         margin-left: 10px;
     }
               }
