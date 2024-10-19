@@ -431,7 +431,7 @@ flex-direction: column;
 
   .sort, .filter {
     cursor: pointer;
-    background-color: #e9ecef;
+    // background-color: #e9ecef;
     flex: 0 0 auto; // Fix the width of .sort and .filter
     display: flex;
     justify-content: center; // Ensure content (image, text) stays centered
@@ -536,24 +536,85 @@ border:2px solid;
 
 
 
+    .bg-blue {
+        border-color: #74b9ff !important;
+      }
+    
+      .bg-orange {
+        border-color: #ff7675 !important;
+      }
+    
+      .bg-red {
+        border-color: #f53b57 !important;
+      }
+    
+      .bg-grey {
+        border-color: grey !important;
+      }
+    
+      .bg-white {
+        border-color: #fff !important;
+      }
+    
+      .bg-yellow {
+        border-color: #FECA57 !important;
+      }
+    
+      .bg-lemon {
+        border-color: #FFD6D6 !important;
+      }
+    
+      .bg-pink {
+        border-color: pink !important;
+      }
+    
+      .bg-brown {
+        border-color: #dabb9f !important;
+      }
+    
+      .bg-lightgreen {
+        border-color: #55EFC4 !important;
+      }
+    
+      .bg-pale {
+        border-color: #FCD4BB !important;
+      }
+    
+      .bg-blue {
+        border-color: #81ecec !important;
+      }
+    
+      .bg-tea {
+        border-color: $tea !important;
+      }
+    
+      .bg-lavender {
+        border-color: $lavender !important;
+      }
+    
+      .bg-sourLemon {
+        border-color: $sourLemon !important;
+      }
+
+
     // .bg-blue {
-    //     border-color: #74b9ff !important;
+    //     background-color: #74b9ff !important;
     //   }
     
     //   .bg-orange {
-    //     border-color: #ff7675 !important;
+    //     background-color: #ff7675 !important;
     //   }
     
     //   .bg-red {
-    //     border-color: #f53b57 !important;
+    //     background-color: #f53b57 !important;
     //   }
     
     //   .bg-grey {
-    //     border-color: grey !important;
+    //     background-color: grey !important;
     //   }
     
     //   .bg-white {
-    //     border-color: #fff !important;
+    //     background-color: #fff !important;
     //   }
     
     //   .bg-yellow {
@@ -561,100 +622,39 @@ border:2px solid;
     //   }
     
     //   .bg-lemon {
-    //     border-color: #FFD6D6 !important;
+    //     background-color: #FFD6D6 !important;
     //   }
     
     //   .bg-pink {
-    //     border-color: pink !important;
+    //     background-color: pink !important;
     //   }
     
     //   .bg-brown {
-    //     border-color: #dabb9f !important;
+    //     background-color: #dabb9f !important;
     //   }
     
     //   .bg-lightgreen {
-    //     border-color: #55EFC4 !important;
+    //     background-color: #55EFC4 !important;
     //   }
     
     //   .bg-pale {
-    //     border-color: #FCD4BB !important;
+    //     background-color: #FCD4BB !important;
     //   }
     
     //   .bg-blue {
-    //     border-color: #81ecec !important;
+    //     background-color: #81ecec !important;
     //   }
     
     //   .bg-tea {
-    //     border-color: $tea !important;
+    //     background-color: $tea !important;
     //   }
     
     //   .bg-lavender {
-    //     border-color: $lavender !important;
+    //     background-color: $lavender !important;
     //   }
     
     //   .bg-sourLemon {
-    //     border-color: $sourLemon !important;
+    //     background-color: $sourLemon !important;
     //   }
-
-
-    .bg-blue {
-        background-color: #74b9ff !important;
-      }
-    
-      .bg-orange {
-        background-color: #ff7675 !important;
-      }
-    
-      .bg-red {
-        background-color: #f53b57 !important;
-      }
-    
-      .bg-grey {
-        background-color: grey !important;
-      }
-    
-      .bg-white {
-        background-color: #fff !important;
-      }
-    
-      .bg-yellow {
-        background-color: #FECA57 !important;
-      }
-    
-      .bg-lemon {
-        background-color: #FFD6D6 !important;
-      }
-    
-      .bg-pink {
-        background-color: pink !important;
-      }
-    
-      .bg-brown {
-        background-color: #dabb9f !important;
-      }
-    
-      .bg-lightgreen {
-        background-color: #55EFC4 !important;
-      }
-    
-      .bg-pale {
-        background-color: #FCD4BB !important;
-      }
-    
-      .bg-blue {
-        background-color: #81ecec !important;
-      }
-    
-      .bg-tea {
-        background-color: $tea !important;
-      }
-    
-      .bg-lavender {
-        background-color: $lavender !important;
-      }
-    
-      .bg-sourLemon {
-        background-color: $sourLemon !important;
-      }
   }
   
