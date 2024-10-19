@@ -233,8 +233,8 @@
       -ms-flex-pack: start;
           justify-content: start;
   gap: 12px;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .account-menu .main-part .check__box__color .main__check__box {
   height: 30px;
