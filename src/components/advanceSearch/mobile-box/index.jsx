@@ -1,7 +1,8 @@
-import React, { useState, useRef, Fragment, useEffect } from 'react';
+import React, { useState, useRef, Fragment, useEffect, useContext } from 'react';
 import "../../../css/mobile-box.css";
 import Slider from 'react-slick';
 import { Button } from 'react-bootstrap';
+import blurContext from '../../contexts/blur';
 
 const MobileBox = (props) => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -20,6 +21,7 @@ const MobileBox = (props) => {
   const[showPriceReset,setShowPriceReset]=useState(false)
   const[showBrandReset,setShowBrandReset]=useState(false)
   const[showSizeReset,setShowSizeReset]=useState(false)
+  const {blurState,blurDispatch}=useContext(blurContext)
 
 
 
@@ -345,6 +347,7 @@ setIsMobileCategories(false)
   }
 
   const openSize=()=>{
+    props.setIsBlurProducts(true)
     setIsMobileFilter(true);
     setIsMobileSize(true)
 setIsMobileSort(false)

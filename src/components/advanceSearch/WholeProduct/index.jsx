@@ -37,7 +37,7 @@ const ProductLoader = () => {
 
 
 
-function WholeProduct({ finalPaginateProducts , loading }) {
+function WholeProduct({ finalPaginateProducts , loading , isBlurProdcuts }) {
   console.log("loaaaaaaaaaaaaaaaaa",loading)
   const allAttributeItem = allA.data;
   const [value, dispatch] = useReducer(productReducer);
@@ -74,7 +74,7 @@ function WholeProduct({ finalPaginateProducts , loading }) {
   // }, []);
 
   return (
-<div className="whole__product">
+<div className={isBlurProdcuts? "whole__product blur-products" : "whole__product"} >
   <div className="m">
     <div className="main__offer">
       {loading ? (

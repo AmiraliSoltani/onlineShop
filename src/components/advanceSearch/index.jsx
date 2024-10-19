@@ -1,17 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 import React, { useState, useEffect, useReducer, useContext } from "react";
 import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { getcolors, getAttributes, checkForStock,getSize } from "../common/functionsOfProducts";
@@ -80,6 +68,8 @@ const [filteredBySize, setFilteredBySize] = useState([]);
 const [allCategoryIDS,setAllCategoryIDS]=useState([])
 const [selectedCategoryIDS,setSelectedCategoryIDS]=useState([])
 const[allTestColors,setAllTestColors]=useState([])
+const[isBlurProdcuts,setIsBlurProducts]=useState(false)
+
 const[initalFilters,setInitialFilters]=useState("")
   const [notFound, setNotFound] = useState({
     filteredByStock: { status: false },
@@ -2140,6 +2130,7 @@ return (
             <div className="left__search__products">
               <div className="whole__left__search">
               <MobileBox
+              setIsBlurProducts={setIsBlurProducts}
                      handelClickOrder={handelClickOrder}
                      Sort={sort}
                      handleSort={handleSort}
@@ -2237,6 +2228,7 @@ return (
                 ></FirstBox> */}
 
                 <WholeProduct
+                isBlurProdcuts={isBlurProdcuts}
                                 loading={loading}
                 finalPaginateProducts={finalPaginateProducts}
                   getProducts={getProducts}
