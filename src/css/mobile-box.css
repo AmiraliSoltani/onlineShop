@@ -273,7 +273,7 @@
       -ms-flex-align: center;
           align-items: center;
   justify-self: start;
-  padding: 7px;
+  padding: 7px 7px 0px 7px;
   cursor: pointer;
 }
 .account-menu .main-part li span {
@@ -372,7 +372,7 @@
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 1; /* Slide-up effect */
-  height: 125px;
+  height: 150px;
   padding: 10px;
 }
 

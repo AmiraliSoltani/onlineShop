@@ -268,7 +268,7 @@ flex-wrap: wrap;
                     display: flex;
                     align-items: center;
                     justify-self: start;
-                    padding: 7px;
+                    padding: 7px 7px 0px 7px;
                     cursor: pointer;
                     span {
                         font-size: 17px;
@@ -392,7 +392,7 @@ flex-wrap: wrap;
       transition: all 0.4s ease-in-out;
       opacity:1; /* Slide-up effect */
     //   overflow: hidden;
-  height: 125px;
+  height: 150px;
   padding: 10px;
   
   
