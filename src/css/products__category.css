@@ -1,6 +1,6 @@
 .blur-products {
-  -webkit-filter: blur(1.5px);
-          filter: blur(1.5px);
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
 }
 
 .whole__product {

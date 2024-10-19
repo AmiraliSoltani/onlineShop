@@ -83,7 +83,6 @@
   border-radius: 4px;
   position: relative;
   margin-bottom: 7px;
-  background-color: #FBD3BB;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -517,48 +516,93 @@
   height: 15px;
   margin-right: 4px;
 }
-.mobile_box .bg-blue {
+.mobile_box .br-blue {
   border-color: #74b9ff !important;
 }
-.mobile_box .bg-orange {
+.mobile_box .br-orange {
   border-color: #ff7675 !important;
 }
-.mobile_box .bg-red {
+.mobile_box .br-red {
   border-color: #f53b57 !important;
 }
-.mobile_box .bg-grey {
+.mobile_box .br-grey {
   border-color: grey !important;
 }
-.mobile_box .bg-white {
+.mobile_box .br-white {
   border-color: #fff !important;
 }
-.mobile_box .bg-yellow {
+.mobile_box .br-yellow {
   border-color: #FECA57 !important;
 }
 .mobile_box .bg-lemon {
   border-color: #FFD6D6 !important;
 }
-.mobile_box .bg-pink {
+.mobile_box .br-pink {
   border-color: pink !important;
 }
-.mobile_box .bg-brown {
+.mobile_box .br-brown {
   border-color: #dabb9f !important;
 }
-.mobile_box .bg-lightgreen {
+.mobile_box .br-lightgreen {
   border-color: #55EFC4 !important;
 }
-.mobile_box .bg-pale {
+.mobile_box .br-pale {
   border-color: #FCD4BB !important;
 }
-.mobile_box .bg-blue {
+.mobile_box .br-blue {
   border-color: #81ecec !important;
 }
-.mobile_box .bg-tea {
+.mobile_box .br-tea {
   border-color: #C5E8D0 !important;
 }
-.mobile_box .bg-lavender {
+.mobile_box .br-lavender {
   border-color: #e2dbff !important;
 }
-.mobile_box .bg-sourLemon {
+.mobile_box .brsourLemon {
   border-color: #ffeaa7 !important;
+}
+.mobile_box .bg-blue {
+  background-color: #74b9ff !important;
+}
+.mobile_box .bg-orange {
+  background-color: #ff7675 !important;
+}
+.mobile_box .bg-red {
+  background-color: #f53b57 !important;
+}
+.mobile_box .bg-grey {
+  background-color: grey !important;
+}
+.mobile_box .bg-white {
+  background-color: #fff !important;
+}
+.mobile_box .bg-yellow {
+  background-color: #FECA57 !important;
+}
+.mobile_box .bg-lemon {
+  background-color: #FFD6D6 !important;
+}
+.mobile_box .bg-pink {
+  background-color: pink !important;
+}
+.mobile_box .bg-brown {
+  background-color: #dabb9f !important;
+}
+.mobile_box .bg-lightgreen {
+  background-color: #55EFC4 !important;
+}
+.mobile_box .bg-pale {
+  background-color: #FCD4BB !important;
+}
+.mobile_box .bg-blue {
+  background-color: #81ecec !important;
+}
+.mobile_box .bg-tea {
+  background-color: #C5E8D0 !important;
+}
+.mobile_box .bg-lavender {
+  background-color: #e2dbff !important;
+}
+.mobile_box .bg-sourLemon {
+  background-color: #ffeaa7 !important;
 }/*# sourceMappingURL=mobile-box.css.map */

@@ -326,6 +326,7 @@ console.log("RangePriceClassName",RangePriceClassName)
   };
 
   const closemMobileFilter=()=>{
+    props.setIsBlurProducts(false)
     setIsMobileFilter(false);
 setIsMobileSize(false)
 setIsMobileSort(false)
@@ -336,6 +337,7 @@ setIsMobileCategories(false)
 
   }
   const openSort=()=>{
+    props.setIsBlurProducts(true)
     setIsMobileFilter(true);
     setIsMobileSort(true)
     setIsMobileSize(false)
@@ -359,6 +361,7 @@ setIsMobileCategories(false)
   }
 
   const openBrand=()=>{
+    props.setIsBlurProducts(true)
     setIsMobileFilter(true);
     setIsMobileBrand(true)
     setIsMobileSize(false)
@@ -369,6 +372,8 @@ setIsMobileCategories(false)
   }
 
   const openColor=()=>{
+    props.setIsBlurProducts(true)
+
     setIsMobileFilter(true);
     setIsMobileColor(true)
     setIsMobileSize(false)
@@ -379,6 +384,7 @@ setIsMobileCategories(false)
   }
 
   const openPrice=()=>{
+    props.setIsBlurProducts(true)
     setIsMobileFilter(true);
     setIsMobilePrice(true)
     setIsMobileSize(false)
@@ -389,6 +395,7 @@ setIsMobileCategories(false)
   }
 
   const openCategories=()=>{
+    props.setIsBlurProducts(true)
     setIsMobileFilter(true);
     setIsMobileCategories(true)
     setIsMobileSize(false)
@@ -449,15 +456,11 @@ setIsMobilePrice(false)
                      <div className={`account-menu ${isMobileFilter ? "visible-account" : ""} ` }>
        {isMobileSort && <Fragment>
 
-           <div className="tab-header-container">
-             
-             <div className="write">
-               <div>
-                 <div className="header">
+        <div className="header-filter-new">
+        <span>Sort</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />
        
-               <h2>Sort</h2> {/* Title */}
              </div>
 
              <div className="main-part">
@@ -480,11 +483,7 @@ setIsMobilePrice(false)
                      Reset
                    </Button>
                    </div> 
-               </div>
-             
-           </div>
-           
-           </div>
+        
  </Fragment>}
 
 
@@ -532,16 +531,12 @@ setIsMobilePrice(false)
 
 {isMobilePrice && <Fragment>
 
-<div className="tab-header-container">
-  
-  <div className="write">
-    <div>
-      <div className="header-filter">
-  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
-   onClick={closemMobileFilter} />
-
-    <h2>price Range</h2> {/* Title */}
-  </div>
+    <div className="header-filter-new bg-lightgreen">
+        <span>Price Range</span> {/* Title */}
+             <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+              onClick={closemMobileFilter} />
+       
+             </div>
 
 <div className="main-part">
 {RangePriceClassName.map((range, index) => (
@@ -589,26 +584,18 @@ setIsMobilePrice(false)
           Reset
         </Button>
         </div> 
-    </div>
-  
-</div>
-
-</div>
+ 
 </Fragment>}
 
 
 {isMobileColor && <Fragment>
 
-<div className="tab-header-container">
-  
-  <div className="write">
-    <div>
-      <div className="header-filter">
-  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
-   onClick={closemMobileFilter} />
-
-    <h2>Color</h2> {/* Title */}
-  </div>
+    <div className="header-filter-new">
+        <span>Color</span> {/* Title */}
+             <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+              onClick={closemMobileFilter} />
+       
+             </div>
 
 <div className="main-part">
 {allColors.map((c, index) => (
@@ -633,27 +620,19 @@ setIsMobilePrice(false)
           Reset
         </Button>
         </div> 
-    </div>
-  
-</div>
 
-</div>
 </Fragment>}
 
 
 
 {isMobileCategries && <Fragment>
 
-<div className="tab-header-container">
-  
-  <div className="write">
-    <div>
-      <div className="header-filter">
-  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
-   onClick={closemMobileFilter} />
-
-    <h2>Categories</h2> {/* Title */}
-  </div>
+    <div className="header-filter-new">
+        <span>Categories</span> {/* Title */}
+             <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+              onClick={closemMobileFilter} />
+       
+             </div>
 
 <div className="main-part">
 {allCategoryIDS.map((categoryId, index) => (
@@ -684,26 +663,18 @@ setIsMobilePrice(false)
           Reset
         </Button>
         </div> 
-    </div>
-  
-</div>
 
-</div>
 </Fragment>}
 
 
 {isMobileBrand && <Fragment>
 
-<div className="tab-header-container">
-  
-  <div className="write">
-    <div>
-      <div className="header-filter">
-  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
-   onClick={closemMobileFilter} />
-
-    <h2> Brand</h2> {/* Title */}
-  </div>
+    <div className="header-filter-new">
+        <span>Brand</span> {/* Title */}
+             <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+              onClick={closemMobileFilter} />
+       
+             </div>
 
 <div className="main-part">
 {allBrands.map((brand, index) => (
@@ -732,11 +703,7 @@ setIsMobilePrice(false)
           Reset
         </Button>
         </div> 
-    </div>
-  
-</div>
 
-</div>
 </Fragment>}
 
 
@@ -754,30 +721,30 @@ setIsMobilePrice(false)
         <span>Sort</span>
       </div>
 
-      <div className="filter bg-blue" onClick={openSort}>
+      {/* <div className="filter bg-blue" onClick={openSort}>
         <img src={require("./../../../assets/icons/filter-mobile-2.png")} alt="filter" />
         <span>Filter</span>
-      </div>
+      </div> */}
 
       <div className="slider-container">
         <Slider ref={sliderRef} {...settings2}>
           <div className='one-filter'>
-            <span className='bg-orange' onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
+            <span className='br-orange' onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-yellow' onClick={openSort} >   Only Discounted</span>
+            <span className='br-yellow' onClick={openSort} >   Only Discounted</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-lightgreen' onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
+            <span className='br-lightgreen' onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-tea' onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
+            <span className='br-tea' onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-brown' onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
+            <span className='br-brown' onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
           </div>
           <div className='one-filter'>
-            <span className='bg-coral' onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
+            <span className='br-coral' onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
           </div>
         </Slider>
       </div>
