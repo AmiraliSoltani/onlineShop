@@ -80,7 +80,15 @@ let finalPaginateProducts=props.finalPaginateProducts
     return className;
   };
 
+ console.log("aaaaaaaaaa1111111",selectedCategoryIDS)
+ console.log("aaaaaaaaaa2222222",allCategoryIDS)
+
+ useEffect(() => {
  
+if(allCategoryIDS.length==selectedCategoryIDS.length || selectedCategoryIDS.length==0) setCategoriesHeader(false)
+    else setCategoriesHeader(true)
+  }, [selectedCategoryIDS,allCategoryIDS]);
+
   useEffect(() => {
     setShowColorReset(false)
     if(Object.keys(listOfColors).length === 0) setShowColorReset(false)
@@ -132,7 +140,9 @@ let finalPaginateProducts=props.finalPaginateProducts
     if(Object.keys(props.listOfSizes).length === 0) setShowSizeReset(false)
     else{
       Object.values(props.listOfSizes).forEach((value) => {
-        if(value)  setShowSizeReset(true)
+        if(value) {
+            setShowSizeReset(true)
+        }
       });
   }
   }, [props.listOfSizes]);
@@ -506,7 +516,7 @@ setIsMobilePrice(false)
 
              <div className="footer-button">      
                    <Button className="button-submit" variant="primary" onClick={closemMobileFilter}  >See the products </Button>
-                   <Button className="button-reset" variant="primary" >
+                   <Button className="button-reset" variant="primary" onClick={() => handelClickOrder(orders[5])} >
                      Reset
                    </Button>
                    </div> 
@@ -758,22 +768,22 @@ setIsMobilePrice(false)
       <div className="slider-container">
         <Slider ref={sliderRef} {...settings2}>
           <div className='one-filter'>
-            <span className={categoriesHeader? "br-grey bg-orange" : "br-grey" } onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
+            <span className={categoriesHeader? "br-orange bg-orange" : "br-grey" } onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
           </div>
           <div className='one-filter'>
-            <span  className={discountHeader? "br-grey bg-yellow" : "br-grey" }  onClick={handelClickDiscount} >   Only Discounted</span>
+            <span  className={discount? "br-orange bg-orange" : "br-grey" }  onClick={handelClickDiscount} >   Only Discounted</span>
           </div>
           <div className='one-filter'>
-            <span className={priceHeader? "br-grey bg-lightgreen" : "br-grey" } onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
+            <span className={showPriceReset? "br-orange bg-orange" : "br-grey" } onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
           </div>
           <div className='one-filter'>
-            <span  className={colorHeader? "br-grey bg-tea" : "br-grey" } onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
+            <span  className={showColorReset? "br-orange bg-orange" : "br-grey" } onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
           </div>
           <div className='one-filter'>
-            <span  className={sizeHeader? "br-grey bg-lavender " : "br-grey" } onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
+            <span  className={showSizeReset? "br-orange bg-orange " : "br-grey" } onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
           </div>
           <div className='one-filter'>
-            <span className={brandHeader? "br-coral bg-coral" : "br-grey" } onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
+            <span className={showBrandReset? "br-orange bg-orange " : "br-grey" } onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
           </div>
         </Slider>
       </div>
