@@ -487,13 +487,8 @@ setIsMobilePrice(false)
 
  {isMobileSize && <Fragment>
 
-<div className="tab-header-container">
-  
-  <div className="write">
-    <div>
-        
 
-
+    
 <div className="main-part">
 {allSizes.map((size, index) => (
     <Fragment key={index}>
@@ -522,11 +517,7 @@ setIsMobilePrice(false)
           Reset
         </Button>
         </div> 
-    </div>
-  
-</div>
 
-</div>
 </Fragment>}
 
 

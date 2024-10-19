@@ -83,6 +83,8 @@
   text-align: center;
   background-color: #fff;
   border-radius: 10px;
+  margin-top: 13px;
+  margin-bottom: 13px;
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -370,8 +372,7 @@
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 1; /* Slide-up effect */
-  height: 200px;
-  overflow: hidden;
+  height: 125px;
 }
 
 .mobile_box {
