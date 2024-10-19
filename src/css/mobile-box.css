@@ -96,6 +96,12 @@
 .account-menu .header-filter-new img {
   width: 23px;
   height: 23px;
+  margin-right: 10px;
+}
+.account-menu .header-filter-new span {
+  font-weight: 500;
+  font-size: 21px;
+  margin-left: 10px;
 }
 .account-menu .tab-header-container {
   width: 100%;

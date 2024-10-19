@@ -492,7 +492,7 @@ setIsMobilePrice(false)
 
 
     <div className="header-filter-new">
-        <h2>Size</h2> {/* Title */}
+        <span>Size</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />
        
