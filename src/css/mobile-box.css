@@ -54,8 +54,6 @@
   top: 260px; /* Initially hidden below the viewport */
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%); /* Initially hidden (off-screen) */
-  left: 0;
-  right: 0;
   opacity: 0;
   height: 0px; /* Adjust based on your design */
   background-color: white;
@@ -243,6 +241,10 @@
   gap: 12px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .account-menu .main-part .check__box__color .main__check__box {
   height: 30px;
@@ -372,7 +374,7 @@
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 1; /* Slide-up effect */
-  height: 150px;
+  height: 225px;
   padding: 10px;
 }
 

@@ -51,8 +51,6 @@ margin-top: 20px;
     position: absolute;
     top:260px; /* Initially hidden below the viewport */
     transform: translateY(-100%); /* Initially hidden (off-screen) */
-    left: 0;
-    right: 0;
     opacity: 0;
     height:0px; /* Adjust based on your design */
     background-color: white;
@@ -231,6 +229,7 @@ display: flex;
 justify-content: start;
 gap: 12px;
 flex-wrap: wrap;
+flex-direction: column;
                 .check__box__color {
                     .main__check__box {
                       height: 30px;
@@ -392,7 +391,7 @@ flex-wrap: wrap;
       transition: all 0.4s ease-in-out;
       opacity:1; /* Slide-up effect */
     //   overflow: hidden;
-  height: 150px;
+  height: 225px;
   padding: 10px;
   
   
