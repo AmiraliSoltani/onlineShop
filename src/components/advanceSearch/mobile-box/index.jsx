@@ -758,22 +758,22 @@ setIsMobilePrice(false)
       <div className="slider-container">
         <Slider ref={sliderRef} {...settings2}>
           <div className='one-filter'>
-            <span className={categoriesHeader? "br-orange bg-orange" : "br-orange" } onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
+            <span className={categoriesHeader? "br-grey bg-orange" : "br-grey" } onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
           </div>
           <div className='one-filter'>
-            <span  className={discountHeader? "br-yellow bg-yellow" : "br-yellow" }  onClick={handelClickDiscount} >   Only Discounted</span>
+            <span  className={discountHeader? "br-grey bg-yellow" : "br-grey" }  onClick={handelClickDiscount} >   Only Discounted</span>
           </div>
           <div className='one-filter'>
-            <span className={priceHeader? "br-lightgreen bg-lightgreen" : "br-lightgreen" } onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
+            <span className={priceHeader? "br-grey bg-lightgreen" : "br-grey" } onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
           </div>
           <div className='one-filter'>
-            <span  className={colorHeader? "br-tea bg-tea" : "br-tea" } onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
+            <span  className={colorHeader? "br-grey bg-tea" : "br-grey" } onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
           </div>
           <div className='one-filter'>
-            <span  className={sizeHeader? "br-lavender bg-lavender " : "br-lavender" } onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
+            <span  className={sizeHeader? "br-grey bg-lavender " : "br-grey" } onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
           </div>
           <div className='one-filter'>
-            <span className={brandHeader? "br-coral bg-coral" : "br-coral" } onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
+            <span className={brandHeader? "br-coral bg-coral" : "br-grey" } onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
           </div>
         </Slider>
       </div>
