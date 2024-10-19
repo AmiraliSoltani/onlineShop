@@ -22,7 +22,7 @@
   -webkit-box-flex: 5;
       -ms-flex: 5 1;
           flex: 5 1;
-  background-color: #FF7675;
+  background-color: #747D8C;
   border: 0px;
   font-size: 17px;
   margin-bottom: 3px;
@@ -37,7 +37,7 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  background-color: #FF7675;
+  background-color: gray;
   border: 0px;
   font-size: 17px;
   margin-bottom: 3px;
