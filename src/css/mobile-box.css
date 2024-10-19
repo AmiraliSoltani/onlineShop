@@ -52,8 +52,6 @@
 .account-menu {
   position: absolute;
   bottom: -100%; /* Initially hidden below the viewport */
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%); /* Initially hidden (off-screen) */
   opacity: 0;
   height: 0px; /* Adjust based on your design */
   background-color: white;
@@ -64,6 +62,7 @@
   direction: ltr;
   padding: 0px;
   z-index: 1000;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -369,12 +368,10 @@
 /* Visible state when the page is activated */
 .account-menu.visible-account {
   bottom: 0px !important; /* Slide-up to show the component */
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   opacity: 1; /* Slide-up effect */
-  height: 225px;
+  height: auto;
   padding: 10px;
 }
 

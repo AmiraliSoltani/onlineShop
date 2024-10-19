@@ -50,7 +50,6 @@ margin-top: 20px;
 .account-menu{
     position: absolute;
     bottom:-100%; /* Initially hidden below the viewport */
-    transform: translateY(-100%); /* Initially hidden (off-screen) */
     opacity: 0;
     height:0px; /* Adjust based on your design */
     background-color: white;
@@ -59,6 +58,7 @@ margin-top: 20px;
   direction: ltr;
     padding: 0px;
     z-index: 1000;
+    height: 100%;
     // border-radius: 10px 10px 0 0;
     display: flex;
               flex-direction: column;
@@ -387,11 +387,10 @@ flex-direction: column;
   .account-menu.visible-account {
     //   top:220px !important; /* Slide-up to show the component */
     bottom:0px !important; /* Slide-up to show the component */
-    transform: translateY(0);
       transition: all 0.4s ease-in-out;
       opacity:1; /* Slide-up effect */
     //   overflow: hidden;
-  height: 225px;
+  height: auto;
   padding: 10px;
   
   
