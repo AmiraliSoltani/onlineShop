@@ -345,7 +345,7 @@
 
 /* Visible state when the page is activated */
 .account-menu.visible-account {
-  bottom: 80px !important; /* Slide-up to show the component */
+  bottom: 290px !important; /* Slide-up to show the component */
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; /* Slide-up effect */
 }
