@@ -42,8 +42,8 @@ background-color: #FF7675;
 }
 }
 .account-menu{
-    position: fixed;
-    bottom: -140%; /* Initially hidden below the viewport */
+    position: absolute;
+    bottom: 500px; /* Initially hidden below the viewport */
     left: 0;
     right: 0;
     height:auto; /* Adjust based on your design */
@@ -375,7 +375,8 @@ background-color: #FF7675;
   /* Visible state when the page is activated */
   .account-menu.visible-account {
       bottom:290px !important; /* Slide-up to show the component */
-      transition: all 0.4s ease-in-out; /* Slide-up effect */
+      transition: all 0.4s ease-in-out;
+      opacity:1; /* Slide-up effect */
   
   
   
