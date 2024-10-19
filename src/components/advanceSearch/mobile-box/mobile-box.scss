@@ -317,14 +317,18 @@ gap: 12px;
 flex-wrap: wrap;
 flex-direction: column;
                 .check__box__color {
-                    .main__check__box {
-                      height: 30px;
-                      width: 30px;
+                    margin: 4px;
+                    .main__check__box_filter {
+                      height: 28px;
+                      width: 28px;
                       border: 2px solid #808080;
-                      border-radius: 20px;
+                      border-radius: 6px;
                       margin-left: 5px;
                       cursor: pointer;
                       position: relative;
+                      span{
+                        margin-left: 35px;
+                      }
           
                       .check__box__image {
                         position: absolute;

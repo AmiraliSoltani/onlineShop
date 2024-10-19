@@ -320,16 +320,22 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.account-menu .main-part .check__box__color .main__check__box {
-  height: 30px;
-  width: 30px;
+.account-menu .main-part .check__box__color {
+  margin: 4px;
+}
+.account-menu .main-part .check__box__color .main__check__box_filter {
+  height: 28px;
+  width: 28px;
   border: 2px solid #808080;
-  border-radius: 20px;
+  border-radius: 6px;
   margin-left: 5px;
   cursor: pointer;
   position: relative;
 }
-.account-menu .main-part .check__box__color .main__check__box .check__box__image {
+.account-menu .main-part .check__box__color .main__check__box_filter span {
+  margin-left: 35px;
+}
+.account-menu .main-part .check__box__color .main__check__box_filter .check__box__image {
   position: absolute;
   width: 18px;
   height: 26px;

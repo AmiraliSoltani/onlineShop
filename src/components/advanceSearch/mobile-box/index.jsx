@@ -48,7 +48,7 @@ let finalPaginateProducts=props.finalPaginateProducts
   let loading=props.loading;
   let getSelectedCategoryIdFromFilters=props.getSelectedCategoryIdFromFilters
   
-  console.log("ALLL",allColors,listOfColors)
+  console.log("ALLL222222222222222",allColors,listOfColors)
   console.log("ALLL",allSizes,listOfSizes)
   
   console.log(allSizes,"allSizes")
@@ -602,19 +602,22 @@ setIsMobilePrice(false)
              </div>
 
 <div className="main-part">
+    <div className="filter-color">
 {allColors.map((c, index) => (
               <li key={index} onClick={() => handelColorClick(c)}>
                 <div className="check__box__color">
-                  <div className={`main__check__box bg-${c.class}`}>
+                  <div className={`main__check__box_filter bg-${c.class}`}>
+                      <span>{c.class}</span>
                     <img
                       className={getClassnameOfColor(c.class)}
                       src={require("./../../../assets/icons/tick-gray.png")}
                       alt="Selected"
-                    />
+                      />
                   </div>
                 </div>
               </li>
             ))}
+            </div>
 </div>
 
 
