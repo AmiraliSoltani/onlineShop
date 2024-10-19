@@ -336,31 +336,63 @@ setIsMobileCategories(false)
   const openSort=()=>{
     setIsMobileFilter(true);
     setIsMobileSort(true)
+    setIsMobileSize(false)
+setIsMobileBrand(false)
+setIsMobileColor(false)
+setIsMobilePrice(false)
+setIsMobileCategories(false)
+
   }
 
   const openSize=()=>{
     setIsMobileFilter(true);
     setIsMobileSize(true)
+setIsMobileSort(false)
+setIsMobileBrand(false)
+setIsMobileColor(false)
+setIsMobilePrice(false)
+setIsMobileCategories(false)
+
   }
 
   const openBrand=()=>{
     setIsMobileFilter(true);
     setIsMobileBrand(true)
+    setIsMobileSize(false)
+setIsMobileSort(false)
+setIsMobileColor(false)
+setIsMobilePrice(false)
+setIsMobileCategories(false)
   }
 
   const openColor=()=>{
     setIsMobileFilter(true);
     setIsMobileColor(true)
+    setIsMobileSize(false)
+setIsMobileSort(false)
+setIsMobileBrand(false)
+setIsMobilePrice(false)
+setIsMobileCategories(false)
   }
 
   const openPrice=()=>{
     setIsMobileFilter(true);
     setIsMobilePrice(true)
+    setIsMobileSize(false)
+setIsMobileSort(false)
+setIsMobileBrand(false)
+setIsMobileColor(false)
+setIsMobileCategories(false)
   }
 
   const openCategories=()=>{
     setIsMobileFilter(true);
     setIsMobileCategories(true)
+    setIsMobileSize(false)
+setIsMobileSort(false)
+setIsMobileBrand(false)
+setIsMobileColor(false)
+setIsMobilePrice(false)
   }
 
   const orders = [

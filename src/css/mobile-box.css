@@ -20,12 +20,15 @@
 }
 .footer-button .button-submit {
   -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+      -ms-flex: 5 1;
+          flex: 5 1;
   background-color: #FF7675;
   border: 0px;
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 3px;
+  font-weight: 500;
+  padding: 0px;
+  height: 35px;
 }
 .footer-button .button-submit:hover {
   background-color: #666E7B !important;
@@ -34,10 +37,13 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  background-color: #BBBCBC !important;
+  background-color: #FF7675;
   border: 0px;
-  font-size: 20px;
+  font-size: 17px;
   margin-bottom: 3px;
+  font-weight: 500;
+  padding: 0px;
+  height: 35px;
 }
 .footer-button .button-reset:hover {
   background-color: #666E7B !important;
@@ -269,14 +275,14 @@
   cursor: pointer;
 }
 .account-menu .main-part li span {
-  font-size: 16px;
+  font-size: 17px;
   color: gray;
   text-align: left;
   margin-left: 7px;
 }
 .account-menu .main-part li .check__box .main__check__box {
-  height: 22px;
-  width: 22px;
+  height: 23px;
+  width: 23px;
   border: 2px solid gray;
   border-radius: 5px;
   position: relative;
