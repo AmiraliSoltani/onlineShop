@@ -22,7 +22,12 @@ const MobileBox = (props) => {
   const[showBrandReset,setShowBrandReset]=useState(false)
   const[showSizeReset,setShowSizeReset]=useState(false)
   const {blurState,blurDispatch}=useContext(blurContext)
-
+  const [priceHeader,setPriceHeader]=useState(false)
+  const [sizeHeader,setSizeHeader]=useState(false)
+  const [colorHeader,setColorHeader]=useState(false)
+  const [brandHeader,setBrandHeader]=useState(false)
+  const [discountHeader,setDiscountHeader]=useState(false)
+const [categoriesHeader,setCategoriesHeader]=useState(false)
 
 
   const { allBrands=[], selectedBrands=[], handelBrandClick } = props;
@@ -490,7 +495,7 @@ setIsMobilePrice(false)
  {isMobileSize && <Fragment>
 
 
-    <div className="header-filter-new">
+    <div className="header-filter-new bg-lavender ">
         <span>Size</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />
@@ -531,11 +536,10 @@ setIsMobilePrice(false)
 
 {isMobilePrice && <Fragment>
 
-    <div className="header-filter-new bg-lightgreen">
+    <div className="header-filter-new bg-lightgreen" >
         <span>Price Range</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />
-       
              </div>
 
 <div className="main-part">
@@ -669,7 +673,7 @@ setIsMobilePrice(false)
 
 {isMobileBrand && <Fragment>
 
-    <div className="header-filter-new">
+    <div className="header-filter-new bg-coral">
         <span>Brand</span> {/* Title */}
              <img src={require("../../../assets/icons/close.png")} alt="" className="close"
               onClick={closemMobileFilter} />
@@ -729,22 +733,22 @@ setIsMobilePrice(false)
       <div className="slider-container">
         <Slider ref={sliderRef} {...settings2}>
           <div className='one-filter'>
-            <span className='br-orange' onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
+            <span className={categoriesHeader? "br-orange bg-orange" : "br-orange" } onClick={openCategories}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Categories</span>
           </div>
           <div className='one-filter'>
-            <span className='br-yellow' onClick={openSort} >   Only Discounted</span>
+            <span  className={discountHeader? "br-yellow bg-yellow" : "br-yellow" }  onClick={openSort} >   Only Discounted</span>
           </div>
           <div className='one-filter'>
-            <span className='br-lightgreen' onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
+            <span className={priceHeader? "br-lightgreen bg-lightgreen" : "br-lightgreen" } onClick={openPrice}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Price Range</span>
           </div>
           <div className='one-filter'>
-            <span className='br-tea' onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
+            <span  className={colorHeader? "br-tea bg-tea" : "br-tea" } onClick={openColor}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Color</span>
           </div>
           <div className='one-filter'>
-            <span className='br-brown' onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
+            <span  className={sizeHeader? "br-lavender bg-lavender " : "br-lavender" } onClick={openSize}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Size</span>
           </div>
           <div className='one-filter'>
-            <span className='br-coral' onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
+            <span className={brandHeader? "br-coral bg-coral" : "br-coral" } onClick={openBrand}><img src={require("./../../../assets/icons/down.png")} alt="sort" /> Brand</span>
           </div>
         </Slider>
       </div>
