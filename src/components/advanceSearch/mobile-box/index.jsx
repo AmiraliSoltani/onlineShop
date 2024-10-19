@@ -491,7 +491,13 @@ setIsMobilePrice(false)
  {isMobileSize && <Fragment>
 
 
-    
+    <div className="header-filter-new">
+        <h2>Size</h2> {/* Title */}
+             <img src={require("../../../assets/icons/close.png")} alt="" className="close"
+              onClick={closemMobileFilter} />
+       
+             </div>
+
 <div className="main-part">
 {allSizes.map((size, index) => (
     <Fragment key={index}>

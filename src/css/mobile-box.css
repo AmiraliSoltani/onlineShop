@@ -74,6 +74,29 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+.account-menu .header-filter-new {
+  padding: 6px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  border-radius: 4px;
+  position: relative;
+  margin-bottom: 7px;
+  background-color: #FBD3BB;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 22px;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.account-menu .header-filter-new img {
+  width: 23px;
+  height: 23px;
+}
 .account-menu .tab-header-container {
   width: 100%;
   margin: 0 auto;
