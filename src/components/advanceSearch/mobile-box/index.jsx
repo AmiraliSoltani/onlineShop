@@ -460,10 +460,7 @@ setIsMobileCategories(false)
   <div className="write">
     <div>
         
-      <div className="header-filter">
-  <img src={require("../../../assets/icons/close.png")} alt="" className="close"
-   onClick={closemMobileFilter} />
-  </div>
+
 
 <div className="main-part">
 {allSizes.map((size, index) => (

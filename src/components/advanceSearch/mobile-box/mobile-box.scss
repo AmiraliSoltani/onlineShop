@@ -219,7 +219,10 @@ background-color: #FF7675;
                 }
               }
               .main-part{
-
+display: flex;
+justify-content: start;
+gap: 12px;
+flex-wrap: nowrap;
                 .check__box__color {
                     .main__check__box {
                       height: 30px;
@@ -259,7 +262,6 @@ background-color: #FF7675;
                     justify-self: start;
                     padding: 7px;
                     cursor: pointer;
-                    width: 98%;
                     span {
                         font-size: 18px;
                         color: gray;

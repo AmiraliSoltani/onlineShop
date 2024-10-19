@@ -225,6 +225,17 @@
   margin: 0;
   font-size: 22px;
 }
+.account-menu .main-part {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 12px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
 .account-menu .main-part .check__box__color .main__check__box {
   height: 30px;
   width: 30px;
@@ -256,7 +267,6 @@
   justify-self: start;
   padding: 7px;
   cursor: pointer;
-  width: 98%;
 }
 .account-menu .main-part li span {
   font-size: 18px;
