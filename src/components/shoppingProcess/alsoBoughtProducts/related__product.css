@@ -1,39 +1,14 @@
-.orange-striped {
-  background: repeating-linear-gradient(45deg, #FF7675, #FF7675 40px, #e66564 40px, #e66564 60px);
-}
-
-.Stormcloud-striped {
-  background: repeating-linear-gradient(45deg, #747D8C, #747D8C 20px, #666e7b 20px, #666e7b 40px);
-}
-
-.bg-e {
-  background-color: rgba(238, 238, 238, 0.9333333333);
-}
-
-.w100 {
-  width: 100% !important;
-}
-
 .container .related__products .related__offer {
   margin-top: 15px;
   position: relative;
 }
 .container .related__products .related__offer .main__offer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .container .related__products .related__offer .main__offer .top__offer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -44,18 +19,16 @@
   font-weight: 500;
   border-radius: 3px;
   width: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: start;
+  align-items: center;
   position: relative;
   cursor: pointer;
   width: 100%;
+}
+.container .related__products .related__offer .main__offer .top__offer .top__offer__category:hover .icon {
+  animation: icon__animate 2s infinite;
+  -webkit-animation: icon__animate 2s infinite;
 }
 .container .related__products .related__offer .main__offer .top__offer .top__offer__category .icon {
   height: 43px;
@@ -89,13 +62,9 @@
   background-color: #55efc4;
 }
 .container .related__products .related__offer .main__offer .middle__offer__slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   direction: rtl;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  justify-content: start;
   width: 100%;
 }
 .container .related__products .related__offer .main__offer .middle__offer__slider .line {
@@ -113,16 +82,9 @@
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product {
   width: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  flex-direction: column;
+  align-items: start;
   position: relative;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .tag__discount {
@@ -133,27 +95,17 @@
   background-color: #ff7675;
   top: 3px;
   left: 18px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 19px;
   font-weight: 500;
   z-index: 10;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__images {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   direction: rtl;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   position: relative;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__images:hover .overlay__name {
@@ -166,15 +118,9 @@
   height: 45px;
   background-color: white;
   opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  align-items: center;
+  justify-content: start;
   direction: rtl;
   padding: 5px;
   font-size: 14px;
@@ -189,21 +135,16 @@
   cursor: pointer;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__images img:hover {
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color {
   margin-bottom: 12px;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 10px;
   margin-bottom: 7px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   direction: rtl;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul li {
@@ -235,16 +176,10 @@
   margin-bottom: 5px;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   direction: rtl;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: start;
+  align-items: center;
   position: relative;
   cursor: pointer;
   transition: all 0.6s ease-in-out 0s;
@@ -289,7 +224,7 @@
   top: 21px;
   width: 13px;
   height: 13px;
-  right: 128px;
+  right: 17px;
   visibility: hidden;
 }
 .container .related__products .related__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon .poduct__price {
@@ -324,8 +259,7 @@
   font-size: 15px;
   font-weight: bold;
   color: #fff;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 .container .related__products .related__offer .slick-arrow {
   top: 40%;

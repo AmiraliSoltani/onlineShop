@@ -1,14 +1,60 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, Fragment } from "react";
 import "./../../css/shoppingProcess.css";
 import { getAttributes } from "../common/functionsOfProducts";
 import { Link } from "react-router-dom";
 import cardContext from "../contexts/cardContext";
 import allA from "../../json/attributeItem.json"
+import Tooltip from 'react-bootstrap/Tooltip';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import APIProduct from "../../services/api-product";
+import AlsoBoughtProduct from "./alsoBoughtProducts";
+
+function renderTooltip(props) {
+  return (
+    <Tooltip id="button-tooltip" {...props}>
+    It will calculate in the next step
+    </Tooltip>
+  );
+}
+
 
 const ShoppingProcess = () => {
   const [count, setCount] = useState([]);
-  const {cardState, cardDispatch}= useContext(cardContext)
-  let allAttributeItemS = allA.data
+  const { cardState, cardDispatch } = useContext(cardContext);
+  const [allProducts, setAllProducts] = useState([]);
+  const [allCategories, setAllCategories] = useState([]);
+  console.log("cardState.cartProducts[0]",cardState.cartProducts[0])
+  const [product, setProduct] = useState();
+
+
+
+  let allAttributeItemS = allA.data;
+
+
+  useEffect(() => {
+    setProduct( cardState.cartProducts[0]?.product)
+  }, [cardState]);
+
+  useEffect(() => {
+
+    const fetchData = async () => {
+      try {
+        const allProductsAPI = new APIProduct('/products');
+        const allCategoriesAPI = new APIProduct('/categories');
+        const [productsData, categoriesData] = await Promise.all([
+          allProductsAPI.getAll(),
+          allCategoriesAPI.getAll()
+        ]);
+        
+        setAllProducts(productsData);
+        setAllCategories(categoriesData);
+      } catch (error) {
+        console.error('Error fetching products or categories:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
 
   useEffect(() => {
@@ -20,19 +66,22 @@ const ShoppingProcess = () => {
     return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
   };
 
-  const increase=(product)=>{
-    console.log("hhhhhhhhhhhhhhhhhhh")
-    cardDispatch({type:"increment",payload:product})
-  }
+  const increase = (product) => {
+    console.log("Increment");
+    cardDispatch({ type: "increment", payload: product });
+  };
+
+  let totalPrice=0;
+
 
   const disableButton = (index, status, max) => {
-    let counting  = count[index];
+    let counting = count[index];
     let disable;
-    if (status === 'min') {
+    if (status === "min") {
       if (counting === 1) disable = true;
       else disable = false;
     }
-    if (status === 'max') {
+    if (status === "max") {
       if (counting === max) disable = true;
       else disable = false;
     }
@@ -40,10 +89,8 @@ const ShoppingProcess = () => {
     return disable;
   };
 
-
-
   const deleteProduct = (product) => {
-    cardDispatch({type:"deleteSpecificProduct",payload:product})
+    cardDispatch({ type: "deleteSpecificProduct", payload: product });
   };
 
   const numberOfProducts = () => {
@@ -78,6 +125,12 @@ const ShoppingProcess = () => {
     return sum;
   };
 
+  const getPriceClasses2 = (product) => {
+    let priceClasses = 'product__price';
+    priceClasses += product.off != 0 ? ' before__discount__price' : '';
+    return priceClasses;
+  };
+
   const regularPriceOfAllProducts = () => {
     let sum = 0;
     cardState.cartProducts.forEach((p) => (sum += p.product.price * p.count));
@@ -85,200 +138,186 @@ const ShoppingProcess = () => {
   };
 
   return (
-    <div className="container">
-      <div className="top__offer__category">
-        <img
-          className="icon"
-          src={require("./../../assets/icons/groceries.png")}
-          alt="logo"
-        />
-        <span> سبد خرید</span>
-      </div>
+    <Fragment>
+      <div className="bg-grey">
+      <div className="container-special">
+        <div className="whole-part">
+<div className="left-part">
+  <div className="header">
+<span>My Bag</span>
+  </div>
 
-      <div className="whole__shopping__process">
-        <div className="whole__right__box">
-          <div className="right__box">
-          {cardState.cartProducts.length===0 && <div> empty </div>}
+<div className="main-part">
 
-            {cardState.cartProducts.length > 0 &&
-              cardState.cartProducts.map((oneProduct, index) => (
-                <div className="one__product" key={index}>
-                  <div className="pic__product__left">
-                    <Link to={`/product/${oneProduct.product._id}`}>
-                      <img
-                        src={
-                          oneProduct.product.productPic[
-                            Object.keys(oneProduct.product.productPic)[0]
-                          ]
-                        }
-                        alt="main_image"
-                      />
-                    </Link>
-                  </div>
-                  <div className="detail__product__right">
-                    <div className="title__and__price">
-                      <div className="title">
-                        <Link to={`/product/${oneProduct.product._id}`}>
-                          <span>{oneProduct.product.title}</span>
-                        </Link>
-                        <span className="english__name">
-                          <Link to={`/product/${oneProduct.product._id}`}>
-                            {oneProduct.product.title_En}
-                          </Link>
-                        </span>
-                      </div>
-                    </div>
+<div className="dropdown__basket__body__container">
+                {cardState.cartProducts.map((product,index) => {
+                    const itemPrice = product.product.off
+                    ? ((parseInt(product.product.price) * (100 - parseInt(product.product.off))) / 100) * product.count
+                    : product.product.price * product.count;
+                    const beforeDiscount = product.product.price * product.count;
+                  // Add the current item's price to the total
+                  totalPrice += itemPrice;
+  // Log the product to see its structure
+  console.log("Product222222222222222:", product);
 
-                    <div className="product__detail">
-                      <div className="one-line">
-                        {oneProduct.product._id && (
-                          <div className="id">
-                            <span className="title">آیدی:</span>
-                            <span className="description">
-                              {/* {oneProduct.product._id.slice(
-                                oneProduct.product._id.length - 9,
-                                oneProduct.product._id.length
-                              )}{" "} */}
-                              {oneProduct.product._id}
-                            </span>
-                          </div>
-                        )}
-                        <div className="brand">
-                          <span className="title">برند:</span>
-                          <span className="description">
-                            {
-                              getAttributes(
-                                oneProduct.product,
-                                allAttributeItemS,
-                                4
-                              )[0].title
-                            }
-                          </span>
-                        </div>
-                      </div>
-                      <div className="one-line">
-                        <div className="waranty">
-                          <span className="title">گارانتی:</span>
-                          <span className="description">
-                            {oneProduct.product.guarantee.hasGuarantee &&
-                              oneProduct.product.guarantee.guranteeName}
-                            {!oneProduct.product.guarantee.hasGuarantee &&
-                              "24 ساعت گارانتی سایت"}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="color__and__size">
-                      <div className="product__box__color">
-                        <div className="title__color">
-                          <span className="title">رنگ:</span>
-                          <span className="choose">{oneProduct.color[0]}</span>
-                        </div>
-                        <ul>
-                          <li className={oneProduct.color[1]}></li>
-                        </ul>
-                      </div>
-                      <div className="product__box__size">
-                        <div className="title__size">
-                          <span className="title">سایز:</span>
-                          <span className="choose">{oneProduct.size}</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="buttons">
-                      <div className="number__product">
+  return (
+    <Fragment key={product.product.id}>
+      <div className="dropdown__basket__body">
+             <div className="trash__button">
+              <img
+                src={require("./../../assets/icons/close.png")}
+                alt="logo"
+                onClick={() => {
+                  cardDispatch({ type: "deleteSpecificProduct", payload: product });
+                }}
+              />
+            </div>
+        <div className="dropdown__basket__body__right">
+          <Link to={`/product/${product.product.id}`}>
+            <img
+              src={
+                product.product.productPic[
+                  Object.keys(product.product.productPic)[0]
+                ]
+              }
+              alt="logo"
+            />
+          </Link>
+        </div>
+        <div className="dropdown__basket__body__left">
+          <span className="name">
+            {product.product.title_En.slice(0, 40)}
+          </span>
+          {product.product.title.length > 40 && <span>...</span>}
+          <div className="color-size">
+          <span className="color">
+            {` ${product.color[0]}`}{" "}
+          </span>
+          <span className="size">{`${product.size}`}</span>
+</div>
+          <div className="dropdown__basket__body__left__info">
+              {/* <span className="number">{`Number : ${product.count}`}</span> */}
+              <div className="number__product">
                         <button
-                          disabled={disableButton(index, "max", oneProduct.maxCount)}
-                          onClick={()=>cardDispatch({type:"increment",payload:oneProduct})}
+                          disabled={disableButton(index, "max", product.maxCount)}
+                          onClick={() =>
+                            cardDispatch({ type: "increment", payload: product })
+                          }
                         >
                           +
                         </button>
                         <span className="quantity">{count[index]}</span>
                         <button
-                          disabled={disableButton(index, "min", oneProduct.maxCount)}
-                          onClick={()=>cardDispatch({type:"decrement",payload:oneProduct})}
+                          disabled={disableButton(index, "min", product.maxCount)}
+                          onClick={() =>
+                            cardDispatch({ type: "decrement", payload: product })
+                          }
                         >
                           -
                         </button>
-                      </div>
-
-                      <div className="delete">
+                        </div>
+          
+          </div>
+          {/* <span className="price__item">
+            {numberWithCommas(itemPrice)}
+            .00 $
+          </span> */}
+             <div className="price">
+                  {/* {product.product.off != 0 && (
+                    <span className="percentage__discount">
+                      {product.product.off}%
+                    </span>
+                  )} */}
+                  <span className={getPriceClasses2(product.product)}>
+                    {`$${Number(beforeDiscount).toLocaleString('en-CA', { style: 'currency', currency: 'CAD' }).slice(1)}`}
+                  </span>
+                  {product.product.off!=0 && (
+                    <Fragment>
+                      <span className="discount__price">
+                        {`$${Number(
+                          Math.ceil(
+                            (parseInt(beforeDiscount) * (100 - parseInt(product.product.off))) /
+                              100
+                          )
+                        ).toLocaleString('en-CA', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
+                      </span>
+{/* 
+                      <div className="discount__icon">
                         <img
-                          alt="delete"
-                          src={require("./../../assets/icons/ui.png")}
-                          onClick={() => deleteProduct(oneProduct)}
+                          src={require("./../../assets/icons/sale.png")}
+                          alt="logo"
                         />
-                      </div>
-                      <div className="price">
-                        <span>قیمت:</span>
-                        {!oneProduct.product.off && (
-                          <div className="regular__price">
-                            {`${
-                              oneProduct.product.price * oneProduct.count
-                            } هزار تومان`}
-                          </div>
-                        )}
-                        {oneProduct.product.off && (
-                          <div className="all__price">
-                            <div className="regular2__price">
-                              {`${
-                                oneProduct.product.price * oneProduct.count
-                              } هزار تومان`}
-                            </div>
-                            <div className="discount__price">
-                              {Math.ceil(
-                                (parseInt(oneProduct.product.price) *
-                                  (100 - parseInt(oneProduct.product.off))) /
-                                  100
-                              ) * oneProduct.count}
-                              &nbsp; هزار تومان
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
+                      </div> */}
+                    </Fragment>
+                  )} 
                 </div>
-              ))}
-          </div>
         </div>
-        {cardState.cartProducts.length > 0 &&
-        <div className="left__box">
-          <div className="numbers">
-            <span>{`قیمت کالاها (${numberOfProducts()})`}</span>
-            <span>{` ${numberWithCommas(regularPriceOfAllProducts())},000 تومان`}</span>
-          </div>
-          <div className="discounts">
-            <span>{`تخفیف کالاها `}</span>
-            {discountOfAllProducts() !== 0 && (
-              <span>{`${numberWithCommas(discountOfAllProducts())},000 تومان`}</span>
-            )}
-            {discountOfAllProducts() === 0 && <span>بدون تخفیف</span>}
-          </div>
-          <div className="line2"></div>
-          <div className="result first">
-            <span>{`جمع کل  `}</span>
-            <span>{`${numberWithCommas(priceOfAllProducts())},000 تومان`}</span>
-          </div>
-          <div className="result second">
-            <span>{` هزینه ارسال  `}</span>
-            <span>{`رایگان`}</span>
-          </div>
-
-          <div className="line2"></div>
-
-          <div className="result third">
-            <span>{`مبلغ قابل پرداخت `}</span>
-            <span>{`${numberWithCommas(priceOfAllProducts())},000 تومان`}</span>
-          </div>
-
-          <button type="button" className="btn btn-info custom__button">
-            ادامه فرایند خرید
-          </button>
-        </div>}
       </div>
-    </div>
+
+
+    </Fragment>
   );
+})}
+</div>
+
+</div>
+
+
+</div>
+<div className="right-part">
+<div className="header-shopping">
+Total
+</div>
+<div className="shopLine"></div>
+<div className="sub-total">
+  <div className="title">Sub-total</div>
+  <div className="sub-total-price">222</div>
+</div>
+
+<div className="delivery">
+  <div className="title">Delivery</div>
+  <OverlayTrigger
+        placement="right"
+        delay={{ show: 250, hide: 400 }}
+        overlay={renderTooltip}
+      >
+       <img className="delivery-img" src={require("./../../assets/icons/info-3.png")}alt="logo"/>
+
+      </OverlayTrigger>
+  {/* <img className="delivery-img" src={require("./../../assets/icons/info-3.png")}alt="logo"/> */}
+</div>
+<div className="shopLine"></div>
+
+<div className="checkout-button">
+  CHECKOUT
+</div>
+<div className="footer">
+  <span className="header">We Accept:</span>
+  <div className="payment">
+  <img src={require("./../../assets/icons/card-1.png")}alt="logo"/>
+  <img src={require("./../../assets/icons/card-2.png")}alt="logo"/>
+  <img src={require("./../../assets/icons/card-3.png")}alt="logo"/>
+  <img src={require("./../../assets/icons/card-4.png")}alt="logo"/>
+  <img src={require("./../../assets/icons/card-5.png")}alt="logo"/>
+  <img src={require("./../../assets/icons/card-6.png")}alt="logo"/>
+
+  </div>
+  <span className="discount-explain">
+  Got a discount code? Add it in the next step.
+  </span>
+</div>
+
+
+</div>
+</div>
+
+      </div>
+      <div className="also">
+      <AlsoBoughtProduct product={product} allProducts={allProducts} allAttributeItemS={allAttributeItemS}/>
+      </div>
+      </div>
+    </Fragment>
+  )
 };
 
 export default ShoppingProcess;

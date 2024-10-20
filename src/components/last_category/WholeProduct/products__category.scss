@@ -1,6 +1,11 @@
 @import './../../../scss/variable.scss';
 @import './../../../scss/mixins.scss';
 
+
+.blur-products{
+  filter: blur(2px)
+}
+
 .whole__product {
   margin-top: 15px;
   position: relative;
