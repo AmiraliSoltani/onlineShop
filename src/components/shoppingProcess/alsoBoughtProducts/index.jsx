@@ -29,6 +29,8 @@ function SamplePrevArrow(props) {
 }
 
 const AlsoBoughtProduct = ({ product, allProducts, allAttributeItemS }) => {
+  console.log("product22244444444444444444444444444444444",product)
+
   console.log("product222",product , allProducts, allAttributeItemS)
 
   const [products, setProducts] = useState([]);
@@ -120,7 +122,7 @@ const AlsoBoughtProduct = ({ product, allProducts, allAttributeItemS }) => {
   return (
     <div className="last__offer">
       <div className="container-special">
-        <div className="main__offer">
+        <div className="main__offer W100">
           <div className="top__offer">
             <div className="top__offer__category Stormcloud-striped">
               <img

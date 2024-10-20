@@ -80,7 +80,7 @@
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
   background-color: white;
-  margin-bottom: 20px;
+  margin-top: 20px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -287,6 +287,8 @@
   }
 }
 .bg-grey .whole-part .right-part {
+  position: sticky;
+  top: 0px;
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
   height: 350px;
@@ -329,6 +331,7 @@
 }
 .bg-grey .whole-part .right-part .sub-total .sub-total-price {
   font-size: 20px;
+  font-weight: 500;
 }
 .bg-grey .whole-part .right-part .delivery {
   display: -webkit-box;

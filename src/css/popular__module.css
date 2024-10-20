@@ -42,6 +42,18 @@
             transform: rotate(45deg);
   }
 }
+.bg-e {
+  background-color: rgba(238, 238, 238, 0.9333333333) !important;
+}
+
+.Stormcloud-striped {
+  background: repeating-linear-gradient(45deg, #747D8C, #747D8C 20px, #666e7b 20px, #666e7b 40px);
+}
+
+.W100 {
+  width: 100% !important;
+}
+
 .orange-striped {
   background: repeating-linear-gradient(45deg, #FF7675, #FF7675 40px, #e66564 40px, #e66564 60px);
 }

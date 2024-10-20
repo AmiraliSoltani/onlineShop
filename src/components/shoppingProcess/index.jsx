@@ -24,7 +24,7 @@ const ShoppingProcess = () => {
   const [allProducts, setAllProducts] = useState([]);
   const [allCategories, setAllCategories] = useState([]);
   console.log("cardState.cartProducts[0]",cardState.cartProducts[0])
-  const [product, setProduct] = useState();
+  const [product, setProduct] = useState({});
 
 
 
@@ -271,7 +271,10 @@ Total
 <div className="shopLine"></div>
 <div className="sub-total">
   <div className="title">Sub-total</div>
-  <div className="sub-total-price">222</div>
+  <div className="sub-total-price">
+  <span>{numberWithCommas(totalPrice )}
+  .00 $</span>
+  </div>
 </div>
 
 <div className="delivery">
@@ -313,7 +316,9 @@ Total
 
       </div>
       <div className="also">
+        {product && allProducts.length>0 &&
       <AlsoBoughtProduct product={product} allProducts={allProducts} allAttributeItemS={allAttributeItemS}/>
+        }
       </div>
       </div>
     </Fragment>
