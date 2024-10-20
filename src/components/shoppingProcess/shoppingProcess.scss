@@ -20,14 +20,37 @@
 
  .whole-part{
 display: flex;
-gap: 10%;
+// gap: 10%;
 direction: ltr;
-padding-top: 20px; 
+padding-top: 20px;
+justify-content: space-evenly;
+
+@include mq(900) {
+   justify-content: space-evenly;
+   gap: 0px;
+}
+@include mq(700) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+}
 .left-part{
     // flex:1;
     width: 44%;
     display: flex;
     flex-direction: column;
+    @include mq(800) {
+        width: 51%;
+
+    }
+    @include mq(700) {
+        position: static;
+    width: 70%;
+    }
+    @include mq(500) {
+        position: static;
+    width: 80%;
+    }
 
     .header{
         background-color: white;
@@ -38,12 +61,22 @@ padding-top: 20px;
         align-items: center;
         justify-items: center;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+        @include mq(900) {
+            height: 60px;
+
+        }
+        @include mq(700) {
+        margin-top: 25px;
+        }
 
         span{
             font-size: 20px;
             font-weight: 500;
             padding:30px;
-            
+            @include mq(800) {
+                font-size: 18px;
+    
+            }
         }
 
     }
@@ -73,6 +106,10 @@ margin-top: 20px;
                 position: absolute;
                 top: 11px;
     right: 29px;
+    @include mq(900) {
+        right: 10px;
+
+    }
                 img{
                   margin-bottom: 3px;
                     width: 22px;
@@ -85,17 +122,23 @@ margin-top: 20px;
             .dropdown__basket__body__right {
               width: 23%;
               height: 100%;
+              @include mq(900) {
+                width: 30%;
+
+            }
+            @include mq(500) {
+            width: 37%;
+            }
 
               img {
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
                 cursor: pointer;
               }
             }
 
             .dropdown__basket__body__left {
-              width: 50%;
+              width: 70%;
               padding: 8px;
 
               span {
@@ -108,7 +151,18 @@ margin-top: 20px;
               }
               .name{
                 font-size: 18px;
-                // color: grey;
+                @include mq(900) {
+                    font-size: 17px;
+            
+                }
+                @include mq(800) {
+                    font-size: 16px;
+
+                }
+                @include mq(500) {
+                    font-size: 15px;
+
+                }
               }
               .color-size{
                 display: flex;
@@ -125,7 +179,7 @@ margin-top: 20px;
               .dropdown__basket__body__left__info {
                 display: flex;
                 position: relative;
-                margin-top: 5px;
+                margin-top: 10px;
                 padding-top: 2px;
   align-items: center;
   .number{
@@ -166,18 +220,18 @@ margin-top: 20px;
                         display: flex;
                         align-items: center;
                         position: relative;
-                        margin-top: 17px;
+                        margin-top: 15px;
 
                         span {
                             font-size: 19px;
                             font-weight: 500;
                             color: #ff7675;
                             @include mq(900) {
-                                font-size: 22px;
+                                font-size: 19px;
 
                             }
                             @include mq(800) {
-                                font-size: 21px;
+                                font-size: 19px;
 
                             }
                         }
@@ -189,11 +243,11 @@ margin-top: 20px;
                             margin-left: 0px;
                             margin-right: 16px;
                             @include mq(900) {
-                                font-size: 19px;
+                                font-size: 18px;
 
                             }
                             @include mq(800) {
-                                font-size: 18px;
+                                font-size: 17px;
 
                             }
                         }
@@ -204,11 +258,11 @@ margin-top: 20px;
                             font-weight: 500;
                             font-size: 19px;
                             @include mq(900) {
-                                font-size: 22px;
+                                font-size: 18px;
 
                             }
                             @include mq(800) {
-                                font-size: 21px;
+                                font-size: 17px;
 
                             }
                         }
@@ -253,17 +307,28 @@ margin-top: 20px;
                     }
             }
           }
+          .dropdown__basket__body:first-child {
+            margin-top: 0; /* Remove margin-top for the first element */
+        }
         }
     }
 }
 .right-part{
     position: sticky;
-    top: 0px;
+    top: 15px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
 height: 350px;
 width: 40%;
 background-color: white;
 padding: 24px;
+@include mq(700) {
+    position: static;
+width: 70%;
+}
+@include mq(500) {
+    position: static;
+width: 80%;
+}
 
 .header-shopping{
 display: flex;
@@ -290,10 +355,18 @@ font-weight: 500;
     .title{
         font-size: 20px;
         font-weight: 500;
+        @include mq(900) {
+            font-size: 18px;
+
+        }
     }
     .sub-total-price{
 font-size: 20px;
 font-weight: 500;
+@include mq(900) {
+    font-size: 18px;
+
+}
     }
 }
 .delivery{
@@ -302,6 +375,10 @@ font-weight: 500;
     .title{
         font-size: 20px;
         font-weight: 500;
+        @include mq(900) {
+            font-size: 18px;
+
+        }
     }
     .delivery-img{
 width: 20px;
@@ -320,7 +397,11 @@ margin-bottom: 15px;
 color: white;
 padding: 6px;
 cursor: pointer;
+@include mq(900) {
+    font-size: 19px;
+    padding: 5px;
 
+}
 &:hover{
     background-color: #009870;
 }
@@ -333,6 +414,9 @@ cursor: pointer;
     align-items: center;
     .header{
 font-weight: 500;
+@include mq(850) {
+   font-size: 15px;
+}
     }
     .payment{
 display: flex;
@@ -342,10 +426,18 @@ gap: 6px;
 img{
     width: 45px;
     height: 45px;
+    @include mq(850) {
+        width: 37px;
+        height: 37px;
+    }
 }
     }
     .discount-explain{
+margin-top: 10px;
+@include mq(900) {
+    font-size: 13px;
 
+}
     }
 }
 }
@@ -353,6 +445,6 @@ img{
 
 .also{
     padding-bottom: 30px;
-
+padding-top: 15px;
 }
 }
