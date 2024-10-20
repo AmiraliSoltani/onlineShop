@@ -30,7 +30,7 @@ justify-content: space-evenly;
    gap: 0px;
 }
 @include mq(700) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
 
 }
@@ -49,7 +49,11 @@ justify-content: space-evenly;
     }
     @include mq(500) {
         position: static;
-    width: 80%;
+    width: 100%;
+    }
+    @include mq(400) {
+        position: static;
+    width: 100%;
     }
 
     .header{
@@ -65,9 +69,9 @@ justify-content: space-evenly;
             height: 60px;
 
         }
-        @include mq(700) {
-        margin-top: 25px;
-        }
+        // @include mq(700) {
+        // margin-top: 25px;
+        // }
 
         span{
             font-size: 20px;
@@ -105,15 +109,15 @@ margin-top: 20px;
             .trash__button{
                 position: absolute;
                 top: 11px;
-    right: 29px;
+    right: 22px;
     @include mq(900) {
         right: 10px;
 
     }
                 img{
                   margin-bottom: 3px;
-                    width: 22px;
-                    height: 22px;
+                    width: 23px;
+                    height: 23px;
                     margin-left: 5px;
                     cursor: pointer;
                 }
@@ -195,6 +199,10 @@ margin-top: 20px;
     background-color: #747D8C;
     color: white;
     font-weight: 500;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     }
     .quantity{
         font-size: 19px;
@@ -324,10 +332,17 @@ padding: 24px;
 @include mq(700) {
     position: static;
 width: 70%;
+margin-top: 25px;
+
 }
+
 @include mq(500) {
     position: static;
-width: 80%;
+width: 100%;
+}
+@include mq(400) {
+    position: static;
+width: 100%;
 }
 
 .header-shopping{
