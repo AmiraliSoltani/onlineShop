@@ -11,11 +11,24 @@
       opacity: 0;
     }
   }
-      
+      .Stormcloud-striped{
+        @include mq(900) {
+            background:repeating-linear-gradient(45deg, #747D8C, #747D8C 20px, #666e7b 20px, #666e7b 40px);
+color:white
+         }
+      }
 .bg-grey{
     background-color:#eeee;
     margin-top: -20px;
     min-height: 400px;
+    @include mq(700) {
+        margin-top: -15px;
+
+    }
+    @include mq(500) {
+        margin-top: -11px;
+
+    }
 
 
  .whole-part{

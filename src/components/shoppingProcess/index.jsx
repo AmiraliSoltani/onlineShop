@@ -143,7 +143,7 @@ const ShoppingProcess = () => {
       <div className="container-special">
         <div className="whole-part">
 <div className="left-part">
-  <div className="header">
+  <div className="header Stormcloud-striped">
 <span>My Bag</span>
   </div>
 
