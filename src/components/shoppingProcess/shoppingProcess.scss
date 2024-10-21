@@ -62,7 +62,7 @@ justify-content: space-evenly;
     }
     @include mq(500) {
         position: static;
-    width: 100%;
+    width: 95%;
     }
     @include mq(400) {
         position: static;
@@ -351,7 +351,7 @@ margin-top: 25px;
 
 @include mq(500) {
     position: static;
-width: 100%;
+width: 95%;
 }
 @include mq(400) {
     position: static;

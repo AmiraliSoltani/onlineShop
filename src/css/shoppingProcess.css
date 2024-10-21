@@ -97,7 +97,7 @@
 @media only screen and (max-width: 500px) {
   .bg-grey .whole-part .left-part {
     position: static;
-    width: 100%;
+    width: 95%;
   }
 }
 @media only screen and (max-width: 400px) {
@@ -418,7 +418,7 @@
 @media only screen and (max-width: 500px) {
   .bg-grey .whole-part .right-part {
     position: static;
-    width: 100%;
+    width: 95%;
   }
 }
 @media only screen and (max-width: 400px) {
