@@ -2,8 +2,13 @@
 @import './../../../../scss/mixins.scss';
 
 
+.enire__image{
+  width: 200px;
+  height: 200px;
+}
 
 .mobile-menu {
+  font-family: system-ui !important;
   position: fixed;
   bottom: -140%; /* Initially hidden below the viewport */
   left: 0;
@@ -79,39 +84,46 @@ display:none;
             padding: 10px; /* Adjust padding as needed */
             box-sizing: border-box; /* Ensures padding doesn't affect width */
 
+            .only__image{
+              margin-bottom: 32px;
+
+            
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                transition: transform 1s ease-in-out;
+                border: 3px solid white;
+                &:hover{
+                  border-color: #747d8c;
+                }
+           
+          }
    
 
               .first__image{
                 margin-bottom: 32px;
+                  cursor: pointer;
+                  width: 100%;
+                  height: 40%;
+                  transition: transform 1s ease-in-out;
+                  border: 3px solid white;
+                  &:hover{
+                    border-color: #747d8c;
+                  }
 
-              }
-              img{
-                cursor: pointer;
-                width: 100%;
-                height: 40%;
-                transition: transform 1s ease-in-out;
                 
-                // border: 2px solid #ccc;
-                // padding: 1px;
-                // &:hover{
-                //   border-color: #747d8c; /* Change border color on hover */
-                //   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-                // }
-
-                &:hover {
-                  //filter: blur(1px); /* Applies a blur effect */
-                  transform: scale(1.02); /* Slightly scales the image */
-                }
+          
               }
             
 
             .trending-list{
               display: flex;
               flex-wrap: wrap;
+              justify-content: space-evenly;
             
             li{
               width: 35%;
-              margin-left: 10px;
+              // margin-left: 10px;
               margin-right: 23px;
             
             .image-container2 {
@@ -128,7 +140,7 @@ display:none;
               transition: transform 0.3s ease; /* Add smooth transition for hover */
             
               &:hover {
-                transform: scale(1.03); /* Slight zoom on hover */
+                // transform: scale(1.03); /* Slight zoom on hover */
                 .circle-image{
                   border-color: #747d8c; /* Change border color on hover */
                   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
@@ -144,8 +156,9 @@ display:none;
             
             
             .circle-image {
-              width: 82px; /* Set the size of the image */
-              height: 82px;
+              border: 3px solid white;
+              width: 91px; /* Set the size of the image */
+              height: 91px;
               border-radius: 50%; /* Makes the image circular */
               object-fit: cover;
               //border: 2px solid #ccc; /* Light border around the image */
@@ -173,7 +186,7 @@ display:none;
               transition: transform 0.3s ease; /* Add smooth transition for hover */
             
               &:hover {
-                transform: scale(1.03); /* Slight zoom on hover */
+                // transform: scale(1.03); /* Slight zoom on hover */
                 .circle-image{
                   border-color: #747d8c; /* Change border color on hover */
                   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
@@ -189,8 +202,9 @@ display:none;
             
             
             .circle-image {
-              width: 45px; /* Set the size of the image */
-              height: 45px;
+              border:3px solid white;
+              width: 50px; /* Set the size of the image */
+              height: 50px;
               border-radius: 50%; /* Makes the image circular */
               object-fit: cover;
               //border: 2px solid #ccc; /* Light border around the image */
@@ -228,6 +242,7 @@ display:none;
         .main__title{
           font-weight: bold;
           margin-bottom: 10px;
+          font-family: system-ui
         }
         
         .optionl__text, ul {
@@ -241,7 +256,9 @@ display:none;
         
         .sub__title {
             cursor: pointer;
-            color: #666;
+            // color: #666;
+            color: grey;
+
             padding: 5px;
             font-weight: 500;
         }
@@ -315,9 +332,10 @@ span{
         a{
           text-decoration: none;
           color:white;
-          font-weight: bold;
           cursor: default;
-
+          font-size: 16px;
+    font-family: system-ui;
+font-weight: 500;
         }
 
         //cursor: pointer;
@@ -386,7 +404,7 @@ span{
           background-color: #ecf0f1;
 max-height: 363px;
           display: flex;
-          top: 43px;
+          top: 44px;
           z-index: 100;
           direction: ltr;
           right: 0px;

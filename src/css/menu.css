@@ -1,4 +1,10 @@
+.enire__image {
+  width: 200px;
+  height: 200px;
+}
+
 .mobile-menu {
+  font-family: system-ui !important;
   position: fixed;
   bottom: -140%; /* Initially hidden below the viewport */
   left: 0;
@@ -85,10 +91,22 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+.main__menu .sub-category-column .only__image {
+  margin-bottom: 32px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  border: 3px solid white;
+}
+.main__menu .sub-category-column .only__image:hover {
+  border-color: #747d8c;
+}
 .main__menu .sub-category-column .first__image {
   margin-bottom: 32px;
-}
-.main__menu .sub-category-column img {
   cursor: pointer;
   width: 100%;
   height: 40%;
@@ -96,10 +114,10 @@
   transition: -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out;
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  border: 3px solid white;
 }
-.main__menu .sub-category-column img:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02); /* Slightly scales the image */
+.main__menu .sub-category-column .first__image:hover {
+  border-color: #747d8c;
 }
 .main__menu .sub-category-column .trending-list {
   display: -webkit-box;
@@ -107,10 +125,12 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 .main__menu .sub-category-column .trending-list li {
   width: 35%;
-  margin-left: 10px;
   margin-right: 23px;
 }
 .main__menu .sub-category-column .trending-list li .image-container2 {
@@ -134,10 +154,6 @@
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Add smooth transition for hover */
 }
-.main__menu .sub-category-column .trending-list li .image-container2:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03); /* Slight zoom on hover */
-}
 .main__menu .sub-category-column .trending-list li .image-container2:hover .circle-image {
   border-color: #747d8c; /* Change border color on hover */
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -148,8 +164,9 @@
   margin-top: 5px;
 }
 .main__menu .sub-category-column .trending-list li .image-container2 .circle-image {
-  width: 82px; /* Set the size of the image */
-  height: 82px;
+  border: 3px solid white;
+  width: 91px; /* Set the size of the image */
+  height: 91px;
   border-radius: 50%; /* Makes the image circular */
   -o-object-fit: cover;
      object-fit: cover;
@@ -175,10 +192,6 @@
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease; /* Add smooth transition for hover */
 }
-.main__menu .sub-category-column .image-container:hover {
-  -webkit-transform: scale(1.03);
-          transform: scale(1.03); /* Slight zoom on hover */
-}
 .main__menu .sub-category-column .image-container:hover .circle-image {
   border-color: #747d8c; /* Change border color on hover */
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -189,8 +202,9 @@
   margin-left: 20px;
 }
 .main__menu .sub-category-column .image-container .circle-image {
-  width: 45px; /* Set the size of the image */
-  height: 45px;
+  border: 3px solid white;
+  width: 50px; /* Set the size of the image */
+  height: 50px;
   border-radius: 50%; /* Makes the image circular */
   -o-object-fit: cover;
      object-fit: cover;
@@ -224,6 +238,7 @@
 .main__menu .main__title {
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: system-ui;
 }
 .main__menu .optionl__text, .main__menu ul {
   margin: 0;
@@ -234,7 +249,7 @@
 }
 .main__menu .sub__title {
   cursor: pointer;
-  color: #666;
+  color: grey;
   padding: 5px;
   font-weight: 500;
 }
@@ -286,8 +301,10 @@
 .main__menu .menu1 > ul > li a {
   text-decoration: none;
   color: white;
-  font-weight: bold;
   cursor: default;
+  font-size: 16px;
+  font-family: system-ui;
+  font-weight: 500;
 }
 .main__menu .menu1 > ul > li:hover {
   background-color: #ecf0f1;
@@ -316,7 +333,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  top: 43px;
+  top: 44px;
   z-index: 100;
   direction: ltr;
   right: 0px;

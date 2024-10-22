@@ -12,8 +12,7 @@ import AlsoBoughtProduct from "./alsoBoughtProducts";
 function renderTooltip(props) {
   return (
     <Tooltip id="button-tooltip" {...props}>
-    It will calculate in the next step
-    </Tooltip>
+Will be calculated in the next step    </Tooltip>
   );
 }
 
@@ -280,7 +279,7 @@ Total
 <div className="delivery">
   <div className="title">Delivery</div>
   <OverlayTrigger
-        placement="right"
+        placement="top"
         delay={{ show: 250, hide: 400 }}
         overlay={renderTooltip}
       >

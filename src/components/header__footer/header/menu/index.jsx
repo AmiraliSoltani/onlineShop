@@ -42,6 +42,8 @@ function Menu() {
   };
 
   const menuContent=(cat)=>{
+
+
    if(cat.id==4){
     return(
 
@@ -62,43 +64,47 @@ function Menu() {
       {/* Example of Additional Content (images, links, etc.) */}
       <div className="sub-category-column">
       <span className="main__title">Shop by Occasion</span>
-<ul class="occasion-list">
+      <ul class="occasion-list">
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-1-ocassion-wear.avif")}></img>
+<span>Occasionwear
+</span>
 </div>
 </li>
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
-
-</div>
-</li>
-
-<li>
-<div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu1-party-wear.avif")}></img>
+<span>Partywear
+</span>
 
 </div>
 </li>
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-1-basics.avif")}></img>
+<span>Basics
+</span>
 
 </div>
 </li>
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-1-modest-fashion.avif")}></img>
+<span>Modest fashion
+</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src={require("./../../../../assets/banners/menu-1-halloween.avif")}></img>
+<span>Halloween</span>
 
 </div>
 </li>
@@ -112,31 +118,31 @@ function Menu() {
 
 <li>
 <div class="image-container2">
-<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu1-coats.avif")}></img>
+<span>Coats</span>
 </div>
 </li>
 
 <li>
 <div class="image-container2">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
-
-</div>
-</li>
-
-<li>
-<div class="image-container2">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-1-jeans.avif")}></img>
+<span>Jeans</span>
 
 </div>
 </li>
 
 <li>
 <div class="image-container2">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-1-skirt.avif")}></img>
+<span>Skirts</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src={require("./../../../../assets/banners/sports.avif")}></img>
+<span>Sports</span>
 
 </div>
 </li>
@@ -147,11 +153,11 @@ function Menu() {
       </div>
       <div className="sub-category-column">
       <img className="first__image"
-src={require("./../../../../assets/banners/h85.jpg")}
+src={require("./../../../../assets/banners/menu1-big-banner.avif")}
 alt=""
 />
         <img
-src={require("./../../../../assets/banners/h85.jpg")}
+src={require("./../../../../assets/banners/menu-1-big-banner-2.avif")}
 alt=""
 />
 
@@ -162,7 +168,7 @@ alt=""
     )
    }
 
-   else if(cat.id==30){
+   else if(cat.id==5){
     return(
 
     <ul className="subcategories-grid">
@@ -181,44 +187,48 @@ alt=""
 
       {/* Example of Additional Content (images, links, etc.) */}
       <div className="sub-category-column">
-      <span className="main__title">Shop by Occasion</span>
-<ul class="occasion-list">
+      <span className="main__title">Trending now</span>
+      <ul class="occasion-list">
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-flural.avif")}></img>
+<span>Floral dresses
+</span>
 </div>
 </li>
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
-
-</div>
-</li>
-
-<li>
-<div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-formal.avif")}></img>
+<span>Formal Dresses
+</span>
 
 </div>
 </li>
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-wrap-dress.avif")}></img>
+<span>Wrap Dresses
+</span>
 
 </div>
 </li>
 
 <li>
 <div class="image-container">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-blazer-dress.avif")}></img>
+<span>Blazer Dresses
+</span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container">
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-jumper.avif")}></img>
+<span>Jumper Dresses</span>
 
 </div>
 </li>
@@ -227,36 +237,36 @@ alt=""
 
       </div>
       <div className="sub-category-column">
-      <span className="main__title">Shop by Trending</span>
+      <span className="main__title">Shop by Color</span>
       <ul class="trending-list">
 
 <li>
 <div class="image-container2">
-<img class="circle-image" src="https://images.asos-media.com/navigation/ww_uk_summer_white_dress_2805_sb_3m?$n_240w$" alt="Image description" />
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/black-tamara-dress-1_750x.jpg")}></img>
+<span>Black </span>
 </div>
 </li>
 
 <li>
 <div class="image-container2">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
-
-</div>
-</li>
-
-<li>
-<div class="image-container2">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-orange-dress.avif")}></img>
+<span>Orange </span>
 
 </div>
 </li>
 
 <li>
 <div class="image-container2">
-<img class="circle-image" src="path/to/image.jpg" alt="Image description"></img>
-<span>Label</span>
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-blue-dress.avif")}></img>
+<span>Blue </span>
+
+</div>
+</li>
+
+<li>
+<div class="image-container2">
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-pink.avif")}></img>
+<span>Pink </span>
 
 </div>
 </li>
@@ -266,14 +276,11 @@ alt=""
 </ul>
       </div>
       <div className="sub-category-column">
-      <img className="first__image"
-src={require("./../../../../assets/banners/h85.jpg")}
+      <img className="only__image"
+src={require("./../../../../assets/banners/dress-big-banner.avif")}
 alt=""
 />
-        <img
-src={require("./../../../../assets/banners/h85.jpg")}
-alt=""
-/>
+ 
 
 
 
@@ -281,12 +288,14 @@ alt=""
     </ul>
     )
    }
+
   }
 
   return (
     <Fragment>
       <div className="lineMeu"></div>
       <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
+        <div className="hi">hiiii</div>
       </div>
 
 
@@ -299,13 +308,15 @@ alt=""
  
             {/* Show only subcategories of category with id 1 */}
             {allCategories
-              .filter((c2) => c2.parentId === 1)
-              .map((i2) => (
-                <li key={i2.id} style={{ fontWeight: "500" }}>
-    <Link to={`/lastCategory/${i2.id}`}>{i2.title}</Link>
-    {menuContent(i2)}
+  .filter((c2) => c2.parentId === 1)
+  .sort((a, b) => a.id - b.id) // Sort numerically by id
+  .map((i2) => (
+    <li key={i2.id} style={{ fontWeight: "500" }}>
+      <Link to={`/lastCategory/${i2.id}`}>{i2.title}</Link>
+      {menuContent(i2)}
     </li>
-              ))}
+  ))}
+
 
                          {/* Add Brands and Sale options */}
             <li><Link to="/brands">Brands</Link></li>
