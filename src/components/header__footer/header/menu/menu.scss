@@ -79,10 +79,10 @@ direction: ltr;
       height: 80px;
   }
   @include mq(600) {
-    height: 73px;
+    height: 100px;
   }
 @include mq(500) {
-  height: 73px;
+  height: 100px;
 }
 
     }

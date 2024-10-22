@@ -103,12 +103,12 @@
 }
 @media only screen and (max-width: 600px) {
   .mobile-menu .category-container .one-mobile-category img {
-    height: 73px;
+    height: 100px;
   }
 }
 @media only screen and (max-width: 500px) {
   .mobile-menu .category-container .one-mobile-category img {
-    height: 73px;
+    height: 100px;
   }
 }
 
