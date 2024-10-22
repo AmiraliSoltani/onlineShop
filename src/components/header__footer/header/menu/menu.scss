@@ -22,35 +22,170 @@
 direction: ltr;
   padding: 0px 20px;
   z-index: 1000;
-  width: 40%;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+.details-one-category{
+  margin-top: 20px;
+  width: 55%;
+  // overflow-y: auto;
+.header-category{
+  width: 100%;
+  background-color: #EFEFEF;
+  height: 4.5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span{
+    font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  align-items: center;
+
+  }
+}
+// .mobile-menu-categories{
+//   background-color: #EFEFEF;
+// padding: 10px 25px;
+//   display: grid;
+//   grid-template-columns: 50% 50%; /* Two columns with equal width */
+//   gap: 10px 10px; /* 30px between rows, 20px between columns */
+//   // justify-items: center; /* Centers items horizontally in each column */
+//   align-items: center; /* Centers items vertically in each row */
+//   margin-top: 10px;
+//   margin-bottom: 15px;
+//   .sub__title{
+//     text-decoration: none;
+//     font-family: inherit;
+//     display: flex;
+//     align-items: center;
+//     justify-content: start;
+//     padding-bottom: 7px;
+//     border-bottom: 2px solid #ccc; /* Add a line between rows */
+
+//     span{
+//       font-size: 14px;
+//       color: black;
+      
+//     }
+//     .category-pic{
+//       width: 50px;
+//       height: 50px;
+//       border-radius: 28px;
+//       border: 2px solid white;
+//       padding: 2px;
+//       margin-right: 4px;
+//     }
+// }
+// .sub__title:nth-last-child(-n+2) {
+//   border-bottom: none;
+// }
+  
+//   }
+
+.mobile-menu-categories {
+  background-color: #EFEFEF;
+  padding: 10px 25px;
+  display: grid;
+  grid-template-columns: 50% 50%; /* Two columns with equal width */
+  gap: 10px 10px;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+  .sub__title {
+    text-decoration: none;
+    font-family: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-bottom: 7px;
+    border-bottom: 2px solid #ccc; /* Add a line between rows */
+
+    span {
+      font-size: 14px;
+      color: black;
+    }
+
+    .category-pic {
+      width: 50px;
+      height: 50px;
+      border-radius: 28px;
+      border: 2px solid white;
+      padding: 2px;
+      margin-right: 14px;
+    }
+  }
+
+  /* Remove border from last row (last two items since it's a grid with 2 columns) */
+  .sub__title:nth-last-child(1), 
+  .sub__title:nth-last-child(2) {
+    border-bottom: none;
+  }
+}
+
+
+  .mobile-menu-ocasions{
+    background-color: #EFEFEF;
+  padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 50% 50%; /* Two columns with equal width */
+    gap: 10px 10px; /* 30px between rows, 20px between columns */
+    margin-top: 10px;
+    margin-bottom: 15px;
+    .image-container{
+      text-decoration: none;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      span{
+        font-size: 18px;
+        color: black;
+        
+      }
+      .circle-image{
+        width: 100px;
+        height: 100px;
+        border-radius: 49px;
+        border: 2px solid white;
+        padding: 2px;
+        margin-right: 8px;
+      }
+  }
+    
+    }
+
+}
+
   // border-radius: 10px 10px 0 0;
-  @include mq(800) {
-    width: 45%;
+//   @include mq(800) {
+//     width: 45%;
 
-}
-@include mq(700) {
-  width: 50%;
+// }
+// @include mq(700) {
+//   width: 50%;
 
-}
-@include mq(600) {
-  width: 60%;
+// }
+// @include mq(600) {
+//   width: 60%;
 
-}
-@include mq(500) {
-  width: 60%;
+// }
+// @include mq(500) {
+//   width: 60%;
 
-}
-@include mq(450) {
-  width: 65%;
+// }
+// @include mq(450) {
+//   width: 65%;
 
-}
+// }
 
 .category-container{
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 40%;
   .one-mobile-category{
     position: relative;
     display: flex;
@@ -58,6 +193,18 @@ direction: ltr;
     align-items: center;
     width: 100%;
     margin-bottom: 10px;
+    .category-line{
+      position: absolute;
+      width: 5px;
+      height:88px ;
+      background-color: #747D8C;
+      top: 0px;
+      right: 0px;
+      display: none;
+    }
+    .active-line{
+      display: flex;
+    }
     span{
       position: absolute;
       font-size: 17px;
@@ -65,7 +212,7 @@ direction: ltr;
       left: 20%;
       font-weight: 500;
       @include mq(600) {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
     img{
@@ -78,10 +225,10 @@ direction: ltr;
       height: 80px;
   }
   @include mq(600) {
-    height: 100px;
+    height: 13vh;
   }
 @include mq(500) {
-  height: 100px;
+  height: 13vh;
 }
 
     }

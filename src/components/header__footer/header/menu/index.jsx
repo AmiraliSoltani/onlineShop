@@ -13,7 +13,7 @@ function Menu() {
   const [allCategories, setAllCategories] = useState([]);
   const {blurState,blurDispatch}=useContext(blurContext)
   const [isVisible, setIsVisible] = useState(false);
-
+const[showCategory,setShowCtegory]=useState(4)
 
   
   useEffect(() => {
@@ -296,34 +296,70 @@ alt=""
       <div className="lineMeu"></div>
       <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
         <div className="category-container">
-          <div className="one-mobile-category">
-          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-clothing.avif")}></img>
-<span>Clothing</span>
-          </div>
-          <div className="one-mobile-category">
-          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-dress.avif")}></img>
-<span>Dressing</span>
-          </div>
-          <div className="one-mobile-category">
-          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-bags.avif")}></img>
-<span>Bags</span>
-          </div>
-          <div className="one-mobile-category">
-          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-shoes.avif")}></img>
-<span>shoes</span>
-          </div>
-          <div className="one-mobile-category">
-          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-accesspries.avif")}></img>
-<span>Accessories</span>
-          </div>
-          <div className="one-mobile-category">
+      {allCategories
+            .filter((c3) => c3.parentId === 1)
+            .map((i3,index) => (
+              <div className="one-mobile-category" onClick={()=>setShowCtegory(i3.id)}>
+              <img class="rectangle-image" src={i3.categoryPicture}></img>
+    <span>{i3.title}</span>
+    <div className={showCategory==i3.id? "category-line active-line" : "category-line" } > </div>
+              </div>
+              
+            ))}
+
+          <div className="one-mobile-category" onClick={()=>setShowCtegory("Brands")}>
           <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-brands.avif")}></img>
 <span>Brands</span>
+<div className={showCategory=="Brands"? "category-line active-line" : "category-line" } > </div>
           </div>
-          <div className="one-mobile-category">
-          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-sale.avif")}></img>
-<span>Sale</span>
+
+        </div>
+        <div className="details-one-category">
+          <div className="header-category">
+            <span>Shop By Product</span>
+            </div>
+          <div className="mobile-menu-categories">
+
+          {allCategories
+            .filter((c3) => c3.parentId == showCategory)
+            .map((i3) => (
+              <Link style={{textDecoration:"none"}} to={`/lastCategory/${i3.id}`} key={i3.id}>
+                <div className="sub__title">
+                  <img src={i3.categoryPicture} alt="" className="category-pic" />
+                  <span className="category-title">{i3.title}</span>
+                  </div>
+              </Link>
+              
+            ))}
+
           </div>
+          <div className="header-category">
+            <span>Shop By Trending</span>
+            </div>
+            <div className="mobile-menu-ocasions">
+
+
+<div class="image-container">
+<img class="circle-image" src={require("./../../../../assets/banners/menu1-coats.avif")}></img>
+<span>Coats
+</span>
+</div>
+
+
+
+<div class="image-container">
+<img class="circle-image" src={require("./../../../../assets/banners/sports.avif")}></img>
+<span>Sports
+</span>
+
+</div> 
+
+
+
+
+
+
+            </div>
         </div>
       </div>
 
