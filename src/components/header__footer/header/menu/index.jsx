@@ -131,6 +131,7 @@ const[showCategory,setShowCtegory]=useState(4)
 </div>
 </li>
 
+
 <li>
 <div class="image-container2">
 <img class="circle-image" src={require("./../../../../assets/banners/menu-1-skirt.avif")}></img>
@@ -314,7 +315,7 @@ alt=""
           </div>
 
         </div>
-        <div className="details-one-category">
+        {(showCategory==4 || showCategory==5) && <div className="details-one-category">
           <div className="header-category">
             <span>Shop By Product</span>
             </div>
@@ -322,11 +323,12 @@ alt=""
 
           {allCategories
             .filter((c3) => c3.parentId == showCategory)
-            .map((i3) => (
+            .map((i3,index,array) => (
               <Link style={{textDecoration:"none"}} to={`/lastCategory/${i3.id}`} key={i3.id}>
                 <div className="sub__title">
                   <img src={i3.categoryPicture} alt="" className="category-pic" />
                   <span className="category-title">{i3.title}</span>
+                  <div className={ index==array.length - 1 ? "":"border-bottom"}></div>
                   </div>
               </Link>
               
@@ -338,7 +340,8 @@ alt=""
             </div>
             <div className="mobile-menu-ocasions">
 
-
+            {showCategory==4 && 
+              <Fragment>
 <div class="image-container">
 <img class="circle-image" src={require("./../../../../assets/banners/menu1-coats.avif")}></img>
 <span>Coats
@@ -353,14 +356,32 @@ alt=""
 </span>
 
 </div> 
+</Fragment>
+            }
+
+{showCategory==5 && 
+              <Fragment>
+<div class="image-container">
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-pink.avif")}></img>
+<span>Pink
+</span>
+</div>
 
 
 
+<div class="image-container">
+<img class="circle-image" src={require("./../../../../assets/banners/menu-2-orange-dress.avif")}></img>
+<span>Orange
+</span>
+
+</div> 
+</Fragment>
+            }
 
 
 
             </div>
-        </div>
+        </div>}
       </div>
 
 
