@@ -295,7 +295,36 @@ alt=""
     <Fragment>
       <div className="lineMeu"></div>
       <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
-        <div className="hi">hiiii</div>
+        <div className="category-container">
+          <div className="one-mobile-category">
+          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-clothing.avif")}></img>
+<span>Clothing</span>
+          </div>
+          <div className="one-mobile-category">
+          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-dress.avif")}></img>
+<span>Dressing</span>
+          </div>
+          <div className="one-mobile-category">
+          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-bags.avif")}></img>
+<span>Bags</span>
+          </div>
+          <div className="one-mobile-category">
+          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-shoes.avif")}></img>
+<span>shoes</span>
+          </div>
+          <div className="one-mobile-category">
+          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-accesspries.avif")}></img>
+<span>Accessories</span>
+          </div>
+          <div className="one-mobile-category">
+          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-brands.avif")}></img>
+<span>Brands</span>
+          </div>
+          <div className="one-mobile-category">
+          <img class="rectangle-image" src={require("./../../../../assets/banners/mobile-menu-sale.avif")}></img>
+<span>Sale</span>
+          </div>
+        </div>
       </div>
 
 
