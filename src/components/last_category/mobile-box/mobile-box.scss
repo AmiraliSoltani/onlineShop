@@ -491,7 +491,7 @@ flex-direction: column;
   }
 
 
-  .slider-container-category {
+  .slider-container-category2 {
     flex: 1; /* Allow the slider to take the remaining space */
     overflow: hidden; /* Hide content that overflows the container */
     display: none;
@@ -513,13 +513,13 @@ flex-direction: column;
           // border-bottom: 2px solid #ccc; /* Add a line between rows */
       
           span{
-            font-size: 14px;
+            font-size: 13px;
             color: black;
             
           }
           .category-pic{
-            width: 100px;
-            height: 100px;
+            width: 130px;
+            height: 130px;
             border-radius: 28px;
             border: 2px solid white;
             padding: 2px;

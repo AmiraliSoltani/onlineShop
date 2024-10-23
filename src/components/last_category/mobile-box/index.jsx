@@ -305,6 +305,12 @@ console.log("RangePriceClassName",RangePriceClassName)
   };
 
 
+  var settings3 = {
+    ltr: true,
+    infinite: false,
+    speed: 500,
+    slidesToScroll: 1,
+  };
 
   const settings2 = {
     ltr: true,
@@ -710,8 +716,8 @@ setIsMobilePrice(false)
            </div>
       
 
-           <div className="slider-container-category">
-        <Slider ref={sliderRef} {...settings2}>
+           <div className="slider-container-category2">
+        <Slider  {...settings2}>
       
         {allCategories
             .filter((c3) => c3.parentId == categoryId)
