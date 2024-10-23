@@ -234,7 +234,7 @@
 }
 @media only screen and (max-width: 550px) {
   .mobile-menu .category-container {
-    width: 33%;
+    width: 100%;
   }
 }
 .mobile-menu .category-container .one-mobile-category {
