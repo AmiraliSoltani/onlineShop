@@ -41,11 +41,9 @@ direction: ltr;
     width: 61%;
   }
   @include mq(650) {
-    width: 63%;
+    display: none;
   }
-  @include mq(550) {
-    width: 63%;
-  }
+ 
   // overflow-y: auto;
 .header-category{
   width: 100%;
@@ -228,7 +226,7 @@ direction: ltr;
   @include mq(650) {
     width: 33%;
   }
-  @include mq(550) {
+  @include mq(650) {
     width: 100%;
   }
 
@@ -251,7 +249,7 @@ direction: ltr;
         height: 88px;
     }
     @include mq(650) {
-      height: 71px;
+      height: 114px;
   }
     }
     .active-line{
@@ -277,10 +275,10 @@ direction: ltr;
       height: 88px;
   }
   @include mq(650) {
-    height: 71px;
+    height: 114px;
   }
 @include mq(500) {
-  height: 71px;
+  height: 114px;
 }
 
     }
