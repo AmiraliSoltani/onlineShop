@@ -1806,6 +1806,8 @@ return (
 
 </MobileBox>
               <SecondBox
+              allCategories={allCategories}
+              categoryId={categoryId}
                   handelClickOrder={handelClickOrder}
                   Sort={sort}
                   handleSort={handleSort}

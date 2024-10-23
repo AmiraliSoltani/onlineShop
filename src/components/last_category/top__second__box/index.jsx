@@ -1,5 +1,14 @@
 import React, { Component, Fragment } from "react";
 import "./../../../css/top__second__box.css";
+import Slider from "react-slick";
+
+var settings3 = {
+  ltr: true,
+  infinite: false,
+  speed: 500,
+  slidesToScroll: 1,
+  variableWidth: true,
+};
 
 class SecondBox extends Component {
   state = {};
@@ -25,6 +34,9 @@ class SecondBox extends Component {
     let { handleSort, handelClickOrder , finalBeforePagination } = this.props;
     
     return (
+      <Fragment>
+
+
       <div className="second__box ">
 
         <div className="sort__icon">
@@ -47,6 +59,7 @@ class SecondBox extends Component {
         {/* <span className="product">{finalBeforePagination.length} Products</span> */}
 
       </div>
+      </Fragment>
     );
   }
 }

@@ -491,9 +491,8 @@ flex-direction: column;
   }
 
 
-  .slider-container-category2 {
+  .slider-container-category5 {
     flex: 1; /* Allow the slider to take the remaining space */
-    overflow: hidden; /* Hide content that overflows the container */
     display: none;
     @include mq(900) {
       display: flex;
@@ -501,6 +500,8 @@ flex-direction: column;
     }
     a{
       text-decoration: none;
+      display: block; /* Ensure links take up the full width of the slide */
+
     
     .sub__title{
           text-decoration: none;
@@ -529,13 +530,13 @@ flex-direction: column;
 }
   }
 
-  .slick-slide {
-    display: inline-flex;
-    align-items: center;
-    width: auto; /* Each slide takes its own width based on content */
-    margin-right: 5px; /* Space between the slides */
+  // .slick-slide {
+  //   display: inline-flex;
+  //   align-items: center;
+  //   width: auto; /* Each slide takes its own width based on content */
+  //   margin-right: 5px; /* Space between the slides */
 
-  }
+  // }
 
 .mobile_box {
   width: 100%;

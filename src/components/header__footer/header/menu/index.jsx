@@ -177,7 +177,7 @@ alt=""
           <span className="main__title">Shop by product</span>
         <ul>
           {allCategories
-            .filter((c3) => c3.parentId === cat.id)
+            .filter((c3) => c3.parentId === cat.id).sort((a, b) => a.id - b.id) 
             .map((i3) => (
               <Link to={`/lastCategory/${i3.id}`} key={i3.id}>
                 <li className="sub__title">{i3.title}</li>
@@ -298,7 +298,7 @@ alt=""
       <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
         <div className={(showCategory==4 || showCategory==5)?"category-container shift-left-category":"category-container"} >
       {allCategories
-            .filter((c3) => c3.parentId === 1)
+            .filter((c3) => c3.parentId === 1).sort((a, b) => a.id - b.id) 
             .map((i3,index) => (
               <div className="one-mobile-category" onClick={()=>setShowCtegory(i3.id)}>
               <img class="rectangle-image" src={i3.categoryPicture}></img>
@@ -329,7 +329,7 @@ alt=""
           <div className="mobile-menu-categories">
 
           {allCategories
-            .filter((c3) => c3.parentId == showCategory)
+            .filter((c3) => c3.parentId == showCategory).sort((a, b) => a.id - b.id) 
             .map((i3,index,array) => (
               <Link style={{textDecoration:"none"}} to={`/lastCategory/${i3.id}`} key={i3.id} onClick={ ()=>menuSearchDispatch({ type: "toggleMobileMenu" })}>
                 <div className="sub__title">
