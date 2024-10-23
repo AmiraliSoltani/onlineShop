@@ -11,6 +11,9 @@ const BottomMenu = () => {
   const {loginState, loginDispatch}= useContext(loginContext)
   const [labelUser, setLabelUser] = useState("My Account");
   const [showAccountAccordion, setShowAccountAccordion] = useState(false); // For handling the accordion
+  
+    const [activeIndex, setActiveIndex] = useState(-1); // Track the active menu item
+    const navigate = useNavigate();
   const {cardState, cardDispatch}= useContext(cardContext)
 
   useEffect(() => {
@@ -21,8 +24,11 @@ const BottomMenu = () => {
     }
   }, [loginState.authenticated]);
 
-  const [activeIndex, setActiveIndex] = useState(-1); // Track the active menu item
-  const navigate = useNavigate();
+  useEffect(() => {
+    if (!menuSearchState.MobileMenu) 
+      setActiveIndex(-1)
+  
+  }, [menuSearchState.MobileMenu]);
 
 
   const signoutUser=()=>{

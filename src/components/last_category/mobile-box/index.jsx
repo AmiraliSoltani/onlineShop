@@ -3,6 +3,7 @@ import "../../../css/mobile-box.css";
 import Slider from 'react-slick';
 import { Button } from 'react-bootstrap';
 import blurContext from '../../contexts/blur';
+import { Link } from 'react-router-dom';
 
 const MobileBox = (props) => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -460,6 +461,7 @@ setIsMobilePrice(false)
     handelClickDiscount,
     handelColorClick,
     PresentURL,
+    allCategories,
     categoryId,
     originalSearch,
     filters,
@@ -708,6 +710,23 @@ setIsMobilePrice(false)
            </div>
       
 
+           <div className="slider-container-category">
+        <Slider ref={sliderRef} {...settings2}>
+      
+        {allCategories
+            .filter((c3) => c3.parentId == categoryId)
+            .map((i3,index,array) => (
+              <Link style={{textDecoration:"none"}} to={`/lastCategory/${i3.id}`} key={i3.id}>
+                <div className="sub__title">
+                  <img src={i3.categoryPicture} alt="" className="category-pic" />
+                  <span className="category-title">{i3.title}</span>
+                  <div className={ index==array.length - 1 ? "":"border-bottom"}></div>
+                  </div>
+              </Link>
+              
+            ))}
+        </Slider>
+      </div>
 
 
     <div className={`mobile_box ${isScrolling && !isAtFirstSlide ? 'is-scrolling' : ''}`}> 
@@ -743,7 +762,9 @@ setIsMobilePrice(false)
           </div>
         </Slider>
       </div>
+      
     </div>
+  
     </Fragment>
   );
 };

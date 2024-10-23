@@ -331,7 +331,7 @@ alt=""
           {allCategories
             .filter((c3) => c3.parentId == showCategory)
             .map((i3,index,array) => (
-              <Link style={{textDecoration:"none"}} to={`/lastCategory/${i3.id}`} key={i3.id}>
+              <Link style={{textDecoration:"none"}} to={`/lastCategory/${i3.id}`} key={i3.id} onClick={ ()=>menuSearchDispatch({ type: "toggleMobileMenu" })}>
                 <div className="sub__title">
                   <img src={i3.categoryPicture} alt="" className="category-pic" />
                   <span className="category-title">{i3.title}</span>
