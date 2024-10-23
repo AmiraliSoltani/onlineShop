@@ -261,8 +261,8 @@ direction: ltr;
       top: 31%;
       left: 20%;
       font-weight: 500;
-      @include mq(600) {
-        font-size: 15px;
+      @include mq(650) {
+        font-size: 23px;
       }
     }
     img{

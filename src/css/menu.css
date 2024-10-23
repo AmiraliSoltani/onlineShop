@@ -277,9 +277,9 @@
   left: 20%;
   font-weight: 500;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   .mobile-menu .category-container .one-mobile-category span {
-    font-size: 15px;
+    font-size: 23px;
   }
 }
 .mobile-menu .category-container .one-mobile-category img {
