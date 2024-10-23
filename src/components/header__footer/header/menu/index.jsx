@@ -296,7 +296,7 @@ alt=""
     <Fragment>
       <div className="lineMeu"></div>
       <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
-        <div className={showCategory?"category-container shift-left-category":"category-container"} >
+        <div className={(showCategory==4 || showCategory==5)?"category-container shift-left-category":"category-container"} >
       {allCategories
             .filter((c3) => c3.parentId === 1)
             .map((i3,index) => (
@@ -316,7 +316,7 @@ alt=""
 
         </div>
         <div 
-          className={showCategory?"details-one-category shift-left-details":"details-one-category"}>
+          className={(showCategory==4 || showCategory==5)?"details-one-category shift-left-details":"details-one-category"}>
           <div className="header-category-title">
           <img  src={require("./../../../../assets/icons/arrow.png")} onClick={()=>setShowCtegory(false)}></img>
 
