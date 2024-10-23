@@ -494,6 +494,7 @@ flex-direction: column;
   .slider-container-category5 {
     flex: 1; /* Allow the slider to take the remaining space */
     display: none;
+    overflow: hidden;
     @include mq(900) {
       display: flex;
   

@@ -465,6 +465,7 @@
       -ms-flex: 1;
           flex: 1; /* Allow the slider to take the remaining space */
   display: none;
+  overflow: hidden;
 }
 @media only screen and (max-width: 900px) {
   .slider-container-category5 {
