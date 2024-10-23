@@ -4,6 +4,13 @@ import Slider from 'react-slick';
 import { Button } from 'react-bootstrap';
 import blurContext from '../../contexts/blur';
 import { Link } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules'; // Import modules
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const MobileBox = (props) => {
   const [isScrolling, setIsScrolling] = useState(false);
@@ -306,7 +313,7 @@ console.log("RangePriceClassName",RangePriceClassName)
 
 
   var settings3 = {
-    ltr: true,
+    rtl:true,
     infinite: false,
     speed: 500,
     slidesToScroll: 1,
@@ -715,9 +722,35 @@ setIsMobilePrice(false)
 
 
            </div>
-      
-
            <div className="slider-container-category5">
+      <Swiper
+        spaceBetween={4}        // Space between slides
+        slidesPerView={4}      // Adjust number of visible slides based on container width
+      
+        breakpoints={{
+          570: {
+            spaceBetween:2,       // Space between slides
+            slidesPerView:5      // Adjust number of visible slides based on container width
+          },
+         
+        }}
+      >
+        {allCategories
+          .filter((c3) => c3.parentId == categoryId)
+          .map((i3) => (
+            <SwiperSlide key={i3.id}>
+              <Link style={{ textDecoration: "none" }} to={`/lastCategory/${i3.id}`}>
+                <div className="sub__title">
+                  <img src={i3.categoryPicture} alt="" className="category-pic" />
+                  <span className="category-title">{i3.title}</span>
+                </div>
+              </Link>
+            </SwiperSlide>
+          ))}
+      </Swiper>
+    </div>
+
+           {/* <div className="slider-container-category5">
         <Slider  {...settings3}>
       
         {allCategories
@@ -727,13 +760,12 @@ setIsMobilePrice(false)
                 <div className="sub__title">
                   <img src={i3.categoryPicture} alt="" className="category-pic" />
                   <span className="category-title">{i3.title}</span>
-                  <div className={ index==array.length - 1 ? "":"border-bottom"}></div>
                   </div>
               </Link>
               
             ))}
         </Slider>
-      </div>
+      </div> */}
 
 
     <div className={`mobile_box ${isScrolling && !isAtFirstSlide ? 'is-scrolling' : ''}`}> 

@@ -465,7 +465,7 @@
       -ms-flex: 1;
           flex: 1; /* Allow the slider to take the remaining space */
   display: none;
-  overflow: hidden;
+  overflow: auto;
 }
 @media only screen and (max-width: 900px) {
   .slider-container-category5 {
@@ -500,13 +500,24 @@
   font-size: 13px;
   color: black;
 }
+@media only screen and (max-width: 500px) {
+  .slider-container-category5 a .sub__title span {
+    font-size: 12px;
+  }
+}
 .slider-container-category5 a .sub__title .category-pic {
-  width: 130px;
-  height: 130px;
+  width: 110px;
+  height: 110px;
   border-radius: 28px;
   border: 2px solid white;
   padding: 2px;
   margin-right: 4px;
+}
+@media only screen and (max-width: 500px) {
+  .slider-container-category5 a .sub__title .category-pic {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .mobile_box {
