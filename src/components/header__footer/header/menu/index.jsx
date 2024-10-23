@@ -13,7 +13,7 @@ function Menu() {
   const [allCategories, setAllCategories] = useState([]);
   const {blurState,blurDispatch}=useContext(blurContext)
   const [isVisible, setIsVisible] = useState(false);
-const[showCategory,setShowCtegory]=useState(4)
+const[showCategory,setShowCtegory]=useState(false)
 
   
   useEffect(() => {
@@ -296,7 +296,7 @@ alt=""
     <Fragment>
       <div className="lineMeu"></div>
       <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
-        <div className="category-container">
+        <div className={showCategory?"category-container shift-left-category":"category-container"} >
       {allCategories
             .filter((c3) => c3.parentId === 1)
             .map((i3,index) => (
@@ -315,7 +315,14 @@ alt=""
           </div>
 
         </div>
-        {(showCategory==4 || showCategory==5) && <div className="details-one-category">
+        <div 
+          className={showCategory?"details-one-category shift-left-details":"details-one-category"}>
+          <div className="header-category-title">
+          <img  src={require("./../../../../assets/icons/arrow.png")} onClick={()=>setShowCtegory(false)}></img>
+
+            <span>{allCategories.filter((c3) => c3.id == showCategory)[0]?.title}</span>
+            </div>
+
           <div className="header-category">
             <span>Shop By Product</span>
             </div>
@@ -381,7 +388,7 @@ alt=""
 
 
             </div>
-        </div>}
+        </div>
       </div>
 
 
