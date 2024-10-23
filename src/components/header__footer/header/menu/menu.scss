@@ -41,10 +41,10 @@ direction: ltr;
     width: 61%;
   }
   @include mq(650) {
-    width: 54%;
+    width: 63%;
   }
   @include mq(550) {
-    width: 50%;
+    width: 63%;
   }
   // overflow-y: auto;
 .header-category{
@@ -226,10 +226,10 @@ direction: ltr;
     width: 37%;
   }
   @include mq(650) {
-    width: 50%;
+    width: 33%;
   }
   @include mq(550) {
-    width: 60%;
+    width: 33%;
   }
 
   .one-mobile-category{
@@ -250,8 +250,8 @@ direction: ltr;
       @include mq(700) {
         height: 88px;
     }
-    @include mq(600) {
-      height: 88px;
+    @include mq(650) {
+      height: 71px;
   }
     }
     .active-line{
@@ -276,11 +276,11 @@ direction: ltr;
     @include mq(700) {
       height: 88px;
   }
-  @include mq(600) {
-    height: 88px;
+  @include mq(650) {
+    height: 71px;
   }
 @include mq(500) {
-  height: 88px;
+  height: 71px;
 }
 
     }
