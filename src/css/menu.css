@@ -3,14 +3,50 @@
   height: 200px;
 }
 
+.just-menu-blur {
+  bottom: -140%; /* Initially hidden below the viewport */
+  right: 0%;
+  height: 100%;
+  z-index: 1000;
+  width: 50%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; /* Slide-up effect */
+  position: fixed;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px); /* Blurring the background */
+}
+@media only screen and (max-width: 650px) {
+  .just-menu-blur {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .just-menu-blur {
+    width: 35%;
+  }
+}
+@media only screen and (max-width: 430px) {
+  .just-menu-blur {
+    width: 30%;
+  }
+}
+
+.visible-just-menu-blur {
+  bottom: 0px !important; /* Slide-up to show the component */
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out; /* Slide-up effect */
+}
+
 .mobile-menu-cat {
   overflow-y: auto; /* Enable vertical scrolling if needed */
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px); /* Blurring the background */
   font-family: system-ui !important;
   position: fixed;
   bottom: -140%; /* Initially hidden below the viewport */
   left: 0;
   right: 0;
-  height: 90%; /* Adjust based on your design */
+  height: 100%; /* Adjust based on your design */
   background-color: white;
   -webkit-box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
@@ -334,7 +370,7 @@
 
 /* Visible state when the page is activated */
 .mobile-menu-cat.visible-mobile {
-  bottom: 50px !important; /* Slide-up to show the component */
+  bottom: 0px !important; /* Slide-up to show the component */
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; /* Slide-up effect */
 }

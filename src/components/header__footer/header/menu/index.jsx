@@ -295,6 +295,7 @@ alt=""
   return (
     <Fragment>
       <div className="lineMeu"></div>
+      <div className={`just-menu-blur ${isVisible ? "visible-just-menu-blur" : ""} `} onClick={ ()=>menuSearchDispatch({ type: "toggleMobileMenu" })}></div>
       <div className={`mobile-menu-cat ${isVisible ? "visible-mobile" : ""} ` }>
         <div className={(showCategory==4 || showCategory==5)?"category-container shift-left-category":"category-container"} >
       {allCategories
