@@ -28,7 +28,13 @@ const BottomMenu = () => {
     if (!menuSearchState.MobileMenu) 
       setActiveIndex(-1)
   
-  }, [menuSearchState.MobileMenu]);
+  }, [menuSearchState.MobileMenu,]);
+
+  useEffect(() => {
+    if (! menuSearchState.Account) 
+      setActiveIndex(-1)
+  
+  }, [ menuSearchState.Account]);
 
 
   const signoutUser=()=>{

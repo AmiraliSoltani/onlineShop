@@ -225,7 +225,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
 
                     <div className="tab-header-container-register">
       <div className="register-header">
-      <img src={require("./../../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
+      <img src={require("./../../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=> menuSearchDispatch({ type: "toggleAccount" })} />
 
         <h2>Welcome</h2> {/* Title */}
       </div>
