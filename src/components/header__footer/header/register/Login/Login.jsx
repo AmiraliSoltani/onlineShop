@@ -59,6 +59,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
     if (menuSearchState.Account) {
       setIsVisible(true)
       // blurDispatch({ type: "activeBlur" });
+      document.body.style.overflow = 'hidden';  // Disable scroll
 
     }
     else  setIsVisible(false)
