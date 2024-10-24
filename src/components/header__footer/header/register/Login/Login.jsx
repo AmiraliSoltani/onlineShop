@@ -12,6 +12,7 @@ import debounce from "lodash.debounce";
 import { useDebouncedCallback } from 'use-debounce';
 import menuSearchContext from "../../../../contexts/menuSearchContext";
 import Signin from "../Signin/Signin";
+import Spinner from "react-bootstrap/Spinner";
 
 const userService = require("../../../../../services/authenticate");
 
@@ -36,6 +37,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   const hasOpened = useRef(false); // Track if modal has opened
 
   const [isVisible, setIsVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
 
   useEffect(() => {
@@ -64,12 +66,15 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   }
 
   const onSubmit = async (data) => {
+    setLoading(true);  // Start loading
     const [authenticate, user] = await userService.authenticateUser(data);
 
     if (authenticate) {
       setGetUserData(true);
       if (generalError) setGeneralError(false);
     } else setGeneralError(user);
+    setLoading(false);  // Stop loading after the request completes
+
   };
 
   // Open Google popup for login
@@ -168,8 +173,8 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
                    onClick={openPopup}
                  />
                </div> */}
-               <div className="footerMenu">
-           <button className="button-menu"  type="submit" >
+               <div className="footerMenu-register">
+           <button className="button-menu-register"  type="submit" >
                Log In
              </button>
 
@@ -185,11 +190,11 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
       case 2:
         return <div className="tab-content">
             <img
-                      src={require("../../../../../assets/icons/log-in-with-google-icon.png")}
+                      src={require("../../../../../assets/icons/sign-in-with-google-icon.jpg")}
                       alt="logo"
                       style={{
-                        width: "210px",
-                        height: "43px",
+                        width: "222px",
+                        height: "54px",
                         cursor: "pointer",
                       }}
                       onClick={openPopup}
@@ -210,28 +215,28 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
             {!loginState.authenticated && (
               <Fragment>
 
-                    <div className="tab-header-container">
-      <div className="header">
+                    <div className="tab-header-container-register">
+      <div className="register-header">
       <img src={require("./../../../../../assets/icons/close.png")} alt="" className="close"  onClick={()=>closeSlidingPage()} />
 
         <h2>Welcome</h2> {/* Title */}
       </div>
 
-      <div className="tabs">
+      <div className="register-tabs">
         <button
-          className={`tab ${activeTab === 0 ? 'active' : ''}`}
+          className={`register-tab ${activeTab === 0 ? 'active' : ''}`}
           onClick={() => setActiveTab(0)}
         >
           Log In
         </button>
         <button
-          className={`tab ${activeTab === 1 ? 'active' : ''}`}
+          className={`register-tab ${activeTab === 1 ? 'active' : ''}`}
           onClick={() => setActiveTab(1)}
         >
           Sign In
         </button>
         <button
-          className={`tab ${activeTab === 2 ? 'active' : ''}`}
+          className={`register-tab ${activeTab === 2 ? 'active' : ''}`}
           onClick={openPopup}
         >
           Google
@@ -279,7 +284,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
                 <div className="d-flex flex-row justify-content-between align-items-center">
                   <div className="col-sm-7">
                     {generalError && (
-                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                      <div className="width90 bg-danger text-center text-warning p-2 mt-2 rounded">
                         {generalError}
                       </div>
                     )}
@@ -324,9 +329,21 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
                 </div>
               </Modal.Body>
               <Modal.Footer className="log" style={{ backgroundColor: "#747d8c"}}>
-              <Button className="button"  type="submit" variant="primary">
-                  Log In
-                </Button>
+              <Button className="button" type="submit" variant="primary" disabled={loading}>
+            {loading ? (
+              <>
+                <Spinner
+                  as="span"
+                  animation="border"
+                  size="sm"
+                  role="status"
+                  aria-hidden="true"
+                />
+              </>
+            ) : (
+              "Log In"
+            )}
+          </Button>
 
                 <Button className="button" variant="secondary" onClick={() => toggleModal()}  style={{ width: "200px" }}>
                 Create An Account

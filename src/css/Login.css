@@ -55,7 +55,7 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.account-menu .tab-header-container {
+.account-menu .tab-header-container-register {
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -64,7 +64,7 @@
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.account-menu .header {
+.account-menu .register-header {
   padding: 12px;
   color: white;
   border-radius: 10px 10px 0 0;
@@ -72,7 +72,7 @@
   margin-bottom: 28px;
   background: repeating-linear-gradient(45deg, #747D8C, #747D8C 20px, #666e7b 20px, #666e7b 40px) !important;
 }
-.account-menu .header .close {
+.account-menu .register-header .close {
   height: 30px;
   width: 30px;
   cursor: pointer;
@@ -80,11 +80,11 @@
   top: 11px;
   right: 20px;
 }
-.account-menu .header h2 {
+.account-menu .register-header h2 {
   margin: 0;
   font-size: 24px;
 }
-.account-menu .tabs {
+.account-menu .register-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,11 +93,11 @@
   background-color: #f1f2f6;
   border-bottom: 2px solid #dfe4ea;
 }
-.account-menu .tab {
+.account-menu .register-tab {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  padding: 12px 0;
+  padding: 8px 0;
   background-color: #f1f2f6;
   border: 0;
   cursor: pointer;
@@ -107,11 +107,11 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   outline: none;
 }
-.account-menu .tab:hover {
+.account-menu .register-tab:hover {
   background-color: #747d8c;
   color: white;
 }
-.account-menu .tab.active {
+.account-menu .register-tab.active {
   background-color: #ff7675;
   color: white;
   border-bottom: 3px solid #ff6b81; /* Active tab with solid border */
@@ -128,17 +128,18 @@
   padding: 10px;
   background: repeating-linear-gradient(45deg, #FF7675, #FF7675 20px, #e66564 20px, #e66564 40px) !important;
 }
-.account-menu .tab-content-container .login_mobile .footerMenu .button-menu {
+.account-menu .tab-content-container .login_mobile .footerMenu-register .button-menu-register {
   background-color: #00B894;
-  padding: 7px;
+  padding: 10px;
   border: 0px;
   width: 100%;
   color: white;
+  font-size: 18px;
 }
-.account-menu .tab-content-container .login_mobile .footerMenu .button-menu:hover {
+.account-menu .tab-content-container .login_mobile .footerMenu-register .button-menu-register:hover {
   background-color: #00996D;
 }
-.account-menu .tab-content-container .login_mobile .footerMenu .button-menu:active {
+.account-menu .tab-content-container .login_mobile .footerMenu-register .button-menu-register:active {
   background-color: #5E6672; /* Darker color when clicked */
   -webkit-transform: scale(0.98);
           transform: scale(0.98); /* Slight shrink effect on click */

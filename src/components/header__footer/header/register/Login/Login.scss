@@ -37,7 +37,7 @@ direction: ltr;
             justify-content: center;
            
 
-            .tab-header-container {
+            .tab-header-container-register {
               width: 100%;
               margin: 0 auto;
               text-align: center;
@@ -47,7 +47,7 @@ direction: ltr;
               box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             }
             
-            .header {
+            .register-header {
               // background-color: #ff7675; /* Light red background */
               padding: 12px;
               color: white;
@@ -74,16 +74,16 @@ direction: ltr;
               }
             }
             
-            .tabs {
+            .register-tabs {
               display: flex;
               justify-content: space-around;
               background-color: #f1f2f6;
               border-bottom: 2px solid #dfe4ea;
             }
             
-            .tab {
+            .register-tab{
               flex: 1;
-              padding: 12px 0;
+              padding: 8px 0;
               background-color: #f1f2f6;
               border: 0;
               cursor: pointer;
@@ -120,13 +120,14 @@ direction: ltr;
                   background: repeating-linear-gradient(45deg, #FF7675, #FF7675 20px, #e66564 20px, #e66564 40px) !important;;
                 }
                 
-                .footerMenu{
-                  .button-menu{
+                .footerMenu-register{
+                  .button-menu-register{
                     background-color: #00B894;
-                    padding: 7px;
+                    padding: 10px;
                     border: 0px;
                     width: 100%;
                     color: white;
+                    font-size:18px;
                     &:hover{
                       background-color: #00996D;
                     }

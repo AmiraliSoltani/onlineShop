@@ -2,17 +2,18 @@
   background-color: #e6bfa6 !important;
 }
 
-.footerMenu .button-menu {
+.footerMenu-regist .button-menu-regist {
   background-color: #00B894;
-  padding: 7px;
+  padding: 10px;
   border: 0px;
   width: 100%;
   color: white;
+  font-size: 18px;
 }
-.footerMenu .button-menu:hover {
+.footerMenu-regist .button-menu-regist:hover {
   background-color: #00996D;
 }
-.footerMenu .button-menu:active {
+.footerMenu-regist .button-menu-regist:active {
   background-color: #5E6672; /* Darker color when clicked */
   -webkit-transform: scale(0.98);
           transform: scale(0.98); /* Slight shrink effect on click */
@@ -21,7 +22,7 @@
 }
 
 .modal-content {
-  width: 110% !important;
+  width: 115% !important;
 }
 
 .width90 {

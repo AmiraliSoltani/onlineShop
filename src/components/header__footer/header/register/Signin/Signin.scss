@@ -7,13 +7,15 @@
 }
 }
 
-.footerMenu{
-  .button-menu{
+.footerMenu-regist{
+  .button-menu-regist{
     background-color: #00B894;
-    padding: 7px;
+    padding: 10px;
     border: 0px;
     width: 100%;
     color: white;
+    font-size:18px;
+
     &:hover{
       background-color: #00996D;
     }
@@ -26,7 +28,7 @@
 }
 
 .modal-content{
-  width: 110% !important;
+  width: 115% !important;
 }
 
 .width90{

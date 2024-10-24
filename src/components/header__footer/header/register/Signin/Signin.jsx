@@ -26,17 +26,25 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal,tab=false
   const { loginState, loginDispatch } = useContext(loginContext);
   const [generalError, setGeneralError] = useState(false);
   const [getUserData, setGetUserData] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   if (getUserData) {
     ReadTokenInformation();
   }
 
   const onSubmit = async (data) => {
+    setLoading(true);  // Start loading
     const [authenticate, msg] = await userService.registerUser(data);
     if (authenticate) {
       setGetUserData(true);
       if (generalError) setGeneralError(false);
-    } else setGeneralError(msg);
+    } else
+    {
+console.log("errrrrrrrrrrrr",msg)
+      setGeneralError(msg);
+    }
+    setLoading(false);  // Stop loading after the request completes
+
   };
 
   // Google sign-up handler
@@ -154,8 +162,8 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal,tab=false
                   </div>
 
                 </div>
-                <div className="footerMenu">
-           <button className="button-menu"  type="submit" >
+                <div className="footerMenu-regist">
+           <button className="button-menu-regist"  type="submit" >
                Sign In
              </button>
 
@@ -195,7 +203,7 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal,tab=false
                 <div className="d-flex flex-row justify-content-between align-items-center">
                   <div className="col-sm-7">
                     {generalError && (
-                      <div className="w-100 bg-danger text-center text-warning p-2 mt-2 rounded">
+                      <div className="width90 bg-danger text-center text-warning p-2 mt-2 rounded">
                         {generalError}
                       </div>
                     )}
@@ -264,8 +272,8 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal,tab=false
                       src={require('../../../../../assets/icons/sign-in-with-google-icon.png')}
                       alt="logo"
                       style={{
-                        width: '214px',
-                        height: '52px',
+                        width: '222px',
+                        height: '54px',
                         cursor: "pointer",
                       }}
                       onClick={handleGoogleSignUp} // Trigger Google sign-up
@@ -274,9 +282,14 @@ function Signin({ showRegisterModal, setShowRegisterModal, toggleModal,tab=false
                 </div>
               </Modal.Body>
               <Modal.Footer className="sign" style={{ backgroundColor: "#747d8c"}}>
-                                <Button className="button"  type="submit" variant="primary">
-                  Create An Account
-                </Button>
+              <Button className="button" type="submit" variant="primary" disabled={loading}>
+  {loading ? (
+    <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true" />
+  ) : (
+    "Create An Account"
+  )}
+</Button>
+
                 <Button
   className="button bg-dark"
   variant="secondary"

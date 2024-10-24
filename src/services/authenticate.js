@@ -113,13 +113,17 @@ export async function registerUser(data) {
       console.log("yesssssssssssss",response.data.token);
       return [true, response.data.user];
     } else {
-      console.log("noooooo",response.data.message);
+      console.log("noooooooooooooooooooooooooooooooooooooooooo");
+      console.log("noooooo",response.data);
       return [false, response.data.message];
     }
   } catch (error) {
+    console.log("noooooooooooooooooooooooooooooooooooooooooo22222222");
+    console.log(error,"noooooooooooooooooooooooooooooooooooooooooo22222222");
+
     console.log(error);
 
-    console.log(error.response?.data?.message || error.message);
+    console.log(error.response?.data?.message || error);
     return [false, error.response?.data?.message];
   }
 }

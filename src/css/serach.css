@@ -451,11 +451,11 @@
   color: grey;
 }
 .search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-prev::before {
-  left: 172px;
+  left: 178px;
   top: -35px;
 }
 .search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .slick-next::before {
-  right: 235px;
+  right: 220px;
   top: -35px;
 }
 .search__box .dropdown__search .dropdown__search__main .dropdown__search__history .history .history-trend-search .text {
