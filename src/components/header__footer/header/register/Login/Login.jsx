@@ -62,7 +62,10 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
       document.body.style.overflow = 'hidden';  // Disable scroll
 
     }
-    else  setIsVisible(false)
+    else {
+      document.body.style.overflow = 'auto';  // Disable scroll
+      setIsVisible(false)
+    } 
   }, [menuSearchState.Account]);
 
 
