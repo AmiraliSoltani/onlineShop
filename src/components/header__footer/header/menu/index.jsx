@@ -295,7 +295,7 @@ alt=""
   return (
     <Fragment>
       <div className="lineMeu"></div>
-      <div className={`mobile-menu ${isVisible ? "visible-mobile" : ""} ` }>
+      <div className={`mobile-menu-cat ${isVisible ? "visible-mobile" : ""} ` }>
         <div className={(showCategory==4 || showCategory==5)?"category-container shift-left-category":"category-container"} >
       {allCategories
             .filter((c3) => c3.parentId === 1).sort((a, b) => a.id - b.id) 
