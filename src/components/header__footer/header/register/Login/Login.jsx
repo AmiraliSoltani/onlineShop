@@ -13,6 +13,7 @@ import { useDebouncedCallback } from 'use-debounce';
 import menuSearchContext from "../../../../contexts/menuSearchContext";
 import Signin from "../Signin/Signin";
 import Spinner from "react-bootstrap/Spinner";
+import blurContext from "../../../../contexts/blur";
 
 const userService = require("../../../../../services/authenticate");
 
@@ -33,6 +34,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   const [getUserData, setGetUserData] = useState(false);
   const { menuSearchState, menuSearchDispatch } = useContext(menuSearchContext);
   const [activeTab, setActiveTab] = useState(0);
+  const {blurState,blurDispatch}=useContext(blurContext)
 
   const hasOpened = useRef(false); // Track if modal has opened
 
@@ -56,6 +58,8 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
     // console.log("menuSearchState",menuSearchState.Account)
     if (menuSearchState.Account) {
       setIsVisible(true)
+      blurDispatch({ type: "activeBlur" });
+
     }
     else  setIsVisible(false)
   }, [menuSearchState.Account]);
