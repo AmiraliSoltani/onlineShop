@@ -40,7 +40,19 @@ function ThreeImages() {
                 <span className="title"></span>
               </div>
               <span className="text"></span>
-              <span className="button">Autumn Discount Festival</span>
+              <span className="button">Autumn Festival</span>
+            </div>
+          </Link>
+        </div>
+        <div className="vertical">
+        <Link to="/last__category/1/discount=true">
+            <div className="vertical__image">
+              <img src={require("./../../../assets/banners/vertical2.jpg")} alt="" />
+              <div className="detail__image">
+                <span className="title"></span>
+              </div>
+              <span className="text"></span>
+              <span className="button">Autumn Festival</span>
             </div>
           </Link>
         </div>

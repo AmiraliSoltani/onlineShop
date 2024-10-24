@@ -173,7 +173,7 @@ setMultitabCategories(orderedSelectedCategories);
     infinite: false,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 5,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     responsive: [
@@ -213,33 +213,7 @@ setMultitabCategories(orderedSelectedCategories);
       <div className="container-special">
         <div className="main__offer">
         <div className="top__offer">
-  {/* {multitabCategories.length !== 0 && multitabCategories.map((category) => {
-    console.log("Category:", category);
-    return (
-      <div
-        onClick={() => getProducts(category)}
-        className={`top__offer__category bg-${category.backgroundcolor}`}
-        key={category.id}
-      >
-        <span>{category.title}</span>
-        <img className="icon" src={category.iconPic} alt="category" />
-        {show === category.id && (
-          <svg
-            className={`arrow arrow__bg-${category.backgroundcolor}`}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 494.148 494.148"
-            space="preserve"
-          >
-            <path
-              d="M405.284,201.188L130.804,13.28C118.128,4.596,105.356,0,94.74,0C74.216,0,61.52,16.472,61.52,44.044v406.124
-              c0,27.54,12.68,43.98,33.156,43.98c10.632,0,23.2-4.6,35.904-13.308l274.608-187.904c17.66-12.104,27.44-28.392,27.44-45.884
-              C432.632,229.572,422.964,213.288,405.284,201.188z"
-            />
-          </svg>
-        )}
-      </div>
-    );
-  })} */}
+
 {multitabCategories.length !== 0 && multitabCategories.map((category,index) => {
   console.log("Category:", category);
   return (
@@ -276,13 +250,15 @@ setMultitabCategories(orderedSelectedCategories);
 
 
           <div className="middle__offer__slider">
-            <div className={`line2 bg-${line}`}></div>
+            <div className={`line22 bg-${line}`}></div>
           </div>
 
           <div className="buttom__offer__slider">
             <Slider {...settings2} key={show}>
       
-              {multitabsProduct?.slice(0,12).map((product) => {
+      
+      
+              {multitabsProduct?.slice(0,14).map((product) => {
                 const defaultImage = product.productPic[Object.keys(product.productPic)[0]];
                 const currentImage = imageStates[product.id] || defaultImage;
 

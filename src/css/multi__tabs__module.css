@@ -28,8 +28,13 @@
 }
 
 .amazing__offer {
-  margin-top: 15px;
+  margin-top: -10px;
   position: relative;
+}
+@media only screen and (max-width: 900px) {
+  .amazing__offer {
+    margin-top: -20px;
+  }
 }
 .amazing__offer .main__offer {
   display: -webkit-box;
@@ -57,6 +62,7 @@
   color: black;
   padding: 5px;
   font-size: 16px;
+  font-weight: 500;
   border-radius: 3px;
   width: 245px;
   display: -webkit-box;
@@ -86,6 +92,11 @@
 @media only screen and (max-width: 870px) {
   .amazing__offer .main__offer .top__offer .top__offer__category {
     font-size: 13px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .amazing__offer .main__offer .top__offer .top__offer__category {
+    margin-left: 4px;
   }
 }
 @media only screen and (max-width: 650px) {
@@ -198,9 +209,10 @@
   width: 100%;
   margin-top: 10px;
 }
-.amazing__offer .main__offer .middle__offer__slider .line2 {
+.amazing__offer .main__offer .middle__offer__slider .line22 {
   width: 99%;
   height: 4px;
+  margin-bottom: 12px;
 }
 .amazing__offer .main__offer .buttom__offer__slider {
   width: 99%;
@@ -346,11 +358,12 @@
 }
 @media only screen and (max-width: 500px) {
   .amazing__offer .main__offer .buttom__offer__slider .one__product .tag__discount {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     font-size: 10px;
-    padding: 14px;
+    padding: 13px;
     left: 8px;
+    border-radius: 11px;
   }
 }
 .amazing__offer .main__offer .buttom__offer__slider .one__product .product__images {
@@ -391,6 +404,12 @@
   .amazing__offer .main__offer .buttom__offer__slider .one__product .product__images .product__star ul .star__icon .without__color {
     height: 18px;
     width: 18px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .amazing__offer .main__offer .buttom__offer__slider .one__product .product__images .product__star ul .star__icon .without__color {
+    height: 17px;
+    width: 17px;
   }
 }
 .amazing__offer .main__offer .buttom__offer__slider .one__product .product__images .product__star ul .star__icon .positive {
@@ -563,14 +582,14 @@
   .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul li {
     height: 24px;
     width: 24px;
-    margin-left: 1px;
+    margin-left: 2px;
   }
 }
 @media only screen and (max-width: 500px) {
   .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul li {
-    margin-left: 1px;
-    height: 22px;
-    width: 22px;
+    margin-left: 3px;
+    height: 20px;
+    width: 20px;
   }
 }
 .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__box__color ul li:hover {
@@ -638,6 +657,11 @@
 @media only screen and (max-width: 470px) {
   .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__name {
     font-size: 10px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__name {
+    font-size: 9px;
   }
 }
 .amazing__offer .main__offer .buttom__offer__slider .one__product .product__detail .product__price__and__icon {
@@ -787,6 +811,11 @@
 }
 .amazing__offer .bg-3 {
   background: repeating-linear-gradient(45deg, #C5E8D0, #C5E8D0 40px, #A9D7BB 40px, #A9D7BB 60px);
+}
+@media only screen and (max-width: 370px) {
+  .amazing__offer .bg-3 {
+    display: none !important;
+  }
 }
 .amazing__offer .bg-4 {
   background: repeating-linear-gradient(45deg, #EEE8AA, #EEE8AA 40px, #ebe7c3 40px, #ebe7c3 60px) !important;
