@@ -58,7 +58,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
     // console.log("menuSearchState",menuSearchState.Account)
     if (menuSearchState.Account) {
       setIsVisible(true)
-      blurDispatch({ type: "activeBlur" });
+      // blurDispatch({ type: "activeBlur" });
 
     }
     else  setIsVisible(false)
@@ -215,7 +215,7 @@ function Login({ showLoginModal, setShowLoginModal, toggleModal }) {
   }
   return (
     <Fragment>
-            <div className={`account-menu container-special ${isVisible ? "visible-account" : ""} ` }>
+            <div className={`account-menu-register container-special ${isVisible ? "visible-account" : ""} ` }>
             {!loginState.authenticated && (
               <Fragment>
 

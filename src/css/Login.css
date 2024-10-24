@@ -30,13 +30,14 @@
   width: 90% !important;
 }
 
-.account-menu {
+.account-menu-register {
   position: fixed;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px); /* Blurring the background */
   bottom: -140%; /* Initially hidden below the viewport */
   left: 0;
   right: 0;
   height: 100%; /* Adjust based on your design */
-  background-color: white;
   -webkit-box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.2);
   -webkit-transition: all 0.4s ease-in-out;
@@ -55,7 +56,7 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.account-menu .tab-header-container-register {
+.account-menu-register .tab-header-container-register {
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -64,7 +65,7 @@
   -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
-.account-menu .register-header {
+.account-menu-register .register-header {
   padding: 12px;
   color: white;
   border-radius: 10px 10px 0 0;
@@ -72,7 +73,7 @@
   margin-bottom: 28px;
   background: repeating-linear-gradient(45deg, #747D8C, #747D8C 20px, #666e7b 20px, #666e7b 40px) !important;
 }
-.account-menu .register-header .close {
+.account-menu-register .register-header .close {
   height: 30px;
   width: 30px;
   cursor: pointer;
@@ -80,11 +81,11 @@
   top: 11px;
   right: 20px;
 }
-.account-menu .register-header h2 {
+.account-menu-register .register-header h2 {
   margin: 0;
   font-size: 24px;
 }
-.account-menu .register-tabs {
+.account-menu-register .register-tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,7 +94,7 @@
   background-color: #f1f2f6;
   border-bottom: 2px solid #dfe4ea;
 }
-.account-menu .register-tab {
+.account-menu-register .register-tab {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -107,28 +108,28 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   outline: none;
 }
-.account-menu .register-tab:hover {
+.account-menu-register .register-tab:hover {
   background-color: #747d8c;
   color: white;
 }
-.account-menu .register-tab.active {
+.account-menu-register .register-tab.active {
   background-color: #ff7675;
   color: white;
   border-bottom: 3px solid #ff6b81; /* Active tab with solid border */
 }
-.account-menu .tab-content-container {
+.account-menu-register .tab-content-container {
   padding: 12px 20px 20px 20px;
   border: 2px solid #dfe4ea;
   border-top: 0;
   background-color: #fff;
   border-radius: 0 0 10px 10px;
 }
-.account-menu .tab-content-container .login_mobile .header-mobile {
+.account-menu-register .tab-content-container .login_mobile .header-mobile {
   font-weight: bold;
   padding: 10px;
   background: repeating-linear-gradient(45deg, #FF7675, #FF7675 20px, #e66564 20px, #e66564 40px) !important;
 }
-.account-menu .tab-content-container .login_mobile .footerMenu-register .button-menu-register {
+.account-menu-register .tab-content-container .login_mobile .footerMenu-register .button-menu-register {
   background-color: #00B894;
   padding: 10px;
   border: 0px;
@@ -136,23 +137,23 @@
   color: white;
   font-size: 18px;
 }
-.account-menu .tab-content-container .login_mobile .footerMenu-register .button-menu-register:hover {
+.account-menu-register .tab-content-container .login_mobile .footerMenu-register .button-menu-register:hover {
   background-color: #00996D;
 }
-.account-menu .tab-content-container .login_mobile .footerMenu-register .button-menu-register:active {
+.account-menu-register .tab-content-container .login_mobile .footerMenu-register .button-menu-register:active {
   background-color: #5E6672; /* Darker color when clicked */
   -webkit-transform: scale(0.98);
           transform: scale(0.98); /* Slight shrink effect on click */
   -webkit-animation: click-bounce 0.4s ease;
           animation: click-bounce 0.4s ease; /* Apply bounce effect */
 }
-.account-menu .tab-content {
+.account-menu-register .tab-content {
   font-size: 18px;
   color: #2f3542;
 }
 
 /* Visible state when the page is activated */
-.account-menu.visible-account {
+.account-menu-register.visible-account {
   bottom: 0px !important; /* Slide-up to show the component */
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out; /* Slide-up effect */
