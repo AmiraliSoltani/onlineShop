@@ -3,9 +3,14 @@
 
 
 .instagram {
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
-
+    @include mq(900) {
+        margin-top: 10px;
+      }
+      @include mq(500) {
+        margin-top: 5px;
+      }
     .salam {
         // display: flex;
         // flex-direction: column;
@@ -45,14 +50,17 @@
                 }
                 @include mq(600) {
                     padding: 2px 2px 3px 6px;
-                    font-size: 16px;  
+                    font-size: 15px;  
                     height: 42px; 
+                    margin-bottom: 5px;
 
                 }
                 @include mq(480) {
                     padding: 0px;
-                    font-size: 15px;  
-                    height: 38px; 
+                    font-size: 13px;  
+                    height: 35px; 
+                    margin-bottom: 5px;
+
                 }
             .icon {
                 height: 38px;

@@ -30,6 +30,9 @@
     margin-top: 15px;
     margin-bottom: 15px;
     position: relative;
+    @include mq(900) {
+        margin-top: 10px;
+      }
 
     .main__offer {
         display: flex;
@@ -80,14 +83,17 @@
                         }
                         @include mq(600) {
                             padding: 2px 2px 3px 6px;
-                            font-size: 16px;  
+                            font-size: 15px;  
                             height: 42px; 
- 
+                            margin-bottom: 5px;
+    
                         }
                         @include mq(480) {
                             padding: 0px;
-                            font-size: 15px;  
-                            height: 38px; 
+                            font-size: 13px;  
+                            height: 35px; 
+                            margin-bottom: 5px;
+    
                         }
                     .icon {
                         height: 41px;

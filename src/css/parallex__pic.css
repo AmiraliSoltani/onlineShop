@@ -72,7 +72,7 @@
   background-image: url("./../assets/banners/parallex-7.jpg");
   background-attachment: fixed;
   background-position: center;
-  height: 220px;
+  height: 240px;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 5px;
@@ -147,7 +147,7 @@
   font-size: 25px;
   width: auto;
   text-align: right;
-  font-weight: bold;
+  font-weight: 500;
   margin-left: 25px;
 }
 @media only screen and (max-width: 1200px) {
@@ -177,25 +177,30 @@
 }
 @media only screen and (max-width: 685px) {
   .text__in__parallex .top__text {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 600px) {
   .text__in__parallex .top__text {
-    font-size: 13px;
+    font-size: 15px;
   }
 }
 @media only screen and (max-width: 570px) {
   .text__in__parallex .top__text {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 480px) {
   .text__in__parallex .top__text {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .text__in__parallex .top__text {
     font-size: 11px;
   }
 }
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 360px) {
   .text__in__parallex .top__text {
     font-size: 10px;
   }

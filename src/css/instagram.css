@@ -1,6 +1,16 @@
 .instagram {
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom: 20px;
+}
+@media only screen and (max-width: 900px) {
+  .instagram {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .instagram {
+    margin-top: 5px;
+  }
 }
 .instagram .salam .title {
   display: -webkit-box;
@@ -50,15 +60,17 @@
 @media only screen and (max-width: 600px) {
   .instagram .salam .top__offer__category {
     padding: 2px 2px 3px 6px;
-    font-size: 16px;
+    font-size: 15px;
     height: 42px;
+    margin-bottom: 5px;
   }
 }
 @media only screen and (max-width: 480px) {
   .instagram .salam .top__offer__category {
     padding: 0px;
-    font-size: 15px;
-    height: 38px;
+    font-size: 13px;
+    height: 35px;
+    margin-bottom: 5px;
   }
 }
 .instagram .salam .top__offer__category .icon {
